@@ -1,0 +1,20 @@
+{
+  "version": "2.0.47",
+  "mode": "integrated",
+  "project": {
+    "name": "PhysicianLabs",
+    "industry": "HealthTech"
+  },
+  "repository": {
+    "provider": "github",
+    "owner": "moamalleck",
+    "name": "PhyLabs",
+    "defaultBranch": "main"
+  },
+  "issueTracking": {
+    "provider": "github",
+    "owner": "moamalleck",
+    "name": "PhyLabs"
+  },
+  "customizations": {}
+}
