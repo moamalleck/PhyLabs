@@ -1,5 +1,139 @@
-<!-- BEGIN:nextjs-agent-rules -->
-# This is NOT the Next.js you know
+<!-- BEGIN:fraim-sync — auto-generated from fraim/config.json + project rules. Do not edit manually. -->
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
-<!-- END:nextjs-agent-rules -->
+# PhysicianLabs — Agent Instructions
+
+You are working inside the **PhysicianLabs** repository (`moamalleck/PhyLabs`).
+Read this file fully before taking any action.
+
+---
+
+## Project Identity
+
+| Field | Value |
+|---|---|
+| **Product** | PhysicianLabs |
+| **Industry** | HealthTech — SaaS for healthcare providers (clinics, doctors, small care centres) |
+| **Repo** | `github.com/moamalleck/PhyLabs` |
+| **Issue tracker** | GitHub Issues — `moamalleck/PhyLabs` |
+| **FRAIM mode** | `integrated` |
+| **Architecture doc** | `docs/architecture/architecture.md` |
+
+---
+
+## This is NOT the Next.js you know
+
+This project uses **Next.js 16** (App Router, Turbopack). APIs, conventions, and file structure
+may differ significantly from your training data.
+Read `node_modules/next/dist/docs/` before writing any Next.js code. Heed all deprecation notices.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | TypeScript 5 (strict mode) |
+| Frontend | Next.js 16 — App Router, React Server Components |
+| Styling | Tailwind CSS v4 (`@tailwindcss/postcss`) |
+| Backend | Next.js Server Actions + API Routes |
+| AI sidecar | Express 4 — MCP server (`src/mcp-server.ts`, port 15302) |
+| Database | PostgreSQL (`pg`) — branch-scoped DB naming via `src/core/utils/git-utils.ts` |
+| Testing | Jest + ts-jest (unit/integration), Playwright (e2e, planned) |
+| Runtime | Node.js v24 |
+
+---
+
+## Project Rules
+
+### 1. HIPAA-Awareness by Default
+Never log, expose, or persist Protected Health Information (PHI) — including patient names,
+dates of birth, diagnoses, treatment records, or insurance details. Any feature that touches
+patient data must be flagged for compliance review before implementation begins.
+
+### 2. Stack Discipline
+The approved stack is **Next.js (App Router) + Node.js + Tailwind CSS**.
+Do not introduce additional UI frameworks, component libraries, or alternative styling systems
+without explicit approval from the project owner.
+
+### 3. API-First Architecture
+All business logic must live in Node.js API routes or Next.js server actions.
+Client components must stay thin and presentational.
+Do not put business rules, data access, or validation logic inside React components.
+
+### 4. Auth on Every Endpoint
+Every API route and server action must be authenticated.
+Implement RBAC with at minimum three roles: `provider`, `admin`, and `patient`.
+No endpoint may be publicly accessible unless explicitly approved.
+
+### 5. Accessibility (WCAG 2.1 AA)
+All UI components must meet WCAG 2.1 Level AA standards: sufficient colour contrast,
+full keyboard navigation, correct ARIA labels, and screen-reader compatibility.
+
+### 6. Test Before Merge
+Every feature or bug fix requires at least one unit test and one integration test
+before a pull request is considered complete.
+
+---
+
+## Repository Structure
+
+```
+src/
+  app/                        # Next.js App Router — RSC + client components
+    layout.tsx                # Root layout (Geist fonts, Tailwind)
+    page.tsx                  # Home route (provider dashboard placeholder)
+    globals.css
+  core/
+    utils/
+      git-utils.ts            # getPort(), determineDatabaseName(), getCurrentGitBranch()
+  services/                   # Domain services (planned)
+  middleware/                 # Middleware (planned)
+  models/                     # PostgreSQL models (planned)
+  types/                      # Shared TypeScript types (planned)
+  config/                     # Config modules (planned)
+  lib/                        # Shared library code — db.ts connection pool (planned)
+  __tests__/
+    test-utils.ts             # BaseTestCase, tag filtering, runTests<T>()
+    shared-server-utils.ts    # MCP server lifecycle helpers for e2e tests
+  issues.ts                   # GitHub issue filing (fileIssue())
+  mcp-server.ts               # Express MCP sidecar — /health + /mcp (JSON-RPC 2.0)
+
+e2e/
+  health.test.ts              # MCP server health + initialize e2e test
+
+fraim/
+  config.json                 # FRAIM config (mode, repo, issue tracker, customizations)
+  personalized-employee/
+    rules/project_rules.md    # Agent operating rules (source of truth for this file)
+
+docs/
+  architecture/
+    architecture.md           # Full system architecture document (read before designing)
+```
+
+---
+
+## Key Conventions
+
+- **Path alias**: `@/*` maps to `src/*` (configured in `tsconfig.json`)
+- **Port allocation**: `getPort()` in `git-utils.ts` — do not hardcode ports
+- **Database naming**: `determineDatabaseName()` — branch-scoped, do not hardcode DB names
+- **Environment variables**: never hardcode secrets; all config via `.env.local` (see `.env.example`)
+- **Issue filing**: use `fileIssue()` from `src/issues.ts` for programmatic GitHub issues
+- **MCP tools**: register new AI-callable tools in `src/mcp-server.ts` under `tools/call`
+
+---
+
+## Available Scripts
+
+| Script | Command | Purpose |
+|---|---|---|
+| Dev server | `npm run dev` | Start Next.js on port 3000 |
+| Build | `npm run build` | Production build (Turbopack) |
+| Tests | `npm test` | Jest unit + integration tests |
+| MCP server | `npm run mcp` | Start MCP sidecar (`npx tsx src/mcp-server.ts`) |
+| E2E tests | `npm run e2e` | Run MCP health e2e test |
+
+---
+
+<!-- END:fraim-sync -->
