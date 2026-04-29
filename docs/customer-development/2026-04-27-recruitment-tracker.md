@@ -52,16 +52,16 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 ### LinkedIn Connection Requests (≤300 chars)
 
 **Samir Master MD** *(send via mutual Dr. Kristof or Lana — warm intro preferred)*
-> Hi Samir — you built Dermatology Arts and invest in healthcare. I'm a founder trying to understand the admin burden problem for independent derm practices. Would love 15 min of your perspective.
+> Hi Samir, I see that you built Dermatology Arts and invest in healthcare. I'm an aspiring founder trying to understand the admin burden problem for independent Derm practices. Would love 15 min of your perspective.
 
-*(174 chars)*
+*(213 chars)*
 
 ---
 
 **Heather D. Rogers MD**
-> Hi Heather — you founded two practices and I've been studying how independent dermatologists manage admin overhead. You seem like someone with real perspective here. Could I get 15 min of your advice?
+> Hi Heather. You founded two clinical practices and I've been studying how independent Dermatologists manage their admin overhead, and understand their business decisions. You seem like someone with real perspective here. Could I get 15 minutes of your advice please?
 
-*(200 chars)*
+*(265 chars)*
 
 ---
 
@@ -80,26 +80,27 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 ---
 
 **Shaka Hatcher**
-> Hi Shaka — 20 years building New Leaf is impressive. I'm a founder trying to understand how independent chiro owners manage patient retention and admin overhead. Could I get 15 min of your advice?
+> Hi Shaka. Your 20+ years of building New Leaf caught my eye because it is impressive! I'm currently researching to understand how independent Chiro owners manage their client retention and Admin overhead. Could I get 15 minutes of your advice?
 
-*(197 chars)*
+*(243 chars)*
 
 ---
 
 ### Reddit Direct Messages
 
 **u/chakratones** *(r/Dermatology — prior auth thread)*
-> Hi — I read your post about spending 15-20 hours/week on biologic prior auths. That really stuck with me. I'm a founder trying to understand this problem from the people living it. No pitch — just trying to learn. Would you be up for a 15-minute conversation about how you currently handle PAs?
+> Hi chakra! I read your post about spending 15-20 hours/week on biologic prior auths. That really stuck with me because I'm a founder trying to understand this problem from the people living it. I'm not trying to pitch you anything, but just trying to learn more. Would you be up for a 15-minute conversation about how you currently handle PAs?
 
 ---
 
 **u/Snapcracklepayme** *(r/Chiropractic — PVA series author)*
-> Hi — your PVA series is the most useful practice business content I've seen on r/Chiropractic. I'm a founder trying to deeply understand the patient retention problem for DC practices. Not here to sell anything — I'd love 20 minutes to ask you about what you've seen in your own practice.
+> Hi Snapcrackle! Your PVA series is the most useful practice business content I've seen on the r/Chiropractic forum. I'm currently researching to try deeply understand the patient retention problem for DC practices. Not selling you anything and not asking for anything but your time - I'd love 20 minutes to learn more from you about what you've seen in your own practice.
 
 ---
 
 **u/crossfit6** *(r/Chiropractic — EHR frustration thread)*
-> Hi — your comment about being on your 5th EHR and getting oversold every time really resonated. I'm a founder trying to understand the practice software problem for DCs from the people who've lived through it. Would you be open to a 15-minute conversation? No pitch, just trying to learn.
+> Hi crossfit (what do you think of Hyrox taking over? ... Just kidding!)
+> Your comment about being on your 5th EHR and getting oversold every time really resonated. I'm in Tech and I am trying to understand the practice software problem for DCs from the people who've lived through it. Especially those who have seen the pain and suffered the trauma of its uselessness! Would you be open to a 15-minute conversation? No pitch, just trying to learn.
 
 ---
 

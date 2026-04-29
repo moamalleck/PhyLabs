@@ -1,5 +1,5 @@
 {
-  "version": "2.0.47",
+  "version": "2.0.124",
   "mode": "integrated",
   "project": {
     "name": "PhysicianLabs",
@@ -17,6 +17,7 @@
     "name": "PhyLabs"
   },
   "customizations": {
-    "architectureDoc": "docs/architecture/architecture.md"
+    "architectureDoc": "docs/architecture/architecture.md",
+    "worktrees": false
   }
 }

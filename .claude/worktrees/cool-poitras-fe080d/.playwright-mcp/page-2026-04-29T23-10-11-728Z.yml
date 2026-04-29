@@ -1,0 +1,24 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+    - generic [ref=e4]: Skip to main content
+  - generic [ref=e5]:
+    - generic:
+      - generic:
+        - generic [ref=e6]:
+          - generic: Reddit Chat
+        - generic "Reddit Chat"
+        - generic [ref=e10]:
+          - navigation [ref=e11]
+          - main [ref=e58]:
+            - generic [ref=e122]:
+              - textbox "Write message" [disabled] [ref=e124]:
+                - /placeholder: Message
+              - generic [ref=e126]:
+                - generic:
+                  - generic:
+                    - generic:
+                      - button "Send message" [disabled]:
+                        - generic:
+                          - generic:
+                            - img

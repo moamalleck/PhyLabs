@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"\\(Get-CimInstance Win32_ComputerSystem\\).TotalPhysicalMemory\")",
+      "Bash(powershell -Command \"\\(Get-CimInstance Win32_ComputerSystem\\).NumberOfLogicalProcessors\")",
+      "mcp__fraim__fraim_connect",
+      "mcp__fraim__list_fraim_jobs",
+      "mcp__fraim__get_fraim_job",
+      "mcp__fraim__seekMentoring",
+      "mcp__fraim__get_fraim_file",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx create-next-app@latest phylabs --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --yes)",
+      "Bash(cp -r phylabs/src .)",
+      "Bash(cp -r phylabs/public .)",
+      "Bash(rm -rf phylabs)",
+      "Bash(npm install *)",
+      "Bash(npx tsc *)",
+      "Bash(npm test *)",
+      "Bash(npm run *)",
+      "Bash(node_modules/.bin/next build *)",
+      "Bash(npm cache *)",
+      "Bash(rm -rf node_modules/next)",
+      "Bash(node -e \"const c = require\\('./fraim/config.json'\\); console.log\\('architectureDoc:', c.customizations.architectureDoc === 'docs/architecture/architecture.md' ? 'OK' : 'FAIL'\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)"
+    ]
+  }
+}

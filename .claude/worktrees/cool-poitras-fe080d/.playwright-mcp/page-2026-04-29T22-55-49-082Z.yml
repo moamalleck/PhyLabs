@@ -1,0 +1,599 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+    - generic [ref=e4]: Skip to main content
+  - generic [ref=e6]:
+    - generic:
+      - generic [ref=e7]:
+        - generic: chakratones (u/chakratones) - Reddit
+      - banner [ref=e10]:
+        - navigation [ref=e11]:
+          - generic [ref=e12]:
+            - button "Open menu" [ref=e16] [cursor=pointer]:
+              - img [ref=e19]
+              - generic [ref=e21]:
+                - generic: Open menu
+            - link "Home" [ref=e26] [cursor=pointer]:
+              - /url: /
+              - img [ref=e28]
+          - search [ref=e45]:
+            - generic [ref=e47]:
+              - img [ref=e50]
+              - generic "Remove u/chakratones filter and expand search to all of Reddit" [ref=e53] [cursor=pointer]:
+                - button [pressed] [ref=e54]:
+                  - generic [ref=e58]: u/chakratones
+                  - img [ref=e60]
+              - textbox "Remove u/chakratones filter and expand search to all of Reddit" [ref=e63]:
+                - /placeholder: Search in u/chakratones
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - button "Open chat" [ref=e71] [cursor=pointer]:
+                - img [ref=e74]
+                - generic [ref=e76]:
+                  - generic: Open chat
+              - link "Create post" [ref=e81] [cursor=pointer]:
+                - /url: /submit
+                - generic [ref=e82]:
+                  - img [ref=e84]
+                  - generic [ref=e86]: Create
+                - generic [ref=e87]:
+                  - generic: Create post
+              - generic [ref=e89]:
+                - link "Open inbox" [ref=e92] [cursor=pointer]:
+                  - /url: /notifications
+                  - img [ref=e95]
+                  - generic [ref=e97]:
+                    - generic: Open inbox
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: "1"
+            - generic [ref=e101]:
+              - button "User Avatar Expand user menu" [ref=e103] [cursor=pointer]:
+                - img "User Avatar" [ref=e111]
+                - generic [ref=e113]:
+                  - generic: Expand user menu
+              - generic [ref=e115]:
+                - tooltip "Open profile menu":
+                  - generic:
+                    - generic: Open profile menu
+      - generic [ref=e119]:
+        - main [ref=e120]:
+          - generic [ref=e121]:
+            - generic [ref=e123]:
+              - img "chakratones u/chakratones avatar" [ref=e125]
+              - generic [ref=e129]:
+                - heading "chakratones" [level=1] [ref=e132]
+                - paragraph [ref=e133]: u/chakratones
+            - generic [ref=e134]:
+              - generic [ref=e136]:
+                - tablist [ref=e137]:
+                  - tab "Overview" [selected] [ref=e138]:
+                    - link "Overview" [ref=e139] [cursor=pointer]:
+                      - /url: /user/chakratones/
+                      - generic [ref=e143]: Overview
+                  - tab "Posts" [ref=e144]:
+                    - link "Posts" [ref=e145] [cursor=pointer]:
+                      - /url: /user/chakratones/submitted/
+                      - generic [ref=e149]: Posts
+                  - tab "Comments" [ref=e150]:
+                    - link "Comments" [ref=e151] [cursor=pointer]:
+                      - /url: /user/chakratones/comments/
+                      - generic [ref=e155]: Comments
+                - button "forward" [ref=e157] [cursor=pointer]:
+                  - img [ref=e160]
+                  - generic [ref=e162]:
+                    - generic: forward
+                - button "back" [ref=e164] [cursor=pointer]:
+                  - img [ref=e167]
+                  - generic [ref=e169]:
+                    - generic: back
+              - generic:
+                - generic:
+                  - tabpanel
+            - generic [ref=e170]:
+              - generic "chakratones (u/chakratones) - Reddit"
+              - button "Feed options" [ref=e175] [cursor=pointer]:
+                - generic [ref=e177]:
+                  - img [ref=e178]
+                  - text: Feed options
+              - separator [ref=e180]
+              - generic [ref=e181]:
+                - heading "Feed" [level=1] [ref=e183]
+                - generic:
+                  - article "Weekly Community Thread" [ref=e184]:
+                    - generic [ref=e186] [cursor=pointer]:
+                      - link "Thread for chakratones's comment on Weekly Community Thread" [ref=e187]:
+                        - /url: /r/ambientmusic/comments/1razeld/comment/ocdultd/?context=3
+                      - generic [ref=e188]:
+                        - generic [ref=e189]:
+                          - generic [ref=e190]:
+                            - link [ref=e193]:
+                              - /url: /r/ambientmusic/
+                            - generic [ref=e196]:
+                              - link "r/ambientmusic" [ref=e199]:
+                                - /url: /r/ambientmusic/
+                                - generic [ref=e200]: r/ambientmusic
+                              - text: •
+                              - heading "Weekly Community Thread" [level=2] [ref=e201]:
+                                - link "Weekly Community Thread" [ref=e202]:
+                                  - /url: /r/ambientmusic/comments/1razeld/weekly_community_thread/
+                          - generic [ref=e204]:
+                            - generic [ref=e205]:
+                              - link "chakratones" [ref=e207]:
+                                - /url: /user/chakratones/
+                              - text: commented
+                            - time [ref=e209]: 1 mo. ago
+                        - generic [ref=e212]:
+                          - paragraph [ref=e213]: Sound healing app, non-looping-samples, non-AI
+                          - paragraph [ref=e214]: As a point of reference, I am a qualified Reiki practitioner and sound healer and I record music.
+                          - paragraph [ref=e215]: I have an app in public beta right now. It is built from studio-produced music (over 250 hours), all of it original and with real, acoustically recorded instruments (crystal bowls, Tibetan bowls, tuning forks, chimes, monochord, koto etc.).
+                          - paragraph [ref=e216]:
+                            - text: iOS -
+                            - link "https://testflight.apple.com/join/Av89rMPS" [ref=e217]:
+                              - /url: https://testflight.apple.com/join/Av89rMPS
+                          - paragraph [ref=e218]:
+                            - text: Android -
+                            - link "https://play.google.com/apps/testing/com.chakratones.app" [ref=e219]:
+                              - /url: https://play.google.com/apps/testing/com.chakratones.app
+                          - paragraph [ref=e220]: When I was doing research before starting to build the app, I noticed that there were many reviews of existing apps saying things like 'shame it's just looped samples'. So I'm certain that there really is a space for an app with authentic recorded sessions, created and performed with intention, and that it would be beneficial.
+                          - paragraph [ref=e221]: Obviously, from a practitioner's perspective, the caveat is that anything which is streamed is compressed and the vibrations are not felt in the same way as they are in a live environment. However, the creative side of audio engineering and production can both design and fill the space that holds the music, if you see what I mean.
+                          - paragraph [ref=e222]: The app is free to download, and has a free tier. And since it is in public beta, I am looking for feedback before the production version is released.
+                        - generic [ref=e227]:
+                          - generic [ref=e229]:
+                            - button "Upvote" [ref=e230]:
+                              - img [ref=e232]
+                              - generic [ref=e234]:
+                                - generic: Upvote
+                            - generic [ref=e236]: "1"
+                            - button "Downvote" [ref=e237]:
+                              - img [ref=e239]
+                              - generic [ref=e241]:
+                                - generic: Downvote
+                          - link "Reply reply" [ref=e243]:
+                            - /url: /r/ambientmusic/comments/1razeld/comment/ocdultd/?context=3
+                            - generic [ref=e244]:
+                              - img [ref=e246]
+                              - generic [ref=e248]: Reply
+                            - generic [ref=e249]:
+                              - generic: reply
+                          - button "Share" [ref=e252]:
+                            - generic [ref=e253]:
+                              - img [ref=e255]
+                              - generic [ref=e257]: Share
+                          - button "Open user actions" [ref=e261]:
+                            - img [ref=e264]
+                  - separator [ref=e266]
+                  - article "Weekly Community Thread" [ref=e267]:
+                    - generic [ref=e269] [cursor=pointer]:
+                      - link "Thread for chakratones's comment on Weekly Community Thread" [ref=e270]:
+                        - /url: /r/ambientmusic/comments/1rzy5g5/comment/ocdu26n/?context=3
+                      - generic [ref=e271]:
+                        - generic [ref=e272]:
+                          - generic [ref=e273]:
+                            - link [ref=e276]:
+                              - /url: /r/ambientmusic/
+                            - generic [ref=e279]:
+                              - link "r/ambientmusic" [ref=e282]:
+                                - /url: /r/ambientmusic/
+                                - generic [ref=e283]: r/ambientmusic
+                              - text: •
+                              - heading "Weekly Community Thread" [level=2] [ref=e284]:
+                                - link "Weekly Community Thread" [ref=e285]:
+                                  - /url: /r/ambientmusic/comments/1rzy5g5/weekly_community_thread/
+                          - generic [ref=e287]:
+                            - generic [ref=e288]:
+                              - link "chakratones" [ref=e290]:
+                                - /url: /user/chakratones/
+                              - text: commented
+                            - time [ref=e292]: 1 mo. ago
+                        - generic [ref=e295]:
+                          - paragraph [ref=e296]: Sound healing app, non-looping-samples, non-AI
+                          - paragraph [ref=e297]: As a point of reference, I am a qualified Reiki practitioner and sound healer, and I record music.
+                          - paragraph [ref=e298]: I have an app in public beta right now. It is built from studio-produced music (over 250 hours), all of it original and with real, acoustically recorded instruments (crystal bowls, Tibetan bowls, tuning forks, chimes, monochord, koto etc.).
+                          - paragraph [ref=e299]: I won't post download links here so as to keep within the rules, but the Chakratones app public beta is available to download from Testflight (iPhone) and the Play Store (Android)
+                          - paragraph [ref=e300]: When I was doing research before starting to build the app, I noticed that there were many reviews of existing apps saying things like 'shame it's just looped samples'. So I'm certain that there really is a space for an app with authentic recorded sessions, created and performed with intention, and that it would be beneficial.
+                          - paragraph [ref=e301]: Obviously, from a practitioner's perspective, the obvious caveat is that anything which is streamed is compressed and the vibrations are not felt in the same way as they are in a live environment. However, the creative side of audio engineering and production can both design and fill the space that holds the music, if you see what I mean.
+                          - paragraph [ref=e302]: The app is free to download, and has a free tier. And since it is in public beta, I am looking for feedback before the production version is released.
+                        - generic [ref=e307]:
+                          - generic [ref=e309]:
+                            - button "Upvote" [ref=e310]:
+                              - img [ref=e312]
+                              - generic [ref=e314]:
+                                - generic: Upvote
+                            - generic [ref=e316]: "1"
+                            - button "Downvote" [ref=e317]:
+                              - img [ref=e319]
+                              - generic [ref=e321]:
+                                - generic: Downvote
+                          - link "Reply reply" [ref=e323]:
+                            - /url: /r/ambientmusic/comments/1rzy5g5/comment/ocdu26n/?context=3
+                            - generic [ref=e324]:
+                              - img [ref=e326]
+                              - generic [ref=e328]: Reply
+                            - generic [ref=e329]:
+                              - generic: reply
+                          - button "Share" [ref=e332]:
+                            - generic [ref=e333]:
+                              - img [ref=e335]
+                              - generic [ref=e337]: Share
+                          - button "Open user actions" [ref=e341]:
+                            - img [ref=e344]
+                  - separator [ref=e346]
+                  - article "15 MINUTE 7 CHAKRA TUNE-UP - 432Hz CRYSTAL SINGING BOWLS" [ref=e347]:
+                    - generic [ref=e348] [cursor=pointer]:
+                      - link "15 MINUTE 7 CHAKRA TUNE-UP - 432Hz CRYSTAL SINGING BOWLS" [ref=e349]:
+                        - /url: /r/audiomeditation/comments/1buw9hr/15_minute_7_chakra_tuneup_432hz_crystal_singing/
+                        - generic [ref=e350]:
+                          - generic: 15 MINUTE 7 CHAKRA TUNE-UP - 432Hz CRYSTAL SINGING BOWLS
+                      - generic [ref=e351]:
+                        - generic [ref=e352]:
+                          - link "r/audiomeditation" [ref=e355]:
+                            - /url: /r/audiomeditation/
+                            - generic [ref=e359]: r/audiomeditation
+                          - generic [ref=e360]: •
+                          - time [ref=e362]: 2 yr. ago
+                        - generic [ref=e363]:
+                          - button "Join" [ref=e365]
+                          - button "Open user actions" [ref=e369]:
+                            - img [ref=e372]
+                      - heading "15 MINUTE 7 CHAKRA TUNE-UP - 432Hz CRYSTAL SINGING BOWLS" [level=2] [ref=e376]:
+                        - link "15 MINUTE 7 CHAKRA TUNE-UP - 432Hz CRYSTAL SINGING BOWLS" [ref=e377]:
+                          - /url: /r/audiomeditation/comments/1buw9hr/15_minute_7_chakra_tuneup_432hz_crystal_singing/
+                      - button "Play" [ref=e384]:
+                        - generic [ref=e385]: Play
+                      - generic "Actions available for this post" [ref=e386]:
+                        - generic [ref=e389]:
+                          - button "Upvote" [ref=e390]:
+                            - img [ref=e392]
+                            - generic [ref=e394]:
+                              - generic: Upvote
+                          - generic [ref=e396]: "3"
+                          - button "Downvote" [ref=e397]:
+                            - img [ref=e399]
+                            - generic [ref=e401]:
+                              - generic: Downvote
+                        - link "0 Go to comments" [ref=e402]:
+                          - /url: /r/audiomeditation/comments/1buw9hr/15_minute_7_chakra_tuneup_432hz_crystal_singing/
+                          - generic [ref=e403]:
+                            - img [ref=e405]
+                            - generic [ref=e408]: "0"
+                          - generic [ref=e409]:
+                            - generic: Go to comments
+                        - button "Give award" [ref=e411]:
+                          - img [ref=e414]
+                        - button "Share" [ref=e419]:
+                          - generic [ref=e420]:
+                            - img [ref=e422]
+                            - generic [ref=e424]: Share
+                  - separator [ref=e425]
+                  - article "EARTH STAR & HIGHER HEART CHAKRAS - HIGH ENERGIES OF THE COSMOS & UNCOND..." [ref=e426]:
+                    - generic [ref=e427] [cursor=pointer]:
+                      - link "EARTH STAR & HIGHER HEART CHAKRAS - HIGH ENERGIES OF THE COSMOS & UNCOND..." [ref=e428]:
+                        - /url: /r/audiomeditation/comments/18noimx/earth_star_higher_heart_chakras_high_energies_of/
+                        - generic [ref=e429]:
+                          - generic: EARTH STAR & HIGHER HEART CHAKRAS - HIGH ENERGIES OF THE COSMOS & UNCOND...
+                      - generic [ref=e430]:
+                        - generic [ref=e432]:
+                          - generic [ref=e433]:
+                            - link "r/audiomeditation" [ref=e436]:
+                              - /url: /r/audiomeditation/
+                              - generic [ref=e440]: r/audiomeditation
+                            - generic [ref=e441]: •
+                            - time [ref=e443]: 2 yr. ago
+                          - generic [ref=e444]:
+                            - button "Join" [ref=e446]
+                            - button "Open user actions" [ref=e450]:
+                              - img [ref=e453]
+                        - generic [ref=e455]:
+                          - link "EARTH STAR & HIGHER HEART CHAKRAS - HIGH ENERGIES OF THE COSMOS & UNCOND..." [ref=e457]:
+                            - /url: /r/audiomeditation/comments/18noimx/earth_star_higher_heart_chakras_high_energies_of/
+                          - link "https://youtube.com/live/w5GuhcBUCIo?si=sDUo67bOPAQFvKs6" [ref=e460]:
+                            - /url: https://youtube.com/live/w5GuhcBUCIo?si=sDUo67bOPAQFvKs6
+                        - generic [ref=e462]:
+                          - link "r/audiomeditation - EARTH STAR & HIGHER HEART CHAKRAS - HIGH ENERGIES OF THE COSMOS & UNCOND..." [ref=e463]:
+                            - /url: https://youtube.com/live/w5GuhcBUCIo?si=sDUo67bOPAQFvKs6
+                            - img "r/audiomeditation - EARTH STAR & HIGHER HEART CHAKRAS - HIGH ENERGIES OF THE COSMOS & UNCOND..." [ref=e464]
+                          - generic:
+                            - generic:
+                              - img
+                      - generic "Actions available for this post" [ref=e466]:
+                        - generic [ref=e469]:
+                          - button "Upvote" [ref=e470]:
+                            - img [ref=e472]
+                            - generic [ref=e474]:
+                              - generic: Upvote
+                          - generic [ref=e476]: "1"
+                          - button "Downvote" [ref=e477]:
+                            - img [ref=e479]
+                            - generic [ref=e481]:
+                              - generic: Downvote
+                        - link "0 Go to comments" [ref=e482]:
+                          - /url: /r/audiomeditation/comments/18noimx/earth_star_higher_heart_chakras_high_energies_of/
+                          - generic [ref=e483]:
+                            - img [ref=e485]
+                            - generic [ref=e488]: "0"
+                          - generic [ref=e489]:
+                            - generic: Go to comments
+                        - button "Give award" [ref=e491]:
+                          - img [ref=e494]
+                        - button "Share" [ref=e499]:
+                          - generic [ref=e500]:
+                            - img [ref=e502]
+                            - generic [ref=e504]: Share
+                  - separator [ref=e505]
+                  - article "WINTER SOLSTICE SATURNALIA - TIBETAN BOWL SOUNDHEALING MEDITATION" [ref=e506]:
+                    - generic [ref=e507] [cursor=pointer]:
+                      - link "WINTER SOLSTICE SATURNALIA - TIBETAN BOWL SOUNDHEALING MEDITATION" [ref=e508]:
+                        - /url: /r/audiomeditation/comments/18nofw8/winter_solstice_saturnalia_tibetan_bowl/
+                        - generic [ref=e509]:
+                          - generic: WINTER SOLSTICE SATURNALIA - TIBETAN BOWL SOUNDHEALING MEDITATION
+                      - generic [ref=e510]:
+                        - generic [ref=e512]:
+                          - generic [ref=e513]:
+                            - link "r/audiomeditation" [ref=e516]:
+                              - /url: /r/audiomeditation/
+                              - generic [ref=e520]: r/audiomeditation
+                            - generic [ref=e521]: •
+                            - time [ref=e523]: 2 yr. ago
+                          - generic [ref=e524]:
+                            - button "Join" [ref=e526]
+                            - button "Open user actions" [ref=e530]:
+                              - img [ref=e533]
+                        - generic [ref=e535]:
+                          - link "WINTER SOLSTICE SATURNALIA - TIBETAN BOWL SOUNDHEALING MEDITATION" [ref=e537]:
+                            - /url: /r/audiomeditation/comments/18nofw8/winter_solstice_saturnalia_tibetan_bowl/
+                          - link "https://youtube.com/live/GDCb2atl1kQ?si=KfSQBVY7qzmb8kI3" [ref=e540]:
+                            - /url: https://youtube.com/live/GDCb2atl1kQ?si=KfSQBVY7qzmb8kI3
+                        - generic [ref=e542]:
+                          - link "r/audiomeditation - WINTER SOLSTICE SATURNALIA - TIBETAN BOWL SOUNDHEALING MEDITATION" [ref=e543]:
+                            - /url: https://youtube.com/live/GDCb2atl1kQ?si=KfSQBVY7qzmb8kI3
+                            - img "r/audiomeditation - WINTER SOLSTICE SATURNALIA - TIBETAN BOWL SOUNDHEALING MEDITATION" [ref=e544]
+                          - generic:
+                            - generic:
+                              - img
+                      - generic "Actions available for this post" [ref=e546]:
+                        - generic [ref=e549]:
+                          - button "Upvote" [ref=e550]:
+                            - img [ref=e552]
+                            - generic [ref=e554]:
+                              - generic: Upvote
+                          - generic [ref=e556]: "1"
+                          - button "Downvote" [ref=e557]:
+                            - img [ref=e559]
+                            - generic [ref=e561]:
+                              - generic: Downvote
+                        - link "0 Go to comments" [ref=e562]:
+                          - /url: /r/audiomeditation/comments/18nofw8/winter_solstice_saturnalia_tibetan_bowl/
+                          - generic [ref=e563]:
+                            - img [ref=e565]
+                            - generic [ref=e568]: "0"
+                          - generic [ref=e569]:
+                            - generic: Go to comments
+                        - button "Give award" [ref=e571]:
+                          - img [ref=e574]
+                        - button "Share" [ref=e579]:
+                          - generic [ref=e580]:
+                            - img [ref=e582]
+                            - generic [ref=e584]: Share
+                  - separator [ref=e585]
+                  - article "WINTER SOLSTICE TUNING FORK SOUNDHEALING - CONNECT WITH ANGELIC REALMS" [ref=e586]:
+                    - generic [ref=e587] [cursor=pointer]:
+                      - link "WINTER SOLSTICE TUNING FORK SOUNDHEALING - CONNECT WITH ANGELIC REALMS" [ref=e588]:
+                        - /url: /r/audiomeditation/comments/18mhttm/winter_solstice_tuning_fork_soundhealing_connect/
+                        - generic [ref=e589]:
+                          - generic: WINTER SOLSTICE TUNING FORK SOUNDHEALING - CONNECT WITH ANGELIC REALMS
+                      - generic [ref=e590]:
+                        - generic [ref=e591]:
+                          - link "r/audiomeditation" [ref=e594]:
+                            - /url: /r/audiomeditation/
+                            - generic [ref=e598]: r/audiomeditation
+                          - generic [ref=e599]: •
+                          - time [ref=e601]: 2 yr. ago
+                        - generic [ref=e602]:
+                          - button "Join" [ref=e604]
+                          - button "Open user actions" [ref=e608]:
+                            - img [ref=e611]
+                      - heading "WINTER SOLSTICE TUNING FORK SOUNDHEALING - CONNECT WITH ANGELIC REALMS" [level=2] [ref=e615]:
+                        - link "WINTER SOLSTICE TUNING FORK SOUNDHEALING - CONNECT WITH ANGELIC REALMS" [ref=e616]:
+                          - /url: /r/audiomeditation/comments/18mhttm/winter_solstice_tuning_fork_soundhealing_connect/
+                      - button "Play" [ref=e623]:
+                        - generic [ref=e624]: Play
+                      - generic "Actions available for this post" [ref=e625]:
+                        - generic [ref=e628]:
+                          - button "Upvote" [ref=e629]:
+                            - img [ref=e631]
+                            - generic [ref=e633]:
+                              - generic: Upvote
+                          - generic [ref=e635]: "2"
+                          - button "Downvote" [ref=e636]:
+                            - img [ref=e638]
+                            - generic [ref=e640]:
+                              - generic: Downvote
+                        - link "0 Go to comments" [ref=e641]:
+                          - /url: /r/audiomeditation/comments/18mhttm/winter_solstice_tuning_fork_soundhealing_connect/
+                          - generic [ref=e642]:
+                            - img [ref=e644]
+                            - generic [ref=e647]: "0"
+                          - generic [ref=e648]:
+                            - generic: Go to comments
+                        - button "Give award" [ref=e650]:
+                          - img [ref=e653]
+                        - button "Share" [ref=e658]:
+                          - generic [ref=e659]:
+                            - img [ref=e661]
+                            - generic [ref=e663]: Share
+                  - separator [ref=e664]
+                  - article "HEART BRAIN COHERENCE & ALIGNMENT - TUNING FORKS CRYSTAL BOWLS TIBETAN B..." [ref=e665]:
+                    - generic [ref=e666] [cursor=pointer]:
+                      - link "HEART BRAIN COHERENCE & ALIGNMENT - TUNING FORKS CRYSTAL BOWLS TIBETAN B..." [ref=e667]:
+                        - /url: /r/audiomeditation/comments/18ils66/heart_brain_coherence_alignment_tuning_forks/
+                        - generic [ref=e668]:
+                          - generic: HEART BRAIN COHERENCE & ALIGNMENT - TUNING FORKS CRYSTAL BOWLS TIBETAN B...
+                      - generic [ref=e669]:
+                        - generic [ref=e670]:
+                          - link "r/audiomeditation" [ref=e673]:
+                            - /url: /r/audiomeditation/
+                            - generic [ref=e677]: r/audiomeditation
+                          - generic [ref=e678]: •
+                          - time [ref=e680]: 2 yr. ago
+                        - generic [ref=e681]:
+                          - button "Join" [ref=e683]
+                          - button "Open user actions" [ref=e687]:
+                            - img [ref=e690]
+                      - heading "HEART BRAIN COHERENCE & ALIGNMENT - TUNING FORKS CRYSTAL BOWLS TIBETAN B..." [level=2] [ref=e694]:
+                        - link "HEART BRAIN COHERENCE & ALIGNMENT - TUNING FORKS CRYSTAL BOWLS TIBETAN B..." [ref=e695]:
+                          - /url: /r/audiomeditation/comments/18ils66/heart_brain_coherence_alignment_tuning_forks/
+                      - button "Play" [ref=e702]:
+                        - generic [ref=e703]: Play
+                      - generic "Actions available for this post" [ref=e704]:
+                        - generic [ref=e707]:
+                          - button "Upvote" [ref=e708]:
+                            - img [ref=e710]
+                            - generic [ref=e712]:
+                              - generic: Upvote
+                          - generic [ref=e714]: "1"
+                          - button "Downvote" [ref=e715]:
+                            - img [ref=e717]
+                            - generic [ref=e719]:
+                              - generic: Downvote
+                        - link "0 Go to comments" [ref=e720]:
+                          - /url: /r/audiomeditation/comments/18ils66/heart_brain_coherence_alignment_tuning_forks/
+                          - generic [ref=e721]:
+                            - img [ref=e723]
+                            - generic [ref=e726]: "0"
+                          - generic [ref=e727]:
+                            - generic: Go to comments
+                        - button "Give award" [ref=e729]:
+                          - img [ref=e732]
+                        - button "Share" [ref=e737]:
+                          - generic [ref=e738]:
+                            - img [ref=e740]
+                            - generic [ref=e742]: Share
+                  - separator [ref=e743]
+                  - article "12:12 PORTAL - NEW MOON IN SAGITTARIUS - CHIRON - MERCURY RETROGRADE SOU..." [ref=e744]:
+                    - generic [ref=e745] [cursor=pointer]:
+                      - link "12:12 PORTAL - NEW MOON IN SAGITTARIUS - CHIRON - MERCURY RETROGRADE SOU..." [ref=e746]:
+                        - /url: /r/audiomeditation/comments/18fkeoq/1212_portal_new_moon_in_sagittarius_chiron/
+                        - generic [ref=e747]:
+                          - generic: 12:12 PORTAL - NEW MOON IN SAGITTARIUS - CHIRON - MERCURY RETROGRADE SOU...
+                      - generic [ref=e748]:
+                        - generic [ref=e749]:
+                          - link "r/audiomeditation" [ref=e752]:
+                            - /url: /r/audiomeditation/
+                            - generic [ref=e756]: r/audiomeditation
+                          - generic [ref=e757]: •
+                          - time [ref=e759]: 2 yr. ago
+                        - generic [ref=e760]:
+                          - button "Join" [ref=e762]
+                          - button "Open user actions" [ref=e766]:
+                            - img [ref=e769]
+                      - heading "12:12 PORTAL - NEW MOON IN SAGITTARIUS - CHIRON - MERCURY RETROGRADE SOU..." [level=2] [ref=e773]:
+                        - link "12:12 PORTAL - NEW MOON IN SAGITTARIUS - CHIRON - MERCURY RETROGRADE SOU..." [ref=e774]:
+                          - /url: /r/audiomeditation/comments/18fkeoq/1212_portal_new_moon_in_sagittarius_chiron/
+                      - button "Play" [ref=e781]:
+                        - generic [ref=e782]: Play
+                      - generic "Actions available for this post" [ref=e783]:
+                        - generic [ref=e786]:
+                          - button "Upvote" [ref=e787]:
+                            - img [ref=e789]
+                            - generic [ref=e791]:
+                              - generic: Upvote
+                          - generic [ref=e793]: "2"
+                          - button "Downvote" [ref=e794]:
+                            - img [ref=e796]
+                            - generic [ref=e798]:
+                              - generic: Downvote
+                        - link "0 Go to comments" [ref=e799]:
+                          - /url: /r/audiomeditation/comments/18fkeoq/1212_portal_new_moon_in_sagittarius_chiron/
+                          - generic [ref=e800]:
+                            - img [ref=e802]
+                            - generic [ref=e805]: "0"
+                          - generic [ref=e806]:
+                            - generic: Go to comments
+                        - button "Give award" [ref=e808]:
+                          - img [ref=e811]
+                        - button "Share" [ref=e816]:
+                          - generic [ref=e817]:
+                            - img [ref=e819]
+                            - generic [ref=e821]: Share
+                  - separator [ref=e822]
+                - img [ref=e828]
+        - generic [ref=e841]:
+          - complementary "Profile information" [ref=e843]:
+            - generic [ref=e845]:
+              - generic [ref=e846]:
+                - heading "chakratones" [level=2] [ref=e847]: chakratones
+                - button "Open overflow menu" [ref=e851] [cursor=pointer]:
+                  - img [ref=e854]
+              - generic [ref=e857]:
+                - button "Follow" [ref=e860] [cursor=pointer]:
+                  - generic [ref=e861]:
+                    - img [ref=e863]
+                    - generic [ref=e866]: Follow
+                - link "Open chat" [ref=e868] [cursor=pointer]:
+                  - /url: https://chat.reddit.com/user/t2_92b1gn6f
+                  - generic [ref=e869]:
+                    - img [ref=e871]
+                    - generic [ref=e873]: Start Chat
+              - generic [ref=e874]:
+                - generic [ref=e875]:
+                  - paragraph [ref=e876]:
+                    - generic [ref=e877]:
+                      - generic: "471"
+                  - paragraph [ref=e878]: Karma
+                - generic [ref=e880] [cursor=pointer]:
+                  - paragraph [ref=e881]: "414"
+                  - paragraph [ref=e882]: Contributions
+                - generic [ref=e883]:
+                  - paragraph [ref=e884]:
+                    - time [ref=e887]: 5 y
+                  - paragraph [ref=e888]: Reddit Age
+                - generic [ref=e890] [cursor=pointer]:
+                  - paragraph [ref=e891]:
+                    - generic [ref=e900]: "3"
+                  - paragraph [ref=e901]: Active in >
+              - separator [ref=e902]
+              - generic [ref=e903]: achievements
+              - generic [ref=e904]:
+                - generic [ref=e905]:
+                  - generic [ref=e906]:
+                    - generic [ref=e908] [cursor=pointer]:
+                      - img "Banana Enthusiast" [ref=e909]
+                      - img [ref=e911]
+                    - generic [ref=e914] [cursor=pointer]:
+                      - img "Feed Finder" [ref=e915]
+                      - img [ref=e917]
+                    - generic [ref=e920] [cursor=pointer]:
+                      - img "Top 25% Poster" [ref=e921]
+                      - img [ref=e923]
+                  - generic [ref=e925]:
+                    - generic [ref=e927] [cursor=pointer]: Banana Enthusiast,
+                    - generic [ref=e929] [cursor=pointer]: Feed Finder,
+                    - generic [ref=e931] [cursor=pointer]: Top 25% Poster,
+                    - generic [ref=e933] [cursor=pointer]: +19 more
+                - generic [ref=e935] [cursor=pointer]: View your achievements
+              - separator [ref=e936]
+              - heading "Trophy Case" [level=2] [ref=e937]
+              - menu [ref=e939]:
+                - menuitem "Five-Year Club":
+                  - generic:
+                    - generic:
+                      - generic: Five-Year Club
+                - menuitem "Verified Email":
+                  - generic:
+                    - generic:
+                      - generic: Verified Email
+          - generic [ref=e941]:
+            - link "Reddit Rules" [ref=e944] [cursor=pointer]:
+              - /url: https://www.redditinc.com/policies/content-policy
+            - link "Privacy Policy" [ref=e947] [cursor=pointer]:
+              - /url: https://www.reddit.com/policies/privacy-policy
+            - link "User Agreement" [ref=e950] [cursor=pointer]:
+              - /url: https://www.redditinc.com/policies/user-agreement
+            - link "Your Privacy Choices" [ref=e953] [cursor=pointer]:
+              - /url: https://support.reddithelp.com/hc/articles/43980704794004
+            - link "Accessibility" [ref=e956] [cursor=pointer]:
+              - /url: https://support.reddithelp.com/hc/sections/38303584022676-Accessibility
+            - link "Reddit, Inc. © 2026. All rights reserved." [ref=e958] [cursor=pointer]:
+              - /url: https://redditinc.com

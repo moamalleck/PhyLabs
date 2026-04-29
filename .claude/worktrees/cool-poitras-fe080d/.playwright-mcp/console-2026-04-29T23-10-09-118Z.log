@@ -1,0 +1,5 @@
+[     770ms] [LOG] Navigation listeners online @ https://www.redditstatic.com/shreddit/en-US/8DHMC1YI3r.js:0
+[    1915ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://www.reddit.com/chat/user/t2_92b1gn6f:0
+[    2135ms] [INFO] Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner. @ https://www.reddit.com/chat/user/t2_92b1gn6f:0
+[    4671ms] [ERROR] Failed to load resource: the server responded with a status of 405 () @ https://www.reddit.com/svc/matrix-web/v2j?csrf_token=bdc59a6ce7c05e0b7c60fd99c283b78e:0
+[   31765ms] [ERROR] Failed to load resource: the server responded with a status of 403 () @ https://matrix.redditspace.com/_matrix/client/v3/createRoom:0

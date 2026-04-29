@@ -1,0 +1,4 @@
+[    3653ms] [WARNING] <link rel=preload> must have a valid `as` value @ https://www.reddit.com/user/chakratones/:2230
+[    4595ms] [LOG] Navigation listeners online @ https://www.redditstatic.com/shreddit/en-US/8DHMC1YI3r.js:0
+[   13636ms] [WARNING] <meta name="apple-mobile-web-app-capable" content="yes"> is deprecated. Please include <meta name="mobile-web-app-capable" content="yes"> @ https://www.reddit.com/user/chakratones/:0
+[   13724ms] [INFO] Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner. @ https://www.reddit.com/user/chakratones/:0

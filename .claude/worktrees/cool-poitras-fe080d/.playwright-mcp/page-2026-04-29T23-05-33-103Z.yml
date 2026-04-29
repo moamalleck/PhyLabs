@@ -1,0 +1,106 @@
+- generic [active] [ref=e1]:
+  - link "Skip to main content" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+    - generic [ref=e4]: Skip to main content
+  - generic [ref=e6]:
+    - generic:
+      - generic [ref=e7]:
+        - generic: Send a message
+      - banner [ref=e10]:
+        - navigation [ref=e11]:
+          - generic [ref=e12]:
+            - button "Open menu" [ref=e16] [cursor=pointer]:
+              - img [ref=e19]
+              - generic [ref=e21]:
+                - generic: Open menu
+            - link "Home" [ref=e26] [cursor=pointer]:
+              - /url: /
+              - img [ref=e28]
+          - search [ref=e45]:
+            - generic [ref=e47]:
+              - img [ref=e50]
+              - textbox "Ask" [ref=e53]:
+                - /placeholder: Find anything
+              - separator [ref=e54]
+              - link "Ask" [ref=e58] [cursor=pointer]:
+                - /url: /answers/
+                - generic [ref=e59]:
+                  - img [ref=e61]
+                  - generic [ref=e63]: Ask
+          - generic [ref=e64]:
+            - generic [ref=e65]:
+              - button "Open chat" [ref=e71] [cursor=pointer]:
+                - img [ref=e74]
+                - generic [ref=e76]:
+                  - generic: Open chat
+              - link "Create post" [ref=e81] [cursor=pointer]:
+                - /url: /submit
+                - generic [ref=e82]:
+                  - img [ref=e84]
+                  - generic [ref=e86]: Create
+                - generic [ref=e87]:
+                  - generic: Create post
+              - generic [ref=e89]:
+                - link "Open inbox" [ref=e92] [cursor=pointer]:
+                  - /url: /notifications
+                  - img [ref=e95]
+                  - generic [ref=e97]:
+                    - generic: Open inbox
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: "1"
+            - button "User Avatar Expand user menu" [ref=e102] [cursor=pointer]:
+              - img "User Avatar" [ref=e110]
+              - generic [ref=e112]:
+                - generic: Expand user menu
+      - generic [ref=e116]:
+        - main [ref=e117]:
+          - generic [ref=e118]:
+            - generic "Send a message"
+            - heading "Send a message" [level=1] [ref=e119]
+            - generic [ref=e120]:
+              - generic:
+                - generic [ref=e121]:
+                  - heading "Sender" [level=2] [ref=e122]
+                  - button "u/This-Security3925 avatar u/This-Security3925" [ref=e125] [cursor=pointer]:
+                    - generic [ref=e128]:
+                      - img "u/This-Security3925 avatar" [ref=e133]
+                      - text: u/This-Security3925
+                - generic [ref=e140]:
+                  - generic:
+                    - generic: Send to
+                    - text: "*"
+                  - textbox "Send to" [ref=e141]: chakratones
+                - generic [ref=e143]:
+                  - generic [ref=e147]:
+                    - generic:
+                      - generic: Title
+                      - text: "*"
+                    - textbox "Title" [ref=e148]
+                  - generic [ref=e151]: 0/100
+                - generic [ref=e153]:
+                  - generic [ref=e157]:
+                    - generic:
+                      - generic: Message
+                      - text: "*"
+                    - textbox "Message" [ref=e159]
+                  - generic [ref=e162]: 0/10000
+                - generic [ref=e164]:
+                  - button "Send" [disabled]:
+                    - generic:
+                      - generic: Send
+        - generic [ref=e166]:
+          - link "Reddit Rules" [ref=e169] [cursor=pointer]:
+            - /url: https://www.redditinc.com/policies/content-policy
+          - link "Privacy Policy" [ref=e172] [cursor=pointer]:
+            - /url: https://www.reddit.com/policies/privacy-policy
+          - link "User Agreement" [ref=e175] [cursor=pointer]:
+            - /url: https://www.redditinc.com/policies/user-agreement
+          - link "Your Privacy Choices" [ref=e178] [cursor=pointer]:
+            - /url: https://support.reddithelp.com/hc/articles/43980704794004
+          - link "Accessibility" [ref=e181] [cursor=pointer]:
+            - /url: https://support.reddithelp.com/hc/sections/38303584022676-Accessibility
+          - generic [ref=e182]: •
+          - link "Reddit, Inc. © 2026. All rights reserved." [ref=e184] [cursor=pointer]:
+            - /url: https://redditinc.com
