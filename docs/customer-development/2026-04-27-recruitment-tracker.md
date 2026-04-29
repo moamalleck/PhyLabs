@@ -108,7 +108,9 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 
 | Date | Prospect | Platform | Method | Message Version | Response | Notes |
 |------|----------|----------|--------|-----------------|----------|-------|
-| — | — | — | — | — | — | Awaiting dispatch approval |
+| 2026-04-29 | u/chakratones | Reddit | Message compose — BLOCKED. Comment posted on their PA thread. Alt: hello@koanmedia.io | v2 (edited) | Pending | DMs fully restricted. Comment live on r/Dermatology post. |
+| 2026-04-29 | u/Snapcracklepayme | Reddit | Message compose — sent ✅ | v2 (edited) | Pending | |
+| 2026-04-29 | u/crossfit6 | Reddit | Message compose — sent ✅ | v2 (edited) | Pending | |
 
 ---
 
@@ -116,14 +118,14 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 
 | Prospect | Outreach Sent | Response Received | Interview Scheduled | Interview Date |
 |----------|---------------|-------------------|--------------------|--------------  |
-| u/chakratones | — | — | — | — |
-| u/Snapcracklepayme | — | — | — | — |
+| u/chakratones | 2026-04-29 (comment) | — | — | — |
+| u/Snapcracklepayme | 2026-04-29 | — | — | — |
 | Samir Master MD | — | — | — | — |
 | Heather D. Rogers MD | — | — | — | — |
 | Elie Levy | — | — | — | — |
 | Michael Li | — | — | — | — |
 | Shaka Hatcher | — | — | — | — |
-| u/crossfit6 | — | — | — | — |
+| u/crossfit6 | 2026-04-29 | — | — | — |
 
 ---
 
@@ -131,7 +133,7 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 
 | Metric | Target | Actual |
 |--------|--------|--------|
-| Outreach sent | 8 | 0 |
+| Outreach sent | 8 | 3 (Reddit) |
 | Response rate | 30–50% (2–4 responses) | — |
 | Interviews scheduled | 3–5 | — |
 | Interviews completed | 3–5 | — |
