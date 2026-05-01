@@ -1,19 +1,20 @@
 # PhysicianLabs: Problem Clarity Document
 **Date:** 2026-04-30
+**Revised:** 2026-05-01
 **Job:** problem-statement-crystallization
-**Status:** Draft -- ready for customer validation
+**Status:** Revised per founder feedback -- ready for customer validation
 
 ---
 
 ## Executive Summary
 
-Physicians who decide to open their first independent practice face a complete operational information gap during the 6 to 12 months before launch because no structured end-to-end guide exists for the 50+ business, legal, and administrative steps required to reach a billable, cash-flow-positive clinic. The target customer is any physician (dermatology, physiotherapy, or chiropractic) who has made the decision to go independent but has not yet opened their practice.
+Physicians who decide to open their first independent practice face a complete operational information gap during the 6 to 12 months before launch because no structured end-to-end guide exists for the 50+ business, legal, and administrative steps required to reach a billable, patient-generating, cash-flow-positive clinic. This includes not only practice setup and credentialing, but also patient acquisition: how to choose marketing channels, build a patient funnel, and track pipeline intake from the start. The primary wedge targets low capital-expenditure specialties with high operational complexity (dermatology and physiotherapy first; chiropractic and mental health secondarily) in the pre-launch window.
 
 ---
 
 ## 1. Problem Statement
 
-> **Physicians who decide to open their first independent practice face a complete operational information gap during the 6 to 12 months before launch because no structured end-to-end guide exists for the 50+ business, legal, and administrative steps required to reach a billable, cash-flow-positive clinic.**
+> **Physicians who decide to open their first independent practice face a complete operational information gap during the 6 to 12 months before launch because no structured end-to-end guide exists for the 50+ business, legal, administrative, and patient acquisition steps required to reach a billable, patient-generating, cash-flow-positive clinic.**
 
 ### What specifically breaks
 
@@ -23,7 +24,9 @@ The core failure is an information vacuum. The physician knows they want to go i
 - Payer credentialing (90 to 120 day processing time that must start immediately)
 - EHR selection and billing configuration
 - Working capital planning for the 30 to 90 day payment lag after first patient
-- Facility, staffing, and patient acquisition setup
+- Facility and staffing setup
+- Patient acquisition: which marketing channels to invest in, how to build a referral network, and where their first patients will come from
+- Patient pipeline visibility: understanding the intake funnel, tracking conversion from inquiry to booked visit, and identifying where prospective patients drop off
 
 The result is a predictable cash crisis at months 2 to 4 post-opening. 65% of clinics open without full payer enrollment. 92% experience cash flow problems in year one.
 
@@ -37,7 +40,7 @@ No structured resource covers the full operational launch sequence for a new ind
 
 ### Behavioral Definition
 
-> **Physicians (dermatology, physiotherapy, or chiropractic) who have made the decision to open their first independent clinic and are in the pre-launch window: decision made, clinic not yet open.**
+> **Physicians who have made the decision to open their first independent clinic and are in the pre-launch window: decision made, clinic not yet open. Primary wedge: low capital-expenditure specialties with high operational complexity.**
 
 ### How to recognize this customer in the wild
 
@@ -55,9 +58,15 @@ No structured resource covers the full operational launch sequence for a new ind
 - Physicians who delegated 100% of setup to a practice manager from day one
 - Residents or fellows who have not yet decided to go independent (too early)
 
-### Specialty note
+### Specialty targeting
 
-No gut-sense differential between dermatology, physiotherapy, and chiropractic yet. The first 5 interviews should explicitly test which specialty experiences this most acutely. Do not pre-commit to a beachhead specialty before interview evidence exists.
+**Beachhead wedge (primary):** Dermatology and physiotherapy. Low capital expenditure (no heavy equipment), high operational complexity, strong independent practice culture, and insurance-dependent revenue cycles.
+
+**Secondary wedge:** Chiropractic and mental health. Similar low-capex / high-complexity profile; slightly lower insurance complexity for some mental health practitioners (higher private-pay mix) but same information vacuum on the business and patient acquisition side.
+
+**Broadening principle:** Any specialty that is low capital-expenditure intensive (no heavy imaging equipment, surgical suites, or lab infrastructure) while carrying significant operational setup complexity is a valid future expansion target. Derms and PTs are the entry point because of strong independent practice culture and insurance billing pain; the model is replicable across the broader low-capex category without product redesign.
+
+Within the primary wedge, no specialty differential has been confirmed by interviews yet. The first 5 conversations should surface whether derm or PT experiences the information vacuum more acutely.
 
 ---
 
@@ -67,7 +76,7 @@ No gut-sense differential between dermatology, physiotherapy, and chiropractic y
 
 This tests observable past behavior, not a counterfactual. "Would you have paid?" is not a valid signal. Money or time already spent on the problem confirms both the problem and the market.
 
-A secondary behavioral signal: *"Did you make a mistake during setup that cost you money or time you could not recover?"* A specific story here confirms intensity.
+A secondary behavioral signal: emotional and narrative language in the story itself. When a physician uses charged language ("I had no idea," "I was completely lost," "we almost had to close") without being prompted, that confirms the problem validity independently of any purchase behavior. Listen for the emotional texture of the answer, not just the facts. Strong stories with emotional language are confirming evidence even before a wallet moment is identified.
 
 ---
 
@@ -107,6 +116,7 @@ Minimum conversations before drawing conclusions: **5**.
 | Which specialty experiences this most acutely? | MEDIUM -- determines beachhead priority | Compare Q4 answers across derm, PT, chiro interviewees |
 | "No structured guide" is the right framing vs. "I didn't know credentialing takes 90 days" | MEDIUM -- determines problem scope | Listen for whether credentialing surfaces unprompted in first 5 interviews |
 | Physicians will pay before they open (not just post-crisis) | HIGH -- changes timing of sales motion entirely | Look for pre-crisis vs. rescue-mode spending in interview answers |
+| Patient acquisition is part of the launch information vacuum, not a separate post-launch problem | MEDIUM -- determines whether patient pipeline tools belong in the wedge product or the upsell | Ask: "How did you think about where your first patients would come from before you opened?" |
 
 ---
 
@@ -125,6 +135,10 @@ All questions target past behavior. Do not use hypotheticals.
 6. "When you hit a wall operationally, what did you actually do? Who did you call? What did you search?"
 7. "Did you ever pay anyone specifically to help you figure out the business or operational side (not the clinical side)?"
 8. "Was there anything you wish you had known 6 months earlier? What happened because you did not know it?"
+
+### Patient acquisition probe (new pain cluster)
+10. "Before you opened, how did you think about where your first patients would come from? What did you actually do to get them?"
+11. "Do you have a clear picture today of which channels are bringing patients in and which are not worth the time?"
 
 ### Wallet moment probe
 9. "Was there a specific moment where you felt most in over your head? What was happening at that moment?"
@@ -174,7 +188,7 @@ Use the qualification criteria in Section 2. Prioritize prospects who are: in th
 Run after interview 2. Input: interview notes. Output: ranked pain clusters mapped to the four open assumptions in Section 6.
 
 ### For `process-interview-notes`
-After each interview, capture: (a) whether the information vacuum was mentioned unprompted, (b) any money or time spent on the problem, (c) a wallet moment story if present, and (d) which specific step caused the most pain.
+After each interview, capture: (a) whether the information vacuum was mentioned unprompted, (b) any money or time spent on the problem, (c) a wallet moment story if present, (d) which specific step caused the most pain, and (e) whether patient acquisition (marketing channel choice, pipeline visibility, intake tracking) was mentioned as part of the launch confusion or as a separate ongoing problem.
 
 ---
 
