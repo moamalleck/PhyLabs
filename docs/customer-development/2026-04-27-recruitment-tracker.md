@@ -111,6 +111,11 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 | 2026-04-29 | u/chakratones | Reddit | Message compose — BLOCKED. Comment posted on their PA thread. Alt: hello@koanmedia.io | v2 (edited) | Pending | DMs fully restricted. Comment live on r/Dermatology post. |
 | 2026-04-29 | u/Snapcracklepayme | Reddit | Message compose — sent ✅ | v2 (edited) | Pending | |
 | 2026-04-29 | u/crossfit6 | Reddit | Message compose — sent ✅ | v2 (edited) | Pending | |
+| 2026-04-29 | Samir Master MD | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 213 chars |
+| 2026-04-30 | Heather D. Rogers MD | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 266 chars |
+| 2026-04-30 | Elie Levy | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 199 chars |
+| 2026-04-30 | Michael Li | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 205 chars |
+| 2026-04-30 | Shaka Hatcher | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 243 chars |
 
 ---
 
@@ -120,11 +125,11 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 |----------|---------------|-------------------|--------------------|--------------  |
 | u/chakratones | 2026-04-29 (comment) | — | — | — |
 | u/Snapcracklepayme | 2026-04-29 | — | — | — |
-| Samir Master MD | — | — | — | — |
-| Heather D. Rogers MD | — | — | — | — |
-| Elie Levy | — | — | — | — |
-| Michael Li | — | — | — | — |
-| Shaka Hatcher | — | — | — | — |
+| Samir Master MD | 2026-04-29 | — | — | — |
+| Heather D. Rogers MD | 2026-04-30 | — | — | — |
+| Elie Levy | 2026-04-30 | — | — | — |
+| Michael Li | 2026-04-30 | — | — | — |
+| Shaka Hatcher | 2026-04-30 | — | — | — |
 | u/crossfit6 | 2026-04-29 | — | — | — |
 
 ---
@@ -133,7 +138,7 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 
 | Metric | Target | Actual |
 |--------|--------|--------|
-| Outreach sent | 8 | 3 (Reddit) |
+| Outreach sent | 8 | 8 ✅ (3 Reddit + 5 LinkedIn) |
 | Response rate | 30–50% (2–4 responses) | — |
 | Interviews scheduled | 3–5 | — |
 | Interviews completed | 3–5 | — |
