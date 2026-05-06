@@ -1,7 +1,7 @@
 ---
 author: ash.malleck@gmail.com
 date: 2026-04-30
-synthesized:
+synthesized: 2026-05-06
 ---
 
 # Postmortem: Marketing Strategy Definition - PhysicianLabs Launch
