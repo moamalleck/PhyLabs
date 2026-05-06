@@ -1,7 +1,7 @@
 ---
 author: ash.malleck@gmail.com
 date: 2026-04-23
-synthesized:
+synthesized: 2026-05-06
 ---
 
 # Postmortem: PhysicianLabs Marketing Website — Session 2026-04-23
