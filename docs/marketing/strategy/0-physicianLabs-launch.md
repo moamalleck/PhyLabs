@@ -1,156 +1,142 @@
-# Marketing Strategy Brief: PhysicianLabs Launch
-**Date:** 2026-04-30
+# Marketing Strategy Brief: PhysicianLabs Launch — Design Partner Recruitment
+**Date:** 2026-05-06 (revised from 2026-04-30)
 **Job:** marketing-strategy-definition
 **Feature:** PhysicianLabs Launch (full product)
-**Goal:** Sign 3 to 6 committed pilot clinics by May 22, 2026
+**Goal:** Recruit 3 design partners by May 22, 2026; build POC with them; pilot by end of May
+**Issue:** 0 (gap: no GitHub issue exists for this work — create one before the next job run)
 
 ---
 
 ## Bottom Line
 
-PhysicianLabs Launch is the guided operating system for physicians opening their first independent clinic. The launch goal is not brand awareness; it is direct pilot recruitment. Every tactic below is chosen to generate one-on-one conversations with physicians in the decision-to-independent window, not impressions.
+This brief replaces the pilot recruitment framing from April 30 with a design partner framing. The goal is not to find customers for a finished product — it is to find three physicians who will co-build the product with us. Every tactic targets a specific psychographic: opinion-leader practitioners who, when they hit a wall, want to fix it for everyone, not just themselves. The May 22 deadline remains. Pilot launch follows by end of May once the POC is shaped with design partner input.
 
 ---
 
 ## 1. Value Proposition
 
-PhysicianLabs Launch is the guided operating system for physicians opening their first independent clinic. It is a concierge partner that walks you through every credentialing, billing, and patient pipeline step, so you open on time, get paid on your first claim, and never run out of cash before your practice finds its footing.
+We are looking for three physicians opening their first independent clinic who want to help build the tool that should have existed all along. As a PhysicianLabs design partner, you get a dedicated guide through every credentialing, billing, and patient pipeline step — and your direct experience shapes the product before anyone else uses it.
 
 ### Hero Benefit
 
-**You start credentialing on day one, not three months late.**
+**You start credentialing on day one — and you tell us what is missing.**
 
-Most physicians do not know credentialing takes 90 to 120 days until cash flow hits zero. PhysicianLabs Launch builds your credentialing timeline the moment you decide to go independent, so you open with payers already enrolled and revenue arriving from your first patient visit.
+Most physicians do not know credentialing takes 90 to 120 days until cash flow hits zero. PhysicianLabs walks you through it from the moment you decide to go independent. As a design partner, every gap you find becomes a fix that helps every physician who comes after you.
 
 ### Supporting Benefits
 
 | Benefit | Pain It Solves |
 |---|---|
+| Co-shape the product before it ships (your pain becomes the spec) | "I wish someone had asked me what I actually needed" |
 | Step-by-step clinic launch checklist (50 steps, Derm/PT/Chiro) | "I don't know the 50 steps" |
 | Credentialing timeline manager with deadline alerts | 90 to 120 day payer surprise |
 | Patient pipeline builder: book patients before day one | Cash crisis at months 2 to 4 |
 | Specialty benchmarking dashboard | No visibility into peer performance |
 | No EHR migration required: integrates on top of existing EHR | EHR switching cost objection |
 | Concierge-first delivery (Business Doula model) | Physician is a clinician, not an operator |
-| Milestone-based pricing: pay only when you hit real milestones | Medical school debt and affordability constraint |
+| Free during design partner phase | Medical school debt and affordability constraint |
 
 ---
 
 ## 2. Target Audience
 
-### Primary Persona: The Departing Resident
+### Primary Persona: The Departing Resident (Design Partner Edition)
 
 | Dimension | Profile |
 |---|---|
-| **Who** | MD/DO physician, dermatology or physiotherapy (beachhead); 3 to 8 years post-residency; making the move from employed or hospital to independent practice |
-| **Stage** | Pre-launch (decision made, 0 to 12 months before opening) OR early post-launch (months 2 to 6, first billing crisis underway) |
-| **Geography** | Pacific NW first (Seattle/UW pipeline); fee-for-service billing; HIPAA jurisdiction |
-| **Practice type** | Solo or small group (1 to 3 providers); greenfield or selecting first EHR |
-| **Financial situation** | Carrying medical school debt; pricing must feel milestone-earned, not subscription-taxed |
-| **Psychographic** | Highly competent clinically; anxious about the business side; responds to expert authority and peer proof; does not respond to generic SaaS marketing |
-| **Decision trigger** | "I decided to go independent and I don't know the 50 steps" OR "My first claim batch got rejected and I don't know why" |
+| **Who** | MD/DO physician (Derm/PT beachhead), 0 to 12 months pre-launch or 2 to 6 months post-launch, Pacific NW first |
+| **Practice type** | Solo or small group (1 to 3 providers), greenfield or selecting first EHR |
+| **Financial situation** | Carrying medical school debt; free design partner engagement removes price friction entirely |
+| **Design partner psychographic** | Posts publicly about practice ops pain; is an opinion leader or peer advice-giver; expresses specific, solvable frustration rather than general venting; would feel ownership over a tool they helped shape |
+| **Ideal signal** | A Reddit post with a specific process complaint, a LinkedIn post about the independence decision, or a warm referral from someone who can say "they are the type who would love to co-build this" |
+| **Decision trigger** | "I decided to go independent and I don't know the 50 steps" — and they are the kind of person who, when they hit a wall, wants to fix it for everyone |
 
-### Secondary Persona: The Struggling Solo Chiropractor
+### Qualification Gate (tighter than pilot)
 
-Independent DC, 1 to 3 providers, insurance and cash-pay mix, losing 40 to 60% of treatment plan revenue to patient drop-off and billing complexity. Market size: ~35,000 independent practices (vs. ~8,000 derm). More accessible community via Facebook groups and state associations. Used as expansion wedge once the Derm/PT pilot validates the core model.
+The design partner ask is more demanding than a pilot ask. It requires feedback sessions, co-creation input, and genuine engagement. Prioritize prospects who have already demonstrated they will engage: they posted, they asked questions publicly, they gave advice to peers. Passive practitioners who never engage publicly are lower-fit design partners even if their pain is real.
 
-### Counter-Persona (explicitly excluded)
+### Secondary Persona: The Solo Chiropractor
 
-Physicians on academic or fellowship tracks (e.g., internal medicine resident to oncology fellowship at a top-5 hospital). They have clear institutional pathways and do not experience the independent practice pain.
+Independent DC, 1 to 3 providers, 35,000-practice market. Same design partner psychographic filter applies. The r/Chiropractic subreddit already contains multiple high-fit candidates (u/Snapcracklepayme, u/crossfit6) with public engagement histories and verbatim pain quotes on file.
 
-### Evidence-Backed Pain Points
+### Counter-Persona (excluded)
 
-| Pain | Severity | Evidence |
-|---|---|---|
-| No structured guide to the 50 clinic-opening steps | Critical | 65% of new clinics open without full payer enrollment |
-| Credentialing delay blindside | Critical | 90 to 120 day lag; leading cause of cash crisis |
-| Cash runs out at months 2 to 4 | Critical | 92% cash flow crisis rate in year one |
-| No patient pipeline before day one | High | Physicians book first patients reactively |
-| EHR selection paralysis | High | Greenfield physicians overwhelmed by options |
-| Cannot afford full admin staff | High | Solo/small group; medical school debt load |
+Physicians on academic or fellowship tracks. They have clear institutional pathways and do not experience the independent practice pain.
 
 ---
 
 ## 3. Competitive Positioning
 
-**Category claim:** Clinical Operating System for independent physician-owned practices. This label is unclaimed. No competitor occupies the integration-layer position at the small-practice price point.
+**Category claim:** Clinical Operating System for independent physician-owned practices. Label unclaimed. No competitor addresses the pre-launch credentialing window or the "50 steps" problem at any price point.
 
 | Capability | PhysicianLabs | Tebra | athenahealth |
 |---|:---:|:---:|:---:|
 | Sits on top of existing EHR (no migration) | Yes | No | No |
 | Launch OS / credentialing guidance | Yes | No | No |
 | Specialty benchmarking | Yes | No | Partial |
-| Price point for solo practice | ~$250/mo | $99 to $399/mo | 5 to 7% of collections |
-| Concierge onboarding | Yes | No | No |
-
-**Primary objection to pre-empt:** "I'll just ask my residency director." Response: residency programs do not cover entity formation, NPI, payer credentialing sequencing, or billing configuration. This is a gap the program explicitly does not fill.
+| Price point for solo practice | Free (design partner phase) | $99 to $399/mo | 5 to 7% of collections |
+| Co-creation / design partner program | Yes | No | No |
 
 ---
 
-## 4. Pricing (Pilot Terms)
+## 4. Design Partner Offer
 
-| Milestone | Trigger | Fee |
-|---|---|---|
-| Launch Pack | Physician commits to open a clinic | $500 one-time |
-| Active Practice | 10 patients booked via PhysicianLabs | $200 per month |
-| RCM Unlock | First insurance payment received | +$150 per month |
-
-**Pilot offer (May 2026 cohort):** First 6 pilots receive the Launch Pack at no charge. Pilots pay only at the Active Practice milestone. Rationale: remove price as a barrier to commitment; the concierge delivery is the product being validated, not the billing infrastructure.
+| Term | Detail |
+|---|---|
+| **Who qualifies** | Physician opening or recently opened first independent clinic, Derm/PT/Chiro, Pacific NW preferred |
+| **What they get** | Full concierge access to PhysicianLabs Launch (checklist, credentialing tracker, patient pipeline builder, benchmarking teaser); dedicated founder-level support throughout clinic opening |
+| **What we get** | 3 feedback sessions (30 minutes each) during the engagement; candid input on what works, what is missing, and what should be built next; written or recorded testimonial if satisfied |
+| **Cost** | Free for the entire design partner phase (pre-POC completion) |
+| **Transition** | Post-POC: design partners are offered the first pilot seats at the Active Practice pricing ($200/month) with a 90-day free period in recognition of their contribution |
+| **Spots** | 3 total (hard cap — this is a concierge engagement, not a waitlist) |
 
 ---
 
 ## 5. Channel Strategy
 
-This is a precision pilot recruitment sprint (3 weeks, 3 to 6 clinics), not a broadcast campaign. Every channel is chosen to generate direct one-on-one conversations, not impressions or followers.
+This is a precision recruitment sprint targeting 3 specific individuals, not a broadcast campaign. Every channel is chosen to generate one-on-one conversations with the right psychographic. The message shift from the April 30 brief is: replace "commit as a pilot customer" with "help us build this."
 
-### Channel Plan
+### Channel 1: Reddit Outreach (Co-Primary — elevated from supporting)
 
-#### Channel 1: LinkedIn Direct Outreach (Primary)
+- **Why elevated:** The prospect list already contains verbatim pain quotes from Reddit. These quotes make the cold-to-warm conversion natural for a co-creation ask — we can reference their exact words.
+- **Tactic:** DM high-fit prospects directly, referencing their specific post. For prospects with restricted DMs (e.g., u/chakratones), reply helpfully in their thread and invite a DM. Do not open with the product.
+- **Message frame:** "Your post about [specific pain] is exactly the problem I am trying to solve. I am looking for 3 practitioners to help me build the fix. Would you be open to a 20-minute conversation?"
+- **Priority contacts from existing tracker:** u/Snapcracklepayme (sent Apr 29, follow up), u/crossfit6 (sent Apr 29, follow up), u/chakratones (comment posted, DMs blocked — retry via hello@koanmedia.io)
+- **Tone:** Community member, builder asking for genuine input.
 
-- **Why:** Physicians in the decision-to-independent window are active on LinkedIn. Existing prospect list from customer discovery is available.
-- **Tactic:** Personalized DMs to pre-qualified prospects. Reference their specific situation (specialty, geography, recent posts about independence). Do not open with the product; open with the pain.
-- **Message frame:** "I noticed you mentioned going independent. I'm building something for exactly this moment. Would you be willing to give me 20 minutes? No pitch, just want to understand your situation."
-- **Target:** 20 to 30 outbound DMs over 3 weeks. Goal: 8 to 10 conversations; 3 to 6 commitments.
-- **Tone:** Peer-to-peer, candid, no sales language.
+### Channel 2: LinkedIn Direct Outreach (Co-Primary)
 
-#### Channel 2: Reddit Community Posts (Supporting)
+- **Why:** Physicians in the decision-to-independent window are active here. Five high-score prospects (Samir Master MD, Heather D. Rogers MD, Elie Levy, Michael Li, Shaka Hatcher) have not yet been contacted.
+- **Tactic:** Personalized connection request referencing their specific situation. Once connected, DM with the design partner ask. Do not pitch in the connection note.
+- **Message frame:** "I am building a tool for exactly the moment you are in — and I am looking for 3 physicians to help me get it right. Not a pitch. Would you give me 20 minutes?"
+- **Target:** Send 5 connection requests this week to the existing Tier 1 list. Expand to Tier 2 (Score 7 to 8 contacts) if needed to reach 3 committed design partners.
+- **Tone:** Peer-to-peer, founder-to-practitioner, candid.
 
-- **Why:** Physicians vent operational pain in r/MedicalBilling, r/Dermatology, and r/chiropractic. Community-native posts outperform ads.
-- **Tactic:** Post a genuine problem-framing question: "What's the one thing you wish you'd known before opening your practice?" Use responses to identify high-pain prospects and DM them directly.
-- **Do not:** Pitch the product in the post. Respond helpfully. Move to DM only after establishing presence.
-- **Tone:** Authentic, helpful, zero-pitch in public threads.
+### Channel 3: Warm Referrals via Medical Associations (High-Value)
 
-#### Channel 3: Twitter/X Thread (Supporting)
+- **Why:** One warm introduction from a trusted peer converts faster than 20 cold DMs and bypasses the qualification step — the referrer pre-qualifies the fit.
+- **Tactic:** Ask 3 existing contacts for one warm introduction each. Frame the ask specifically: "I am looking for a physician opening their first clinic who is the type to want to co-build the tool, not just use it. Do you know anyone?"
+- **Tone:** Professional, specific, brief.
 
-- **Why:** #DermTwitter and #ChiroTwitter are active physician communities. Hook content builds inbound pull.
-- **Tactic:** One thread per week on a credentialing or billing gotcha. Example hook: "65% of physicians open their clinic without full payer enrollment. Most don't find out until month three when cash hits zero. Here's the checklist they needed."
-- **CTA at thread end:** "If you're in this window, DM me. I'm building the tool for this."
-- **Tone:** Bold, direct, peer-voice. No corporate language.
+### Channel 4: Twitter/X Thread (Supporting)
 
-#### Channel 4: Facebook Groups (Supporting)
+- **Tactic:** One hook thread per week on a credentialing or billing gotcha. End with: "I am looking for 3 physicians who have lived this to help me build the fix. DM me."
+- **Tone:** Bold, builder voice, direct.
 
-- **Why:** Chiropractic Business Owners (private group) is an active, high-intent community. DCs openly discuss billing and retention pain.
-- **Tactic:** Join the group. Provide value by answering questions for 1 to 2 weeks before any product mention. Introduce PhysicianLabs only when directly relevant to a thread question.
-- **Tone:** Community member voice, not vendor voice.
+### Channel 5: Facebook Groups — Chiropractic Business Owners (Supporting)
 
-#### Channel 5: Warm Referrals via Medical Associations (High-Value)
+- **Tactic:** Provide value first (answer questions). Introduce the design partner ask only when directly relevant to an active thread about practice operations.
+- **Tone:** Community member voice, collaborative.
 
-- **Why:** A single warm introduction converts faster than 20 cold DMs. AAD, state dermatology societies, and state PT associations have direct access to the ICP.
-- **Tactic:** Ask existing contacts for 1 to 2 warm introductions to physicians in the launch window. Prioritize contacts from the UW/Seattle network.
-- **Tone:** Professional, evidence-led, brief.
+### Channel 6: Targeted Cold Email (Fallback)
 
-#### Channel 6: Targeted Cold Email (Fallback)
-
-- **Why:** For known prospects identified during customer discovery who have not responded to LinkedIn.
-- **Tactic:** 3-sentence email: name the specific pain, name the product, ask for a 20-minute call. No attachments, no decks.
-- **Volume:** Fewer than 20 recipients total.
-- **Tone:** Direct, short, problem-first.
+- **Volume:** Fewer than 20 recipients total, from the existing prospect CSV.
+- **Format:** 3 sentences: name the specific pain, name the design partner program, ask for 20 minutes. No attachments.
+- **Tone:** Direct, short, builder framing.
 
 ### Channels Excluded (this sprint)
 
-- Paid advertising: too slow to optimise within a 3-week window
-- Newsletter or content marketing: compounding asset; not appropriate for a sprint
-- Product Hunt or public launch: reserved for post-pilot announcement
+Paid advertising, newsletter/content marketing, Product Hunt. These are compounding assets that do not convert fast enough for a 3-design-partner sprint.
 
 ---
 
@@ -158,60 +144,67 @@ This is a precision pilot recruitment sprint (3 weeks, 3 to 6 clinics), not a br
 
 ### Tone Principles (all channels)
 
-1. **Lead with the problem, not the product.** Physicians respond to being understood, not sold to.
-2. **Use their language.** Credentialing, payer enrollment, clean claim, month-three cash crisis.
-3. **Concierge framing, not SaaS framing.** This is a human-guided service. Avoid "sign up", "free trial", "platform".
-4. **No clinical claims.** Never imply clinical decision-making is automated. HIPAA-awareness in every communication.
-5. **Peer authority, not founder pitch.** Lead with evidence ("65% of clinics open without full payer enrollment") not founder story.
+1. **Builder voice, not sales voice.** "Help us build this" is the ask, not "try our product."
+2. **Reference their specific words.** The prospect CSV contains verbatim pain quotes. Use them.
+3. **Lead with their problem, not your solution.** Physicians respond to being understood first.
+4. **Use their language.** Credentialing, payer enrollment, clean claim, month-three cash crisis.
+5. **No clinical claims.** Never imply clinical decision-making is automated. HIPAA-awareness in all communications.
 
 ### Approved Phrases
 
-- "The guided operating system for your first clinic"
+- "Help us build the tool that should have existed"
+- "Your pain becomes the spec"
+- "3 design partner spots — this is a concierge engagement, not a waitlist"
+- "You start credentialing on day one"
 - "Business Doula for independent physicians"
-- "You won't be surprised by month three"
-- "Start credentialing on day one"
-- "Built for physicians who chose independence"
+- "Built by physicians who chose independence, for physicians choosing independence"
 
 ### Phrases to Avoid
 
-- "AI-powered" (too early; builds wrong expectation)
-- "All-in-one platform" (implies EHR replacement; that is the objection)
+- "AI-powered" (builds wrong expectation at this stage)
+- "All-in-one platform" (implies EHR replacement)
 - "Scale your practice" (pre-launch physicians are not thinking about scale)
-- "Disrupting healthcare" (trust-destroying with clinicians)
+- "Sign up" or "free trial" (SaaS framing; this is a concierge partnership)
+- "Pilot" (replaced by "design partner" throughout)
 
 ---
 
-## 7. Launch Timeline (3-Week Sprint to May 22)
+## 7. Sprint Timeline to May 22
 
 | Week | Focus | Actions |
 |---|---|---|
-| **Week 1 (Apr 30 to May 6)** | List-building and first outreach | Compile 30-person LinkedIn prospect list from customer discovery tracker; send first 15 DMs; post Reddit thread in r/Dermatology; join Facebook chiro group |
-| **Week 2 (May 7 to May 13)** | Conversations and qualification | Follow up on Week 1 DMs; post Reddit thread in r/MedicalBilling; publish first Twitter/X credentialing gotcha thread; request warm intros from 3 contacts |
-| **Week 3 (May 14 to May 22)** | Commitment close | Follow up all open conversations; send targeted cold emails to non-responders; aim to convert 3 to 6 prospects to signed pilot agreements |
+| **Week 1 (May 6 to May 9)** | Activate existing pipeline | Follow up with u/Snapcracklepayme and u/crossfit6 (sent Apr 29); send 5 LinkedIn connection requests to Tier 1 list (Samir, Heather, Elie, Michael, Shaka); retry u/chakratones via email; request 3 warm intros from existing contacts |
+| **Week 2 (May 12 to May 16)** | Conversations and qualification | Convert connections to DM conversations; apply design partner qualification gate; post first Twitter/X credentialing gotcha thread; expand to Tier 2 LinkedIn contacts if Tier 1 pipeline is thin |
+| **Week 3 (May 19 to May 22)** | Commitment close | Convert 3 qualified conversations to signed design partner agreements by May 22; send cold email fallback to non-responders |
+
+**Post-recruitment (May 23 to May 31):** Run concierge POC sessions with 3 design partners; collect feedback; build fixes; prepare pilot launch.
 
 ---
 
-## 8. Pilot Commitment Definition
+## 8. Design Partner Commitment Definition
 
-A committed pilot is defined as: a physician who has agreed (via email or signed 1-page agreement) to:
-1. Use PhysicianLabs Launch with concierge support for their clinic opening
-2. Participate in 2 feedback sessions (30 minutes each) during the engagement
-3. Provide a written or recorded testimonial if satisfied
+A committed design partner is defined as a physician who has agreed (via email or signed 1-page agreement) to:
 
-A verbal "sounds interesting" does not count. Written commitment only.
+1. Engage with PhysicianLabs Launch with concierge support during their clinic opening process
+2. Participate in 3 feedback sessions (30 minutes each) at defined milestones during the engagement
+3. Provide candid input on gaps, missing features, and what should be built next
+4. Provide a written or recorded testimonial if satisfied with the experience
+
+A verbal "sounds interesting" or "send me more info" does not count. Written commitment only. Hard cap: 3 spots.
 
 ---
 
-## 9. Success Metrics (3-Week Sprint)
+## 9. Success Metrics (Sprint)
 
 | Metric | Target |
 |---|---|
-| LinkedIn DMs sent | 25 to 30 |
-| Conversations started (reply rate) | 8 to 10 |
+| Reddit follow-ups sent | 3 (existing pipeline) |
+| LinkedIn connection requests sent | 10 to 15 |
+| LinkedIn DM conversations started | 5 to 7 |
+| Warm intro requests made | 3 |
 | Discovery calls completed | 5 to 7 |
-| Committed pilots signed | 3 to 6 (minimum 3) |
-| Reddit posts published | 2 |
-| Twitter/X threads published | 3 |
+| Design partner agreements signed by May 22 | 3 (hard target) |
+| POC sessions completed by May 31 | 3 |
 
 ---
 
@@ -219,11 +212,12 @@ A verbal "sounds interesting" does not count. Written commitment only.
 
 | Risk | Likelihood | Mitigation |
 |---|---|---|
-| Physicians do not respond to cold outreach | Medium | Lead with problem-framing, not product pitch; use warm intros as primary channel |
-| Prospect says "I'll wait until I'm closer to opening" | High | Reframe: credentialing must start 90 to 120 days before you open; the time is now |
-| Prospect asks for a live product demo | Medium | Demo the checklist and credentialing tracker in its current Wizard of Oz state; set expectation that concierge delivery is the product |
-| Pilot expects billing/RCM features | Medium | Scope pilot explicitly: Launch OS only (F1 to F3); RCM is milestone 2 |
-| 3-week window closes with fewer than 3 pilots | Low | Extend outreach to chiropractor community (Facebook groups) using identical playbook |
+| Prospects have not responded to Apr 29 Reddit outreach | Medium | Follow up with revised design partner framing (not pilot framing); reference their original post again |
+| LinkedIn connection requests sit unanswered | Medium | Send warm intro requests in parallel; do not wait for LinkedIn to convert before activating other channels |
+| Prospect says "I am not opening a clinic yet" | Medium | Reframe: the ideal moment to start is 6 to 12 months before opening, not after; credentialing must begin before the decision feels urgent |
+| Prospect asks for a live product demo | Medium | Demo the checklist and credentialing tracker in Wizard of Oz state; frame concierge delivery as the product feature being validated |
+| Design partner drops out post-agreement | Low | Hold 1 to 2 warm contacts in reserve (not formally committed) as backup; do not recruit beyond 3 until a dropout occurs |
+| 3 design partners not signed by May 22 | Low | Activate chiropractor Facebook groups with same design partner playbook; 35K-practice market with active online communities provides significant additional pipeline |
 
 ---
 
@@ -233,7 +227,7 @@ A verbal "sounds interesting" does not count. Written commitment only.
 |---|---|
 | Business Validation and Scoping Report | `docs/business-development/business-validation-report-2026-04-28.md` |
 | Customer Persona (Wave 1) | `docs/customer-development/customer-persona-2026-04-24.md` |
-| Customer Prospect Search Strategy | `docs/customer-development/search-strategy-2026-04-24.md` |
-| Recruitment Tracker | `docs/customer-development/2026-04-27-recruitment-tracker.md` |
+| Prospect CSV (40 contacts, scored) | `docs/customer-development/users-to-target-2026-04-27.csv` |
+| Recruitment Tracker (outreach log) | `docs/customer-development/2026-04-27-recruitment-tracker.md` |
 | Mentor Session: David Jorjani | `docs/customer-insights/mentor-session-david-jorjani-2026-04-28.md` |
-| Architecture Doc | `docs/architecture/architecture.md` |
+| Previous Marketing Brief (pilot framing) | `docs/marketing/strategy/0-physicianLabs-launch.md` (this file, superseded) |

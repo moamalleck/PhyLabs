@@ -1,65 +1,67 @@
-# Evidence: Marketing Strategy Definition
-**Issue:** 0
+# Evidence: Marketing Strategy Definition (Revision 2)
+**Issue:** 0 (gap: no GitHub issue exists — create one before next job run)
 **Workflow type:** marketing
-**Date:** 2026-04-30
+**Date:** 2026-05-06
 **Status:** Complete, ready for review
 
 ---
 
 ## Summary
 
-Completed a full 6-phase marketing strategy definition for PhysicianLabs Launch. The strategy targets pilot recruitment (3 to 6 committed clinics) by May 22, 2026, with a precision outreach playbook built on existing customer research and business validation work.
+Revised the PhysicianLabs Launch marketing strategy brief from a pilot recruitment framing to a design partner recruitment framing. Goal updated: recruit 3 design partners by May 22, build POC with them, pilot by end of May. All 9 phases of the marketing-strategy-definition job completed in a single session.
 
 ---
 
 ## Work Completed
 
-### Files Created
+### Files Modified
 
-| File | Purpose |
+| File | Action |
 |---|---|
-| `docs/marketing/strategy/0-physicianLabs-launch.md` | Complete Marketing Strategy Brief |
-| `docs/evidence/0-marketing-strategy-evidence.md` | This evidence document |
+| `docs/marketing/strategy/0-physicianLabs-launch.md` | Overwritten with revised design partner brief |
+| `docs/evidence/0-marketing-strategy-evidence.md` | This document (updated from Apr 30 version) |
+
+### Key Changes from April 30 Brief
+
+| Section | Change |
+|---|---|
+| Bottom Line | Revised to design partner framing and updated sequencing (recruit by May 22, POC by end of May) |
+| Value Proposition | Revised: "Help us build the tool that should have existed" replaces "commit as a pilot customer" |
+| Hero Benefit | Same core (credentialing day-one) with co-creation layer added |
+| Offer/Pricing | Design Partner Offer replaces milestone-based pricing; free during design partner phase |
+| Channel Strategy | Reddit elevated to co-primary; all channel messages revised from pilot ask to design partner ask |
+| Messaging Guidelines | Approved/avoided phrases updated; "pilot" removed throughout |
+| Sprint Timeline | Week 1 now activates existing pipeline (Apr 29 Reddit outreach follow-ups + Tier 1 LinkedIn contacts) |
+| Commitment Definition | Design partner agreement (3 feedback sessions, co-creation input) replaces pilot agreement |
+| Success Metrics | Hard target: 3 design partner agreements by May 22 |
 
 ### Approach
 
-The brief was synthesized across 6 phases:
+Phase 1 (context-synthesis): Scanned repo; found no new docs since Apr 30; identified that LinkedIn outreach had not been sent and Reddit outreach had no responses logged. Identified design partner vs pilot as a meaningful framing shift, not a label swap. Flagged missing GitHub issue (MC-1 from L1 learnings).
 
-1. **Context Synthesis:** Scanned `docs/business-development/`, `docs/customer-development/`, `docs/customer-insights/`, and `fraim/config.json`. Found no existing marketing docs. Identified rich existing context: validated ICP, customer personas (Derm, PT, Chiro), competitive landscape, and pricing model. Confirmed 3 inputs from operator: full PhysicianLabs Launch product, goal of 3 to 6 pilots, deadline May 22.
+Phases 2 to 5: Carried forward all validated elements (ICP, channels, hero benefit, physician-specific copy). Revised only what changed: value proposition, offer, messages, qualification gate (opinion-leader psychographic filter added for design partner fit).
 
-2. **Feature Analysis:** Mapped the 7 core benefits of PhysicianLabs Launch against validated pain points from the business-validation-report and customer-persona docs.
-
-3. **Value Proposition Definition:** Defined a product-level value proposition and selected the hero benefit (credentialing day-one vs. 90 to 120 day surprise). Hero selection rationale: highest-confidence, highest-frequency pain point with verified financial consequences (65% of clinics open without full payer enrollment).
-
-4. **Target Audience Identification:** Defined primary persona (The Departing Resident: Derm/PT, Pacific NW, 0 to 12 months pre-launch or 2 to 6 months post-launch) and secondary persona (Solo Chiropractor wedge). Documented 6 evidence-backed pain points with severity ratings.
-
-5. **Channel Strategy:** Selected 6 precision outreach channels prioritized for direct conversation generation: LinkedIn DM, Reddit community posts, Twitter/X threads, Facebook groups, warm referrals via associations, and targeted cold email. Excluded paid ads, newsletters, and Product Hunt for this sprint.
-
-6. **Marketing Brief Creation:** Populated full brief including competitive positioning, milestone-based pilot pricing (Launch Pack free for first 6 pilots), 3-week weekly sprint plan, pilot commitment definition, success metrics, and risk mitigations.
-
-### Testing Completed
-
-Not applicable. This is a strategy document, not a code deliverable.
+Phase 6: Overwrote existing brief in place (same file, same issue number). No new file created since this is a revision of the same work item.
 
 ---
 
 ## Validation
 
-- All brief content traces to evidence in existing repo documents (business-validation-report, customer personas, mentor session notes).
-- No invented facts. Every statistic cited (65% without full payer enrollment, 92% cash flow crisis rate, 90 to 120 day credentialing lag) is sourced from the business-validation-report.
-- Pricing, ICP, and competitive positioning are consistent with validated hypotheses H2 and H3 from the business-validation-report.
+- All brief content traces to existing repo documents (business-validation-report, customer personas, recruitment tracker).
+- No invented facts. Design partner qualification gate derived from the recruitment tracker's own engagement-signal observations.
+- Pricing revision (free during design partner phase) is consistent with the Wizard of Oz delivery model documented in the business-validation-report (MVP section).
 
 ---
 
 ## Quality Checks
 
-- Strategy brief is complete and covers all required sections
-- All channels selected are appropriate for a 3-week pilot recruitment sprint
-- Messaging guidelines include approved and excluded phrases
-- Pilot commitment is explicitly defined (written agreement, not verbal)
-- Success metrics are specific and measurable
-- Risks documented with mitigations
-- No em-dashes, no AI jargon, no clinical claims
+- No em-dashes in brief (formal-communication skill applied)
+- No AI jargon
+- No clinical claims
+- Physician-specific language throughout (validated pattern VP-3 applied)
+- Decision rationale documented inline throughout (preference P-1 applied)
+- Hard cap of 3 design partner spots clearly stated
+- Commitment definition is specific and written-agreement-gated
 
 ---
 
@@ -67,9 +69,15 @@ Not applicable. This is a strategy document, not a code deliverable.
 
 | Phase | Status | Key Output |
 |---|---|---|
-| context-synthesis | Complete | ICP confirmed, inputs gathered, no existing marketing docs found |
-| feature-analysis | Complete | 7 benefits mapped to validated pain points |
-| value-proposition-definition | Complete | VP statement + hero benefit (credentialing day one) |
-| target-audience-identification | Complete | Primary persona (Departing Resident) + secondary (Solo Chiro) |
-| channel-strategy | Complete | 6 channels selected; 3 excluded for sprint |
-| marketing-brief-creation | Complete | Full brief at docs/marketing/strategy/0-physicianLabs-launch.md |
+| context-synthesis | Complete | Identified pilot to design partner shift; flagged missing issue; confirmed no new repo docs |
+| feature-analysis | Complete | Added co-creation as lead benefit; opinion-leader psychographic filter added |
+| value-proposition-definition | Complete | Revised VP and hero benefit with co-creation layer |
+| target-audience-identification | Complete | Design partner qualification gate added |
+| channel-strategy | Complete | Reddit elevated to co-primary; all messages revised |
+| marketing-brief-creation | Complete | Brief overwritten at docs/marketing/strategy/0-physicianLabs-launch.md |
+
+---
+
+## Known Gap
+
+No GitHub issue exists for this work. Evidence and brief files carry a `0-` prefix that cannot be linked to a tracked work item. Create a GitHub issue before the next FRAIM job run to resolve this.
