@@ -122,8 +122,8 @@ The strategy is investment-ready in framing but not yet in evidence. The gap bet
 
 | # | Gap / Risk | Severity | What's Missing |
 |---|---|---|---|
-| G1 | SQ2 unresolved: single-segment vs. simultaneous four-segment launch | 🔴 Critical | Business plan describes four segments equally; MVP scope is Wizard-of-Oz pre-launch only. The financial model, roadmap, and CAC assumptions all change depending on the answer. |
-| G2 | ARPU inconsistency across artifacts | 🔴 High | Validation report: $3,000/yr → $300M SAM. Business plan: $4,800/yr → $480M SAM. Which is the basis for financial planning? |
+| G1 | ~~SQ2: single-segment vs. simultaneous launch~~ | ✅ **Resolved 2026-05-06** | Deliberate simultaneous four-segment launch. Segment depth prioritisation to emerge from design partner conversations. |
+| G2 | ~~ARPU inconsistency across artifacts~~ | ✅ **Resolved 2026-05-06** | $4,800/yr ($400/mo blended) is the working figure. Validation report updated to align. Preliminary — to be refined from customer interviews. |
 | G3 | No primary WTP validation | 🔴 Critical | 0 customer interviews conducted. All LTV:CAC ratios, pricing tiers, and Month 12 targets rest on this unresolved assumption. |
 | G4 | No financial P&L model | 🟠 High | No revenue/cost/burn/runway model. Required before any fundraising conversation. |
 | G5 | No founder-market fit analysis | 🟡 Medium | Not addressed across any artifact — relevant for investor conversations. |

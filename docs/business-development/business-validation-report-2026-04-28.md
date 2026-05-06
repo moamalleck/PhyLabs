@@ -90,11 +90,11 @@ After 8 phases of structured validation — including market research, workflow 
 
 | Layer | Calculation | Value |
 |-------|------------|-------|
-| **TAM** | ~165,751 physician-owned US practices × $3,000/yr ARPU | **~$497M** |
-| **SAM** | ~100,000 practices (1–5 physicians, fee-for-service, EHR, pain-aware) × $3,000/yr | **~$300M** |
-| **SOM (Year 3)** | 3% of SAM | **~$9M ARR** |
+| **TAM** | ~165,751 physician-owned US practices × $4,800/yr ARPU | **~$796M** |
+| **SAM** | ~100,000 practices (1–5 physicians, fee-for-service, EHR, pain-aware) × $4,800/yr | **~$480M** |
+| **SOM (Year 3)** | 3% of SAM | **~$14.4M ARR** |
 
-**ARPU assumptions:** $200–$300/practice/month (integration layer pricing, not full-stack EHR)
+**ARPU assumptions:** ~$400/practice/month (blended across SaaS + services tiers) — preliminary figure, to be refined from customer discovery interviews.
 
 **Macro risk:** Independent physician ownership is structurally declining — 37.8% in 2019 → 22.4% in 2024. The TAM window is narrowing. Speed to market is strategic. Design architecture now to expand to employed physician groups in Year 2–3 as a hedge.
 

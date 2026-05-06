@@ -237,7 +237,7 @@ WebPT, ChiroTouch, and Jane App are documentation/billing tools. None surface pa
 | # | Question | Resolve By |
 |---|---|---|
 | SQ1 | At what specific moment does a physician reach for their wallet? (decision? first denial? Month 3 cash crisis?) | Day 60 |
-| SQ2 | Single-segment launch (PT only) vs. simultaneous PT + chiro + new clinic launcher? | Day 30 |
+| ~~SQ2~~ | ~~Single-segment launch (PT only) vs. simultaneous PT + chiro + new clinic launcher?~~ | **Resolved 2026-05-06**: Deliberate simultaneous four-segment launch. Segment depth prioritisation to emerge from design partner conversations — not pre-decided. |
 | SQ3 | How much of the services layer gets automated vs. human-delivered in Year 1? What gets built first? | Day 90 |
 | SQ4 | Build own RCM clearinghouse integration or partner with Availity / Change Healthcare? | Day 60 |
 | SQ5 | Is Pacific NW geography-constrained or is national community-led launch viable from Day 1? | Day 45 |
