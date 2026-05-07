@@ -1,4 +1,5 @@
 # Manager Coaching — ash.malleck@gmail.com
+**Last synthesized:** 2026-05-06
 
 Guidance on how to direct and delegate to the AI agent more effectively.
 

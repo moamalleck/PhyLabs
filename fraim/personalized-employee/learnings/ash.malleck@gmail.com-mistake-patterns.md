@@ -1,4 +1,5 @@
 # Mistake Patterns — ash.malleck@gmail.com
+**Last synthesized:** 2026-05-06
 
 Recurring agent mistakes and anti-patterns to avoid.
 

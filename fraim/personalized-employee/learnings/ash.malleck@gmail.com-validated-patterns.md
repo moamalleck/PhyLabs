@@ -1,4 +1,5 @@
 # Validated Patterns — ash.malleck@gmail.com
+**Last synthesized:** 2026-05-06
 
 Durable judgment calls and successful unusual-but-correct decisions worth reproducing.
 
