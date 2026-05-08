@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysicianLabs — Strategy Presentation</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0a1628;
+      --slate:  #112240;
+      --teal:   #00c7b1;
+      --teal2:  #00a896;
+      --white:  #f0f6fc;
+      --muted:  #8899aa;
+      --accent: #ff6b6b;
+      --gold:   #ffd166;
+    }
+
+    html, body { width: 100%; height: 100%; overflow: hidden; background: var(--navy); }
+
+    /* ── Deck container ── */
+    .deck {
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    /* ── Individual slides ── */
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 48px 64px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.45s ease;
+    }
+    .slide.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* ── SLIDE 1 — Pitch ── */
+    #s1 {
+      background: radial-gradient(ellipse at 60% 40%, #0d2b50 0%, var(--navy) 70%);
+      text-align: center;
+      gap: 28px;
+    }
+    .slide-label {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+      border: 1px solid var(--teal);
+      padding: 4px 14px;
+      border-radius: 20px;
+    }
+    .pitch-headline {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: clamp(22px, 3vw, 36px);
+      color: var(--white);
+      line-height: 1.45;
+      max-width: 820px;
+    }
+    .pitch-headline em {
+      font-style: normal;
+      color: var(--teal);
+    }
+    .pitch-sub {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+    .logo-line {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--teal);
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    /* ── SLIDE 2 — Persona ── */
+    #s2 {
+      background: var(--slate);
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      grid-template-rows: auto 1fr;
+      column-gap: 56px;
+      row-gap: 20px;
+      align-items: start;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .slide-header {
+      grid-column: 1 / -1;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .slide-header h2 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+    .divider { flex: 1; height: 1px; background: rgba(0,199,177,0.25); }
+
+    .persona-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(0,199,177,0.18);
+      border-radius: 16px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      text-align: center;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid var(--teal);
+      background: #1a3a5c;
+    }
+    .persona-name {
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: var(--white);
+      font-weight: normal;
+    }
+    .persona-title {
+      font-size: 12px;
+      color: var(--teal);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      letter-spacing: 1px;
+    }
+    .persona-tag {
+      display: inline-block;
+      background: rgba(0,199,177,0.12);
+      border: 1px solid rgba(0,199,177,0.3);
+      color: var(--teal);
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .demo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      width: 100%;
+      margin-top: 4px;
+    }
+    .demo-item {
+      text-align: left;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .demo-item .label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+    .demo-item .val   { font-size: 12px; color: var(--white); margin-top: 2px; }
+
+    .persona-details {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .detail-block h3 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 7px;
+    }
+    .detail-block ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .detail-block ul li {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      color: var(--white);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .detail-block ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-size: 15px;
+      line-height: 1.3;
+    }
+    .buying-flow {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .buy-step {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--white);
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+    .buy-arrow {
+      color: var(--teal);
+      font-size: 12px;
+    }
+    .wtp-badge {
+      margin-top: 8px;
+      background: rgba(255,209,102,0.12);
+      border: 1px solid rgba(255,209,102,0.35);
+      border-radius: 8px;
+      padding: 8px 14px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .wtp-badge .wtp-label { font-size: 9px; color: var(--gold); text-transform: uppercase; letter-spacing: 1.5px; }
+    .wtp-badge .wtp-val   { font-size: 14px; color: var(--gold); font-weight: 600; margin-top: 2px; }
+
+    /* ── SLIDE 3 — Outreach ── */
+    #s3 {
+      background: radial-gradient(ellipse at 30% 60%, #0d2b50 0%, var(--navy) 70%);
+      flex-direction: column;
+      gap: 32px;
+      max-width: 960px;
+      margin: auto;
+      width: 100%;
+    }
+    .s3-header { width: 100%; display: flex; align-items: center; gap: 16px; }
+    .s3-header h2 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--teal);
+    }
+
+    .outreach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+    .outreach-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(0,199,177,0.18);
+      border-radius: 14px;
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .outreach-card:hover {
+      border-color: rgba(0,199,177,0.5);
+      background: rgba(0,199,177,0.06);
+      transition: all 0.2s;
+    }
+    .oc-icon-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .oc-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+    .oc-icon.reddit   { background: rgba(255,107,107,0.15); }
+    .oc-icon.linkedin { background: rgba(0,119,181,0.2); }
+    .oc-icon.events   { background: rgba(255,209,102,0.15); }
+    .oc-icon.facebook { background: rgba(66,103,178,0.2); }
+    .oc-num {
+      font-family: 'Courier New', monospace;
+      font-size: 28px;
+      color: rgba(0,199,177,0.2);
+      font-weight: 700;
+      line-height: 1;
+    }
+    .oc-channel {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+    }
+    .oc-platform {
+      font-size: 11px;
+      color: var(--teal);
+      letter-spacing: 1px;
+    }
+    .oc-desc {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .oc-action {
+      font-family: 'Courier New', monospace;
+      font-size: 11px;
+      color: var(--teal);
+      background: rgba(0,199,177,0.08);
+      border-radius: 6px;
+      padding: 6px 10px;
+      line-height: 1.5;
+    }
+
+    .s3-footer {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      font-style: italic;
+    }
+
+    /* ═══════════════════════════════════════
+       SLIDE 4  —  COMPETITOR SWOT OVERVIEW
+    ═══════════════════════════════════════ */
+    #s4 {
+      background: var(--slate);
+      flex-direction: column;
+      gap: 20px;
+      max-width: 1160px;
+      margin: auto;
+      width: 100%;
+      padding: 36px 52px;
+    }
+    .s4-header { width: 100%; display: flex; align-items: center; gap: 16px; }
+    .s4-header h2 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .swot-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      width: 100%;
+    }
+    .comp-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .comp-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+    }
+    .comp-card.direct::before { background: var(--accent); }
+    .comp-card.adjacent::before { background: var(--gold); }
+    .comp-card.none::before { background: var(--muted); }
+
+    .comp-name {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .comp-verdict {
+      font-family: 'Courier New', monospace;
+      font-size: 9px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 10px;
+      display: inline-block;
+      width: fit-content;
+    }
+    .verdict-direct   { background: rgba(255,107,107,0.15); color: var(--accent); border: 1px solid rgba(255,107,107,0.3); }
+    .verdict-adjacent { background: rgba(255,209,102,0.12); color: var(--gold);   border: 1px solid rgba(255,209,102,0.3); }
+    .verdict-none     { background: rgba(136,153,170,0.1);  color: var(--muted);  border: 1px solid rgba(136,153,170,0.2); }
+
+    .comp-strength, .comp-risk {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+      line-height: 1.45;
+      padding-left: 12px;
+      position: relative;
+    }
+    .comp-strength { color: rgba(0,199,177,0.85); }
+    .comp-risk     { color: rgba(255,107,107,0.85); }
+    .comp-strength::before { content: '↑'; position: absolute; left: 0; color: var(--teal); font-size: 10px; }
+    .comp-risk::before     { content: '!'; position: absolute; left: 0; color: var(--accent); font-size: 10px; font-weight: 700; }
+
+    .comp-opp {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10px;
+      color: var(--muted);
+      line-height: 1.4;
+      padding-left: 12px;
+      position: relative;
+      font-style: italic;
+    }
+    .comp-opp::before { content: '→'; position: absolute; left: 0; color: var(--muted); font-size: 10px; }
+
+    /* ═══════════════════════════════════════
+       SLIDE 5  —  COMPETITIVE MATRIX
+    ═══════════════════════════════════════ */
+    #s5 {
+      background: radial-gradient(ellipse at 70% 30%, #0d2b50 0%, var(--navy) 65%);
+      flex-direction: column;
+      gap: 22px;
+      max-width: 1120px;
+      margin: auto;
+      width: 100%;
+      padding: 40px 56px;
+    }
+    .s5-header { width: 100%; display: flex; align-items: center; gap: 16px; }
+    .s5-header h2 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .matrix-wrap {
+      width: 100%;
+      overflow-x: auto;
+    }
+    .matrix {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .matrix th, .matrix td {
+      padding: 10px 14px;
+      text-align: center;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .matrix th {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--muted);
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(0,199,177,0.2);
+      white-space: nowrap;
+    }
+    .matrix th.phylabs-col {
+      color: var(--teal);
+      background: rgba(0,199,177,0.06);
+      border: 1px solid rgba(0,199,177,0.25);
+      border-bottom: 2px solid var(--teal);
+      border-radius: 4px 4px 0 0;
+    }
+    .matrix td.feature-name {
+      text-align: left;
+      font-size: 12px;
+      color: var(--white);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .matrix td.feature-sub {
+      text-align: left;
+      font-size: 10px;
+      color: var(--muted);
+      font-style: italic;
+      padding-top: 0;
+    }
+    .matrix tr:hover td { background: rgba(255,255,255,0.02); }
+    .matrix td { font-size: 16px; }
+    .matrix td.phylabs-col {
+      background: rgba(0,199,177,0.04);
+      border-left: 1px solid rgba(0,199,177,0.15);
+      border-right: 1px solid rgba(0,199,177,0.15);
+    }
+    .matrix tr:last-child td.phylabs-col {
+      border-bottom: 1px solid rgba(0,199,177,0.15);
+      border-radius: 0 0 4px 4px;
+    }
+    .check  { color: #00c7b1; font-size: 17px; }
+    .cross  { color: #ff6b6b; font-size: 15px; }
+    .partial { color: #ffd166; font-size: 15px; }
+
+    .legend-row {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .legend-item { display: flex; align-items: center; gap: 6px; }
+
+    /* ═══════════════════════════════════════
+       SLIDE 6  —  THREE STRUCTURAL GAPS
+    ═══════════════════════════════════════ */
+    #s6 {
+      background: var(--slate);
+      flex-direction: column;
+      gap: 24px;
+      max-width: 1100px;
+      margin: auto;
+      width: 100%;
+      padding: 44px 60px;
+    }
+    .s6-header { width: 100%; display: flex; align-items: center; gap: 16px; }
+    .s6-header h2 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .gap-intro {
+      font-family: Georgia, serif;
+      font-size: clamp(15px, 1.5vw, 18px);
+      color: rgba(240,246,252,0.7);
+      line-height: 1.6;
+      text-align: center;
+      max-width: 820px;
+    }
+    .gap-intro strong { color: var(--white); }
+
+    .gaps-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      width: 100%;
+    }
+    .gap-panel {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(0,199,177,0.15);
+      border-radius: 16px;
+      padding: 28px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      overflow: hidden;
+    }
+    .gap-panel::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--teal), var(--teal2));
+    }
+    .gap-number {
+      font-family: 'Courier New', monospace;
+      font-size: 42px;
+      color: rgba(0,199,177,0.08);
+      font-weight: 900;
+      line-height: 1;
+      position: absolute;
+      top: 16px; right: 20px;
+    }
+    .gap-icon {
+      font-size: 28px;
+      line-height: 1;
+    }
+    .gap-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+    }
+    .gap-stat {
+      font-family: 'Courier New', monospace;
+      font-size: 22px;
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .gap-stat-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: -8px;
+    }
+    .gap-desc {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 12px;
+      color: rgba(240,246,252,0.65);
+      line-height: 1.6;
+    }
+    .gap-null {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+      color: var(--accent);
+      background: rgba(255,107,107,0.08);
+      border: 1px solid rgba(255,107,107,0.2);
+      border-radius: 6px;
+      padding: 5px 10px;
+    }
+
+    /* ═══════════════════════════════════════
+       SLIDE 7  —  THE WEDGE
+    ═══════════════════════════════════════ */
+    #s7 {
+      background: radial-gradient(ellipse at 40% 50%, #082040 0%, var(--navy) 65%);
+      flex-direction: column;
+      gap: 22px;
+      max-width: 1080px;
+      margin: auto;
+      width: 100%;
+      padding: 40px 56px;
+    }
+    .s7-header { width: 100%; display: flex; align-items: center; gap: 16px; }
+    .s7-header h2 {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase; color: var(--teal);
+      white-space: nowrap;
+    }
+
+    .wedge-body {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 32px;
+      width: 100%;
+    }
+    .wedge-left { display: flex; flex-direction: column; gap: 18px; }
+
+    .wedge-label {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: -10px;
+    }
+    .wedge-segment {
+      font-family: Georgia, serif;
+      font-size: clamp(18px, 2vw, 26px);
+      color: var(--white);
+      line-height: 1.4;
+    }
+    .wedge-segment em { font-style: normal; color: var(--teal); }
+
+    .pitch-box {
+      background: rgba(0,199,177,0.06);
+      border: 1px solid rgba(0,199,177,0.25);
+      border-radius: 12px;
+      padding: 18px 20px;
+      font-family: Georgia, serif;
+      font-size: 13px;
+      color: var(--white);
+      line-height: 1.7;
+      font-style: italic;
+    }
+    .pitch-box strong { color: var(--teal); font-style: normal; }
+
+    .criteria-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .crit-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .crit-label {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 9px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--muted);
+    }
+    .crit-val {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 12px;
+      color: var(--white);
+    }
+
+    .wedge-right { display: flex; flex-direction: column; gap: 12px; }
+    .timeline-title {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
+    .timeline { display: flex; flex-direction: column; gap: 0; }
+    .tl-item {
+      display: flex;
+      gap: 14px;
+      position: relative;
+    }
+    .tl-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 17px;
+      top: 34px;
+      bottom: 0;
+      width: 1px;
+      background: rgba(0,199,177,0.2);
+    }
+    .tl-week {
+      font-family: 'Courier New', monospace;
+      font-size: 9px;
+      color: var(--teal);
+      background: rgba(0,199,177,0.1);
+      border: 1px solid rgba(0,199,177,0.25);
+      border-radius: 8px;
+      padding: 3px 7px;
+      white-space: nowrap;
+      height: fit-content;
+      margin-top: 10px;
+      flex-shrink: 0;
+    }
+    .tl-content {
+      padding: 10px 0 14px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    .tl-action {
+      font-size: 12px;
+      color: var(--white);
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .tl-detail {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 2px;
+      line-height: 1.4;
+    }
+
+    .kpi-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .kpi-pill {
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: var(--gold);
+      background: rgba(255,209,102,0.08);
+      border: 1px solid rgba(255,209,102,0.25);
+      border-radius: 8px;
+      padding: 5px 10px;
+      line-height: 1.4;
+    }
+
+    /* ── Nav controls ── */
+    .nav {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      z-index: 100;
+    }
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .nav-dot.active { background: var(--teal); transform: scale(1.4); }
+
+    .nav-btn {
+      background: rgba(0,199,177,0.1);
+      border: 1px solid rgba(0,199,177,0.3);
+      color: var(--teal);
+      font-size: 18px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      user-select: none;
+    }
+    .nav-btn:hover { background: rgba(0,199,177,0.2); }
+
+    .slide-counter {
+      position: fixed;
+      top: 24px;
+      right: 32px;
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    /* ── Keyboard hint ── */
+    .hint {
+      position: fixed;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Courier New', monospace;
+      font-size: 10px;
+      color: rgba(136,153,170,0.5);
+      letter-spacing: 1.5px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- ════════════════════════════════════════════
+       SLIDE 1  —  ONE-SENTENCE PITCH
+  ════════════════════════════════════════════ -->
+  <section class="slide active" id="s1">
+    <span class="logo-line">PhysicianLabs</span>
+    <span class="slide-label">Slide 1 · One-Sentence Pitch</span>
+    <p class="pitch-headline">
+      PhysicianLabs is the <em>Infrastructure Layer</em> and
+      <em>Operating System</em> that Healthcare needs —
+      we help clinicians establish independent practices into
+      <em>profitable, preventative-care engines</em>,
+      by automating everything physicians were
+      <em>never trained to do</em>.
+    </p>
+    <p class="pitch-sub">
+      Independent practice. Full clinical integrity. Zero administrative collapse.
+    </p>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SLIDE 2  —  INITIAL BUYER PERSONA
+  ════════════════════════════════════════════ -->
+  <section class="slide" id="s2">
+    <div class="slide-header">
+      <h2>Slide 2 · Initial Buyer Persona</h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Left: persona card -->
+    <div class="persona-card">
+      <!-- SVG avatar — composite independent PT/chiro owner -->
+      <div class="avatar">
+        <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg" width="96" height="96">
+          <rect width="96" height="96" fill="#1a3a5c"/>
+          <ellipse cx="48" cy="98" rx="32" ry="22" fill="#e8f4fc"/>
+          <rect x="42" y="62" width="12" height="12" rx="4" fill="#d4956a"/>
+          <ellipse cx="48" cy="50" rx="20" ry="22" fill="#d4956a"/>
+          <ellipse cx="48" cy="32" rx="20" ry="10" fill="#3d2314"/>
+          <ellipse cx="28" cy="44" rx="6" ry="12" fill="#3d2314"/>
+          <ellipse cx="68" cy="44" rx="6" ry="12" fill="#3d2314"/>
+          <ellipse cx="40" cy="50" rx="3" ry="3.5" fill="#fff"/>
+          <ellipse cx="56" cy="50" rx="3" ry="3.5" fill="#fff"/>
+          <ellipse cx="40.5" cy="50.5" rx="1.8" ry="2" fill="#3d2314"/>
+          <ellipse cx="56.5" cy="50.5" rx="1.8" ry="2" fill="#3d2314"/>
+          <path d="M42 59 Q48 65 54 59" stroke="#a0674a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <polygon points="44,74 48,82 52,74" fill="#c8e0f0"/>
+          <path d="M38 78 Q34 84 36 90 Q38 95 42 94" stroke="#00c7b1" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <circle cx="42" cy="94" r="3" fill="none" stroke="#00c7b1" stroke-width="1.5"/>
+        </svg>
+      </div>
+
+      <div class="persona-name">Dr. Morgan Ellis, DPT</div>
+      <div class="persona-title">Solo Practice Owner · Seattle, WA</div>
+      <span class="persona-tag">Independent Physical Therapist</span>
+
+      <div class="demo-grid">
+        <div class="demo-item">
+          <div class="label">Age</div>
+          <div class="val">36–44</div>
+        </div>
+        <div class="demo-item">
+          <div class="label">Practice Size</div>
+          <div class="val">1–3 providers</div>
+        </div>
+        <div class="demo-item">
+          <div class="label">Annual Revenue</div>
+          <div class="val">$300K–$600K</div>
+        </div>
+        <div class="demo-item">
+          <div class="label">Staff</div>
+          <div class="val">0–2 PTAs, 1 front desk</div>
+        </div>
+        <div class="demo-item">
+          <div class="label">Payer Mix</div>
+          <div class="val">Insurance + Cash</div>
+        </div>
+        <div class="demo-item">
+          <div class="label">Overhead</div>
+          <div class="val">55–70% of collections</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: goals / challenges / buying -->
+    <div class="persona-details">
+
+      <div class="detail-block">
+        <h3>Goals</h3>
+        <ul>
+          <li>Keep patients on the full plan of care — clinical outcomes <em>and</em> revenue</li>
+          <li>Get paid for every visit without fighting insurance</li>
+          <li>Run a profitable practice that doesn't consume every evening</li>
+          <li>Compete on relationship &amp; outcomes against ATI and hospital-owned PT</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Challenges</h3>
+        <ul>
+          <li><strong style="color:#ff6b6b">Patient drop-off:</strong> completes 3–5 of 12 planned visits, 40–60% revenue lost per episode</li>
+          <li><strong style="color:#ff6b6b">Prior auth:</strong> visit limits, mid-episode re-auth, medical necessity denials</li>
+          <li><strong style="color:#ff6b6b">Billing:</strong> CPT 97xxx denial rate 10–20%, workers' comp &amp; PIP state-by-state rules</li>
+          <li><strong style="color:#ff6b6b">EHR fatigue:</strong> SOAP notes + functional outcomes (LEFS/PSFS) eating 2+ hrs/day</li>
+        </ul>
+      </div>
+
+      <div class="detail-block">
+        <h3>Buying Process</h3>
+        <div class="buying-flow">
+          <span class="buy-step">Peer recommendation</span>
+          <span class="buy-arrow">→</span>
+          <span class="buy-step">Reddit / PTOC group</span>
+          <span class="buy-arrow">→</span>
+          <span class="buy-step">LinkedIn research</span>
+          <span class="buy-arrow">→</span>
+          <span class="buy-step">Demo / trial</span>
+          <span class="buy-arrow">→</span>
+          <span class="buy-step">Purchase (owner decides)</span>
+        </div>
+        <div class="wtp-badge" style="margin-top:12px">
+          <div class="wtp-label">Willingness to Pay</div>
+          <div class="wtp-val">$150–$400 / month</div>
+          <div style="font-size:11px;color:rgba(255,209,102,0.7);margin-top:2px;font-family:sans-serif;">
+            Trigger: recovering 1–2 dropped treatment episodes / month
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SLIDE 3  —  INTERVIEW OUTREACH PLAN
+  ════════════════════════════════════════════ -->
+  <section class="slide" id="s3">
+    <div class="s3-header">
+      <h2>Slide 3 · Interview Outreach Plan</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="outreach-grid">
+
+      <div class="outreach-card">
+        <div class="oc-icon-row">
+          <div class="oc-icon reddit">🟠</div>
+          <div>
+            <div class="oc-channel">Reddit Communities</div>
+            <div class="oc-platform">r/physicaltherapy · r/chiropractic</div>
+          </div>
+          <div class="oc-num">01</div>
+        </div>
+        <div class="oc-desc">
+          Post a genuinely curious question — no product mention. Ask about the hardest part of running an independent clinic. High-signal, high-volume. Active practice owners self-identify in replies.
+        </div>
+        <div class="oc-action">
+          "I'm exploring what makes independent PT/chiro ownership hard — happy to share findings. What's your biggest operational headache?"
+        </div>
+      </div>
+
+      <div class="outreach-card">
+        <div class="oc-icon-row">
+          <div class="oc-icon linkedin">💼</div>
+          <div>
+            <div class="oc-channel">LinkedIn Direct Outreach</div>
+            <div class="oc-platform">Connection notes · Mom Test framing</div>
+          </div>
+          <div class="oc-num">02</div>
+        </div>
+        <div class="oc-desc">
+          Send personalized connection requests to the 35 PT pipeline + 40 chiro/derm prospects. Reference a specific detail from their profile. Ask one question — no pitch, no product.
+        </div>
+        <div class="oc-action">
+          "Building for independent PT owners — saw your post on billing headaches. Could I ask 2 questions about your experience? 20 min max."
+        </div>
+      </div>
+
+      <div class="outreach-card">
+        <div class="oc-icon-row">
+          <div class="oc-icon events">📍</div>
+          <div>
+            <div class="oc-channel">Local Association Events</div>
+            <div class="oc-platform">APTA-WA · ChiroWA · Seattle meetups</div>
+          </div>
+          <div class="oc-num">03</div>
+        </div>
+        <div class="oc-desc">
+          Attend Washington State APTA chapter meetings and WA chiropractic association events. In-person credibility is highest — warm intros from peers convert at 3–4× vs. cold outreach.
+        </div>
+        <div class="oc-action">
+          Attend next APTA-WA or ChiroWA chapter event. Introduce as "building tools for independent practices — trying to learn what actually hurts."
+        </div>
+      </div>
+
+      <div class="outreach-card">
+        <div class="oc-icon-row">
+          <div class="oc-icon facebook">👥</div>
+          <div>
+            <div class="oc-channel">PT Owners Club (PTOC)</div>
+            <div class="oc-platform">Facebook Group · 10,000+ active members</div>
+          </div>
+          <div class="oc-num">04</div>
+        </div>
+        <div class="oc-desc">
+          Physical Therapy Owners Club is the most active private community for independent PT practice owners. Members openly discuss billing, compliance, and admin pain — the exact problems we solve.
+        </div>
+        <div class="oc-action">
+          Join PTOC. Contribute value for 2 weeks. Then post a single discovery question — no link, no pitch. DM the most engaged responders.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="s3-footer">
+      Rule: Every outreach is a <strong style="color:var(--teal)">learning conversation</strong>, not a sales conversation.
+      Ask about the past. Never pitch the future.
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SLIDE 4  —  COMPETITOR SWOT OVERVIEW
+  ════════════════════════════════════════════ -->
+  <section class="slide" id="s4">
+    <div class="s4-header">
+      <h2>Slide 4 · Competitive Landscape — 8 Competitors</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="swot-grid">
+
+      <div class="comp-card direct">
+        <div class="comp-name">Tebra</div>
+        <span class="comp-verdict verdict-direct">Direct</span>
+        <div class="comp-strength">All-in-one; 140K+ providers; AI documentation</div>
+        <div class="comp-risk">Post-sales support "nonexistent"; requires EHR migration; opaque pricing</div>
+        <div class="comp-opp">No retention product. Churn window open from dissatisfaction</div>
+      </div>
+
+      <div class="comp-card direct">
+        <div class="comp-name">athenahealth</div>
+        <span class="comp-verdict verdict-direct">Direct</span>
+        <div class="comp-strength">Best-in-KLAS 2025; 98.4% clean claim rate; strong network effects</div>
+        <div class="comp-risk">4–7% of collections pricing; hostile to pre-revenue practices; no retention</div>
+        <div class="comp-opp">New Clinic Launcher segment completely unaddressed</div>
+      </div>
+
+      <div class="comp-card adjacent">
+        <div class="comp-name">Meroka</div>
+        <span class="comp-verdict verdict-adjacent">Adjacent</span>
+        <div class="comp-strength">Employee ownership model; physician-first ethos; $6M raise</div>
+        <div class="comp-risk">Only 5 practices; OB/GYN &amp; primary care only — no PT, chiro, or derm</div>
+        <div class="comp-opp">Not competing in PhysicianLabs segments in any meaningful way</div>
+      </div>
+
+      <div class="comp-card direct">
+        <div class="comp-name">Jane App</div>
+        <span class="comp-verdict verdict-direct">Direct</span>
+        <div class="comp-strength">Highest UX scores in market; $1.8B valuation; AI Scribe 2025</div>
+        <div class="comp-risk">US billing 2–3 years from maturity; no PT-specific RCM; no retention product</div>
+        <div class="comp-opp">US billing gap = multi-year window before they can compete fully</div>
+      </div>
+
+      <div class="comp-card direct">
+        <div class="comp-name">SimplePractice</div>
+        <span class="comp-verdict verdict-direct">Direct</span>
+        <div class="comp-strength">Lowest entry price ($49/mo); clean UX; 200K+ practitioners</div>
+        <div class="comp-risk">63% price increase March 2025; mental-health design doesn't fit PT/chiro; no retention</div>
+        <div class="comp-opp">Live migration wave — largest acquisition window in years</div>
+      </div>
+
+      <div class="comp-card direct">
+        <div class="comp-name">ChiroTouch</div>
+        <span class="comp-verdict verdict-direct">Direct</span>
+        <div class="comp-strength">12,500+ chiro practices; Rheo AI (92% doc reduction); 25 years of chiro-specific depth</div>
+        <div class="comp-risk">Outdated UI; BBB complaints for price increases; restrictive contracts; no retention</div>
+        <div class="comp-opp">Chiro drop-off pain = $162K/year. ChiroTouch doesn't touch it</div>
+      </div>
+
+      <div class="comp-card none">
+        <div class="comp-name">Epic Systems</div>
+        <span class="comp-verdict verdict-none">Not a Competitor</span>
+        <div class="comp-strength">Hospital-grade interoperability; 300M+ patient records</div>
+        <div class="comp-risk">$30–70K/provider year 1; 12–18 month implementation; no independent practice motion</div>
+        <div class="comp-opp">Irrelevant at our market segment. Epic Cheers (CRM) is 5+ years from threatening</div>
+      </div>
+
+      <div class="comp-card none">
+        <div class="comp-name">Aidoc</div>
+        <span class="comp-verdict verdict-none">Not a Competitor</span>
+        <div class="comp-strength">30+ FDA-cleared radiology AI models; 2,000+ hospitals; $150M Series E</div>
+        <div class="comp-risk">Hospital radiology AI only — zero intersection with independent practice management</div>
+        <div class="comp-opp">No overlap. Remove from competitive monitoring</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SLIDE 5  —  COMPETITIVE MATRIX
+  ════════════════════════════════════════════ -->
+  <section class="slide" id="s5">
+    <div class="s5-header">
+      <h2>Slide 5 · Feature Comparison Matrix</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="matrix-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th style="text-align:left; width:220px">Capability</th>
+            <th>Tebra</th>
+            <th>athenahealth</th>
+            <th>Meroka</th>
+            <th>SimplePractice</th>
+            <th>Jane App</th>
+            <th class="phylabs-col">PhysicianLabs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="feature-name">Patient plan-of-care retention</td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Drop-off risk scoring &amp; re-engagement</td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Pre-launch / New Clinic product</td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Integration layer — no EHR migration</td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">PT-specific billing (8-min rule, units)</td>
+            <td><span class="partial">◐</span></td>
+            <td><span class="partial">◐</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Milestone-based pricing (pre-revenue)</td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">Retained-revenue ROI dashboard</td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+          <tr>
+            <td class="feature-name">AI ambient documentation</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="partial">◐</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="cross">✗</span></td>
+            <td><span class="check">✓</span></td>
+            <td class="phylabs-col" style="font-size:11px;color:var(--muted)">Roadmap</td>
+          </tr>
+          <tr>
+            <td class="feature-name">Established US payer network / billing</td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="partial">◐</span></td>
+            <td><span class="partial">◐</span></td>
+            <td><span class="partial">◐</span></td>
+            <td class="phylabs-col"><span class="check">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="legend-row">
+      <div class="legend-item"><span class="check" style="font-size:14px">✓</span> Available</div>
+      <div class="legend-item"><span class="cross" style="font-size:13px">✗</span> Not available</div>
+      <div class="legend-item"><span class="partial" style="font-size:13px">◐</span> Partial / limited</div>
+      <div style="flex:1"></div>
+      <div style="font-family:'Courier New',monospace; font-size:10px; color:var(--teal);">
+        PhysicianLabs owns 6 of 9 capabilities with zero competition
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SLIDE 6  —  THREE STRUCTURAL GAPS
+  ════════════════════════════════════════════ -->
+  <section class="slide" id="s6">
+    <div class="s6-header">
+      <h2>Slide 6 · Three Structural Gaps — Zero Competitors</h2>
+      <div class="divider"></div>
+    </div>
+
+    <p class="gap-intro">
+      Every competitor — from $30K/year Epic to $49/month SimplePractice — treats the patient as a
+      <strong>passive record</strong> to be managed, not an active relationship to be retained.
+      These three gaps are <strong>uncontested</strong>.
+    </p>
+
+    <div class="gaps-row">
+
+      <div class="gap-panel">
+        <div class="gap-number">01</div>
+        <div class="gap-icon">📉</div>
+        <div class="gap-title">Plan-of-Care Completion &amp; Patient Retention</div>
+        <div class="gap-stat">$162,000</div>
+        <div class="gap-stat-label">Lost revenue / practice / year from drop-off</div>
+        <div class="gap-desc">
+          70% of PT patients don't complete their authorized plan of care (WebPT 2025).
+          The same pattern holds in chiro. Every vendor treats this as a scheduling problem.
+          It's a relationship problem — and it's bleeding $162K/year per practice invisibly.
+        </div>
+        <div class="gap-null">Zero competitors have a retention product</div>
+      </div>
+
+      <div class="gap-panel">
+        <div class="gap-number">02</div>
+        <div class="gap-icon">🚀</div>
+        <div class="gap-title">The New Clinic Launcher Segment</div>
+        <div class="gap-stat">57.8%</div>
+        <div class="gap-stat-label">Of physicians now employed (AMA 2024) — 42% still independent</div>
+        <div class="gap-desc">
+          Physicians who choose independence are high-intent entrepreneurs actively searching
+          for tools <em>before</em> they open. Every product requires an existing patient panel.
+          The pre-launch physician is completely invisible to the entire market.
+        </div>
+        <div class="gap-null">Zero competitors sell a pre-launch product</div>
+      </div>
+
+      <div class="gap-panel">
+        <div class="gap-number">03</div>
+        <div class="gap-icon">🔌</div>
+        <div class="gap-title">Integration Layer — No Migration Required</div>
+        <div class="gap-stat">#1</div>
+        <div class="gap-stat-label">Purchase objection in healthcare software: EHR migration cost</div>
+        <div class="gap-desc">
+          Every competitor requires full EHR replacement. PhysicianLabs plugs on top of
+          the physician's existing system (Epic, athena, Tebra) and adds the retention,
+          analytics, and launch capabilities the EHR doesn't provide.
+          Migration is not a conversation.
+        </div>
+        <div class="gap-null">Zero competitors offer integration-first architecture</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════
+       SLIDE 7  —  THE WEDGE STRATEGY
+  ════════════════════════════════════════════ -->
+  <section class="slide" id="s7">
+    <div class="s7-header">
+      <h2>Slide 7 · The Wedge — Independent PT Patient Retention</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div class="wedge-body">
+
+      <div class="wedge-left">
+
+        <div>
+          <div class="wedge-label">Primary Segment</div>
+          <div class="wedge-segment">
+            Independent physical therapy practices<br>
+            <em>1–3 providers · US-wide · PTOC community-first</em>
+          </div>
+        </div>
+
+        <div class="pitch-box">
+          "The average PT practice loses <strong>$162,000 a year</strong> because 70% of patients stop coming
+          before they finish their plan of care. Every tool you've tried treats this as a scheduling problem.
+          It isn't — it's a <strong>relationship problem</strong>. PhysicianLabs tracks which patients are at
+          drop-off risk <strong>before they ghost you</strong> and runs personalized re-engagement that brings
+          them back. We plug in on top of your existing EHR — you don't touch a thing."
+        </div>
+
+        <div class="criteria-grid">
+          <div class="crit-item">
+            <div class="crit-label">Entry Price</div>
+            <div class="crit-val">$200/mo retention module</div>
+          </div>
+          <div class="crit-item">
+            <div class="crit-label">Primary Channel</div>
+            <div class="crit-val">PTOC Facebook (10K+ owners)</div>
+          </div>
+          <div class="crit-item">
+            <div class="crit-label">Acquisition Trigger</div>
+            <div class="crit-val">SimplePractice price hike refugees</div>
+          </div>
+          <div class="crit-item">
+            <div class="crit-label">Expansion Path</div>
+            <div class="crit-val">PT → Chiro → Derm → Primary Care</div>
+          </div>
+          <div class="crit-item">
+            <div class="crit-label">ROI Breakeven</div>
+            <div class="crit-val">1–2 retained episodes/month</div>
+          </div>
+          <div class="crit-item">
+            <div class="crit-label">Design Partner Goal</div>
+            <div class="crit-val">3 signed by May 22, 2026</div>
+          </div>
+        </div>
+
+        <div class="kpi-row">
+          <div class="kpi-pill">North Star:<br>$5K+ retained revenue / practice / month at 60 days</div>
+          <div class="kpi-pill">LTV:CAC<br>target 19–29:1</div>
+        </div>
+
+      </div>
+
+      <div class="wedge-right">
+        <div class="timeline-title">90-Day Go-to-Market</div>
+        <div class="timeline">
+
+          <div class="tl-item">
+            <div class="tl-week">Wk 1–2</div>
+            <div class="tl-content">
+              <div class="tl-action">PTOC community entry</div>
+              <div class="tl-detail">Post founder story + problem statement. No link, no pitch. Build credibility.</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-week">Wk 2–4</div>
+            <div class="tl-content">
+              <div class="tl-action">Precision DM outreach</div>
+              <div class="tl-detail">Contact 20 prospects from existing CSV using verbatim Reddit pain quotes as openers.</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-week">Wk 3–6</div>
+            <div class="tl-content">
+              <div class="tl-action">5 design partner calls</div>
+              <div class="tl-detail">Free unlimited access in exchange for bi-weekly feedback sessions.</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-week">Wk 4–8</div>
+            <div class="tl-content">
+              <div class="tl-action">Ship MVP retention module</div>
+              <div class="tl-detail">Drop-off risk score + one re-engagement sequence template.</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-week">Wk 6–10</div>
+            <div class="tl-content">
+              <div class="tl-action">First case study</div>
+              <div class="tl-detail">"Dr. X recovered $14K in patient revenue in 6 weeks" — publish in PTOC.</div>
+            </div>
+          </div>
+
+          <div class="tl-item">
+            <div class="tl-week">Wk 8–12</div>
+            <div class="tl-content">
+              <div class="tl-action">SimplePractice refugees page</div>
+              <div class="tl-detail">Acquisition landing page targeting churned users with comparison + 90-day trial.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /deck -->
+
+<!-- Slide counter -->
+<div class="slide-counter" id="counter">01 / 07</div>
+
+<!-- Keyboard hint -->
+<div class="hint">← → ARROW KEYS  ·  CLICK TO ADVANCE</div>
+
+<!-- Nav -->
+<div class="nav">
+  <button class="nav-btn" id="prevBtn" onclick="navigate(-1)">‹</button>
+  <div class="nav-dot active" onclick="goTo(0)"></div>
+  <div class="nav-dot" onclick="goTo(1)"></div>
+  <div class="nav-dot" onclick="goTo(2)"></div>
+  <div class="nav-dot" onclick="goTo(3)"></div>
+  <div class="nav-dot" onclick="goTo(4)"></div>
+  <div class="nav-dot" onclick="goTo(5)"></div>
+  <div class="nav-dot" onclick="goTo(6)"></div>
+  <button class="nav-btn" id="nextBtn" onclick="navigate(1)">›</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dots   = document.querySelectorAll('.nav-dot');
+  const counter = document.getElementById('counter');
+  let cur = 0;
+
+  function goTo(n) {
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = Math.max(0, Math.min(n, slides.length - 1));
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+    counter.textContent = String(cur + 1).padStart(2,'0') + ' / 0' + slides.length;
+  }
+
+  function navigate(dir) { goTo(cur + dir); }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') navigate(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                      navigate(-1);
+  });
+
+  // Click anywhere on slide to advance (except nav controls)
+  document.getElementById('deck').addEventListener('click', e => {
+    if (!e.target.closest('.nav') && !e.target.closest('.nav-btn')) navigate(1);
+  });
+</script>
+</body>
+</html>
