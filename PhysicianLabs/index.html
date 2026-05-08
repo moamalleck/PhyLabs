@@ -453,6 +453,35 @@
 
   </main>
 
+  <!-- ═══ FLOATING SURVEY BUTTON ═══ -->
+  <button class="survey-fab" id="survey-fab" aria-label="Take our quick survey">
+    <span class="survey-fab-icon" aria-hidden="true">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </span>
+    <span class="survey-fab-label">Share Feedback</span>
+  </button>
+
+  <!-- ═══ SURVEY MODAL ═══ -->
+  <div class="survey-overlay" id="survey-overlay" role="dialog" aria-modal="true" aria-labelledby="survey-title" hidden>
+    <div class="survey-modal">
+      <button class="survey-close" id="survey-close" aria-label="Close survey">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="survey-header">
+        <p class="survey-eyebrow">PhysicianLabs — Quick Survey</p>
+        <div class="survey-progress-track">
+          <div class="survey-progress-fill" id="survey-progress"></div>
+        </div>
+        <p class="survey-step-label" id="survey-step-label">Question 1 of 10</p>
+      </div>
+      <div class="survey-body" id="survey-body"></div>
+      <div class="survey-nav" id="survey-nav">
+        <button class="survey-btn-back" id="survey-back" aria-label="Previous question">← Back</button>
+        <button class="survey-btn-next" id="survey-next">Next →</button>
+      </div>
+    </div>
+  </div>
+
   <script src="js/script.js"></script>
 </body>
 </html>
