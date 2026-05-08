@@ -6,6 +6,17 @@ Last synthesized: 2026-05-06
 
 ---
 
+#### [P-HIGH] Front-load context scan before asking the operator any questions
+
+**Score**: 12.4
+**Last seen**: 2026-04-30
+**Recurrences**: 2
+**First synthesized**: 2026-05-06
+
+Before asking the operator anything, scan all available repo artifacts (docs/, config, prior job outputs, retrospectives) for context relevant to the current task. In both the website-creation and marketing-strategy-definition sessions, this scan reduced the question set to only what was genuinely unanswerable from the repo — 0 structural revisions in both sessions. The cost of a context scan is low; the cost of asking questions the repo already answers is operator friction and longer sessions.
+
+---
+
 #### [P-HIGH] Front-loaded reference site discovery prevents structural rework
 
 **Score**: 7.6
@@ -17,14 +28,14 @@ In the website-creation session, spending Phase 1 visiting three reference sites
 
 ---
 
-#### [P-HIGH] Front-load context scan before asking the operator any questions
+#### [P-HIGH] Mock UI cards with realistic data for pre-product marketing sites
 
-**Score**: 12.4
-**Last seen**: 2026-04-30
-**Recurrences**: 2
+**Score**: 7.6
+**Last seen**: 2026-04-23
+**Recurrences**: 1
 **First synthesized**: 2026-05-06
 
-Before asking the operator anything, scan all available repo artifacts (docs/, config, prior job outputs, retrospectives) for context relevant to the current task. In both the website-creation and marketing-strategy-definition sessions, this scan reduced the question set to only what was genuinely unanswerable from the repo — 0 structural revisions in both sessions. The cost of a context scan is low; the cost of asking questions the repo already answers is operator friction and longer sessions.
+When no live product exists to screenshot, dark-themed mock UI cards populated with realistic data (claim denial rates, no-show percentages, checklist items, dollar amounts) convey product maturity more credibly than placeholders or generic illustrations. In the PhysicianLabs website session, each pillar section got a mock card showing real-world metrics — the user did not request any visual improvements, confirming the mocks carried full credibility. Apply this pattern in any website-creation job where the product is pre-launch.
 
 ---
 
@@ -94,40 +105,7 @@ When search results are completely off-domain (none of the results belong to the
 
 ---
 
-#### [P-MED] Mock UI cards with realistic data outperform placeholders for pre-product marketing sites
-
-**Score**: 4.8
-**Last seen**: 2026-04-23
-**Recurrences**: 1
-**First synthesized**: 2026-05-06
-
-When no live product exists to screenshot, dark-themed mock UI cards containing realistic domain data (claim rates, denial percentages, checklist items, dollar amounts) communicate product maturity more effectively than placeholder images or illustrations. The operator did not request any visual improvements after this approach was used on the PhysicianLabs website, confirming it carried sufficient credibility. Apply this pattern in any website-creation or marketing asset job where the product is pre-launch.
-
----
-
-## P-HIGH LinkedIn People Search for practitioner demographic qualification
-
-**Score**: 7.7
-**Last seen**: 2026-04-27
-**Recurrences**: 1
-**First synthesized**: 2026-05-06
-
-After LinkedIn content search returned irrelevant results, pivoting to People Search (`/search/results/people/?keywords=<role>+<city>`) immediately returned relevant practitioners with verifiable title, location, and profile. The switch was triggered by recognising a platform-level failure (zero medical context in results) rather than a query failure. People Search is the correct LinkedIn tool for healthcare professional discovery; content search is not viable for pain keyword research.
-
----
-
-## P-HIGH Verbatim pain quotes from Reddit as a compounding outreach asset
-
-**Score**: 7.7
-**Last seen**: 2026-04-27
-**Recurrences**: 1
-**First synthesized**: 2026-05-06
-
-Capturing verbatim Reddit pain quotes alongside prospect demographic data creates a compounding outreach asset — the quote becomes the personalised cold outreach angle without additional research. In the PhysicianLabs prospect discovery run, all 40 CSV rows included a direct public quote, enabling immediate, credible personalisation. Always include a PainQuote column in prospect CSVs when Reddit is a discovery source.
-
----
-
-## P-MED Proactive WCAG form label audit before submission
+#### [P-MED] Proactive WCAG form label audit before submission
 
 **Score**: 4.8
 **Last seen**: 2026-04-23
@@ -138,7 +116,7 @@ In the website-creation session, a proactive WCAG 2.1 AA audit during the optimi
 
 ---
 
-## P-MED Evidence doc before commit preserves the audit trail
+#### [P-MED] Evidence doc before commit preserves the audit trail
 
 **Score**: 4.8
 **Last seen**: 2026-04-23
