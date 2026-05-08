@@ -8,7 +8,9 @@
 
 ## Recruitment Goal
 
-Book 3–5 customer discovery interviews (15 min each) with independent practice owners who have publicly expressed pain around: prior authorization burden, patient retention/drop-off, or billing complexity.
+**Updated 2026-05-07:** Goal revised from customer discovery interviews to design partner recruitment. Target: 3 signed design partner agreements by May 22, 2026. See `docs/marketing/strategy/0-physicianLabs-launch.md` for full brief.
+
+**Original goal:** Book 3–5 customer discovery interviews (15 min each) with independent practice owners who have publicly expressed pain around: prior authorization burden, patient retention/drop-off, or billing complexity.
 
 **Target:** Tier 1 prospects (Score 9) first — 8 total.
 
@@ -111,11 +113,13 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 | 2026-04-29 | u/chakratones | Reddit | Message compose — BLOCKED. Comment posted on their PA thread. Alt: hello@koanmedia.io | v2 (edited) | Pending | DMs fully restricted. Comment live on r/Dermatology post. |
 | 2026-04-29 | u/Snapcracklepayme | Reddit | Message compose — sent ✅ | v2 (edited) | Pending | |
 | 2026-04-29 | u/crossfit6 | Reddit | Message compose — sent ✅ | v2 (edited) | Pending | |
-| 2026-04-29 | Samir Master MD | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 213 chars |
-| 2026-04-30 | Heather D. Rogers MD | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 266 chars |
-| 2026-04-30 | Elie Levy | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 199 chars |
-| 2026-04-30 | Michael Li | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 205 chars |
-| 2026-04-30 | Shaka Hatcher | LinkedIn | Connection request with note — sent ✅ | v1 | Pending | 243 chars |
+| 2026-05-07 | u/Snapcracklepayme | Reddit | DM follow-up — sent ✅ | Design partner framing | Pending | Referenced PVA series. Asked for 20 min as design partner co-builder. |
+| 2026-05-07 | u/crossfit6 | Reddit | DM follow-up — sent ✅ | Design partner framing | Pending | Referenced "5th EHR" quote directly. Asked for 20 min as design partner. |
+| 2026-05-07 | Heather D. Rogers MD | LinkedIn | Direct message — sent ✅ | Design partner framing | Pending | Referenced Modern Dermatology and Doctor Rogers Skin Care. Asked for 15 min. |
+| 2026-05-07 | Elie Levy | LinkedIn | Direct message — sent ✅ | Design partner framing | Pending | Referenced founder-physician background. Asked for 15 min. |
+| 2026-05-07 | Michael Li | LinkedIn | Direct message — sent ✅ | Design partner framing | Pending | Referenced healthcare and practice operations experience. Asked for 15 min. |
+| 2026-05-07 | Shaka Hatcher | LinkedIn | Direct message — sent ✅ | Design partner framing | Pending | Referenced independence decision journey. Asked for 15 min. |
+| 2026-05-07 | Samir Master MD | LinkedIn | Contacted separately by operator | — | Pending | Operator reached out directly (1st-degree connection). |
 
 ---
 
@@ -124,13 +128,13 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 | Prospect | Outreach Sent | Response Received | Interview Scheduled | Interview Date |
 |----------|---------------|-------------------|--------------------|--------------  |
 | u/chakratones | 2026-04-29 (comment) | — | — | — |
-| u/Snapcracklepayme | 2026-04-29 | — | — | — |
-| Samir Master MD | 2026-04-29 | — | — | — |
-| Heather D. Rogers MD | 2026-04-30 | — | — | — |
-| Elie Levy | 2026-04-30 | — | — | — |
-| Michael Li | 2026-04-30 | — | — | — |
-| Shaka Hatcher | 2026-04-30 | — | — | — |
-| u/crossfit6 | 2026-04-29 | — | — | — |
+| u/Snapcracklepayme | 2026-04-29; follow-up 2026-05-07 | — | — | — |
+| Samir Master MD | 2026-05-07 (operator, direct) | — | — | — |
+| Heather D. Rogers MD | 2026-05-07 | — | — | — |
+| Elie Levy | 2026-05-07 | — | — | — |
+| Michael Li | 2026-05-07 | — | — | — |
+| Shaka Hatcher | 2026-05-07 | — | — | — |
+| u/crossfit6 | 2026-04-29; follow-up 2026-05-07 | — | — | — |
 
 ---
 
@@ -138,7 +142,9 @@ Book 3–5 customer discovery interviews (15 min each) with independent practice
 
 | Metric | Target | Actual |
 |--------|--------|--------|
-| Outreach sent | 8 | 8 ✅ (3 Reddit + 5 LinkedIn) |
+| Outreach sent (Apr 29) | 8 | 3 (Reddit only) |
+| Outreach sent (May 7 — design partner sprint) | 7 | 7 (4 LinkedIn + 2 Reddit follow-ups + 1 operator direct) |
+| Total prospects contacted | 8 | 8 |
 | Response rate | 30–50% (2–4 responses) | — |
-| Interviews scheduled | 3–5 | — |
-| Interviews completed | 3–5 | — |
+| Design partner agreements signed by May 22 | 3 | — |
+| POC sessions completed by May 31 | 3 | — |

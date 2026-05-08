@@ -1,18 +1,30 @@
 # Manager Coaching — ash.malleck@gmail.com
-**Last synthesized:** 2026-05-06
 
-Guidance on how to direct and delegate to the AI agent more effectively.
+Patterns in how this operator delegates, reviews, and directs — useful context for working together effectively.
+
+Last synthesized: 2026-05-06
 
 ---
 
-## P-HIGH Check for gh CLI at session start in submission-heavy jobs
+#### [P-HIGH] Create a GitHub issue before launching any FRAIM job
 
-**Score**: 8.0
-**Last seen**: 2026-04-23
-**Recurrences**: 1
+**Score**: 12.4
+**Last seen**: 2026-04-30
+**Recurrences**: 2
 **First synthesized**: 2026-05-06
 
-In the website-creation session, the absence of `gh` CLI was only discovered at the PR submission step, forcing a disruptive fallback. As the manager, confirming tooling availability at the start of a session (or asking the agent to verify it) prevents late-stage friction. For jobs with a PR submission phase, ask the agent to check `which gh` early and confirm the fallback plan before work begins.
+FRAIM job artifacts (evidence docs, strategy briefs, feedback files) use the issue number in their filenames and as a traceability anchor. When jobs are launched directly via CLI without a pre-created issue, every artifact gets a `0-` prefix — a placeholder that cannot be linked back to a tracked work item. This has occurred in two separate sessions (website-creation, marketing-strategy-definition). The fix belongs with the manager: open the GitHub issue first, then launch the FRAIM job with the real issue number in scope.
+
+---
+
+#### [P-HIGH] Verify gh CLI availability before any job with a PR submission step
+
+**Score**: 12.4
+**Last seen**: 2026-04-30
+**Recurrences**: 2
+**First synthesized**: 2026-05-06
+
+`gh` is not installed in this machine's shell environment. This has caused the submission phase to fall back to a manual URL handoff in two separate sessions (website-creation, marketing-strategy-definition). The agent should check for `gh` in Phase 1 of any job that ends with a PR submission step, surface the gap to the operator immediately, and prepare the PR title and body text early so the handoff is seamless rather than a last-minute interruption. Installing `gh` or ensuring it is on the PATH would eliminate this entirely.
 
 ---
 
@@ -46,5 +58,3 @@ When requesting equal distribution across segments (e.g. 20 chiropractors + 20 d
 **First synthesized**: 2026-05-06
 
 In a multi-hour session, the FRAIM session ID expired mid-run. While no work was lost, the interruption was avoidable. For long delegated sessions (>2 hours, multiple FRAIM phase transitions), ask the agent to reconnect the FRAIM session proactively before each `seekMentoring` call rather than waiting for an expiry error.
-
----
