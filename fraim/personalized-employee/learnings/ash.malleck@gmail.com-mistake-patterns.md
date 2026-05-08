@@ -80,3 +80,36 @@ Multiple query formats (hashtag, quoted phrase, People tab) returned irrelevant 
 **First synthesized**: 2026-05-06
 
 When the user explicitly requested equal segment distribution (chiro vs derm), the final prospect list came out 24 vs 16 — a 33% imbalance — because X/Twitter abandonment disproportionately reduced derm signal and no compensating LinkedIn pass was run. The correct pattern: if one segment is >20% below the other after Reddit discovery, run a compensating LinkedIn People Search pass before declaring completion.
+
+---
+
+#### [P-HIGH] Patient acquisition omitted from initial problem statement scope
+
+**Score**: 8.0
+**Last seen**: 2026-05-01
+**Recurrences**: 1
+**First synthesized**: 2026-05-06
+
+For clinic-launch or practice-startup problem statements, the initial draft covered operational setup (credentialing, billing, entity formation) but omitted patient acquisition entirely. This would have biased all downstream interview questions toward operational pain and under-sampled the marketing channel and funnel visibility problem. For any product targeting a new independent practice, include patient acquisition as a first-class pain cluster alongside operational setup unless the founder explicitly scopes it out.
+
+---
+
+#### [P-HIGH] Counterfactual WTP hypothesis is not a valid customer development signal
+
+**Score**: 8.0
+**Last seen**: 2026-05-01
+**Recurrences**: 1
+**First synthesized**: 2026-05-06
+
+Using "would you have paid?" or "would you pay for X?" in a validation hypothesis tests a hypothetical, not a behavior. This is a Mom Test violation. The correct proxy for willingness to pay is real past behavior: money or time actually spent trying to solve the problem before the solution existed. When drafting validation hypotheses, always replace counterfactual WTP framing with behavioral signals (e.g., "Did you hire someone, pay for a guide, or spend 10+ hours figuring this out yourself?").
+
+---
+
+#### [P-LOW] Segment or specialty targeting left vague when founder has a clear hierarchy
+
+**Score**: 3.0
+**Last seen**: 2026-05-01
+**Recurrences**: 1
+**First synthesized**: 2026-05-06
+
+In the problem statement crystallization session, the specialty note defaulted to "no gut sense, wait for interviews" when the founder in fact had a clear segment hierarchy (derm+PT primary, chiro+mental health secondary). This required an extra feedback round to resolve. In Socratic refinement phases, ask directly: "Do you have a priority order across these segments?" before documenting the target market.

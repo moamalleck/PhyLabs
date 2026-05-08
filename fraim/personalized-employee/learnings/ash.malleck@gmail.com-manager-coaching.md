@@ -58,3 +58,25 @@ When requesting equal distribution across segments (e.g. 20 chiropractors + 20 d
 **First synthesized**: 2026-05-06
 
 In a multi-hour session, the FRAIM session ID expired mid-run. While no work was lost, the interruption was avoidable. For long delegated sessions (>2 hours, multiple FRAIM phase transitions), ask the agent to reconnect the FRAIM session proactively before each `seekMentoring` call rather than waiting for an expiry error.
+
+---
+
+#### [P-HIGH] Probe segment and scope tensions explicitly during Socratic phases
+
+**Score**: 8.0
+**Last seen**: 2026-05-01
+**Recurrences**: 1
+**First synthesized**: 2026-05-06
+
+In the problem statement crystallization session, a visible tension between two target segments (derm+PT vs. chiro+derm) was carried through the entire session without being directly resolved. The manager had a clear hierarchy (derm+PT primary, chiro+mental health secondary) that emerged only in the feedback round. A direct Socratic question — "Do you have a priority order across these segments?" — would have resolved this in Phase 1. When segment, scope, or framing tensions are visible, ask for explicit resolution during the refinement phase rather than flagging as TBD and deferring to documentation.
+
+---
+
+#### [P-MED] Ask "What else is part of this problem?" before finalizing any problem statement
+
+**Score**: 5.0
+**Last seen**: 2026-05-01
+**Recurrences**: 1
+**First synthesized**: 2026-05-06
+
+Patient acquisition was omitted from the initial problem statement draft because the session naturally followed the source documents, which framed the problem as operational complexity. The manager caught this in the feedback round. A closing question during the Socratic refinement phase — "Is there anything else that belongs in this problem that we haven't covered?" — would have surfaced the missing pain cluster before synthesis. Make this question standard in any problem-statement-crystallization or scope-definition job.
