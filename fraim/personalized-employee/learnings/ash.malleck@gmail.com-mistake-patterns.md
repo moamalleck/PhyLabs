@@ -2,7 +2,7 @@
 
 Recurring agent mistakes and environmental pitfalls to avoid on this project.
 
-Last synthesized: 2026-05-06
+Last synthesized: 2026-05-11
 
 ---
 
@@ -17,14 +17,14 @@ Last synthesized: 2026-05-06
 
 ---
 
-#### [P-MED] No GitHub issue pre-created before starting a FRAIM job
+#### [P-HIGH] No GitHub issue pre-created before starting a FRAIM job
 
-**Score**: 7.6
-**Last seen**: 2026-04-30
-**Recurrences**: 2
+**Score**: 9.6
+**Last seen**: 2026-05-06
+**Recurrences**: 3
 **First synthesized**: 2026-05-06
 
-FRAIM artifact naming (evidence docs, strategy briefs, feedback files) uses the issue number as a prefix. When a job is launched directly via CLI without a corresponding GitHub issue, every artifact defaults to a `0-` prefix — a placeholder that creates a traceability gap between the file and any tracked work item. The agent should not start a FRAIM job without confirming an issue number exists; if none exists, prompt the operator to create one before proceeding.
+FRAIM artifact naming (evidence docs, strategy briefs, feedback files) uses the issue number as a prefix. When a job is launched directly via CLI without a corresponding GitHub issue, every artifact defaults to a `0-` prefix — a placeholder that creates a traceability gap between the file and any tracked work item. This has now occurred three times (Apr 23, Apr 30, May 6), confirming it is a workflow pattern, not an isolated lapse. The agent should not start a FRAIM job without explicitly asking: "What is the GitHub issue number for this work?" as the first question at session open — not as a flagged gap at the end of Phase 1.
 
 ---
 
@@ -36,6 +36,28 @@ FRAIM artifact naming (evidence docs, strategy briefs, feedback files) uses the 
 **First synthesized**: 2026-05-06
 
 Modern Reddit (shreddit-post web components) and LinkedIn render data in non-semantic HTML that the accessibility tree either does not populate or populates sparsely. `browser_snapshot` returns minimal content on these pages — not because the page failed to load, but because the ARIA layer is incomplete. The correct approach is `browser_run_code` with `page.evaluate()` and direct DOM queries (`shreddit-post` elements, `a[data-testid="post-title"]`, `document.body.innerText`). Always switch to JavaScript evaluation when a snapshot returns near-empty content on a page that visually loaded.
+
+---
+
+#### [P-HIGH] Patient acquisition omitted from initial problem statement scope
+
+**Score**: 8.0
+**Last seen**: 2026-05-01
+**Recurrences**: 1
+**First synthesized**: 2026-05-06
+
+For clinic-launch or practice-startup problem statements, the initial draft covered operational setup (credentialing, billing, entity formation) but omitted patient acquisition entirely. This would have biased all downstream interview questions toward operational pain and under-sampled the marketing channel and funnel visibility problem. For any product targeting a new independent practice, include patient acquisition as a first-class pain cluster alongside operational setup unless the founder explicitly scopes it out.
+
+---
+
+#### [P-HIGH] Counterfactual WTP hypothesis is not a valid customer development signal
+
+**Score**: 8.0
+**Last seen**: 2026-05-01
+**Recurrences**: 1
+**First synthesized**: 2026-05-06
+
+Using "would you have paid?" or "would you pay for X?" in a validation hypothesis tests a hypothetical, not a behavior. This is a Mom Test violation. The correct proxy for willingness to pay is real past behavior: money or time actually spent trying to solve the problem before the solution existed. When drafting validation hypotheses, always replace counterfactual WTP framing with behavioral signals (e.g., "Did you hire someone, pay for a guide, or spend 10+ hours figuring this out yourself?").
 
 ---
 
@@ -83,25 +105,58 @@ When the user explicitly requested equal segment distribution (chiro vs derm), t
 
 ---
 
-#### [P-HIGH] Patient acquisition omitted from initial problem statement scope
+#### [P-MED] Python unavailable on this Windows machine — use Node.js/PowerShell for .docx extraction
 
-**Score**: 8.0
-**Last seen**: 2026-05-01
+**Score**: 5.0
+**Last seen**: 2026-05-10
 **Recurrences**: 1
-**First synthesized**: 2026-05-06
+**First synthesized**: 2026-05-11
 
-For clinic-launch or practice-startup problem statements, the initial draft covered operational setup (credentialing, billing, entity formation) but omitted patient acquisition entirely. This would have biased all downstream interview questions toward operational pain and under-sampled the marketing channel and funnel visibility problem. For any product targeting a new independent practice, include patient acquisition as a first-class pain cluster alongside operational setup unless the founder explicitly scopes it out.
+Python is not installed in this shell environment. The `.docx` extraction skill references `python scripts/office/unpack.py`, which fails on this machine. The working fallback: rename the `.docx` to `.zip`, expand via PowerShell `Expand-Archive`, then read `word/document.xml` using Node.js. Do not attempt the Python path first on this machine — go directly to the Node.js/PowerShell approach.
 
 ---
 
-#### [P-HIGH] Counterfactual WTP hypothesis is not a valid customer development signal
+#### [P-MED] Em-dashes in initial artifact drafts violate formal-communication guardrails — draft without them from the start
 
-**Score**: 8.0
-**Last seen**: 2026-05-01
+**Score**: 5.0
+**Last seen**: 2026-05-10
 **Recurrences**: 1
-**First synthesized**: 2026-05-06
+**First synthesized**: 2026-05-11
 
-Using "would you have paid?" or "would you pay for X?" in a validation hypothesis tests a hypothetical, not a behavior. This is a Mom Test violation. The correct proxy for willingness to pay is real past behavior: money or time actually spent trying to solve the problem before the solution existed. When drafting validation hypotheses, always replace counterfactual WTP framing with behavioral signals (e.g., "Did you hire someone, pay for a guide, or spend 10+ hours figuring this out yourself?").
+When drafting any artifact under formal-communication standards, em-dashes introduced in the first pass require a full rewrite before finalizing — a wasted cycle. The fix is to draft without em-dashes from the start, not catch them at the validate-output phase. Confirmed when the Chelsea Parkman session produced a clean first draft with no rewrite pass needed after the lesson was applied from the David Jorjani session.
+
+---
+
+#### [P-MED] Long .docx transcripts (>700 lines) require two reads — plan the offset proactively
+
+**Score**: 5.0
+**Last seen**: 2026-05-10
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+Files exceeding approximately 25K tokens (around 700–800 lines for transcript `.docx` files) cannot be read in a single pass. A proactive two-chunk read — first pass from line 1, second pass with offset at approximately line 450 — should be planned before starting extraction, not triggered by a read error mid-session. The 901-line Chelsea Parkman transcript confirmed the threshold.
+
+---
+
+#### [P-MED] fraim/config.json may contain unsupported fields from prior automated init steps
+
+**Score**: 5.0
+**Last seen**: 2026-05-10
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+`fraim init-project` or equivalent tooling may write fields into `fraim/config.json` that later schema versions do not support (e.g., `customizations.worktrees`). Manual schema inspection is not sufficient to catch these — only `npx fraim workspace-config validate` provides authoritative confirmation. Before adding new config fields, strip any unrecognised existing fields against the current schema first.
+
+---
+
+#### [P-MED] Editing worktree path instead of project root when files live in the main repo
+
+**Score**: 5.0
+**Last seen**: 2026-05-10
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+In repositories with Claude worktrees (`.claude/worktrees/<branch-name>/`), config files such as `fraim/config.json` live in the project root, not inside the worktree directory. Attempting to edit the worktree path fails with "file not found." Establish the canonical project root path before any file operations at the start of any session operating in a repo with worktrees.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 author: ash.malleck@gmail.com
 date: 2026-05-10
-synthesized:
+synthesized: 2026-05-11
 ---
 
 # Postmortem: Project Onboarding (FRAIM) — PhysicianLabs

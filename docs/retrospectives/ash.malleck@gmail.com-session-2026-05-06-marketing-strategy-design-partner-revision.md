@@ -1,7 +1,7 @@
 ---
 author: ash.malleck@gmail.com
 date: 2026-05-06
-synthesized:
+synthesized: 2026-05-11
 ---
 
 # Postmortem: Marketing Strategy Revision — Design Partner Framing

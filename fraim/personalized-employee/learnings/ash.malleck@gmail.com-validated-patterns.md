@@ -2,18 +2,18 @@
 
 Durable judgment calls and successful unusual-but-correct decisions worth reproducing.
 
-Last synthesized: 2026-05-06
+Last synthesized: 2026-05-11
 
 ---
 
 #### [P-HIGH] Front-load context scan before asking the operator any questions
 
-**Score**: 12.4
-**Last seen**: 2026-04-30
-**Recurrences**: 2
+**Score**: 15.7
+**Last seen**: 2026-05-06
+**Recurrences**: 3
 **First synthesized**: 2026-05-06
 
-Before asking the operator anything, scan all available repo artifacts (docs/, config, prior job outputs, retrospectives) for context relevant to the current task. In both the website-creation and marketing-strategy-definition sessions, this scan reduced the question set to only what was genuinely unanswerable from the repo — 0 structural revisions in both sessions. The cost of a context scan is low; the cost of asking questions the repo already answers is operator friction and longer sessions.
+Before asking the operator anything, scan all available repo artifacts (docs/, config, prior job outputs, retrospectives) for context relevant to the current task. In the website-creation, marketing-strategy-definition, and marketing-strategy-revision sessions, this scan reduced the question set to only what was genuinely unanswerable from the repo — zero structural revisions across all three sessions. The cost of a context scan is low; the cost of asking questions the repo already answers is operator friction and longer sessions.
 
 ---
 
@@ -72,6 +72,28 @@ Capturing verbatim Reddit pain quotes alongside prospect demographic data create
 
 ---
 
+#### [P-HIGH] Revision-mode jobs require explicit delta analysis before writing
+
+**Score**: 7.8
+**Last seen**: 2026-05-06
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+When a job begins with "revise the existing X," the first step is to map what changed vs. what stayed the same before touching any document. Changes that appear cosmetic (e.g., "pilot" to "design partner") often have substantive downstream effects on the offer, commitment definition, qualification gate, and outreach messages. In the May 6 marketing-strategy-revision session, identifying the delta prevented a shallow find-and-replace that would have missed material changes across four sections. A delta analysis step should be the first named action in any revision-mode job run.
+
+---
+
+#### [P-HIGH] Cross-mentor convergence on the same point is a high-signal validation marker
+
+**Score**: 8.0
+**Last seen**: 2026-05-10
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+When two independent mentors give the same guidance on the same point without coordination (both David Jorjani and Chelsea Parkman flagged the midstream module as the wrong starting point), that convergence deserves explicit callout in the output artifact, not just a passive note. Independent convergence across two high-credibility sources is qualitatively stronger than a single source repeated. Mark these moments clearly in transcript analysis and customer development artifacts so the signal is visible to the operator.
+
+---
+
 #### [P-MED] Physician-specific language outperforms generic SaaS copy for this ICP
 
 **Score**: 7.7
@@ -124,3 +146,36 @@ In the website-creation session, a proactive WCAG 2.1 AA audit during the optimi
 **First synthesized**: 2026-05-06
 
 Creating the evidence document first and committing it alongside the feature files ensures the audit trail is always intact in the same atomic commit. In the PhysicianLabs website session, the evidence doc was written before the commit — no separate clean-up step required. Reversing this order (code first, evidence later) risks forgetting the evidence doc entirely or creating a dangling commit.
+
+---
+
+#### [P-MED] Same-day learning synthesis delivers same-day ROI
+
+**Score**: 4.9
+**Last seen**: 2026-05-06
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+All three L1 learnings synthesized in the morning sleep-on-learnings run on May 6 applied directly in the afternoon marketing-strategy-revision session — VP-1, P-1, and MP-2 each fired within the first two phases, contributing to a first-pass approval with zero revision rounds. Running sleep-on-learnings before starting the day's work is not overhead; it is preparation that materially affects session quality within hours.
+
+---
+
+#### [P-MED] Grounding discipline in transcript analysis — every item must trace to a specific exchange
+
+**Score**: 5.0
+**Last seen**: 2026-05-10
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+In transcript analysis jobs, every item in the final artifact (Items Learned, Actionable Items, Other Important Notes) must be traceable to a specific exchange in the transcript. Background knowledge, inference, or pattern-matching from prior sessions should never be promoted as a finding unless explicitly confirmed in the transcript. This discipline is what distinguishes a grounded analysis from a plausible-but-fabricated one.
+
+---
+
+#### [P-MED] FRAIM workspace-config validator is the authoritative check for config correctness
+
+**Score**: 5.0
+**Last seen**: 2026-05-10
+**Recurrences**: 1
+**First synthesized**: 2026-05-11
+
+`npx fraim workspace-config validate` is the ground truth for whether `fraim/config.json` is correctly formed. Manual schema inspection is not sufficient — fields that look syntactically correct may be unsupported (e.g., `customizations.worktrees`). Run the validator immediately after every config write, not just at the end of the session, and treat a clean validator pass as a pre-condition for reporting the write phase complete.
