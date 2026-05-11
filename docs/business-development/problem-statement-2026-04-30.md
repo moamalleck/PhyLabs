@@ -1,6 +1,6 @@
 # PhysicianLabs: Problem Clarity Document
 **Date:** 2026-04-30
-**Revised:** 2026-05-01
+**Revised:** 2026-05-08
 **Job:** problem-statement-crystallization
 **Status:** Revised per founder feedback -- ready for customer validation
 
@@ -47,7 +47,7 @@ No structured resource covers the full operational launch sequence for a new ind
 | Signal | Example |
 |--------|---------|
 | Posted about going independent on Reddit or LinkedIn | Announced the decision with visible anxiety or open questions about next steps |
-| Final year of residency or fellowship | Actively evaluating options, decision often crystallizes here |
+| Final 18 months of residency or fellowship | Decision about where to land is actively forming; the cognitive shift from training to practice begins here, often triggered by watching colleagues make their choices (confirmed: Shaun Cowan, 2026-05-08) |
 | Actively shopping for or demoing an EHR | Strong behavioral indicator of imminent launch intent |
 | Recently registered a medical PLLC or LLC | Entity formation is one of the first 50 steps |
 
@@ -117,6 +117,7 @@ Minimum conversations before drawing conclusions: **5**.
 | "No structured guide" is the right framing vs. "I didn't know credentialing takes 90 days" | MEDIUM -- determines problem scope | Listen for whether credentialing surfaces unprompted in first 5 interviews |
 | Physicians will pay before they open (not just post-crisis) | HIGH -- changes timing of sales motion entirely | Look for pre-crisis vs. rescue-mode spending in interview answers |
 | Patient acquisition is part of the launch information vacuum, not a separate post-launch problem | MEDIUM -- determines whether patient pipeline tools belong in the wedge product or the upsell | Ask: "How did you think about where your first patients would come from before you opened?" |
+| Patient acquisition pain is specialty-dependent: surgeons and referral-based specialists do not feel it; derm, PT, chiro, and mental health do | MEDIUM -- determines which respondents to ask acquisition questions | Only ask Q10 and Q11 of marketing-dependent specialties; skip for hospital-based or referral-only physicians. Confirmed: Shaun Cowan (surgeon/intensivist) said "not particularly" when asked if pipeline visibility was useful (2026-05-08) |
 
 ---
 
@@ -200,3 +201,4 @@ After each interview, capture: (a) whether the information vacuum was mentioned 
 | Mentor Session: David Jorjani (2026-04-28) | `docs/customer-insights/mentor-session-david-jorjani-2026-04-28.md` |
 | Customer Development Quality Review (2026-04-29) | `docs/customer-development/customer-development-quality-review.md` |
 | Recruitment Tracker (2026-04-27) | `docs/customer-development/2026-04-27-recruitment-tracker.md` |
+| Interview: Shaun Cowan (2026-05-08) | `docs/customer-insights/interview-shaun-cowan-2026-05-08.md` |
