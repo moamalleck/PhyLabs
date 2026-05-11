@@ -44,12 +44,33 @@ Initial FRAIM onboarding completed for PhysicianLabs — a HealthTech SaaS platf
 
 ## Deferred Items (Can Be Added Later)
 
-- Validation commands (build / test / smoke) — add when stack is scaffolded
-- Architecture doc path — add after `create-architecture` job
 - Design system path/brand — add after brand is defined
 - Compliance regulations (HIPAA, SOC 2, etc.) — add via `compliance-requirements-detection`
 - Customer communication config — add when email/newsletter is configured
 - Competitors map — add as competitive research is done
+
+---
+
+## Session 2 Update — 2026-05-10
+
+### Changes Made
+
+| File | Change |
+|------|--------|
+| `fraim/config.json` | Added `customizations.validation` block; removed unsupported `customizations.worktrees` field |
+
+### Config Updates
+
+- **buildCommand:** `npm run build`
+- **testSuiteCommand:** `npm test`
+- **smokeTestCommand:** `npm run e2e`
+
+### Validation
+
+- `npx fraim workspace-config validate` — **PASSED** ✅
+- `customizations.architectureDoc` → `docs/architecture/architecture.md` — file exists ✅
+- `customizations.validation` block confirmed in config ✅
+- Unsupported `customizations.worktrees` field removed ✅
 
 ---
 
@@ -67,3 +88,4 @@ Initial FRAIM onboarding completed for PhysicianLabs — a HealthTech SaaS platf
 - ✅ No fields invented outside the approved config schema
 - ✅ Rules are specific, actionable, and relevant to HealthTech + Next.js stack
 - ✅ Deferred items documented — nothing silently dropped
+- ✅ Unsupported schema field removed; validator passes cleanly

@@ -18,6 +18,10 @@
   },
   "customizations": {
     "architectureDoc": "docs/architecture/architecture.md",
-    "worktrees": false
+    "validation": {
+      "buildCommand": "npm run build",
+      "testSuiteCommand": "npm test",
+      "smokeTestCommand": "npm run e2e"
+    }
   }
 }
