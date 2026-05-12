@@ -1,6 +1,6 @@
 # PhysicianLabs: Problem Clarity Document
 **Date:** 2026-04-30
-**Revised:** 2026-05-12
+**Revised:** 2026-05-12 (Saf Malleck)
 **Job:** problem-statement-crystallization
 **Status:** Revised per founder feedback -- ready for customer validation
 
@@ -24,7 +24,8 @@ The core failure is an information vacuum. The physician knows they want to go i
 - Payer credentialing (90 to 120 day processing time that must start immediately)
 - EHR selection and billing configuration
 - Working capital planning for the 30 to 90 day payment lag after first patient
-- Facility and staffing setup
+- Facility setup
+- Medical office staffing: finding and hiring a competent, EMR-trained medical secretary. No structured placement service exists; physicians run full consumer-level hiring processes (job boards, mass screening) while simultaneously building the clinic. The search routinely takes 4 to 6 months, and a bad first hire compounds the problem -- the second search runs longer than the first (confirmed: Saf Malleck, orthopedic surgeon, Ontario, 2026-05-11: 2,000-4,000 applications, two advertising rounds, 3-4 month temp bridge, 6 months to a good hire)
 - Patient acquisition: which marketing channels to invest in and how to build a referral network. In competitive urban markets the primary channels are Google search/SEO ranking, online review volume and score, and insurance network directory placement (confirmed: Hannan Qureshi, ENT, Atlanta, 2026-04-26)
 - Patient pipeline visibility: understanding the intake funnel, tracking conversion from inquiry to booked visit, and optimising patient mix (high-value recurring patients vs. one-time low-margin visits) -- not just raw volume
 
@@ -113,6 +114,7 @@ Minimum conversations before drawing conclusions: **5**.
 | Assumption | Risk | How to test |
 |------------|------|-------------|
 | Wallet moment: when does pain convert to purchase? | HIGH -- determines pricing model and sales trigger | Ask Q8 in every interview: "Was there a specific moment you felt most in over your head?" |
+| Medical secretary hiring as a top-three launch pain | MEDIUM -- newly surfaced; needs confirmation across specialties outside orthopedics | Ask "What was the hardest operational hire you made in the first year?" in next 3 interviews |
 | Which specialty experiences this most acutely? | MEDIUM -- determines beachhead priority | Compare Q4 answers across derm, PT, chiro interviewees |
 | "No structured guide" is the right framing vs. "I didn't know credentialing takes 90 days" | MEDIUM -- determines problem scope | Listen for whether credentialing surfaces unprompted in first 5 interviews |
 | Physicians will pay before they open (not just post-crisis) | HIGH -- changes timing of sales motion entirely | Look for pre-crisis vs. rescue-mode spending in interview answers |
@@ -136,6 +138,10 @@ All questions target past behavior. Do not use hypotheticals.
 6. "When you hit a wall operationally, what did you actually do? Who did you call? What did you search?"
 7. "Did you ever pay anyone specifically to help you figure out the business or operational side (not the clinical side)?"
 8. "Was there anything you wish you had known 6 months earlier? What happened because you did not know it?"
+
+### Staffing probe (new pain cluster -- confirmed Saf Malleck 2026-05-11)
+12. "Walk me through how you hired your first medical secretary or office admin. Where did you look? How long did it take?"
+13. "If you had to do it again, what would you do differently?"
 
 ### Patient acquisition probe (new pain cluster)
 10. "Before you opened, how did you think about where your first patients would come from? What did you actually do to get them?"
@@ -203,3 +209,4 @@ After each interview, capture: (a) whether the information vacuum was mentioned 
 | Recruitment Tracker (2026-04-27) | `docs/customer-development/2026-04-27-recruitment-tracker.md` |
 | Interview: Shaun Cowan (2026-05-08) | `docs/customer-insights/interview-shaun-cowan-2026-05-08.md` |
 | Interview: Hannan Qureshi MD (2026-04-26) | `docs/customer-insights/interview-hannan-qureshi-2026-04-26.md` |
+| Interview: Saf Malleck MD (2026-05-11) | `docs/customer-insights/interview-saf-malleck-2026-05-11.md` |
