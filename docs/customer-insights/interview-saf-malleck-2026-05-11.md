@@ -150,9 +150,77 @@ This validates the core problem statement from the opposite direction: the setup
 
 ---
 
+---
+
+## Second Half Signals (Transcript Part 2)
+
+### 7. Incorporation and tax optimization is the single largest financial pain -- and the clearest wallet moment to date
+
+Saf incorporated his practice in July 2025 but only set up the bank accounts and began working with an accountant two months ago (March 2026). Until then he was paying personal income tax rates on practice revenue, unaware of the deduction and income-splitting advantages of incorporation.
+
+**His exact framing:**
+> "The amount of tax that I'm paying is nauseating."
+
+> "Had I known this five years ago, I would have... the house I'd be living in would be double the size, just -- it's stupid, like the amount of tax, like we're all broke right now."
+
+> "You're not taught and nobody really explains it to you... unless you have a good accountant."
+
+**Specifics:**
+- Incorporated July 2025; accounts and QuickBooks setup only happened two months before this interview
+- Prior accountants were "bad" -- did not proactively surface the incorporation tax advantages
+- Current accountant (Rob) walks through gray areas of deductible expenses without crossing legal lines
+- Lost an estimated "hundreds of thousands of dollars" over years of sub-optimal structure
+- Explicit regret signal: "Had I known this five years ago..."
+
+**Why this matters for the problem statement:** This is the most emotionally charged and financially specific wallet moment from any interview to date. The information vacuum around incorporation timing and tax structuring is not framed as a business administration problem by Saf -- it is framed as a personal financial catastrophe that played out invisibly over years. No advisor, no EMR vendor, no colleague proactively flagged it. The fix required finding a good accountant, which happened by accident.
+
+This pain applies to every independent physician who incorporates without guidance -- not just orthopedic surgeons. It is not Canada-specific (professional corporations and tax structuring are a distinct pain cluster in the US as well, though the mechanics differ).
+
+---
+
+### 8. Each surgeon in the group handles all financials independently -- QuickBooks, alone
+
+In the Vaughan group, each of the four surgeons pays their own rent, manages their own expenses, and files their own taxes separately. There is no shared P&L, no group-level financial visibility. Saf is doing this himself using QuickBooks (newly set up). This is consistent with the multi-stream revenue visibility problem Shaun Cowan described -- the problem is not that data is missing but that no one is synthesizing it for the physician in a useful form.
+
+---
+
+### 9. PT and derm independently validated by Saf as the correct beachhead targets
+
+Saf endorsed physiotherapy and dermatology as the right first markets without being prompted, based on his direct experience referring patients to both specialties:
+
+**Physiotherapy:**
+- New grad PTs are "lost" after training -- the hospital system underpays and mistreats them; private practice is a grind
+- Hard to get patients and develop flow in early days
+- The physiotherapist in his building has built a clinic with 10 PTs under him and "doesn't even work" -- aspirational trajectory that motivates new grad PTs
+- Revenue structure: PT is primarily private pay in Ontario; one referral from Saf can generate $2,000-$5,000 per patient for the physio
+
+**Dermatology:**
+- High demand, high revenue, "product system" -- operates more like a business than a traditional medical practice
+- Direct example: Linda Xin (Rejuvenation Dermatology, Oakville) -- a franchise company approached her, set up the clinic, and she pays 30% overhead to the franchise. Saf called this "insane"
+- Patients are willing to pay out of pocket; timeliness and quality are the value drivers
+- Cosmetic derm practices operate with high-margin cash-pay revenue
+
+**Impact:** Third-party physician validation of the derm + PT beachhead from someone with direct referral relationships with both specialties. The 30% overhead franchise model in derm adds a new extraction pattern alongside the ortho pyramid scheme and Hannan's PE associate squeeze.
+
+---
+
+### 10. Multi-stream revenue optimization confirmed as a cross-specialty pain
+
+Saf has three main income streams (surgeries, fracture clinic, office clinic) plus smaller streams (work injury forms, insurance medical assessments -- which he is actively trying to grow). He confirmed that OHIP is the primary income focus and that the smaller streams "add up to enough that I need to optimize them." This is the same structural problem Shaun Cowan described: multiple income streams, no unified view of time-vs-revenue to guide prioritization decisions.
+
+---
+
+### 11. Going solo is viable -- the Matthew Tucci model
+
+The colleague who broke from the Oshawa Clinic pyramid scheme (Matthew Tucci) went completely solo initially -- opened a clinic by himself, then took on additional surgeons as new hires. This is the first confirmed example of a solo ortho launch in the interview dataset. Saf described it as difficult but viable, and noted Tucci's motivation: *"I want control of my own thing."* Tucci is now the founder/senior physician of the clinic Saf joined.
+
+The mental model shift Saf described: *"You get locked into this idea that you have to join a group... that in itself isn't necessarily true."* Going solo is underrepresented as a viable path precisely because the knowledge vacuum makes it feel riskier than it is.
+
+---
+
 ## Note on Transcript Completeness
 
-The transcript was cut off at the 30-minute mark (TurboScribe free tier limit). The structured interview format Ash used had three sections: (1) opening/context questions, (2) problem statement testing, (3) willingness-to-pay questions. Based on the transcript length and content, only sections 1 and part of 2 were captured. The WTP section and any further problem-statement discussion are not available.
+Two 30-minute transcript segments have been processed. Both were cut off at TurboScribe's free tier limit. The second segment ends mid-sentence on the topic of Ash's EMR long-term strategy -- the conversation continued beyond what was captured. A third segment may exist if the recording was longer than 60 minutes.
 
 ---
 
