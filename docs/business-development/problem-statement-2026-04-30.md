@@ -1,6 +1,6 @@
 # PhysicianLabs: Problem Clarity Document
 **Date:** 2026-04-30
-**Revised:** 2026-05-08
+**Revised:** 2026-05-12
 **Job:** problem-statement-crystallization
 **Status:** Revised per founder feedback -- ready for customer validation
 
@@ -25,8 +25,8 @@ The core failure is an information vacuum. The physician knows they want to go i
 - EHR selection and billing configuration
 - Working capital planning for the 30 to 90 day payment lag after first patient
 - Facility and staffing setup
-- Patient acquisition: which marketing channels to invest in, how to build a referral network, and where their first patients will come from
-- Patient pipeline visibility: understanding the intake funnel, tracking conversion from inquiry to booked visit, and identifying where prospective patients drop off
+- Patient acquisition: which marketing channels to invest in and how to build a referral network. In competitive urban markets the primary channels are Google search/SEO ranking, online review volume and score, and insurance network directory placement (confirmed: Hannan Qureshi, ENT, Atlanta, 2026-04-26)
+- Patient pipeline visibility: understanding the intake funnel, tracking conversion from inquiry to booked visit, and optimising patient mix (high-value recurring patients vs. one-time low-margin visits) -- not just raw volume
 
 The result is a predictable cash crisis at months 2 to 4 post-opening. 65% of clinics open without full payer enrollment. 92% experience cash flow problems in year one.
 
@@ -202,3 +202,4 @@ After each interview, capture: (a) whether the information vacuum was mentioned 
 | Customer Development Quality Review (2026-04-29) | `docs/customer-development/customer-development-quality-review.md` |
 | Recruitment Tracker (2026-04-27) | `docs/customer-development/2026-04-27-recruitment-tracker.md` |
 | Interview: Shaun Cowan (2026-05-08) | `docs/customer-insights/interview-shaun-cowan-2026-05-08.md` |
+| Interview: Hannan Qureshi MD (2026-04-26) | `docs/customer-insights/interview-hannan-qureshi-2026-04-26.md` |
