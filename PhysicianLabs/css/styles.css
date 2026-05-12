@@ -226,11 +226,38 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   letter-spacing: -0.5px;
 }
+.nav-logo-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
 .logo-name {
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-weight: 700;
   font-size: 17px;
   color: var(--white);
+  line-height: 1.1;
+}
+.logo-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  color: var(--teal);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.badge-spots-num {
+  color: var(--teal);
+  font-weight: 800;
+  font-size: 15px;
 }
 .nav-links {
   display: flex;
