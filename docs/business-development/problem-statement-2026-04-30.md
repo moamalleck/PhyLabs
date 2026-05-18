@@ -1,6 +1,6 @@
 # PhysicianLabs: Problem Clarity Document
 **Date:** 2026-04-30
-**Revised:** 2026-05-12 (Saf Malleck Part 2)
+**Revised:** 2026-05-12 (Saf Malleck Part 2; Sameer Gafoor)
 **Job:** problem-statement-crystallization
 **Status:** Revised per founder feedback -- ready for customer validation
 
@@ -72,6 +72,8 @@ Within the primary wedge, no specialty differential has been confirmed by interv
 
 **Third-party market validation (Saf Malleck, 2026-05-11):** A physician with active referral relationships in both specialties independently endorsed PT and derm as the correct first targets. PT rationale: new grad PTs face the same information vacuum post-training with the added challenge of a primarily private-pay revenue model. Derm rationale: high demand, high-margin cash-pay revenue mix, and an active franchise extraction problem (Rejuvenation Dermatology franchise model: 30% overhead on a set-up clinic) that mirrors the ortho pyramid scheme.
 
+**Alternative beachhead flagged for evaluation -- concierge medicine (Sameer Gafoor, 2026-05-12):** A hospital-employed interventional cardiologist recommended concierge physicians as a potentially stronger initial wedge: aggressively independent (low PE/churn risk), cash-pay model (low billing complexity), data-hungry, and small enough that a pilot of 4-5 practices is tractable. The employed-to-concierge transition is a specific underserved knowledge gap (physicians do not know how to exit employment safely into a concierge model). Investor channel alignment is also higher -- many angels and VCs personally use concierge physicians. This segment warrants at least one dedicated interview before the beachhead is locked. See `docs/customer-insights/interview-sameer-gafoor-2026-05-12.md` for the full ICP comparison.
+
 ---
 
 ## 3. Validation Hypothesis
@@ -119,6 +121,7 @@ Minimum conversations before drawing conclusions: **5**.
 | Wallet moment: when does pain convert to purchase? | HIGH -- determines pricing model and sales trigger | Ask Q8 in every interview: "Was there a specific moment you felt most in over your head?" |
 | Medical secretary hiring as a top-three launch pain | MEDIUM -- newly surfaced; needs confirmation across specialties outside orthopedics | Ask "What was the hardest operational hire you made in the first year?" in next 3 interviews |
 | Incorporation/tax structuring is a universal physician pain, not Canada-specific | MEDIUM -- strongest wallet moment to date; needs confirmation outside Ontario and outside surgery | Ask Q14 and Q15 in every remaining interview regardless of specialty or geography |
+| Concierge medicine is a stronger beachhead than derm/PT | MEDIUM -- flagged by a business-savvy hospital-employed cardiologist (Sameer Gafoor); needs direct validation from at least one concierge physician | Schedule at least one interview with a concierge or DPC physician before beachhead commitment |
 | Which specialty experiences this most acutely? | MEDIUM -- determines beachhead priority | Compare Q4 answers across derm, PT, chiro interviewees |
 | "No structured guide" is the right framing vs. "I didn't know credentialing takes 90 days" | MEDIUM -- determines problem scope | Listen for whether credentialing surfaces unprompted in first 5 interviews |
 | Physicians will pay before they open (not just post-crisis) | HIGH -- changes timing of sales motion entirely | Look for pre-crisis vs. rescue-mode spending in interview answers |
@@ -218,3 +221,4 @@ After each interview, capture: (a) whether the information vacuum was mentioned 
 | Interview: Shaun Cowan (2026-05-08) | `docs/customer-insights/interview-shaun-cowan-2026-05-08.md` |
 | Interview: Hannan Qureshi MD (2026-04-26) | `docs/customer-insights/interview-hannan-qureshi-2026-04-26.md` |
 | Interview: Saf Malleck MD (2026-05-11) | `docs/customer-insights/interview-saf-malleck-2026-05-11.md` |
+| Interview: Sameer Gafoor MD (2026-05-12) | `docs/customer-insights/interview-sameer-gafoor-2026-05-12.md` |
