@@ -124,7 +124,7 @@ function card(s, x, y, w, h, color) {
 
   card(s, 0.5, 1.4, 4.15, 3.25);
   s.addText("TODAY · THE WEDGE", { x: 0.72, y: 1.6, w: 3.7, h: 0.3, margin: 0, fontFace: HEAD, fontSize: 10.5, bold: true, color: TEAL, charSpacing: 2 });
-  s.addText("PhysicianLabs Launch", { x: 0.72, y: 1.92, w: 3.7, h: 0.4, margin: 0, fontFace: HEAD, fontSize: 17, bold: true, color: WHITE });
+  s.addText("First-Year Financial Clarity", { x: 0.72, y: 1.92, w: 3.7, h: 0.4, margin: 0, fontFace: HEAD, fontSize: 16, bold: true, color: WHITE });
   s.addText([
     { text: "Lead offer: $1,000 money-back PoC — “we find $20K you're not collecting, or it's free”", options: { bullet: true, breakLine: true } },
     { text: "Upsell ladder to $20K done-for-you transition", options: { bullet: true, breakLine: true } },
@@ -186,7 +186,7 @@ function card(s, x, y, w, h, color) {
   const layers = [
     { big: "$65.4B → $196B", sub: "US revenue cycle management, 2025 → 2035 (11.6% CAGR)" },
     { big: "$480M", sub: "serviceable market: 100,000 independent practices × $4,800 / yr" },
-    { big: "$23–46M / yr", sub: "wedge entry: 5–10K new practice launches every year" },
+    { big: "$23–46M / yr", sub: "wedge entry: 5–10K practices in their first year, every year" },
   ];
   layers.forEach((l, i) => {
     const y = 1.4 + i * 1.17;
@@ -201,7 +201,7 @@ function card(s, x, y, w, h, color) {
   s.addText("today's independents choose it with conviction. Direct Primary Care is a $61B market growing 10–15% a year, with 9 new physician-ownership platforms launched in 2025.", { x: 6.07, y: 3.05, w: 3.2, h: 1.6, margin: 0, fontFace: BODY, fontSize: 12, color: TEALB, valign: "top" });
   pageNum(s, 5);
 
-  s.addNotes("Sizing is layered and conservative. The macro: US RCM is $65 billion headed to $196 billion by 2035. Our serviceable layer: 100,000 independent practices at $4,800 a year is $480 million. The wedge entry: 5 to 10 thousand new launches a year. And the honest trend, said before you ask: independent share fell from 60 to 42 percent — which is exactly why today's independents are the conviction cohort, with DPC growing double digits.");
+  s.addNotes("Sizing is layered and conservative. The macro: US RCM is $65 billion headed to $196 billion by 2035. Our serviceable layer: 100,000 independent practices at $4,800 a year is $480 million. The wedge entry: 5 to 10 thousand practices in their first year, every year — the moment the financial pain is acute. And the honest trend, said before you ask: independent share fell from 60 to 42 percent — which is exactly why today's independents are the conviction cohort, with DPC growing double digits.");
 }
 
 // ============================== 6. CUSTOMERS & UNIT ECONOMICS ==============================
@@ -298,34 +298,37 @@ function card(s, x, y, w, h, color) {
 {
   const s = newSlide();
   kicker(s, "09  /  COMPETITIVE OVERVIEW");
-  title(s, "Everyone else starts the day the clinic opens.");
+  title(s, "Everyone else records the past. We run the next decision.", { size: 21 });
 
-  // Quadrant
-  const qx = 0.6, qy = 1.45, qw = 5.3, qh = 3.3;
+  // Quadrant: Y = windshield (decision intelligence) vs rear-view (record-keeping); X = migration required vs none
+  const qx = 0.6, qy = 1.5, qw = 5.3, qh = 3.2;
   s.addShape(pres.shapes.LINE, { x: qx, y: qy + qh / 2, w: qw, h: 0, line: { color: MUTED, width: 1 } });
   s.addShape(pres.shapes.LINE, { x: qx + qw / 2, y: qy, w: 0, h: qh, line: { color: MUTED, width: 1 } });
-  s.addText("PRODUCTIZED", { x: qx + qw / 2 - 0.75, y: qy - 0.28, w: 1.5, h: 0.22, margin: 0, align: "center", fontFace: HEAD, fontSize: 8.5, color: MUTED, charSpacing: 2 });
-  s.addText("UNPRODUCTIZED", { x: qx + qw / 2 - 0.75, y: qy + qh + 0.06, w: 1.5, h: 0.22, margin: 0, align: "center", fontFace: HEAD, fontSize: 8.5, color: MUTED, charSpacing: 2 });
-  s.addText("POST-LAUNCH", { x: qx - 0.12, y: qy + qh / 2 - 0.3, w: 1.3, h: 0.22, margin: 0, fontFace: HEAD, fontSize: 8.5, color: MUTED, charSpacing: 2 });
-  s.addText("PRE-LAUNCH", { x: qx + qw - 1.18, y: qy + qh / 2 - 0.3, w: 1.3, h: 0.22, margin: 0, align: "right", fontFace: HEAD, fontSize: 8.5, color: MUTED, charSpacing: 2 });
+  s.addText("DECISION INTELLIGENCE · WINDSHIELD", { x: qx + qw / 2 - 1.6, y: qy - 0.27, w: 3.2, h: 0.22, margin: 0, align: "center", fontFace: HEAD, fontSize: 7.5, color: TEALB, charSpacing: 1 });
+  s.addText("RECORD-KEEPING · REAR-VIEW", { x: qx + qw / 2 - 1.6, y: qy + qh + 0.05, w: 3.2, h: 0.22, margin: 0, align: "center", fontFace: HEAD, fontSize: 7.5, color: MUTED, charSpacing: 1 });
+  s.addText("MIGRATION\nREQUIRED", { x: qx - 0.18, y: qy + qh / 2 - 0.32, w: 1.0, h: 0.5, margin: 0, fontFace: HEAD, fontSize: 7.5, color: MUTED, charSpacing: 1 });
+  s.addText("NO\nMIGRATION", { x: qx + qw - 0.85, y: qy + qh / 2 - 0.32, w: 1.0, h: 0.5, margin: 0, align: "right", fontFace: HEAD, fontSize: 7.5, color: MUTED, charSpacing: 1 });
 
-  s.addText("Tebra ($250M)  ·  Jane App ($1.8B)\nWebPT · athenahealth · Meroka", { x: qx + 0.15, y: qy + 0.35, w: 2.3, h: 0.85, margin: 0, fontFace: BODY, fontSize: 10.5, color: MUTED, valign: "top" });
-  s.addText("Outsourced billing\nSpreadsheets + inertia", { x: qx + 0.15, y: qy + qh / 2 + 0.3, w: 2.3, h: 0.7, margin: 0, fontFace: BODY, fontSize: 10.5, color: MUTED, valign: "top" });
-  s.addText("Startup consultants\n$30K–$60K, hourly, referral-gated", { x: qx + qw / 2 + 0.25, y: qy + qh / 2 + 0.3, w: 2.3, h: 0.7, margin: 0, fontFace: BODY, fontSize: 10.5, color: MUTED, valign: "top" });
+  // Top-left: windshield + migration/heavy
+  s.addText("Enterprise RCM / BI (R1-tier)\n$30–60K consultants — heavy, manual", { x: qx + 0.15, y: qy + 0.32, w: 2.25, h: 0.85, margin: 0, fontFace: BODY, fontSize: 9.5, color: MUTED, valign: "top" });
+  // Bottom-left: rear-view + migration
+  s.addText("Tebra ($250M) · Jane ($1.8B)\nathenahealth · WebPT", { x: qx + 0.15, y: qy + qh / 2 + 0.28, w: 2.25, h: 0.8, margin: 0, fontFace: BODY, fontSize: 9.5, color: MUTED, valign: "top" });
+  // Bottom-right: rear-view + no migration
+  s.addText("Outsourced billing\nSpreadsheets + inertia", { x: qx + qw / 2 + 0.25, y: qy + qh / 2 + 0.28, w: 2.25, h: 0.8, margin: 0, fontFace: BODY, fontSize: 9.5, color: MUTED, valign: "top" });
+  // Top-right: windshield + no migration — PhysicianLabs, alone
+  s.addShape(pres.shapes.RECTANGLE, { x: qx + qw / 2 + 0.35, y: qy + 0.42, w: 2.1, h: 0.75, fill: { color: TEAL }, line: { type: "none" } });
+  s.addText("PHYSICIANLABS", { x: qx + qw / 2 + 0.35, y: qy + 0.42, w: 2.1, h: 0.75, margin: 0, align: "center", valign: "middle", fontFace: HEAD, fontSize: 13, bold: true, color: NAVY, charSpacing: 1 });
 
-  s.addShape(pres.shapes.RECTANGLE, { x: qx + qw / 2 + 0.35, y: qy + 0.4, w: 2.1, h: 0.75, fill: { color: TEAL }, line: { type: "none" } });
-  s.addText("PHYSICIANLABS", { x: qx + qw / 2 + 0.35, y: qy + 0.4, w: 2.1, h: 0.75, margin: 0, align: "center", valign: "middle", fontFace: HEAD, fontSize: 13, bold: true, color: NAVY, charSpacing: 1 });
-
-  card(s, 6.3, 1.45, 3.2, 3.3);
-  s.addText("WHY THEY CAN'T FOLLOW", { x: 6.52, y: 1.65, w: 2.75, h: 0.3, margin: 0, fontFace: HEAD, fontSize: 10.5, bold: true, color: TEAL, charSpacing: 1 });
+  card(s, 6.3, 1.5, 3.2, 3.2);
+  s.addText("WHY THEY CAN'T FOLLOW", { x: 6.52, y: 1.68, w: 2.75, h: 0.3, margin: 0, fontFace: HEAD, fontSize: 10.5, bold: true, color: TEAL, charSpacing: 1 });
   s.addText([
-    { text: "Incumbent revenue begins at go-live: onboarding fees, per-provider subs, clearinghouse cuts", options: { bullet: true, breakLine: true } },
-    { text: "The 18 months before go-live are structurally invisible to their model", options: { bullet: true, breakLine: true } },
-    { text: "We never ask a practice to migrate its EHR — their #1 purchase objection is our entry path", options: { bullet: true } },
-  ], { x: 6.52, y: 2.03, w: 2.75, h: 2.6, margin: 0, fontFace: BODY, fontSize: 11, color: WHITE, paraSpaceAfter: 9, valign: "top" });
+    { text: "Incumbents are systems of record — they log what happened; they don't guide the next decision", options: { bullet: true, breakLine: true } },
+    { text: "Their model depends on you migrating onto them; we sit on top of the stack you already run", options: { bullet: true, breakLine: true } },
+    { text: "Real-time financial intelligence has only existed for hospital systems — never the first-year independent", options: { bullet: true } },
+  ], { x: 6.52, y: 2.04, w: 2.75, h: 2.55, margin: 0, fontFace: BODY, fontSize: 10.5, color: WHITE, paraSpaceAfter: 8, valign: "top" });
   pageNum(s, 9);
 
-  s.addNotes("Map the field on two axes: pre- versus post-launch, productized versus not. Tebra, Jane, WebPT, athenahealth — all productized, all post-launch, all requiring EHR migration. Consultants serve pre-launch but at $30 to 60K, hourly and referral-gated. The pre-launch, productized quadrant is empty — that's our entry. And structurally they can't follow: their revenue starts at go-live, ours starts 18 months earlier. If asked: yes, a practicing dermatologist we interviewed is exploring a similar build — that's the ICP validating the market from the inside, single-specialty and part-time.");
+  s.addNotes("Map the field on two axes that actually matter: do you guide the next decision, or just record the last one — and do you require a migration to deliver it. Tebra, Jane, athenahealth, WebPT are systems of record you migrate onto. Outsourced billing and spreadsheets sit alongside but only record. Enterprise RCM and the $30-60K consultants give real intelligence, but they're heavy, manual, and built for big systems. The windshield-plus-no-migration quadrant is empty — that's us: a forward-looking financial brain that runs on top of the stack a first-year independent already has. The moat is the layer and the data, not a calendar window. If asked: yes, a practicing dermatologist we interviewed is exploring a similar build — the ICP validating the market from the inside, single-specialty and part-time.");
 }
 
 // ============================== 10. TECHNOLOGY STATUS ==============================
@@ -467,7 +470,7 @@ function card(s, x, y, w, h, color) {
   s.addText([
     { text: "CMS interoperability mandate: EHR data by right — integration cost collapsing", options: { bullet: true, breakLine: true } },
     { text: "AI inflection: a financial brain for 1,000 clinics is now a seed-stage build", options: { bullet: true, breakLine: true } },
-    { text: "The conviction cohort grows (DPC +10–15%/yr) while incumbents chase post-launch retention", options: { bullet: true } },
+    { text: "The conviction cohort grows (DPC +10–15%/yr) while incumbents chase established multi-year practices — the first year is ours", options: { bullet: true } },
   ], { x: 0.72, y: 1.88, w: 4.0, h: 1.85, margin: 0, fontFace: BODY, fontSize: 10.5, color: WHITE, paraSpaceAfter: 6, valign: "top" });
 
   card(s, 5.1, 1.35, 4.4, 2.5);

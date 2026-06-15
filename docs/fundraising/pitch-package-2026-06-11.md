@@ -52,7 +52,9 @@ Layered sizing, conservative numbers first (per mentor guidance: never lead with
 
 ### Market Positioning
 
-The 2x2 that matters: **pre-launch vs. post-launch** on one axis, **productized vs. unproductized** on the other. Every funded competitor is post-launch productized. Every pre-launch alternative is unproductized consulting. The pre-launch productized quadrant is empty. PhysicianLabs enters there, then expands into the post-launch financial layer the wedge customers graduate into, with zero EHR migration as the standing entry advantage.
+*(Reframed 2026-06-15 to match the post-launch ICP — the moat is the layer, not a calendar window.)*
+
+The 2x2 that matters: **decision intelligence (windshield) vs. record-keeping (rear-view)** on one axis, **no migration vs. migration required** on the other. EHR/practice-management incumbents (Tebra, Jane, athenahealth, WebPT) are rear-view systems you migrate onto. Outsourced billing and spreadsheets sit alongside but only record. Enterprise RCM and $30–60K consultants give real intelligence, but they are heavy, manual, and built for large systems. The **windshield + no-migration quadrant is empty** — that is PhysicianLabs: a forward-looking financial brain that runs on top of the stack a first-year independent already has. The differentiation is durable because it is structural (layer + data + no migration), not a timing window incumbents could close by launching a pre-launch product.
 
 ---
 
