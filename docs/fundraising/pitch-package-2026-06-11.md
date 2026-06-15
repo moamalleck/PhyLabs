@@ -62,6 +62,7 @@ The 2x2 that matters: **pre-launch vs. post-launch** on one axis, **productized 
 
 | Tier | Price | Margin profile |
 |---|---|---|
+| Money-back PoC (lead offer, validated 2026-06-15) | $1,000 one-time, refunded if <$20K recoverable revenue found | one-time, converts to subscription |
 | Transition Kit (self-serve) | $750 to $1,000 one-time | >90% |
 | Transition Program (founder-guided, 12 weeks) | $3,500 to $5,000 one-time, then $500 to $799/mo | >80% |
 | Full Transition (done-for-you) | $8,000 to $20,000, then $500 to $799/mo | ~70% |
@@ -124,8 +125,8 @@ Cover + 14 slides in the founder-specified order, ~20 seconds each, one message 
 
 ### Anticipated Objections by Category
 
-**Traction: "Zero paid revenue. Why a $2.5M pre-seed?"**
-Correct, and closing the first paid engagement is the next 30 days' only job; the offer is already drafted and the warm pipeline is named. What the pre-seed buys is the proof: 20 paying clinics and platform v1. What exists today is insight density most pre-seeds never have: 7 sessions across 5 physicians in 2 countries and 5 specialties, dollar-quantified willingness to pay ($1K prospective, $10K retrospective from the same surgeon), and a structural gap incumbents cannot serve.
+**Traction: "Why a $2.5M pre-seed at this stage?"**
+We have our first paid PoC commitment confirmed, and I will be candid: the subject is my brother, a post-launch ortho surgeon, and payment is collected on delivery, which is in progress. I am not claiming arm's-length revenue yet. The first non-family, card-charged close is the next 30 days' only job; the offer is validated and the warm pipeline is named (Tucci, Xin, Cowan). What the pre-seed buys is the proof: 20 paying clinics and platform v1. What exists today is insight density most pre-seeds never have: 7 sessions across 5 physicians in 2 countries and 5 specialties, dollar-quantified willingness to pay ($1K prospective, $10K retrospective from the same surgeon), and a structural gap incumbents cannot serve.
 
 **Market: "Independent practice is shrinking."**
 Named proactively: 60.1% to 42.2% since 2012. The drift cohort is disappearing; the conviction cohort is growing. DPC is $61B growing 10 to 15%/yr with nine new ownership platforms in 2025. Smaller, more motivated, higher WTP.
@@ -173,4 +174,4 @@ Three things: (1) define the bar, tell me exactly what you would need to see in 
 ROI frame: base case, acquisition at ~5x on $28M ARR is a $140M+ outcome, roughly 15 to 25x a pre-seed entry. Upside case, category leader comp (Jane App $1.8B) is 50x+.
 
 > [!IMPORTANT]
-> This pitch package builds upon business validation findings. All traction claims use the honest June 11 state: 5 verbal LOIs in written conversion, zero paid revenue, first paid close targeted within 30 days. Do not upgrade any claim without new evidence in hand.
+> This pitch package builds upon business validation findings. Honest traction state (updated 2026-06-15): first paid PoC commitment confirmed (Saf Malleck, June 6) but family and payment-pending — not yet arm's-length, card-charged revenue; 5 verbal LOIs in written conversion; first non-family paid close targeted within 30 days. Do not upgrade any claim to "paying customer" or "revenue" until a non-family card is charged. See `docs/business-development/mvt-analysis-2026-06-15.md`.

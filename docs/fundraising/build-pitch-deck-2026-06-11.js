@@ -126,8 +126,8 @@ function card(s, x, y, w, h, color) {
   s.addText("TODAY · THE WEDGE", { x: 0.72, y: 1.6, w: 3.7, h: 0.3, margin: 0, fontFace: HEAD, fontSize: 10.5, bold: true, color: TEAL, charSpacing: 2 });
   s.addText("PhysicianLabs Launch", { x: 0.72, y: 1.92, w: 3.7, h: 0.4, margin: 0, fontFace: HEAD, fontSize: 17, bold: true, color: WHITE });
   s.addText([
-    { text: "Founder-guided transition program for hospital-employed physicians going independent", options: { bullet: true, breakLine: true } },
-    { text: "$750 self-serve  →  $20K done-for-you", options: { bullet: true, breakLine: true } },
+    { text: "Lead offer: $1,000 money-back PoC — “we find $20K you're not collecting, or it's free”", options: { bullet: true, breakLine: true } },
+    { text: "Upsell ladder to $20K done-for-you transition", options: { bullet: true, breakLine: true } },
     { text: "Selling now — no software build required", options: { bullet: true, breakLine: true } },
     { text: "Every engagement writes the platform spec", options: { bullet: true } },
   ], { x: 0.72, y: 2.42, w: 3.7, h: 2.1, margin: 0, fontFace: BODY, fontSize: 12, color: WHITE, paraSpaceAfter: 8, valign: "top" });
@@ -147,7 +147,7 @@ function card(s, x, y, w, h, color) {
   s.addText("Every EHR is a rear-view mirror. PhysicianLabs is the windshield.", { x: 0.5, y: 4.88, w: 9, h: 0.35, margin: 0, align: "center", fontFace: BODY, fontSize: 14, italic: true, color: TEALB });
   pageNum(s, 3);
 
-  s.addNotes("Two moves. The wedge is live today: a founder-guided transition program priced $750 to $20K — it earns revenue without a software build and every engagement writes the platform spec. The platform is what this round builds: an AI-native financial operating layer above the EHR — real-time P&L, leak detection, credentialing intelligence — with zero migration. EHRs record what happened. We show where the practice is going.");
+  s.addNotes("Two moves. The wedge is live today. The validated tip-of-spear is a $1,000 money-back Proof-of-Concept: we find $20K you're not collecting, or it's free — then it ladders up to the done-for-you transition and the monthly subscription. It earns revenue without a software build, and every engagement writes the platform spec. The platform is what this round builds: an AI-native financial operating layer above the EHR — real-time P&L, leak detection, credentialing intelligence — with zero migration. EHRs record what happened. We show where the practice is going.");
 }
 
 // ============================== 4. LEADERSHIP ==============================
@@ -267,17 +267,19 @@ function card(s, x, y, w, h, color) {
   title(s, "Cash up front. Compounding subscription behind it.");
 
   const tiers = [
-    ["Transition Kit", "$750–$1,000 one-time", "Self-serve digital launch kit"],
-    ["Transition Program", "$3,500–$5,000  +  $500–799/mo", "Founder-guided, 12 weeks"],
-    ["Full Transition", "$8,000–$20,000  +  $500–799/mo", "Done-for-you, high-earner specialists"],
-    ["Platform OS", "$500–799/mo recurring", "Post-launch financial layer — every clinic graduates here"],
+    ["Money-back PoC", "$1,000 one-time", "Lead offer: find $20K or it's free", true],
+    ["Transition Kit", "$750–$1,000 one-time", "Self-serve digital launch kit", false],
+    ["Transition Program", "$3,500–$5,000 + $500–799/mo", "Founder-guided, 12 weeks", false],
+    ["Full Transition", "$8,000–$20,000 + $500–799/mo", "Done-for-you specialists", false],
+    ["Platform OS", "$500–799/mo recurring", "Every clinic graduates here", false],
   ];
   tiers.forEach((t, i) => {
-    const y = 1.4 + i * 0.88;
-    card(s, 0.5, y, 5.9, 0.76, i === 3 ? CARD : CARD2);
-    s.addText(t[0], { x: 0.72, y: y + 0.09, w: 1.9, h: 0.6, margin: 0, fontFace: HEAD, fontSize: 12.5, bold: true, color: i === 3 ? TEAL : WHITE, valign: "middle" });
-    s.addText(t[1], { x: 2.65, y: y + 0.09, w: 2.05, h: 0.6, margin: 0, fontFace: BODY, fontSize: 11, bold: true, color: TEALB, valign: "middle" });
-    s.addText(t[2], { x: 4.75, y: y + 0.09, w: 1.55, h: 0.6, margin: 0, fontFace: BODY, fontSize: 9.5, color: MUTED, valign: "middle" });
+    const y = 1.35 + i * 0.7;
+    card(s, 0.5, y, 5.9, 0.6, t[3] ? CARD : CARD2);
+    if (t[3]) s.addShape(pres.shapes.RECTANGLE, { x: 0.5, y: y, w: 0.07, h: 0.6, fill: { color: TEAL }, line: { type: "none" } });
+    s.addText(t[0], { x: 0.72, y: y + 0.05, w: 1.95, h: 0.5, margin: 0, fontFace: HEAD, fontSize: 12, bold: true, color: t[3] ? TEAL : WHITE, valign: "middle" });
+    s.addText(t[1], { x: 2.7, y: y + 0.05, w: 2.1, h: 0.5, margin: 0, fontFace: BODY, fontSize: 10.5, bold: true, color: TEALB, valign: "middle" });
+    s.addText(t[2], { x: 4.85, y: y + 0.05, w: 1.45, h: 0.5, margin: 0, fontFace: BODY, fontSize: 9, color: MUTED, valign: "middle" });
   });
 
   card(s, 6.65, 1.4, 2.85, 3.4);
@@ -472,7 +474,7 @@ function card(s, x, y, w, h, color) {
   s.addText("TRACTION — STATED HONESTLY", { x: 5.32, y: 1.52, w: 4.0, h: 0.3, margin: 0, fontFace: HEAD, fontSize: 10.5, bold: true, color: TEAL, charSpacing: 1 });
   s.addText([
     { text: "7 discovery sessions · 5 physicians · 2 countries · 5 specialties", options: { bullet: true, breakLine: true } },
-    { text: "5 verbal LOIs converting to written; first paid close targeted inside 30 days", options: { bullet: true, breakLine: true } },
+    { text: "First paid PoC commitment confirmed; first arm's-length close targeted inside 30 days", options: { bullet: true, breakLine: true } },
     { text: "WTP on record ($1K / $10K) · working prototypes · live warm pipeline", options: { bullet: true } },
   ], { x: 5.32, y: 1.88, w: 4.0, h: 1.85, margin: 0, fontFace: BODY, fontSize: 10.5, color: WHITE, paraSpaceAfter: 6, valign: "top" });
 
@@ -481,7 +483,7 @@ function card(s, x, y, w, h, color) {
   s.addText("Put doctors back in the driver's seat of their own financial future.", { x: 0.7, y: 5.05, w: 8.6, h: 0.35, margin: 0, align: "center", fontFace: HEAD, fontSize: 12, bold: true, color: TEAL });
   pageNum(s, 14);
 
-  s.addNotes("Why now: the CMS mandate makes EHR data accessible by right, the AI inflection makes the platform a seed-stage build, and the conviction cohort is growing while incumbents look the other way. Traction, exactly as it is: seven sessions with five physicians across two countries and five specialties, five verbal LOIs converting to written, willingness to pay quantified on record, working prototypes, and a named pipeline. Close on the surgeon's own words: 'If I spend a day in the ICU versus the clinic, I don't know where I am financially.' That is the company. Put doctors back in the driver's seat of their own financial future. [Stop. Take questions.]");
+  s.addNotes("Why now: the CMS mandate makes EHR data accessible by right, the AI inflection makes the platform a seed-stage build, and the conviction cohort is growing while incumbents look the other way. Traction, exactly as it is: seven sessions with five physicians across two countries and five specialties, willingness to pay quantified on record, working prototypes, and a named pipeline. On the first paid PoC — disclose proactively if asked: it is confirmed, but the subject is my brother (a post-launch ortho surgeon) and the payment is collected on delivery, which is in progress. I am deliberately not claiming arm's-length revenue yet; the first non-family, card-charged close is targeted inside 30 days (Tucci, Xin, or Cowan). Close on the surgeon's own words: 'If I spend a day in the ICU versus the clinic, I don't know where I am financially.' That is the company. Put doctors back in the driver's seat of their own financial future. [Stop. Take questions.]");
 }
 
 pres.writeFile({ fileName: "pitch-deck-2026-06-11-softbank-necx.pptx" }).then(() => console.log("DONE"));

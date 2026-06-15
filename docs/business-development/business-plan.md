@@ -1,7 +1,7 @@
 # Business Plan: PhysicianLabs
 **Created:** 2026-05-05
 **Job:** business-plan-creation
-**Status:** Draft v1 — Pending founder review
+**Status:** Draft v2 — Segment 1 updated 2026-05-31 per `docs/business-development/icp-decision-2026-05-31.md`
 **Artifact:** `docs/business-development/business-plan.md`
 
 ---
@@ -12,11 +12,13 @@ PhysicianLabs is building the **Clinical Operating System for independent physic
 
 **The market**: ~165,751 physician-owned US practices. The serviceable addressable market is ~100,000 practices (1–5 physicians, fee-for-service, EHR-equipped), representing a **$480M SAM** at $4,800 blended ARPU. The independent practice software category is growing at **8.96–10.54% CAGR** ([Towards Healthcare, 2025](https://www.towardshealthcare.com/insights/practice-management-system-market-sizing)).
 
-**The beachhead**: Physicians opening their first independent clinic — the pre-launch moment where no competitor exists. The wedge product, *PhysicianLabs Launch*, is a "Business Doula" concierge OS that walks new clinic owners through the 50 operational steps they don't know they need — credentialing, entity formation, payer enrollment, billing configuration, and patient pipeline setup.
+**The beachhead**: Hospital-employed physicians making a deliberate transition to independent or concierge practice. The wedge product, *PhysicianLabs Launch*, is a founder-guided transition program that walks physicians through every financial, legal, and operational decision required to exit employment and open a financially clear, independently owned practice — starting with the incorporation timing mistake that silently costs most physicians $200,000–$400,000 before a good accountant finds it. Concierge/DPC medicine is the sharpest sub-segment: aggressively independent, cash-pay, high WTP, low churn. *(ICP updated 2026-05-31 — see `docs/business-development/icp-decision-2026-05-31.md`.)*
+
+> **Timing refinement (2026-06-15, post-MVT):** The commercial buyer is the physician who has **just launched (0–12 months post-launch)** and feels the pain — *not* the pre-launch physician, who does not yet feel it and will not pay prospectively (confirmed independently by Samir Master and Saf Malleck). Pre-launch physicians are now a nurture/education funnel that converts after they open. Entry offer is a **$1,000 money-back Proof-of-Concept** ("we find $20K you're not collecting, or it's free"). See `docs/business-development/mvt-analysis-2026-06-15.md`.
 
 **The competitive window**: Tebra raised $250M in January 2026 ([Yahoo Finance](https://finance.yahoo.com/news/private-practice-platform-tebra-secures-133000483.html)); Jane App is valued at $1.8B ([BetaKit](https://betakit.com/jane-software-to-be-reportedly-valued-at-1-8-billion-in-upcoming-secondary-financing/)). Both require full EHR migration and don't serve pre-launch physicians. The category label — "Clinical Operating System" — is unclaimed. PhysicianLabs must claim it within 6 months.
 
-**Traction status**: Pre-MVP. Design partner recruiting begins immediately. Target: 5 signed design partners by Day 90, $60K MRR by Month 12.
+**Traction status**: Pre-MVP. First paid PoC commitment confirmed (Saf Malleck, 2026-06-06) — payment pending delivery, and the subject is a family member, so external validity is not yet established. Next gate: close one **arm's-length, card-charged** PoC (Tucci / Xin / Cowan). Target: 5 design partners by Day 90, $60K MRR by Month 12. *(Updated 2026-06-15 — see `docs/business-development/mvt-analysis-2026-06-15.md`.)*
 
 **Business model**: Hybrid SaaS + services. Milestone-based pricing for the launch segment; tiered SaaS + services for established practices. Year 1 unit economics: LTV:CAC of 19–29:1 across all segments.
 
@@ -26,24 +28,25 @@ PhysicianLabs is building the **Clinical Operating System for independent physic
 
 ### Segment Comparison Matrix
 
-| Criterion | New Clinic Launcher | Independent PT | Independent Chiro | Independent Derm | Established Practice |
+| Criterion | Hospital-to-Independent / Concierge Transition | Independent PT | Independent Chiro | Independent Derm | Established Practice |
 |---|:---:|:---:|:---:|:---:|:---:|
 | Pain Intensity | 5/5 | 5/5 | 5/5 | 4/5 | 3/5 |
-| Market Size (US) | ~20K new/yr | ~50K practices | ~35K practices | ~8K practices | ~80–100K practices |
-| Willingness to Pay | Unvalidated | 4/5 | 3/5 | 5/5 | 3/5 |
-| Distribution Ease | 3/5 | 4/5 | 4/5 | 3/5 | 3/5 |
-| Competitive Underservice | 5/5 | 5/5 | 5/5 | 4/5 | 3/5 |
+| Market Size (US) | ~20K concierge/DPC practices + broader transition pool | ~50K practices | ~35K practices | ~8K practices | ~80–100K practices |
+| Willingness to Pay | **5/5** — disposable income, high-stakes transition | 4/5 | 3/5 | 5/5 | 3/5 |
+| Distribution Ease | 4/5 — AAPP, DPC Frontier, Pro Alliance, Doximity | 4/5 | 4/5 | 3/5 | 3/5 |
+| Competitive Underservice | 5/5 — zero products exist for this transition moment | 5/5 | 5/5 | 4/5 | 3/5 |
 | **Priority** | 🥇 **Wedge** | 🥇 **Scale** | 🥈 | 🥉 | Year 2 upsell |
 
 ### Primary Target Segments
 
-**Segment 1 — New Clinic Launcher (Cross-specialty Wedge)**
-- **Profile**: Any specialty physician who has decided to go independent; 0–12 months pre-launch or 0–6 months post-launch; carrying medical school debt; sole decision-maker
-- **JTBD**: "Tell me the 50 steps I don't know. Don't let me fail in the first 6 months."
-- **Core Pains**: (1) No structured guide to credentialing, entity formation, and billing setup; (2) 90–120 day credentialing lag catches most physicians by surprise; (3) 92% hit a cash crisis at months 2–4
-- **Value Prop**: Be the Business Doula — a concierge-first launch OS that walks new clinic owners through every operational step before the cash crisis hits
-- **Buying Process**: Trigger = decision to go independent. Pricing: $500 Launch Pack → $200/mo → +$150/mo RCM unlock. No upfront SaaS commitment
-- **Distribution**: UW/Seattle residency alumni, state medical associations, specialty Facebook groups
+**Segment 1 — Hospital-to-Independent / Concierge Transition Physician (Wedge)**
+*(Updated 2026-05-31 — see `docs/business-development/icp-decision-2026-05-31.md`)*
+- **Profile**: Hospital-employed physician, 5–15 years in practice, making a deliberate choice to exit employment and go independent — with concierge/DPC as the primary sub-segment. Has disposable income. Motivated by reclaiming financial agency and operational clarity, not just escaping paperwork.
+- **JTBD**: "Help me exit hospital employment and launch an independent practice with crystal-clear financials, the right structure from Day 1, and zero of the costly mistakes my colleagues made."
+- **Core Pains**: (1) No structured guide to the transition — incorporation timing, payer re-enrollment, patient panel portability, concierge membership pricing; (2) Tax and entity structure mistakes cost $200K–$400K before a good accountant finds them; (3) No P&L visibility during or after transition — they've never owned their own financial data; (4) Fear of replicating hospital bureaucracy in their own practice
+- **Value Prop**: The only founder-guided transition program for hospital-employed physicians going independent — starting with the financial structure and P&L clarity that determines whether the first three years are financially solvent or a wealth-destruction event
+- **Buying Process**: *(timing refined 2026-06-15)* Highest-urgency trigger = **0–12 months post-launch**, when the financial pain becomes acute and felt. Pre-launch physicians (6–18 months before transition) enter the nurture funnel and convert after they open. Entry offer: **$1,000 money-back PoC** → $599/mo founder rate → platform. Full ladder: $750–$1,000 self-serve kit → $3,500–$5,000 founder-guided 12-week program → $8,000–$20,000 done-for-you → $500–$799/mo active subscription
+- **Distribution**: American Academy of Private Physicians (AAPP), DPC Frontier (dpcare.org), Pro Alliance / Western Washington Medical Group (pods splitting off), r/whitecoatinvestor, Doximity physician career transition communities
 
 **Segment 2 — Independent Physical Therapist (Owner-Operator)**
 - **Profile**: Solo or small group clinic (1–3 DPTs), insurance + cash-pay mix, 10–30 patients/day, no dedicated biller, overhead 55–70% of collections
@@ -148,14 +151,16 @@ PhysicianLabs is building the **Clinical Operating System for independent physic
 
 ### CAC / LTV Analysis
 
-| Segment | Blended Monthly Revenue | Avg Subscription | LTV | Blended CAC | **LTV:CAC** | Payback |
-|---|---|---|---|---|---|---|
-| New Clinic Launcher | $350 + $500 one-time | 12 months | $4,700 | $200 | **23.5:1** | <1 month |
-| Independent PT | $400 | 20 months | $8,000 | $280 | **28.6:1** | <1 month |
-| Independent Chiro | $350 | 16 months | $5,600 | $290 | **19.3:1** | <1 month |
-| Independent Derm | $600 | 28 months | $16,800 | $620 | **27.1:1** | 1 month |
+| Segment | One-time Program Fee | Active Subscription | Avg Engagement | LTV | Blended CAC | **LTV:CAC** | Payback |
+|---|---|---|---|---|---|---|---|
+| Hospital-to-Independent / Concierge | $4,250 avg (mid-tier) | $650/mo | 12 months | ~$12,050 | $400 | **~30:1** | <1 month |
+| Independent PT | — | $400/mo | 20 months | $8,000 | $280 | **28.6:1** | <1 month |
+| Independent Chiro | — | $350/mo | 16 months | $5,600 | $290 | **19.3:1** | <1 month |
+| Independent Derm | — | $600/mo | 28 months | $16,800 | $620 | **27.1:1** | 1 month |
 
-> All segments project LTV:CAC well above the 10:1 health threshold. CAC is low because acquisition is community-led (PTOC, APTA, ACA) with no paid advertising in Year 1. Primary risk: churn assumptions are unvalidated until design partners are live. Month 1 churn modeled at 15–25% — white-glove concierge is the primary lever.
+> ⚠️ **Segment 1 unit economics are provisional** — updated to reflect the hospital-to-independent/concierge ICP pricing ($3,500–$5,000 program fee + $500–$799/mo subscription). LTV estimate uses $4,250 avg one-time + $650/mo × 12 months. WTP is still unvalidated (experiment pass/fail: June 4). Do not use these figures in investor materials until at least one paid transaction closes. All other segment economics remain unchanged from Draft v1.
+>
+> CAC for Segment 1 revised upward to $400 (from $200) to reflect the more specific distribution channels (AAPP, DPC Frontier, warm network) vs. the broad community assumption in Draft v1.
 
 ---
 
@@ -250,10 +255,17 @@ WebPT, ChiroTouch, and Jane App are documentation/billing tools. None surface pa
 
 | Tier | Segment | Structure | Blended MRR |
 |---|---|---|---|
-| **Launch Pack** | New Clinic Launcher | $500 one-time → $200/mo → +$150/mo RCM | Up to $350/mo |
+| **Money-back PoC** *(lead offer, validated 2026-06-15)* | Just-launched (0–12 mo) Hospital-to-Independent / Concierge | $1,000 one-time, refunded if <$20K recoverable revenue found → first right to $599/mo founder rate | One-time → $599/mo |
+| **Transition Kit** *(updated)* | Hospital-to-Independent / Concierge | $750–$1,000 self-serve digital kit | One-time |
+| **Transition Program** *(updated)* | Hospital-to-Independent / Concierge | $3,500–$5,000 one-time → $500–$799/mo active subscription | $500–$799/mo |
+| **Full Transition** *(updated)* | High-earner specialist (derm, surgical, ophthalmology) | $8,000–$20,000 done-for-you → $500–$799/mo | $500–$799/mo |
 | **Practice OS** | PT / Chiro | $250/mo SaaS + $150/mo services | $350–$400/mo |
-| **Derm Concierge** | Dermatologist | $300/mo SaaS + $300/mo services | $500–$600/mo |
-| **Design Partner** | First 5 practices | Free (90 days) → paid at Day 90 | $0 → $350+/mo |
+| **Derm Concierge** | Established Dermatologist | $300/mo SaaS + $300/mo services | $500–$600/mo |
+| **Design Partner** | First 5 practices | Free (90 days) → paid at Day 90 | $0 → $500+/mo |
+
+> *(Pricing for Segment 1 updated 2026-05-31 — reflects hospital-to-independent/concierge ICP with confirmed disposable income and high WTP. Prior tier "Launch Pack" at $500 → $200/mo retired; reflected new-grad ICP that has been deprioritized.)*
+>
+> *(2026-06-15 — added the $1,000 money-back PoC as the validated lead offer / tip-of-spear. It is the offer that produced the first paid commitment and is the fastest path to a card charged. The Kit/Program/Full tiers remain the post-PoC upsell ladder.)*
 
 ### Primary KPIs
 
