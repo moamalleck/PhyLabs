@@ -489,4 +489,67 @@ function card(s, x, y, w, h, color) {
   s.addNotes("Why now: the CMS mandate makes EHR data accessible by right, the AI inflection makes the platform a seed-stage build, and the conviction cohort is growing while incumbents look the other way. Traction, exactly as it is: seven sessions with five physicians across two countries and five specialties, willingness to pay quantified on record, working prototypes, and a named pipeline. On the first paid PoC — disclose proactively if asked: it is confirmed, but the subject is my brother (a post-launch ortho surgeon) and the payment is collected on delivery, which is in progress. I am deliberately not claiming arm's-length revenue yet; the first non-family, card-charged close is targeted inside 30 days (Tucci, Xin, or Cowan). Close on the surgeon's own words: 'If I spend a day in the ICU versus the clinic, I don't know where I am financially.' That is the company. Put doctors back in the driver's seat of their own financial future. [Stop. Take questions.]");
 }
 
+// ============================== APPENDIX · COMPETITIVE DETAIL ==============================
+// Standalone competitor comparison matrix. Drop into tomorrow's deck as the competition
+// slide, keep as SoftBank Q&A backup, or swap in for the slide-9 2x2.
+{
+  const s = newSlide();
+  kicker(s, "APPENDIX  /  COMPETITIVE LANDSCAPE");
+  title(s, "We own the rows that matter. Incumbents own the past.", { size: 21 });
+
+  const cols = ["Tebra", "athena", "Jane", "Chiro-\nTouch", "Meroka", "Status\nquo", "Physician\nLabs"];
+  const rows = [
+    ["AI-native forward-looking financial intelligence", "no", "part", "no", "no", "part", "no", "yes"],
+    ["No migration (layers on existing tools)",          "no", "no",   "no", "no", "part", "no", "yes"],
+    ["Built for the just-launched / first-year clinic",  "no", "no",   "no", "no", "no",   "part", "yes"],
+    ["Quantified, fast ROI (in dollars)",                "no", "part", "no", "no", "no",   "no", "yes"],
+    ["Installed base / specialty depth",                 "yes","yes",  "yes","yes","no",   "na", "part"],
+  ];
+
+  const tx = 0.45, ty = 1.45;
+  const labelW = 3.05, valW = 0.78, plW = 1.05;
+  const headH = 0.5, rowH = 0.58;
+  const colX = (j) => tx + labelW + j * valW; // j=0..5 competitors, j=6 = PhysicianLabs (sits flush after the 6 competitor cols)
+
+  // Highlight band behind the PhysicianLabs column
+  s.addShape(pres.shapes.RECTANGLE, { x: colX(6), y: ty, w: plW, h: headH + rows.length * rowH, fill: { color: "12303A" }, line: { type: "none" } });
+
+  // Header row
+  cols.forEach((c, j) => {
+    const isPL = j === 6;
+    s.addText(c, { x: colX(j), y: ty, w: isPL ? plW : valW, h: headH, margin: 0, align: "center", valign: "middle", fontFace: HEAD, fontSize: isPL ? 10 : 8.5, bold: true, color: isPL ? TEAL : MUTED });
+  });
+
+  const mark = (code) => {
+    if (code === "yes") return { glyph: "✓", color: TEAL, size: 15, bold: true };
+    if (code === "part") return { glyph: "~", color: AMBER, size: 14, bold: true };
+    if (code === "na") return { glyph: "·", color: "4A5A72", size: 14, bold: false };
+    return { glyph: "✕", color: "4A5A72", size: 11, bold: false }; // "no"
+  };
+
+  rows.forEach((r, i) => {
+    const y = ty + headH + i * rowH;
+    if (i % 2 === 1) s.addShape(pres.shapes.RECTANGLE, { x: tx, y: y, w: labelW + 6 * valW, h: rowH, fill: { color: "16213A" }, line: { type: "none" } });
+    // Row label
+    s.addText(r[0], { x: tx + 0.12, y: y, w: labelW - 0.2, h: rowH, margin: 0, valign: "middle", fontFace: BODY, fontSize: 10, color: WHITE });
+    // Value cells (j=0..5 competitors, j=6 PhysicianLabs)
+    for (let j = 0; j < 7; j++) {
+      const isPL = j === 6;
+      const m = mark(r[j + 1]);
+      s.addText(m.glyph, { x: colX(j), y: y, w: isPL ? plW : valW, h: rowH, margin: 0, align: "center", valign: "middle", fontFace: HEAD, fontSize: m.size, bold: m.bold, color: isPL && r[j + 1] === "yes" ? TEALB : m.color });
+    }
+  });
+
+  // Legend
+  s.addText([
+    { text: "✓ ", options: { color: TEAL, bold: true } }, { text: "delivers    ", options: { color: MUTED } },
+    { text: "~ ", options: { color: AMBER, bold: true } }, { text: "partial    ", options: { color: MUTED } },
+    { text: "✕ ", options: { color: "4A5A72" } }, { text: "no", options: { color: MUTED } },
+  ], { x: tx + 0.12, y: ty + headH + rows.length * rowH + 0.12, w: 6, h: 0.3, margin: 0, fontFace: BODY, fontSize: 9 });
+
+  s.addText("The bottom row is the one we don't win — yet. Their installed base is also their innovator's dilemma.", { x: tx + 0.12, y: 5.3, w: 9.0, h: 0.28, margin: 0, fontFace: BODY, fontSize: 10, italic: true, color: TEALB });
+
+  s.addNotes("This is the detailed competitive view — use it as the competition slide, or hold it for Q&A behind the 2x2. The read is simple: we're the only one delivering forward-looking financial intelligence, on top of existing tools, for the just-launched clinic, with ROI in dollars. The one row we don't win is installed base and specialty depth — and I'll name that proactively, because their installed base is exactly what makes the pre-launch and first-year window unattractive for them to chase. Status quo is spreadsheets plus an outsourced biller — the real default for a first-year doctor.");
+}
+
 pres.writeFile({ fileName: "pitch-deck-2026-06-11-softbank-necx.pptx" }).then(() => console.log("DONE"));
