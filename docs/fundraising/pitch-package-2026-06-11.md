@@ -35,7 +35,7 @@ Layered sizing, conservative numbers first (per mentor guidance: never lead with
 | Platform TAM | All US independent physician-owned practices (165,751) at $4,800 ARPU | ~$796M/yr | [Definitive Healthcare](https://www.definitivehc.com/data-products/physician-view), business plan Draft v2 |
 | Platform SAM | 1 to 5 physician, fee-for-service, EHR-equipped practices (~100,000) at $4,800 ARPU | ~$480M/yr | business plan Draft v2 |
 | Wedge entry | 5,000 to 10,000 new practice formations/yr buying launch guidance | $23M to $46M/yr | [pitch-package-2026-05-17](pitch-package-2026-05-17.md) |
-| SOM (Year 5) | ~3,000 clinics (~3% of SAM) | ~$28M ARR | bottoms-up model below |
+| SOM (Year 5) | ~3,000 clinics (~3% of SAM) | ~$35M ARR | bottoms-up model below |
 
 **Headwind acknowledged first:** independent ownership 60.1% (2012) to 42.2% (2024) ([AMA Benchmark Survey 2024](https://www.ama-assn.org/about/ama-research/physician-practice-benchmark-survey)). **Tailwind:** DPC market $61.34B growing 10 to 15%/yr; nine new physician-ownership platforms launched in 2025 ([Holt Law DPC Report](https://djholtlaw.com/direct-primary-care-dpc-market-report-national-analysis-last-12-months/)).
 
@@ -83,7 +83,7 @@ The 2x2 that matters: **decision intelligence (windshield) vs. record-keeping (r
 | | Y1 (FY27) | Y2 | Y3 | Y4 | Y5 |
 |---|---|---|---|---|---|
 | Paying clinics | 20 | 100 | 400 | 1,200 | 3,000 |
-| Revenue / ARR | $200K | $1.0M | $3.8M | $11.5M | $28M |
+| Revenue / ARR | $200K | $1.0M | $3.8M | $11.5M | $35M |
 | Stage | Wedge + platform v1 | $10M seed | Multi-state | Category leader path | ~3% SAM |
 
 Three metrics that matter: paying clinics (20 = seed gate), monthly recovered revenue per clinic (North Star, >$800/mo by Month 6), and net revenue retention (>110%, proves wedge-to-platform expansion).
@@ -116,7 +116,7 @@ Cover + 14 slides in the founder-specified order, ~20 seconds each, one message 
 | 8 | Business Model | One-time program + recurring platform subscription | Pricing architecture; >80% GM |
 | 9 | Competition | Pre-launch x productized quadrant is empty | Tebra $250M, Jane $1.8B post-launch; consultants unproductized |
 | 10 | Technology Status | Foundation built, 2 prototypes from real interviews, HIPAA-clean, pre-MVP honest | Repo: Next.js 16 + MCP AI sidecar; prototype docs |
-| 11 | Financials | $200K to $28M ARR in 5 years, bottoms-up | Clinic counts 20/100/400/1,200/3,000 |
+| 11 | Financials | $200K to $35M ARR in 5 years, bottoms-up | Clinic counts 20/100/400/1,200/3,000 |
 | 12 | Comps & Exit | RCM is a proven exit market | R1 $8.9B, athenahealth $17B, Jane $1.8B; ~4.3x revenue deals |
 | 13 | The Ask | $2.5M pre-seed + 3 non-monetary asks | Use of funds; milestone map to $10M seed |
 | 14 | Why Now + Traction | Convergence + honest traction + mic-drop quote | CMS FHIR mandate, AI inflection; 7 sessions/5 physicians, 5 verbal LOIs |
@@ -173,7 +173,7 @@ Three things: (1) define the bar, tell me exactly what you would need to see in 
 | Jane App secondary valuation | $1.8B | [BetaKit](https://betakit.com/jane-software-to-be-reportedly-valued-at-1-8-billion-in-upcoming-secondary-financing/) |
 | Recent RCM platform deals | ~4.3x revenue, ~17x EBITDA | [Scope Research 2025](https://www.scoperesearch.co/post/healthcare-revenue-cycle-valuation-multiples-and-m-a-trends-2025) |
 
-ROI frame: base case, acquisition at ~5x on $28M ARR is a $140M+ outcome, roughly 15 to 25x a pre-seed entry. Upside case, category leader comp (Jane App $1.8B) is 50x+.
+ROI frame: base case, acquisition at ~5x on $35M ARR is a $175M+ outcome, roughly 18 to 30x a pre-seed entry. Upside case, category leader comp (Jane App $1.8B) is 50x+.
 
 > [!IMPORTANT]
 > This pitch package builds upon business validation findings. Honest traction state (updated 2026-06-15): first paid PoC commitment confirmed (Saf Malleck, June 6) but family and payment-pending — not yet arm's-length, card-charged revenue; 5 verbal LOIs in written conversion; first non-family paid close targeted within 30 days. Do not upgrade any claim to "paying customer" or "revenue" until a non-family card is charged. See `docs/business-development/mvt-analysis-2026-06-15.md`.

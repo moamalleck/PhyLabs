@@ -359,12 +359,12 @@ function card(s, x, y, w, h, color) {
 {
   const s = newSlide();
   kicker(s, "11  /  FORECASTED FINANCIALS");
-  title(s, "Bottoms-up to $28M ARR in five years.");
+  title(s, "Bottoms-up to $35M ARR in five years.");
 
   s.addChart(pres.charts.BAR, [{
     name: "ARR ($M)",
     labels: ["FY27", "FY28", "FY29", "FY30", "FY31"],
-    values: [0.2, 1.0, 3.8, 11.5, 28],
+    values: [0.2, 1.0, 3.8, 11.5, 35],
   }], {
     x: 0.5, y: 1.35, w: 5.9, h: 3.4, barDir: "col",
     chartColors: [TEAL],
@@ -386,7 +386,7 @@ function card(s, x, y, w, h, color) {
   ], { x: 6.87, y: 1.93, w: 2.45, h: 2.7, margin: 0, fontFace: BODY, fontSize: 11, color: WHITE, paraSpaceAfter: 8, valign: "top" });
   pageNum(s, 11);
 
-  s.addNotes("No top-down hand-waving — this is clinics times revenue per clinic. Twenty clinics and $200K in year one, a million in year two, $3.8 million, $11.5 million, $28 million by year five — which is still only about 3% of the serviceable market. Gross margin holds above 70% blended. Year two onward assumes the $10 million seed closes on the 20-clinic proof point.");
+  s.addNotes("No top-down hand-waving — this is clinics times revenue per clinic. Twenty clinics and $200K in year one, a million in year two, $3.8 million, $11.5 million, $35 million by year five — which is still only about 3% of the serviceable market. Gross margin holds above 70% blended. Year two onward assumes the $10 million seed closes on the 20-clinic proof point.");
 }
 
 // ============================== 12. COMPS & EXIT ==============================
@@ -414,10 +414,10 @@ function card(s, x, y, w, h, color) {
 
   card(s, 5.1, 2.95, 4.4, 1.95);
   s.addText("RETURN MATH", { x: 5.32, y: 3.13, w: 4.0, h: 0.3, margin: 0, fontFace: HEAD, fontSize: 10.5, bold: true, color: TEAL, charSpacing: 2 });
-  s.addText("Base: ~5× on $28M ARR is a $140M+ outcome → 15–25× on this round.  Upside: category-leader comp (Jane App) → 50×+.", { x: 5.32, y: 3.48, w: 4.0, h: 1.3, margin: 0, fontFace: BODY, fontSize: 11.5, color: WHITE, valign: "top" });
+  s.addText("Base: ~5× on $35M ARR is a $175M+ outcome → 18–30× on this round.  Upside: category-leader comp (Jane App) → 50×+.", { x: 5.32, y: 3.48, w: 4.0, h: 1.3, margin: 0, fontFace: BODY, fontSize: 11.5, color: WHITE, valign: "top" });
   pageNum(s, 12);
 
-  s.addNotes("Exits in this category are proven, recent and large: R1 RCM went private at $8.9 billion in 2024, athenahealth at $17 billion, Jane App holds a $1.8 billion private mark, and Tebra just raised $250 million. Recent RCM deals price around 4.3 times revenue. The base case — five times on $28 million of ARR — is a $140-million-plus outcome, 15 to 25x this round. The upside case is the AI-native successor to R1, and that is not a $140M company.");
+  s.addNotes("Exits in this category are proven, recent and large: R1 RCM went private at $8.9 billion in 2024, athenahealth at $17 billion, Jane App holds a $1.8 billion private mark, and Tebra just raised $250 million. Recent RCM deals price around 4.3 times revenue. The base case — five times on $35 million of ARR — is a $175-million-plus outcome, 18 to 30x this round. The upside case is the AI-native successor to R1, and that is not a $175M company.");
 }
 
 // ============================== 13. THE ASK ==============================
