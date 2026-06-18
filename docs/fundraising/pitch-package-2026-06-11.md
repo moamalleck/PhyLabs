@@ -32,8 +32,8 @@ Layered sizing, conservative numbers first (per mentor guidance: never lead with
 | Layer | Definition | Size | Source |
 |---|---|---|---|
 | Macro market | US revenue cycle management | $65.38B (2025), 11.6% CAGR, projected $195.92B by 2035 | [Towards Healthcare](https://www.towardshealthcare.com/insights/us-healthcare-revenue-cycle-management-market-sizing), [GlobeNewswire 2025](https://www.globenewswire.com/news-release/2025/11/24/3193563/0/en/U-S-Healthcare-RCM-Market-Climbs-to-195-92-Billion-by-2035-as-Digital-Adoption-Accelerates.html) |
-| Platform TAM | All US independent physician-owned practices (165,751) at $4,800 ARPU | ~$796M/yr | [Definitive Healthcare](https://www.definitivehc.com/data-products/physician-view), business plan Draft v2 |
-| Platform SAM | 1 to 5 physician, fee-for-service, EHR-equipped practices (~100,000) at $4,800 ARPU | ~$480M/yr | business plan Draft v2 |
+| Platform TAM | All US independent physician-owned practices (165,751) at ~$12K blended ARPU | ~$2.0B/yr | [Definitive Healthcare](https://www.definitivehc.com/data-products/physician-view); ARPU per deck unit economics |
+| Platform SAM | 1 to 5 physician, fee-for-service, EHR-equipped practices (~100,000) at ~$12K blended ARPU | ~$1.2B/yr | ARPU reconciled to platform pricing ($500–799/mo + program), 2026-06-15 |
 | Wedge entry | 5,000 to 10,000 new practice formations/yr buying launch guidance | $23M to $46M/yr | [pitch-package-2026-05-17](pitch-package-2026-05-17.md) |
 | SOM (Year 5) | ~3,000 clinics (~3% of SAM) | ~$35M ARR | bottoms-up model below |
 
@@ -110,7 +110,7 @@ Cover + 14 slides in the founder-specified order, ~20 seconds each, one message 
 | 2 | The Problem | Three pains: setup vacuum, invisible P&L, systemic squeeze | $200K to $400K mistakes; $115 vs $290 same-visit reimbursement; 60% to 42% |
 | 3 | Solution | Wedge (program, revenue today) to platform (AI-native financial OS above the EHR) | 3 tiers live; no EHR migration; windshield vs. rear-view |
 | 4 | Leadership | McKinsey x Amazon/AWS x 3 generations of physicians; advisory bench | 5y McKinsey, 11y Amazon/AWS + EA; brother = 2 clinic launches |
-| 5 | Market | $65B RCM macro, $480M SAM, wedge entry; headwind then tailwind | Towards Healthcare, AMA, DPC report |
+| 5 | Market | $65B RCM macro, ~$1.2B SAM, wedge entry; headwind then tailwind | Towards Healthcare, AMA, DPC report |
 | 6 | Customers & Unit Economics | $12K yr-1 per clinic; LTV:CAC 30:1 to 6-8:1; payback <1 mo | WTP $1K/$10K interview evidence |
 | 7 | GTM | Warm network, then communities and IPAs, then referral flywheel | AAPP, DPC Frontier, Pro Alliance/WWMG, r/whitecoatinvestor |
 | 8 | Business Model | One-time program + recurring platform subscription | Pricing architecture; >80% GM |

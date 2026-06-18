@@ -185,7 +185,7 @@ function card(s, x, y, w, h, color) {
 
   const layers = [
     { big: "$65.4B → $196B", sub: "US revenue cycle management, 2025 → 2035 (11.6% CAGR)" },
-    { big: "$480M", sub: "serviceable market: 100,000 independent practices × $4,800 / yr" },
+    { big: "~$1.2B", sub: "serviceable market: 100,000 independent practices × ~$12K / yr" },
     { big: "$23–46M / yr", sub: "wedge entry: 5–10K practices in their first year, every year" },
   ];
   layers.forEach((l, i) => {
@@ -201,7 +201,7 @@ function card(s, x, y, w, h, color) {
   s.addText("today's independents choose it with conviction. Direct Primary Care is a $61B market growing 10–15% a year, with 9 new physician-ownership platforms launched in 2025.", { x: 6.07, y: 3.05, w: 3.2, h: 1.6, margin: 0, fontFace: BODY, fontSize: 12, color: TEALB, valign: "top" });
   pageNum(s, 5);
 
-  s.addNotes("Sizing is layered and conservative. The macro: US RCM is $65 billion headed to $196 billion by 2035. Our serviceable layer: 100,000 independent practices at $4,800 a year is $480 million. The wedge entry: 5 to 10 thousand practices in their first year, every year — the moment the financial pain is acute. And the honest trend, said before you ask: independent share fell from 60 to 42 percent — which is exactly why today's independents are the conviction cohort, with DPC growing double digits.");
+  s.addNotes("Sizing is layered and conservative. The macro: US RCM is $65 billion headed to $196 billion by 2035. Our serviceable layer: 100,000 independent practices at about $12K a year is roughly $1.2 billion. The wedge entry: 5 to 10 thousand practices in their first year, every year — the moment the financial pain is acute. And the honest trend, said before you ask: independent share fell from 60 to 42 percent — which is exactly why today's independents are the conviction cohort, with DPC growing double digits.");
 }
 
 // ============================== 6. CUSTOMERS & UNIT ECONOMICS ==============================
