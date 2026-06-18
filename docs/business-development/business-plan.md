@@ -10,7 +10,7 @@
 
 PhysicianLabs is building the **Clinical Operating System for independent physician-owned practices** — an integration layer that sits on top of existing EHRs and automates the three operational pillars clinic owners struggle with most: patient retention, revenue cycle management (RCM), and practice launch operations.
 
-**The market**: ~165,751 physician-owned US practices. The serviceable addressable market is ~100,000 practices (1–5 physicians, fee-for-service, EHR-equipped), representing a **$480M SAM** at $4,800 blended ARPU. The independent practice software category is growing at **8.96–10.54% CAGR** ([Towards Healthcare, 2025](https://www.towardshealthcare.com/insights/practice-management-system-market-sizing)).
+**The market**: ~165,751 physician-owned US practices. The serviceable addressable market is ~100,000 practices (1–5 physicians, fee-for-service, EHR-equipped), representing a **~$1.2B SAM** at ~$12K blended ARPU. The independent practice software category is growing at **8.96–10.54% CAGR** ([Towards Healthcare, 2025](https://www.towardshealthcare.com/insights/practice-management-system-market-sizing)). *(ARPU reconciled 2026-06-15 — see note under TAM/SAM/SOM.)*
 
 **The beachhead**: Hospital-employed physicians making a deliberate transition to independent or concierge practice. The wedge product, *PhysicianLabs Launch*, is a founder-guided transition program that walks physicians through every financial, legal, and operational decision required to exit employment and open a financially clear, independently owned practice — starting with the incorporation timing mistake that silently costs most physicians $200,000–$400,000 before a good accountant finds it. Concierge/DPC medicine is the sharpest sub-segment: aggressively independent, cash-pay, high WTP, low churn. *(ICP updated 2026-05-31 — see `docs/business-development/icp-decision-2026-05-31.md`.)*
 
@@ -18,7 +18,7 @@ PhysicianLabs is building the **Clinical Operating System for independent physic
 
 **The competitive window**: Tebra raised $250M in January 2026 ([Yahoo Finance](https://finance.yahoo.com/news/private-practice-platform-tebra-secures-133000483.html)); Jane App is valued at $1.8B ([BetaKit](https://betakit.com/jane-software-to-be-reportedly-valued-at-1-8-billion-in-upcoming-secondary-financing/)). Both require full EHR migration and don't serve pre-launch physicians. The category label — "Clinical Operating System" — is unclaimed. PhysicianLabs must claim it within 6 months.
 
-**Traction status**: Pre-MVP. First paid PoC commitment confirmed (Saf Malleck, 2026-06-06) — payment pending delivery, and the subject is a family member, so external validity is not yet established. Next gate: close one **arm's-length, card-charged** PoC (Tucci / Xin / Cowan). Target: 5 design partners by Day 90, $60K MRR by Month 12. *(Updated 2026-06-15 — see `docs/business-development/mvt-analysis-2026-06-15.md`.)*
+**Traction status**: Pre-MVP. First paid PoC commitment confirmed (Saf Malleck, 2026-06-06) — payment pending delivery, and the subject is a family member, so external validity is not yet established. Next gate: close one **arm's-length, card-charged** PoC (Tucci / Xin / Cowan). Target: 5 design partners by Day 90, 20 paying clinics (~$200K ARR) by Month 12. *(Updated 2026-06-15 — see `docs/business-development/mvt-analysis-2026-06-15.md`.)*
 
 **Business model**: Hybrid SaaS + services. Milestone-based pricing for the launch segment; tiered SaaS + services for established practices. Year 1 unit economics: LTV:CAC of 19–29:1 across all segments.
 
@@ -78,10 +78,12 @@ PhysicianLabs is building the **Clinical Operating System for independent physic
 
 | Layer | Scope | Practices | ARPU/yr | Value |
 |---|---|---|---|---|
-| **TAM** | All US independent physician-owned practices | 165,751 | $4,800 | **~$796M** |
-| **SAM** | 1–5 physician, fee-for-service, EHR-equipped, US | ~100,000 | $4,800 | **~$480M** |
-| **SOM Year 1** | Seattle/Pacific NW beachhead | ~150 | $4,800 | **~$720K ARR** |
-| **SOM Year 3** | 3% SAM penetration, West Coast | ~3,000 | $4,800 | **~$14.4M ARR** |
+| **TAM** | All US independent physician-owned practices | 165,751 | ~$12K | **~$2.0B** |
+| **SAM** | 1–5 physician, fee-for-service, EHR-equipped, US | ~100,000 | ~$12K | **~$1.2B** |
+| **SOM Year 1** | Bottoms-up: first paying clinics (partial-year ramp) | ~20 | ~$10K | **~$200K ARR** |
+| **SOM Year 5** | 3% SAM penetration | ~3,000 | ~$12K | **~$35M ARR** |
+
+> **ARPU reconciliation (2026-06-15):** Blended ARPU revised from $4,800 to **~$12K** to match the platform's actual pricing ($500–799/mo subscription + one-time program), which is also the ~$12,050 Segment-1 LTV already modeled in Part 3. The prior $4,800 was a cross-specialty blend that sat *below* the platform's own monthly price and understated the opportunity. TAM/SAM scale accordingly (TAM ~$2.0B, SAM ~$1.2B); SOM is now the deck's bottoms-up trajectory (20 → 3,000 clinics → ~$35M by Year 5, ~3% of SAM). This is the canonical sizing; the deck (`docs/fundraising/`) and `mvt-analysis-2026-06-15.md` match.
 
 **Key market data**:
 - Practice management software (global, 2025): $12.73B, **8.96% CAGR** — small practices (2–5 physicians) growing at **10.54% CAGR** ([Towards Healthcare](https://www.towardshealthcare.com/insights/practice-management-system-market-sizing))
@@ -233,7 +235,7 @@ WebPT, ChiroTouch, and Jane App are documentation/billing tools. None surface pa
 **Medium-Term — Days 90–180 (by November 5, 2026)**
 1. **Launch Specialty Benchmarking Report** — aggregate data from first 15–20 practices; shareable monthly PDF (viral loop activation)
 2. **Build first EHR integration** — athenahealth or DrChrono based on design partner EHR distribution
-3. **Ramp to 50 paying practices / $20K MRR** — combine case study referrals, community presence, and direct outreach
+3. **Ramp toward ~8–10 paying clinics (on the path to 20 by Month 12)** — combine case study referrals, community presence, and direct outreach
 4. **Publish 5 design partner case studies** (PT, chiro, derm, new clinic launcher PT, new clinic launcher chiro); distribute to Medical Economics, Physicians Practice, Becker's
 5. **Begin Series A fundraising preparation** — investor narrative, traction deck, warm intros to ≥5 health tech investors
 
@@ -273,11 +275,13 @@ WebPT, ChiroTouch, and Jane App are documentation/billing tools. None surface pa
 
 | Metric | Month 6 Target | Month 12 Target |
 |---|---|---|
-| MRR | $20K | $60K |
-| Paying practices | 50 | 150 |
+| MRR | ~$8K | ~$20K |
+| Paying clinics | ~8 | 20 |
 | Design partners signed | 5 | 10 |
 | Viral coefficient (K) | >0.25 | >0.3 |
-| Pipeline (qualified leads) | 50 | 150 |
+| Pipeline (qualified leads) | 30 | 60 |
+
+> *(Growth targets reconciled 2026-06-15 to the deck's canonical model: ~20 paying clinics / ~$200K ARR in Year 1 at ~$12K ARPU. Prior figures — 150 practices / $60K MRR — reflected the retired high-volume, $400/mo model. See the ARPU note under TAM/SAM/SOM.)*
 
 **Retention**
 
