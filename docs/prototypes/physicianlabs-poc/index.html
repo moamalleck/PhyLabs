@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysicianLabs — Interactive Product Walkthrough (PoC)</title>
+  <meta name="description" content="Interactive PoC walkthrough of the PhysicianLabs financial-intelligence platform for independent physicians." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     SCREEN 1 — SIGN IN
+     ════════════════════════════════════════════════════════ -->
+<section class="screen active" id="screen-signin" aria-label="Sign in">
+  <div class="auth">
+    <div class="auth-card">
+      <div class="logo">
+        <span class="logo-mark" aria-hidden="true">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </span>
+        PhysicianLabs
+      </div>
+      <h1>Welcome back, Dr. Chen</h1>
+      <p class="auth-sub">Sign in to your practice intelligence workspace.</p>
+
+      <form id="signin-form" novalidate>
+        <div class="field">
+          <label for="si-email">Email</label>
+          <input type="email" id="si-email" name="email" value="marcus.chen@meridianfm.com" autocomplete="email" />
+        </div>
+        <div class="field">
+          <label for="si-pass">Password</label>
+          <input type="password" id="si-pass" name="password" value="demo-account" autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-full" data-go="intake">Sign in &rarr;</button>
+      </form>
+
+      <div class="auth-flag-wrap">
+        <span class="sample-flag" role="note">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+          Sample demo environment &mdash; fictional data
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════════════════
+     APP SHELL  — wraps screens 2–7
+     ════════════════════════════════════════════════════════ -->
+<div class="app" id="app">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </span>
+      PhysicianLabs
+    </div>
+    <nav class="side-nav" aria-label="Primary">
+      <span class="side-label">Practice</span>
+      <button class="side-item" data-nav="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        Dashboard
+      </button>
+      <button class="side-item" data-nav="diagnostic">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        Diagnostic
+      </button>
+      <button class="side-item" data-nav="recovery">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        Revenue Recovery
+        <span class="side-badge">$23.8K</span>
+      </button>
+      <button class="side-item" data-nav="roadmap">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M9 18l6-6-6-6"/><path d="M3 12h6" stroke-dasharray="2 2"/></svg>
+        Roadmap
+      </button>
+      <span class="side-label">Operations</span>
+      <button class="side-item" data-nav="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg>
+        Staffing
+      </button>
+      <button class="side-item" data-nav="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        Billing
+      </button>
+    </nav>
+    <div class="side-foot">
+      <span class="side-avatar" aria-hidden="true">MC</span>
+      <span class="who"><b>Dr. Marcus Chen</b><span>Meridian Family Medicine</span></span>
+    </div>
+  </aside>
+
+  <!-- Right column: topbar + main screens -->
+  <div>
+    <header class="topbar">
+      <span class="crumb" id="crumb"><b>Diagnostic</b></span>
+      <span class="practice-chip"><span class="dot" aria-hidden="true"></span> Meridian Family Medicine &middot; Month 7</span>
+    </header>
+
+    <!-- ───── SCREEN 2 — INTAKE ───── -->
+    <main class="main main-narrow screen" id="screen-intake" aria-label="Practice intake">
+      <span class="page-eyebrow">First-time setup</span>
+      <h1 class="page-title">Let's run your first practice diagnostic</h1>
+      <p class="page-sub">We'll benchmark Meridian Family Medicine against 40+ financial and operational metrics, then surface exactly where revenue is leaking. Confirm your snapshot below &mdash; it takes about 2 minutes.</p>
+
+      <div class="card">
+        <div class="card-hd"><h3>Practice snapshot</h3><span class="hd-tag">Pre-filled from onboarding</span></div>
+        <div class="snapshot-grid">
+          <div class="snap-field"><label>Specialty</label><div class="snap-val">Family Medicine</div></div>
+          <div class="snap-field"><label>Location</label><div class="snap-val">Independent &middot; 1 location</div></div>
+          <div class="snap-field"><label>Months since launch</label><div class="snap-val">7 months</div></div>
+          <div class="snap-field"><label>EHR / PM system</label><div class="snap-val">Accuro</div></div>
+          <div class="snap-field"><label>Avg. patient visits / month</label><div class="snap-val">420</div></div>
+          <div class="snap-field"><label>Avg. reimbursement / visit</label><div class="snap-val">$112</div></div>
+          <div class="snap-field"><label>Clinical + admin staff</label><div class="snap-val">4 (1 MD, 1 NP, 2 admin)</div></div>
+          <div class="snap-field"><label>Primary payers</label><div class="snap-val">3 commercial + Medicare</div></div>
+        </div>
+        <div class="intake-foot">
+          <button class="btn btn-primary btn-lg" id="run-diagnostic">Run my diagnostic &rarr;</button>
+          <span class="note">No spreadsheets to upload &mdash; we read it from your billing system.</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- ───── SCREEN 3 — DIAGNOSTIC PAYOFF ───── -->
+    <main class="main screen" id="screen-diagnostic" aria-label="Diagnostic results">
+      <span class="page-eyebrow">Your diagnostic is ready</span>
+      <h1 class="page-title">Meridian Family Medicine &mdash; Practice Health</h1>
+      <p class="page-sub">Benchmarked against 40+ metrics across 1,200+ independent practices. Here's the headline.</p>
+
+      <div class="payoff">
+        <div class="payoff-grid">
+          <div>
+            <div class="ring" role="img" aria-label="Practice health score 76 out of 100, good with three critical gaps">
+              <svg width="168" height="168" viewBox="0 0 168 168">
+                <circle cx="84" cy="84" r="74" fill="none" stroke="rgba(255,255,255,.18)" stroke-width="13"/>
+                <circle id="ring-arc" cx="84" cy="84" r="74" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round"
+                        stroke-dasharray="465" stroke-dashoffset="465"/>
+              </svg>
+              <span class="ring-center"><span class="ring-score" id="ring-score">0</span><span class="ring-cap">Health</span></span>
+            </div>
+            <div class="ring-label">Good &mdash; with 3 critical gaps</div>
+          </div>
+          <div>
+            <div class="payoff-eyebrow">We found money you're not collecting</div>
+            <div class="payoff-amount" id="payoff-amount">$0</div>
+            <p class="payoff-desc">that's leaving your practice <b>every year</b> &mdash; spread across 4 fixable gaps in your billing and coding. You can't see them today because they're buried across Accuro, your clearinghouse, and your payer remits.</p>
+            <div class="guarantee">
+              <span class="g-ico" aria-hidden="true">&#10003;</span>
+              <span>Our promise: we find at least <b>$20,000</b> in recoverable revenue, or your <b>$1,000 PoC is free</b>.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metric-row">
+        <div class="metric-tile">
+          <div class="mt-lbl">Collection rate</div>
+          <div class="mt-val">82%</div>
+          <div class="mt-bench tag-amber"><span class="mt-pip pip-amber"></span> Target 95%+</div>
+        </div>
+        <div class="metric-tile">
+          <div class="mt-lbl">Denial rate</div>
+          <div class="mt-val">8.1%</div>
+          <div class="mt-bench tag-red"><span class="mt-pip pip-red"></span> Target &lt; 5%</div>
+        </div>
+        <div class="metric-tile">
+          <div class="mt-lbl">Days in A/R</div>
+          <div class="mt-val">48</div>
+          <div class="mt-bench tag-amber"><span class="mt-pip pip-amber"></span> Target &lt; 40</div>
+        </div>
+        <div class="metric-tile">
+          <div class="mt-lbl">Overhead ratio</div>
+          <div class="mt-val">61%</div>
+          <div class="mt-bench tag-amber"><span class="mt-pip pip-amber"></span> Target &lt; 55%</div>
+        </div>
+      </div>
+
+      <div class="flow-cta">
+        <button class="btn btn-primary btn-lg" data-go="recovery">See where the money is &rarr;</button>
+      </div>
+    </main>
+
+    <!-- ───── SCREEN 4 — REVENUE RECOVERY ───── -->
+    <main class="main screen" id="screen-recovery" aria-label="Revenue recovery breakdown">
+      <span class="page-eyebrow">Revenue recovery</span>
+      <h1 class="page-title">Your $23,800 in recoverable revenue</h1>
+      <p class="page-sub">Every dollar below is traced to a specific, fixable gap in your billing and coding &mdash; with the exact claims and codes behind it.</p>
+
+      <div class="leak">
+        <div class="leak-stripe stripe-red"></div>
+        <div class="leak-body">
+          <h3>Unreworked claim denials</h3>
+          <p>31 claims were denied in the last 90 days and never resubmitted. 71% of them are recoverable on appeal &mdash; mostly missing modifiers and eligibility errors that are routine to fix.</p>
+          <span class="leak-fix"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Auto-built rework queue, ready to file</span>
+        </div>
+        <div class="leak-amt">
+          <span class="amt">$8,400</span>
+          <span class="amt-cap">/ year</span>
+          <span class="sev sev-red"><span class="mt-pip pip-red"></span> High severity</span>
+        </div>
+      </div>
+
+      <div class="leak">
+        <div class="leak-stripe stripe-red"></div>
+        <div class="leak-body">
+          <h3>Under-coded visits</h3>
+          <p>Your E/M coding skews to level 3 where your own documentation already supports level 4. 18% of visits are under-coded &mdash; you did the work and documented it, but billed below what it's worth.</p>
+          <span class="leak-fix"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Coding calibration against your notes</span>
+        </div>
+        <div class="leak-amt">
+          <span class="amt">$9,200</span>
+          <span class="amt-cap">/ year</span>
+          <span class="sev sev-red"><span class="mt-pip pip-red"></span> High severity</span>
+        </div>
+      </div>
+
+      <div class="leak">
+        <div class="leak-stripe stripe-amber"></div>
+        <div class="leak-body">
+          <h3>Payer underpayment</h3>
+          <p>Payer B is reimbursing 14% below your contracted rate on 3 high-volume CPT codes. This is a contract-compliance dispute, not a negotiation &mdash; they owe you the difference.</p>
+          <span class="leak-fix"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Pre-drafted underpayment dispute</span>
+        </div>
+        <div class="leak-amt">
+          <span class="amt">$4,100</span>
+          <span class="amt-cap">/ year</span>
+          <span class="sev sev-amber"><span class="mt-pip pip-amber"></span> Medium severity</span>
+        </div>
+      </div>
+
+      <div class="leak">
+        <div class="leak-stripe stripe-amber"></div>
+        <div class="leak-body">
+          <h3>Unbilled &amp; missed visits</h3>
+          <p>9 completed visits last quarter were never billed at all &mdash; they fell through the gap between your schedule and your claims. Pure missed revenue for work already delivered.</p>
+          <span class="leak-fix"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg> Schedule-to-claim reconciliation</span>
+        </div>
+        <div class="leak-amt">
+          <span class="amt">$2,100</span>
+          <span class="amt-cap">/ year</span>
+          <span class="sev sev-amber"><span class="mt-pip pip-amber"></span> Medium severity</span>
+        </div>
+      </div>
+
+      <div class="recovery-total">
+        <span class="rt-lbl">Total recoverable, year one</span>
+        <span class="rt-val">$23,800</span>
+      </div>
+
+      <div class="flow-cta">
+        <button class="btn btn-primary btn-lg" data-go="roadmap">Show me the plan &rarr;</button>
+      </div>
+    </main>
+
+    <!-- ───── SCREEN 5 — ROADMAP ───── -->
+    <main class="main screen" id="screen-roadmap" aria-label="90-day recovery roadmap">
+      <span class="page-eyebrow">Your plan</span>
+      <h1 class="page-title">Your 90-day recovery roadmap</h1>
+      <p class="page-sub">A sequenced plan that recovers the fast money first, then locks in the run-rate so it never leaks again. We do the heavy lifting with you.</p>
+
+      <div class="card">
+        <div class="rm-items">
+          <div class="rm-item">
+            <div class="rm-marker"><div class="rm-dot rm-dot-done" aria-hidden="true">&#10003;</div><div class="rm-line"></div></div>
+            <div class="rm-content">
+              <div class="rm-week">Week 1&ndash;2</div>
+              <div class="rm-title">Baseline audit &amp; denial rework queue</div>
+              <div class="rm-detail">We pull your claims history and build the resubmission queue for all 31 denials.</div>
+            </div>
+            <span class="rm-badge badge-done">Done</span>
+          </div>
+          <div class="rm-item">
+            <div class="rm-marker"><div class="rm-dot rm-dot-active" aria-hidden="true">2</div><div class="rm-line"></div></div>
+            <div class="rm-content">
+              <div class="rm-week">Week 3&ndash;4</div>
+              <div class="rm-title">Resubmit the 31 denied claims</div>
+              <div class="rm-detail">First real dollars back in your account &mdash; the fastest recovery in the plan.</div>
+            </div>
+            <span class="rm-gain">+ $8,400</span>
+          </div>
+          <div class="rm-item">
+            <div class="rm-marker"><div class="rm-dot rm-dot-pending" aria-hidden="true">3</div><div class="rm-line"></div></div>
+            <div class="rm-content">
+              <div class="rm-week">Week 5&ndash;6</div>
+              <div class="rm-title">Coding calibration</div>
+              <div class="rm-detail">Align E/M levels to your documentation so every future visit bills correctly.</div>
+            </div>
+            <span class="rm-gain">+ $9,200/yr</span>
+          </div>
+          <div class="rm-item">
+            <div class="rm-marker"><div class="rm-dot rm-dot-pending" aria-hidden="true">4</div><div class="rm-line"></div></div>
+            <div class="rm-content">
+              <div class="rm-week">Week 7&ndash;8</div>
+              <div class="rm-title">Payer B underpayment dispute</div>
+              <div class="rm-detail">File the contract-compliance dispute with the evidence pack we've assembled.</div>
+            </div>
+            <span class="rm-gain">+ $4,100/yr</span>
+          </div>
+          <div class="rm-item">
+            <div class="rm-marker"><div class="rm-dot rm-dot-pending" aria-hidden="true">5</div></div>
+            <div class="rm-content">
+              <div class="rm-week">Week 9&ndash;12</div>
+              <div class="rm-title">Automate &amp; monitor</div>
+              <div class="rm-detail">Schedule-to-claim reconciliation + always-on monitoring so leaks never reopen.</div>
+            </div>
+            <span class="rm-gain">+ $2,100/yr</span>
+          </div>
+        </div>
+
+        <div class="proj">
+          <div class="proj-tile">
+            <div class="pt-lbl">Cash recovered by day 90</div>
+            <div class="pt-val green">$14,300</div>
+          </div>
+          <div class="proj-tile">
+            <div class="pt-lbl">Annualized run-rate added</div>
+            <div class="pt-val">$23,800</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-cta">
+        <button class="btn btn-primary btn-lg" data-go="dashboard">See my live dashboard &rarr;</button>
+      </div>
+    </main>
+
+    <!-- ───── SCREEN 6 — LIVE DASHBOARD ───── -->
+    <main class="main screen" id="screen-dashboard" aria-label="Live practice dashboard">
+      <span class="page-eyebrow">Your workspace</span>
+      <h1 class="page-title">Practice dashboard</h1>
+      <p class="page-sub">Once you're live, this is your windshield &mdash; real-time visibility on every decision, updated as your billing system updates.</p>
+
+      <div class="kpi-row">
+        <div class="kpi"><div class="k-lbl">Monthly revenue</div><div class="k-val">$47,280</div><div class="k-delta delta-up">&#8593; +12.4% vs last month</div></div>
+        <div class="kpi"><div class="k-lbl">Recovered to date</div><div class="k-val">$6,200</div><div class="k-delta delta-up">&#8593; on track to $23.8K</div></div>
+        <div class="kpi"><div class="k-lbl">Billing health</div><div class="k-val">94%</div><div class="k-delta delta-up">&#8593; +18 pts since launch</div></div>
+        <div class="kpi"><div class="k-lbl">Admin hrs saved</div><div class="k-val">8.2/wk</div><div class="k-delta delta-neutral">this week</div></div>
+      </div>
+
+      <div class="dash-2col">
+        <div class="card">
+          <div class="card-hd"><h3>Revenue trend</h3><span class="hd-tag">Last 12 weeks</span></div>
+          <div class="chart-wrap">
+            <svg viewBox="0 0 820 132" preserveAspectRatio="none" width="100%" height="132" aria-hidden="true">
+              <defs>
+                <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.16"/>
+                  <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,108 C60,100 120,96 180,84 C240,72 300,78 360,62 C420,46 480,54 540,38 C600,24 660,30 740,18 L820,10 L820,132 L0,132 Z" fill="url(#cg)"/>
+              <path d="M0,108 C60,100 120,96 180,84 C240,72 300,78 360,62 C420,46 480,54 540,38 C600,24 660,30 740,18 L820,10" stroke="#4F46E5" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="820" cy="10" r="5.5" fill="#4F46E5"/>
+              <circle cx="820" cy="10" r="10" fill="rgba(79,70,229,.15)"/>
+            </svg>
+          </div>
+          <div class="chart-x"><span>Apr</span><span>May</span><span>Jun</span></div>
+
+          <div class="recover-track">
+            <div class="card-hd" style="margin:24px 0 0;"><h3>Recovery progress</h3><span class="hd-tag">$6,200 of $23,800</span></div>
+            <div class="track-bar"><div class="track-fill" style="width:26%"></div></div>
+            <div class="track-meta"><span>26% recovered</span><span>$17,600 remaining</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <div class="card-hd"><h3>This week's intelligence</h3></div>
+            <div class="intel">
+              <div class="intel-row"><span class="intel-dot" style="background:var(--primary)"></span><p><b>Opportunity:</b> Payer A rate is renegotiable at your volume &mdash; est. <b>+$680/mo</b>.</p></div>
+              <div class="intel-row"><span class="intel-dot" style="background:var(--amber)"></span><p><b>Watch:</b> Days in A/R crept to 46 &mdash; 2 above target. 4 claims aging.</p></div>
+              <div class="intel-row"><span class="intel-dot" style="background:var(--green)"></span><p><b>Win:</b> Denial rate dropped to 3.8% &mdash; best month on record.</p></div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-hd"><h3>Staffing &amp; overhead</h3></div>
+            <div class="staff-line"><span class="sl-lbl">Overhead ratio</span><span class="sl-val tag-amber">58% &#8595;</span></div>
+            <div class="staff-line"><span class="sl-lbl">Cost per visit</span><span class="sl-val">$41</span></div>
+            <div class="staff-line"><span class="sl-lbl">Revenue per staff hr</span><span class="sl-val tag-green">$96 &#8593;</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flow-cta">
+        <button class="btn btn-primary btn-lg" data-go="close">This is what I want for my practice &rarr;</button>
+      </div>
+    </main>
+
+    <!-- ───── SCREEN 7 — CLOSE ───── -->
+    <main class="main screen" id="screen-close" aria-label="Claim your PoC">
+      <div class="close-hero">
+        <span class="page-eyebrow">Put this to work</span>
+        <h2>Ready to find <em>your</em> $20,000+?</h2>
+        <p class="lead">Everything you just walked through, run on <b>your real numbers</b> &mdash; not a sample. In 14 days we find at least $20,000 in recoverable revenue, or you pay nothing.</p>
+      </div>
+
+      <div class="offer-card" id="offer-card">
+        <div class="offer-top">
+          <span class="offer-price">$1,000</span>
+          <span class="offer-strike">money-back PoC</span>
+        </div>
+        <p class="offer-tag">One-time, fully refundable. Founder rate of $599/mo after &mdash; locked for life if you join now.</p>
+
+        <ul class="offer-list">
+          <li><span class="offer-check" aria-hidden="true">&#10003;</span> A full diagnostic on your real billing data &mdash; your Practice Health Score and every recoverable dollar, traced to the claim.</li>
+          <li><span class="offer-check" aria-hidden="true">&#10003;</span> Your personalized 90-day recovery roadmap, sequenced fast-money-first.</li>
+          <li><span class="offer-check" aria-hidden="true">&#10003;</span> A 90-minute working session with the founding team to kick off recovery.</li>
+          <li><span class="offer-check" aria-hidden="true">&#10003;</span> Founding-partner pricing locked for life &mdash; and a direct line to shape the roadmap.</li>
+        </ul>
+
+        <div class="offer-guarantee">
+          <span class="offer-check" aria-hidden="true" style="background:var(--green);color:#fff;">&#10003;</span>
+          We find $20,000+ in recoverable revenue, or your $1,000 is refunded in full.
+        </div>
+
+        <div class="offer-actions">
+          <button class="btn btn-primary btn-lg btn-full" id="claim-btn">Claim my money-back PoC &rarr;</button>
+          <button class="btn btn-ghost btn-lg btn-full" id="book-btn">Book a 20-minute walkthrough first</button>
+        </div>
+        <p class="offer-note">3 founding-partner spots open this cohort &middot; HIPAA-aware by design</p>
+      </div>
+
+      <div class="close-success" id="close-success" role="status" aria-live="polite">
+        <div class="success-circle" aria-hidden="true">&#10003;</div>
+        <h3>You're in, Dr. Chen.</h3>
+        <p>We'll reach out within 24 hours to schedule your diagnostic and kick off recovery. Welcome to the founding cohort.</p>
+      </div>
+    </main>
+
+  </div>
+</div>
+
+<!-- Analyzing overlay -->
+<div class="analyzing" id="analyzing" role="status" aria-live="polite">
+  <div class="analyzing-box">
+    <div class="spinner" aria-hidden="true"></div>
+    <h3>Running your diagnostic&hellip;</h3>
+    <p class="analyzing-status" id="analyzing-status">Connecting to your billing system&hellip;</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════
+     GUIDED DEMO CONTROL BAR
+     ════════════════════════════════════════════════════════ -->
+<div class="demobar" role="navigation" aria-label="Guided demo controls">
+  <span class="db-brand"><span class="db-pip" aria-hidden="true"></span> Guided demo</span>
+  <div class="db-steps" id="db-steps" aria-hidden="true"></div>
+  <div class="db-nav">
+    <button class="db-btn db-restart" id="db-restart">Restart</button>
+    <button class="db-btn db-back" id="db-back">&larr; Back</button>
+    <button class="db-btn db-next" id="db-next">Next &rarr;</button>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

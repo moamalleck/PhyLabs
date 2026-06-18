@@ -1,0 +1,23 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "strategy-presentation",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3741", "docs/strategy-presentation"],
+      "port": 3741
+    },
+    {
+      "name": "physicianlab-website",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3742", "PhysicianLabs"],
+      "port": 3742
+    },
+    {
+      "name": "physicianlabs-poc",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3743", "docs/prototypes/physicianlabs-poc"],
+      "port": 3743
+    }
+  ]
+}
