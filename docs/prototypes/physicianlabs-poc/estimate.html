@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysicianLabs — Recovery Estimator</title>
+  <meta name="description" content="Estimate what your independent practice is leaving on the table — live, on your own numbers." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="est-page">
+
+  <header class="est-top">
+    <div class="logo">
+      <span class="logo-mark" aria-hidden="true">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/></svg>
+      </span>
+      PhysicianLabs
+    </div>
+    <a href="index.html" class="est-back">&larr; Back to product walkthrough</a>
+  </header>
+
+  <div class="est-wrap">
+    <div class="est-head">
+      <span class="page-eyebrow">Recovery estimator</span>
+      <h1>See what <em>your</em> practice is leaving on the table</h1>
+      <p>Three numbers you already know. We'll estimate the revenue slipping through your billing — live. The real diagnostic uses your actual data; this gets you in the ballpark.</p>
+    </div>
+
+    <div class="est-grid">
+
+      <!-- Inputs -->
+      <form class="est-inputs" id="est-form" novalidate>
+        <h2>Your practice</h2>
+        <p class="est-hint">Drag the sliders to match your reality.</p>
+
+        <div class="est-field">
+          <label for="in-specialty">Specialty</label>
+          <select id="in-specialty" class="est-text">
+            <option>Family Medicine</option>
+            <option>Internal Medicine</option>
+            <option>Pediatrics</option>
+            <option>Dermatology</option>
+            <option>Cardiology</option>
+            <option>Orthopedics</option>
+            <option>OB/GYN</option>
+            <option>Psychiatry</option>
+            <option>Other specialty</option>
+          </select>
+        </div>
+
+        <div class="est-field">
+          <label for="in-visits">Patient visits / month <span class="est-num" id="out-visits">420</span></label>
+          <input type="range" id="in-visits" min="80" max="1500" step="10" value="420" />
+          <div class="est-range-cap"><span>80</span><span>1,500</span></div>
+        </div>
+
+        <div class="est-field">
+          <label for="in-reimb">Avg. reimbursement / visit <span class="est-num" id="out-reimb">$112</span></label>
+          <input type="range" id="in-reimb" min="60" max="400" step="2" value="112" />
+          <div class="est-range-cap"><span>$60</span><span>$400</span></div>
+        </div>
+
+        <div class="est-field">
+          <label for="in-denial">Claim denial rate <span class="est-num" id="out-denial">8%</span></label>
+          <input type="range" id="in-denial" min="2" max="20" step="0.5" value="8" />
+          <div class="est-range-cap"><span>2%</span><span>20%</span></div>
+        </div>
+
+        <button type="button" class="btn btn-primary btn-lg btn-full est-calc-btn" id="calc-btn">Calculate my recovery &rarr;</button>
+
+        <p class="est-disclaimer">
+          Estimates apply PhysicianLabs benchmarks (denial recovery rates, E/M under-coding, payer
+          underpayment, unbilled visits) to the numbers you enter. Directional only &mdash; your real
+          diagnostic reads your actual billing data. No data leaves this page.
+        </p>
+      </form>
+
+      <!-- Result -->
+      <div class="est-result">
+        <div class="est-payoff">
+          <div class="ep-eyebrow">We estimate you're not collecting</div>
+          <div class="ep-amount" id="ep-amount">$0</div>
+          <p class="ep-sub">a year for your <b id="ep-specialty">Family Medicine</b> practice &mdash; across 4 fixable gaps in billing and coding. Here's roughly where it's hiding.</p>
+          <div class="est-guarantee" id="est-guarantee">
+            <span class="g-ico" aria-hidden="true">&#10003;</span>
+            <span>Our $1,000 PoC promise: we find at least <b>$20,000</b> in your real numbers, or it's free.</span>
+          </div>
+        </div>
+
+        <div class="est-break">
+          <h3>Estimated breakdown</h3>
+          <div class="est-brow">
+            <span class="est-bdot" style="background:var(--red)"></span>
+            <span class="est-bname">Unreworked claim denials</span>
+            <span class="est-bbar-wrap"><span class="est-bbar" id="bar-denials" style="background:var(--red)"></span></span>
+            <span class="est-bval" id="val-denials">$0</span>
+          </div>
+          <div class="est-brow">
+            <span class="est-bdot" style="background:var(--red)"></span>
+            <span class="est-bname">Under-coded visits</span>
+            <span class="est-bbar-wrap"><span class="est-bbar" id="bar-under" style="background:var(--red)"></span></span>
+            <span class="est-bval" id="val-under">$0</span>
+          </div>
+          <div class="est-brow">
+            <span class="est-bdot" style="background:var(--amber)"></span>
+            <span class="est-bname">Payer underpayment</span>
+            <span class="est-bbar-wrap"><span class="est-bbar" id="bar-payer" style="background:var(--amber)"></span></span>
+            <span class="est-bval" id="val-payer">$0</span>
+          </div>
+          <div class="est-brow">
+            <span class="est-bdot" style="background:var(--amber)"></span>
+            <span class="est-bname">Unbilled &amp; missed visits</span>
+            <span class="est-bbar-wrap"><span class="est-bbar" id="bar-unbilled" style="background:var(--amber)"></span></span>
+            <span class="est-bval" id="val-unbilled">$0</span>
+          </div>
+        </div>
+
+        <div class="est-cta">
+          <div class="ec-txt">
+            <b>Find this in your real numbers</b>
+            <span>$1,000 money-back PoC &middot; founder rate $599/mo after</span>
+          </div>
+          <a href="index.html#close" class="btn btn-primary">Claim my money-back PoC &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script src="estimate.js"></script>
+</body>
+</html>

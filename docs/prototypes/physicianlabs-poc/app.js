@@ -94,7 +94,7 @@
     var arc    = document.getElementById('ring-arc');
     var scoreEl = document.getElementById('ring-score');
     var amtEl   = document.getElementById('payoff-amount');
-    var SCORE = 76, AMOUNT = 23800, CIRC = 465;
+    var SCORE = 76, AMOUNT = 67900, CIRC = 465;
 
     // ring sweep
     if (arc) {

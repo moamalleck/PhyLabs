@@ -433,3 +433,82 @@ body {
   .metric-row, .kpi-row { grid-template-columns: 1fr; }
   .db-steps { display: none; }
 }
+
+/* ============================================================
+   RECOVERY ESTIMATOR  (estimate.html — standalone closing tool)
+   ============================================================ */
+.est-page { min-height: 100vh; background: var(--bg-2); }
+.est-top {
+  height: 64px; background: var(--bg); border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; padding: 0 32px; position: sticky; top: 0; z-index: 50;
+}
+.est-top .est-back { margin-left: auto; font-size: 13.5px; font-weight: 600; color: var(--ink-3); }
+.est-top .est-back:hover { color: var(--primary); }
+
+.est-wrap { max-width: 1080px; margin: 0 auto; padding: 40px 32px 80px; }
+.est-head { text-align: center; max-width: 620px; margin: 0 auto 12px; }
+.est-head .page-eyebrow { display: block; }
+.est-head h1 { font-size: clamp(30px, 4vw, 42px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 12px; }
+.est-head h1 em { font-style: normal; color: var(--primary); }
+.est-head p { font-size: 16px; color: var(--ink-2); }
+
+.est-grid { display: grid; grid-template-columns: 380px 1fr; gap: 24px; align-items: start; margin-top: 32px; }
+
+/* Inputs panel */
+.est-inputs { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-xl); padding: 26px; box-shadow: var(--sh-sm); position: sticky; top: 88px; }
+.est-inputs h2 { font-size: 17px; font-weight: 700; margin-bottom: 4px; }
+.est-inputs .est-hint { font-size: 13px; color: var(--ink-3); margin-bottom: 20px; }
+.est-field { margin-bottom: 18px; }
+.est-field label { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; font-weight: 600; color: var(--ink-2); margin-bottom: 8px; }
+.est-field label .est-num { font-size: 15px; font-weight: 800; color: var(--primary); }
+.est-field input[type="range"] { width: 100%; accent-color: var(--primary); height: 6px; }
+.est-field .est-text {
+  width: 100%; padding: 11px 14px; font-size: 15px; font-weight: 600; color: var(--ink);
+  background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--r-md);
+}
+.est-field .est-text:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px var(--primary-bd); }
+.est-field select.est-text { cursor: pointer; }
+.est-range-cap { display: flex; justify-content: space-between; font-size: 11px; color: var(--ink-4); margin-top: 4px; }
+.est-calc-btn { margin-top: 8px; }
+.est-disclaimer { font-size: 11.5px; color: var(--ink-4); line-height: 1.5; margin-top: 16px; }
+
+/* Result panel */
+.est-result { display: flex; flex-direction: column; gap: 18px; }
+.est-payoff {
+  background: linear-gradient(135deg, #1E1B4B 0%, #312E81 55%, #4F46E5 130%);
+  color: #fff; border-radius: var(--r-2xl); padding: 32px 34px; position: relative; overflow: hidden; box-shadow: var(--sh-lg);
+}
+.est-payoff::after { content: ''; position: absolute; right: -60px; top: -60px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(255,255,255,.12), transparent 70%); }
+.est-payoff .ep-eyebrow { font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.7); margin-bottom: 10px; position: relative; }
+.est-payoff .ep-amount { font-size: clamp(40px, 6vw, 58px); font-weight: 800; letter-spacing: -0.03em; line-height: 1; position: relative; }
+.est-payoff .ep-sub { font-size: 15px; color: rgba(255,255,255,.85); margin-top: 12px; max-width: 440px; position: relative; }
+.est-payoff .ep-sub b { color: #fff; }
+.est-guarantee {
+  display: flex; align-items: center; gap: 11px; margin-top: 20px; position: relative;
+  background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+  border-radius: var(--r-md); padding: 12px 15px; font-size: 13.5px;
+}
+.est-guarantee .g-ico { width: 28px; height: 28px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 900; }
+
+/* Breakdown rows */
+.est-break { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px 24px; box-shadow: var(--sh-sm); }
+.est-break h3 { font-size: 15px; font-weight: 700; margin-bottom: 14px; }
+.est-brow { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border-2); }
+.est-brow:last-child { border-bottom: none; }
+.est-bdot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.est-bname { font-size: 14px; font-weight: 600; color: var(--ink-2); }
+.est-bbar-wrap { flex: 1; height: 8px; background: var(--bg-3); border-radius: 100px; overflow: hidden; margin: 0 6px; }
+.est-bbar { height: 100%; border-radius: 100px; transition: width .6s cubic-bezier(.22,1,.36,1); }
+.est-bval { font-size: 15px; font-weight: 800; color: var(--ink); min-width: 78px; text-align: right; }
+
+.est-cta { background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 22px 24px; box-shadow: var(--sh-sm); display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.est-cta .ec-txt { flex: 1; min-width: 220px; }
+.est-cta .ec-txt b { font-size: 16px; font-weight: 700; display: block; }
+.est-cta .ec-txt span { font-size: 13.5px; color: var(--ink-3); }
+
+.est-empty { display: flex; align-items: center; justify-content: center; min-height: 300px; text-align: center; color: var(--ink-3); font-size: 15px; border: 1.5px dashed var(--border); border-radius: var(--r-xl); padding: 40px; }
+
+@media (max-width: 880px) {
+  .est-grid { grid-template-columns: 1fr; }
+  .est-inputs { position: static; }
+}
