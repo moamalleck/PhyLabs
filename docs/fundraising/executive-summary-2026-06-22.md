@@ -28,5 +28,5 @@
 **Team.** Ash Malleck, Founder & CEO — 5 years McKinsey, 11 years product at Amazon/AWS and EA, three generations of physicians in the family. Supported by an advisory bench of RCM operators, specialist accountants/attorneys, and physicians across five specialties; founding engineer and clinical-ops lead hired with this round.
 
 ---
-**Contact:** Ash Malleck, Founder & CEO · PhysicianLabs · *[insert preferred email]* · github.com/moamalleck/PhyLabs
+**Contact:** Ash Malleck, Founder & CEO · PhysicianLabs · ash@malleckclinics.com · github.com/moamalleck/PhyLabs
 <sub>One-pager structure per standard investor executive-summary templates (Visme / Storydoc / Ali Tamaseb VC memo).</sub>

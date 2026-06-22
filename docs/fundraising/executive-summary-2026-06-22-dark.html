@@ -2,32 +2,32 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>PhysicianLabs — Executive Summary</title>
+<title>PhysicianLabs — Executive Summary (dark)</title>
 <style>
   :root{
-    --navy:#0F172A; --teal:#2DD4BF; --tealdk:#0F6E56; --tealbg:#E1F5EE;
-    --ink:#0F172A; --muted:#475569; --border:#E2E8F0; --card:#F8FAFC;
+    --navy:#0F172A; --card:#16213A; --card2:#1B2942; --teal:#2DD4BF; --tealb:#5EEAD4;
+    --ink:#E5EDF7; --muted:#8FA3BF; --line:#26344F;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  @page{size:Letter;margin:0.45in}
-  html,body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.34}
-  .wrap{max-width:7.6in;margin:0 auto}
-  .hdr{background:var(--navy);color:#fff;border-radius:6px;padding:12px 16px;display:flex;justify-content:space-between;align-items:flex-end}
-  .wordmark{font-size:20pt;font-weight:800;letter-spacing:1px;line-height:1}
+  @page{size:Letter;margin:0}
+  html,body{font-family:"Helvetica Neue",Arial,sans-serif;background:var(--navy);color:var(--ink);font-size:9.8pt;line-height:1.38;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{max-width:8in;margin:0 auto;padding:26px 30px}
+  .hdr{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--teal);padding-bottom:11px}
+  .wordmark{font-size:22pt;font-weight:800;letter-spacing:1px;line-height:1;color:#fff}
   .wordmark span{color:var(--teal)}
-  .tag{color:#5EEAD4;font-style:italic;font-size:9.5pt;margin-top:5px}
-  .meta{text-align:right;font-size:8pt;color:#9FB3C8;letter-spacing:1px;text-transform:uppercase}
-  .lead{background:var(--tealbg);border-left:4px solid var(--teal);border-radius:0;padding:9px 13px;margin:11px 0;font-size:10.2pt;line-height:1.4}
-  .lead b{color:var(--tealdk)}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin-bottom:10px}
-  h2{font-size:8pt;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal);font-weight:800;margin-bottom:3px;border-bottom:1px solid var(--border);padding-bottom:2px}
-  p{margin-bottom:3px}
+  .tag{color:var(--tealb);font-style:italic;font-size:9.8pt;margin-top:6px}
+  .meta{text-align:right;font-size:8pt;color:var(--muted);letter-spacing:1.4px;text-transform:uppercase;line-height:1.6}
+  .lead{background:var(--card2);border-left:4px solid var(--teal);padding:11px 15px;margin:13px 0;font-size:10.4pt;line-height:1.45}
+  .lead b{color:var(--tealb)}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:11px 18px;margin-bottom:11px}
+  h2{font-size:8pt;letter-spacing:1.4px;text-transform:uppercase;color:var(--teal);font-weight:800;margin-bottom:4px;border-bottom:1px solid var(--line);padding-bottom:3px}
+  p{margin-bottom:4px}
   .muted{color:var(--muted)}
-  .ask{background:var(--card);border:1px solid var(--border);border-top:3px solid var(--teal);border-radius:5px;padding:10px 13px;margin-bottom:9px}
-  .ask .row{display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
-  .big{font-size:15pt;font-weight:800;color:var(--navy)}
-  .big span{color:var(--tealdk)}
-  .foot{background:var(--navy);color:#cbd5e1;border-radius:6px;padding:8px 14px;font-size:8.4pt;display:flex;justify-content:space-between;margin-top:2px}
+  .ask{background:var(--card);border:1px solid var(--line);border-top:3px solid var(--teal);border-radius:6px;padding:12px 15px;margin-bottom:11px}
+  .ask .row{display:flex;gap:18px;flex-wrap:wrap;align-items:baseline}
+  .big{font-size:16pt;font-weight:800;color:#fff}
+  .big span{color:var(--teal)}
+  .foot{border-top:1px solid var(--line);color:var(--muted);padding-top:9px;font-size:8.6pt;display:flex;justify-content:space-between}
   .foot b{color:#fff}
   b{font-weight:700}
 </style>
@@ -69,7 +69,7 @@
       <p>No one else delivers forward-looking financial intelligence, on the tools doctors already run, for the just-launched clinic. Incumbents (Tebra, athenahealth, Jane) are post-launch systems of record that require migration — they can't reach the first year, and their installed base is their innovator's dilemma.</p>
     </div>
     <div>
-      <h2>Traction <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400;color:#94a3b8">(stated honestly)</span></h2>
+      <h2>Traction <span class="muted" style="text-transform:none;letter-spacing:0;font-weight:400">(stated honestly)</span></h2>
       <p>7 discovery sessions · 5 physicians · 2 countries · 5 specialties. WTP validated at <b>$1K–$10K</b>. First paid PoC commitment secured (delivery in progress); <b>first arm's-length, card-charged close targeted within 30 days</b>. Working prototypes + platform foundation live.</p>
     </div>
     <div>
@@ -84,10 +84,10 @@
       <div class="big">$35M <span>floor</span> → $100M <span>path</span></div>
       <div class="muted" style="flex:1;min-width:240px">Bottoms-up to $35M ARR by year 5 (3% of SAM). Path to $100M is land-and-expand — same clinics, rising take as we add RCM + payments, ARPU ~$12K → ~$25K (≈4% of SAM; &lt;1% of the $65B RCM market).</div>
     </div>
-    <p style="margin-top:6px"><b>Raising $2.5M pre-seed</b> → 20 paying clinics, ~$200K revenue, platform v1 (the proof that prices a $10M seed). <span class="muted">Use of funds: 45% product · 25% GTM · 15% clinical/compliance · 15% ops.</span></p>
+    <p style="margin-top:7px"><b>Raising $2.5M pre-seed</b> → 20 paying clinics, ~$200K revenue, platform v1 (the proof that prices a $10M seed). <span class="muted">Use of funds: 45% product · 25% GTM · 15% clinical/compliance · 15% ops.</span></p>
   </div>
 
-  <div style="margin-bottom:8px">
+  <div style="margin-bottom:10px">
     <h2>Team</h2>
     <p><b>Ash Malleck, Founder &amp; CEO</b> — 5 years McKinsey, 11 years product at Amazon/AWS &amp; EA, three generations of physicians in the family. Advisory bench of RCM operators, specialist accountants/attorneys, and physicians across five specialties; founding engineer &amp; clinical-ops lead hired with this round.</p>
   </div>
