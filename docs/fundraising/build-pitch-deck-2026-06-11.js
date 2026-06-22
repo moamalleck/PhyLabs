@@ -120,7 +120,7 @@ function card(s, x, y, w, h, color) {
 {
   const s = newSlide();
   kicker(s, "03  /  THE SOLUTION");
-  title(s, "A wedge earning revenue today. A platform that owns the layer.", { size: 22 });
+  title(s, "We help newly independent doctors find the money they're losing in year one.", { size: 18 });
 
   card(s, 0.5, 1.4, 4.15, 3.25);
   s.addText("TODAY · THE WEDGE", { x: 0.72, y: 1.6, w: 3.7, h: 0.3, margin: 0, fontFace: HEAD, fontSize: 10.5, bold: true, color: TEAL, charSpacing: 2 });
@@ -359,7 +359,7 @@ function card(s, x, y, w, h, color) {
 {
   const s = newSlide();
   kicker(s, "11  /  FORECASTED FINANCIALS");
-  title(s, "Bottoms-up to $35M ARR in five years.");
+  title(s, "A $35M floor — and a credible path to $100M.", { size: 21 });
 
   s.addChart(pres.charts.BAR, [{
     name: "ARR ($M)",
@@ -384,9 +384,14 @@ function card(s, x, y, w, h, color) {
     { text: ">70% blended gross margin", options: { bullet: true, breakLine: true } },
     { text: "FY28 onward assumes the $10M seed closes on the 20-clinic proof", options: { bullet: true } },
   ], { x: 6.87, y: 1.93, w: 2.45, h: 2.7, margin: 0, fontFace: BODY, fontSize: 11, color: WHITE, paraSpaceAfter: 8, valign: "top" });
+
+  s.addText([
+    { text: "PATH TO $100M:  ", options: { color: TEAL, bold: true } },
+    { text: "land the clinic, then expand take — add RCM + payments to lift ARPU ~$12K → ~$25K. $100M ≈ 4% of our $1.2B SAM, <1% of the $65B RCM market.", options: { color: TEALB } },
+  ], { x: 0.5, y: 4.85, w: 8.7, h: 0.62, margin: 0, fontFace: BODY, fontSize: 10.5, italic: true, valign: "top" });
   pageNum(s, 11);
 
-  s.addNotes("No top-down hand-waving — this is clinics times revenue per clinic. Twenty clinics and $200K in year one, a million in year two, $3.8 million, $11.5 million, $35 million by year five — which is still only about 3% of the serviceable market. Gross margin holds above 70% blended. Year two onward assumes the $10 million seed closes on the 20-clinic proof point.");
+  s.addNotes("No top-down hand-waving — this is clinics times revenue per clinic. Twenty clinics and $200K in year one, then $1M, $3.8M, $11.5M, $35M by year five — still only about 3% of the serviceable market. That $35M is the conservative floor. The scale story they want: the path to $100M is land-and-expand — same clinics, rising take as we add RCM and payments, lifting ARPU from $12K toward $25K. $100M is about 4% of our $1.2B SAM and under 1% of the $65B RCM market. We are not market-constrained; we are execution-constrained.");
 }
 
 // ============================== 12. COMPS & EXIT ==============================
