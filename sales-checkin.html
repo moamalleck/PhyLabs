@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PhysicianLabs · Sales Standup · 2026-06-30</title>
+<style>
+  :root{
+    --navy:#0F172A; --teal:#2DD4BF; --tealdk:#0F6E56; --tealbg:#E1F5EE;
+    --ink:#0F172A; --muted:#475569; --border:#E2E8F0; --card:#F8FAFC; --amber:#B45309; --amberbg:#FEF3E2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#EEF2F6;line-height:1.4}
+  .wrap{max-width:880px;margin:22px auto;padding:0 16px}
+  .hdr{background:var(--navy);color:#fff;border-radius:10px 10px 0 0;padding:16px 22px;display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px}
+  .wordmark{font-size:23pt;font-weight:800;letter-spacing:1px;line-height:1}
+  .wordmark span{color:var(--teal)}
+  .tag{color:#5EEAD4;font-style:italic;font-size:10pt;margin-top:6px}
+  .wk{text-align:right;font-size:9.5pt;color:#cbd5e1}
+  .wk b{color:#fff;font-size:11pt;display:block}
+  .wk .days{color:#5EEAD4;font-weight:700}
+  .body{background:#fff;border:1px solid var(--border);border-top:none;border-radius:0 0 10px 10px;padding:20px 22px}
+
+  .gate{background:var(--tealbg);border-left:5px solid var(--teal);border-radius:6px;padding:13px 16px;margin-bottom:18px}
+  .gate .lbl{font-size:8.5pt;letter-spacing:1.4px;text-transform:uppercase;color:var(--tealdk);font-weight:800;margin-bottom:3px}
+  .gate .txt{font-size:11.5pt;font-weight:600;color:var(--navy)}
+
+  .stats{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:20px}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:7px;padding:10px 11px}
+  .stat .k{font-size:7.6pt;letter-spacing:.6px;text-transform:uppercase;color:var(--muted);font-weight:700}
+  .stat .v{font-size:17pt;font-weight:800;color:var(--navy);line-height:1.1;margin:3px 0}
+  .stat .v small{font-size:9pt;color:var(--muted);font-weight:600}
+  .bar{height:5px;background:#E2E8F0;border-radius:3px;overflow:hidden}
+  .bar i{display:block;height:100%;background:var(--teal)}
+
+  h2{font-size:9pt;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal);font-weight:800;margin:0 0 8px;border-bottom:1px solid var(--border);padding-bottom:4px}
+  .due{list-style:none;margin-bottom:20px}
+  .due li{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid #F1F5F9}
+  .due input{margin-top:3px;width:15px;height:15px;accent-color:var(--teal);flex:none}
+  .due .lead{font-weight:700;color:var(--navy)}
+  .due .act{color:var(--muted);font-size:9.5pt}
+  .pill{display:inline-block;font-size:7.6pt;font-weight:700;border-radius:10px;padding:1px 8px;margin-left:6px;vertical-align:middle}
+  .pill.stage{background:var(--tealbg);color:var(--tealdk)}
+  .pill.fam{background:#FEE2E2;color:#B91C1C}
+  .pill.amber{background:var(--amberbg);color:var(--amber)}
+
+  .one{background:var(--amberbg);border:1px solid #F5D9A8;border-left:5px solid var(--amber);border-radius:6px;padding:13px 16px;margin-bottom:20px}
+  .one .lbl{font-size:8.5pt;letter-spacing:1.2px;text-transform:uppercase;color:var(--amber);font-weight:800;margin-bottom:3px}
+  .one .txt{font-size:10.5pt;color:var(--navy)}
+  .one .txt b{color:var(--amber)}
+
+  .flags{list-style:none;font-size:9.5pt;color:var(--muted);margin-bottom:6px}
+  .flags li{padding:4px 0 4px 16px;position:relative}
+  .flags li:before{content:"⚠";position:absolute;left:0;color:var(--amber);font-size:8.5pt}
+  .foot{display:flex;justify-content:space-between;color:var(--muted);font-size:8.5pt;margin-top:16px;padding-top:10px;border-top:1px solid var(--border)}
+  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hdr">
+    <div>
+      <div class="wordmark">PHYSICIAN<span>LABS</span></div>
+      <div class="tag">Put doctors back in the driver's seat of their own financial future.</div>
+    </div>
+    <div class="wk">
+      Sales Standup · 2026-06-30
+      <b>Week 0 → Wk 1 · Jul 1–7</b>
+      <span class="days">4 days to Friday gate (Jul 4)</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="gate">
+      <div class="lbl">The Gate This Week — Wk 1</div>
+      <div class="txt">Stripe $1K link live + test charge passed · legal templates signable · <b>Saf's card charged</b>.</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><div class="k">Cards charged</div><div class="v">0<small>/6</small></div><div class="bar"><i style="width:0%"></i></div></div>
+      <div class="stat"><div class="k">Non-family</div><div class="v">0<small>/2</small></div><div class="bar"><i style="width:0%"></i></div></div>
+      <div class="stat"><div class="k">Programs</div><div class="v">0<small>/3</small></div><div class="bar"><i style="width:0%"></i></div></div>
+      <div class="stat"><div class="k">Subs live</div><div class="v">0<small>/3</small></div><div class="bar"><i style="width:0%"></i></div></div>
+      <div class="stat"><div class="k">Cash</div><div class="v">$0<small>/~30K</small></div><div class="bar"><i style="width:0%"></i></div></div>
+    </div>
+
+    <h2>Due This Week — Pipeline</h2>
+    <ul class="due" id="due">
+      <li>
+        <input type="checkbox" data-k="saf-charge">
+        <div>
+          <span class="lead">Saf Malleck</span>
+          <span class="pill stage">Card charged</span><span class="pill fam">family</span>
+          <div class="act">Book + charge the $1,000 PoC; schedule the 90-min audit session.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" data-k="pipeline-board">
+        <div>
+          <span class="lead">Build the 8-lead pipeline board</span>
+          <span class="pill stage">prep</span>
+          <div class="act">Saf, Kayum, Cowan, Xin, Tucci, u/AHaydenL, u/Alterdoc, junior docs — stage + next action.</div>
+        </div>
+      </li>
+      <li>
+        <input type="checkbox" data-k="offer-copy">
+        <div>
+          <span class="lead">Draft the explicit $1K offer copy</span>
+          <span class="pill stage">prep</span>
+          <div class="act">ROI-first paid ask for Kayum / Cowan / Xin / Tucci — ready to send Week 2.</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="one">
+      <div class="lbl">🎯 The One Thing Today</div>
+      <div class="txt">Stand up the <b>Stripe $1,000 PoC payment link</b> and run a live test charge. The cash register gates the entire quarter — and Saf is already committed, so the day it's live is the day the first dollar is charged.</div>
+    </div>
+
+    <h2>Flags &amp; Risks</h2>
+    <ul class="flags">
+      <li><span class="pill amber">gate open</span> No arm's-length card charged yet — the Week-3 non-family charge (Kayum/Cowan/Xin/Tucci) is the validation that actually counts. Saf alone leaves the traction story weak.</li>
+      <li>First-program timing: a slip past July deepens the model's peak cash need below −$17.5K. Charging Saf early is the lever.</li>
+      <li>Competitor (Samir Master) building in the same space — first case study by Week 3 is the moat.</li>
+    </ul>
+
+    <div class="foot">
+      <span><b>Ash Malleck</b> · Founder &amp; CEO · PhysicianLabs</span>
+      <span id="ts">Last generated: 2026-06-30</span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Persist checkbox state across reloads.
+  document.querySelectorAll('#due input[type=checkbox]').forEach(function(cb){
+    var key='salescheckin_'+cb.dataset.k;
+    cb.checked = localStorage.getItem(key)==='1';
+    cb.addEventListener('change',function(){ localStorage.setItem(key, cb.checked?'1':'0'); });
+  });
+</script>
+</body>
+</html>

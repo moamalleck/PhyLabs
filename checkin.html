@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhysicianLabs · Check-In · 2026-05-28</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #f8f9fa;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+    --text: #111827;
+    --muted: #6b7280;
+    --accent: #2563eb;
+    --green: #16a34a;
+    --green-bg: #dcfce7;
+    --blue: #2563eb;
+    --blue-bg: #dbeafe;
+    --amber: #d97706;
+    --amber-bg: #fef3c7;
+    --grey: #6b7280;
+    --grey-bg: #f3f4f6;
+    --red-bg: #fee2e2;
+    --red: #dc2626;
+    --summary-bg: #eff6ff;
+    --summary-border: #bfdbfe;
+    --pull-bg: #fefce8;
+    --pull-border: #fde68a;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    min-height: 100vh;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .container { max-width: 900px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .header-left h1 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: var(--text);
+  }
+  .header-left .date {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 0.1rem;
+  }
+  .header-right {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-align: right;
+  }
+
+  /* Summary card */
+  .summary-card {
+    background: var(--summary-bg);
+    border: 1px solid var(--summary-border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+  .summary-card .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--blue);
+    margin-bottom: 0.5rem;
+  }
+  .summary-card p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text);
+  }
+
+  /* Pull-forward card */
+  .pull-card {
+    background: var(--pull-bg);
+    border: 1px solid var(--pull-border);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    margin-bottom: 1.75rem;
+  }
+  .pull-card .label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--amber);
+    margin-bottom: 0.75rem;
+  }
+  .pull-card .sublabel {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 0.75rem;
+  }
+
+  /* Grid layout for Today / Week / Month / Tracked */
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .grid-full {
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 700px) {
+    .grid-3 { grid-template-columns: 1fr; }
+  }
+
+  /* Cards */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .card-header .title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .card-header .count {
+    margin-left: auto;
+    font-size: 0.75rem;
+    background: var(--grey-bg);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 0.1rem 0.55rem;
+    font-weight: 600;
+  }
+  .card-header .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-today { background: #2563eb; }
+  .dot-week  { background: #7c3aed; }
+  .dot-month { background: #0891b2; }
+  .dot-track { background: #d97706; }
+
+  /* Task rows */
+  .task-list { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+
+  .task-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+  }
+  .task-num {
+    font-size: 0.7rem;
+    color: var(--muted);
+    min-width: 1.1rem;
+    padding-top: 0.15rem;
+    font-weight: 600;
+  }
+  .task-check {
+    width: 16px; height: 16px;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    cursor: pointer;
+    accent-color: var(--accent);
+  }
+  .task-body { flex: 1; min-width: 0; }
+  .task-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.35;
+  }
+  .task-name.done { text-decoration: line-through; color: var(--muted); }
+  .task-note {
+    font-size: 0.775rem;
+    color: var(--muted);
+    margin-top: 0.2rem;
+    line-height: 1.45;
+  }
+  .task-badges { display: flex; gap: 0.35rem; margin-top: 0.3rem; flex-wrap: wrap; }
+
+  /* Badges */
+  .badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .badge-quick   { background: var(--green-bg);  color: var(--green); }
+  .badge-day     { background: var(--blue-bg);   color: var(--blue); }
+  .badge-tracked { background: var(--amber-bg);  color: var(--amber); }
+  .badge-done    { background: var(--grey-bg);   color: var(--grey); }
+  .badge-inprog  { background: var(--blue-bg);   color: var(--blue); }
+  .badge-blocked { background: var(--red-bg);    color: var(--red); }
+
+  /* Status dot inline */
+  .status-dot {
+    display: inline-block;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    margin-right: 0.3rem;
+    vertical-align: middle;
+    position: relative; top: -1px;
+  }
+  .sd-done    { background: var(--green); }
+  .sd-inprog  { background: var(--blue); }
+  .sd-open    { background: #d1d5db; border: 1.5px solid #9ca3af; }
+  .sd-blocked { background: var(--amber); }
+
+  /* Done section */
+  .done-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; }
+  .done-list li {
+    font-size: 0.825rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .done-list li::before {
+    content: "✓";
+    color: var(--green);
+    font-weight: 700;
+    font-size: 0.75rem;
+  }
+
+  /* Collapsible */
+  details summary {
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    user-select: none;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before { content: "▶ "; font-size: 0.65rem; }
+  details[open] summary::before { content: "▼ "; }
+
+  /* Footer */
+  .footer {
+    margin-top: 2.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+  .footer a { color: var(--accent); text-decoration: none; }
+  .footer a:hover { text-decoration: underline; }
+
+  /* Divider */
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    color: var(--muted);
+    margin-bottom: 0.6rem;
+    margin-top: 1.75rem;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <h1>PhysicianLabs · Check-In</h1>
+      <div class="date">Wednesday, May 28, 2026</div>
+    </div>
+    <div class="header-right">
+      Edit <a href="TASKS.md">TASKS.md</a> · run <code>/checkin</code> to refresh
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="summary-card">
+    <div class="label">30-Second Summary</div>
+    <p>You have real traction — 5 interested prospects, 1 design partner, 2 recent interviews pointing at concierge medicine as a beachhead — but <strong>no dollar commitment yet</strong>, which is the one thing investors and mentors are watching for. The mentor panel was clear: convert one prospect to a paid PoC this week, even at a reduced price; that single signal changes the story. Your pitch has all the right ingredients but is structured wrong — it needs to lead with <strong>one doctor story</strong>, not the product. Today's two quick wins are drafting that outreach message and rewriting the opening. Everything else is noise until money is on the table.</p>
+  </div>
+
+  <!-- Pull Forward -->
+  <div class="pull-card">
+    <div class="label">⚡ Pull Forward — Startable &amp; Finishable Today</div>
+    <div class="sublabel">These live in Week/Month but are quick enough to knock out today if you have momentum.</div>
+    <ul class="task-list">
+      <li class="task-item">
+        <input type="checkbox" class="task-check" id="pf1" onchange="saveCheck('pf1',this.checked)">
+        <div class="task-body">
+          <div class="task-name" id="pf1-label">Quantify customer discovery for pitch ("X doctors, Y countries, Z specialties")</div>
+          <div class="task-note">KT said stop being vague. Tally and state exact numbers. → This Month task</div>
+          <div class="task-badges"><span class="badge badge-quick">Quick</span></div>
+        </div>
+      </li>
+      <li class="task-item">
+        <input type="checkbox" class="task-check" id="pf2" onchange="saveCheck('pf2',this.checked)">
+        <div class="task-body">
+          <div class="task-name" id="pf2-label">Front-load founder credibility in pitch (first 60 seconds)</div>
+          <div class="task-note">Why are YOU the right person to build this? Must come before product description. → This Week task</div>
+          <div class="task-badges"><span class="badge badge-quick">Quick</span></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Today / This Week / This Month grid -->
+  <div class="section-label">Priority Views</div>
+  <div class="grid-3">
+
+    <!-- TODAY -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot dot-today"></span>
+        <span class="title">Today</span>
+        <span class="count">2</span>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <span class="task-num">1</span>
+          <input type="checkbox" class="task-check" id="t1" onchange="saveCheck('t1',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="t1-label">Draft outreach to 1 prospect for paid PoC</div>
+            <div class="task-note">Even a reduced-price LOI counts. #1 mentor priority.</div>
+            <div class="task-badges"><span class="badge badge-quick">Quick</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">2</span>
+          <input type="checkbox" class="task-check" id="t2" onchange="saveCheck('t2',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="t2-label">Rewrite pitch opening: lead with ONE doctor story</div>
+            <div class="task-note">Arc: just graduated → funding → year 1 chaos → tools/time/money.</div>
+            <div class="task-badges"><span class="badge badge-quick">Quick</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- THIS WEEK -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot dot-week"></span>
+        <span class="title">This Week</span>
+        <span class="count">5</span>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <span class="task-num">1</span>
+          <input type="checkbox" class="task-check" id="w1" onchange="saveCheck('w1',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="w1-label">Convert prospect to paid PoC</div>
+            <div class="task-badges"><span class="badge badge-inprog">In Progress</span><span class="badge badge-tracked">Tracked</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">2</span>
+          <input type="checkbox" class="task-check" id="w2" onchange="saveCheck('w2',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="w2-label">Add competitive comparison to pitch</div>
+            <div class="task-note">athenahealth, Kareo, practice mgmt software.</div>
+            <div class="task-badges"><span class="badge badge-day">Day</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">3</span>
+          <input type="checkbox" class="task-check" id="w3" onchange="saveCheck('w3',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="w3-label">Add HIPAA/trust framing to pitch deck</div>
+            <div class="task-badges"><span class="badge badge-day">Day</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">4</span>
+          <input type="checkbox" class="task-check" id="w4" onchange="saveCheck('w4',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="w4-label">Front-load founder credibility (60 sec)</div>
+            <div class="task-badges"><span class="badge badge-quick">Quick</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">5</span>
+          <input type="checkbox" class="task-check" id="w5" onchange="saveCheck('w5',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="w5-label">Nail down one repeatable distribution channel</div>
+            <div class="task-badges"><span class="badge badge-tracked">Tracked</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- THIS MONTH -->
+    <div class="card">
+      <div class="card-header">
+        <span class="dot dot-month"></span>
+        <span class="title">This Month</span>
+        <span class="count">5</span>
+      </div>
+      <ul class="task-list">
+        <li class="task-item">
+          <span class="task-num">1</span>
+          <input type="checkbox" class="task-check" id="m1" onchange="saveCheck('m1',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="m1-label">Signed paid PoC (any price)</div>
+            <div class="task-note">The single most important milestone right now.</div>
+            <div class="task-badges"><span class="badge badge-inprog">In Progress</span><span class="badge badge-tracked">Tracked</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">2</span>
+          <input type="checkbox" class="task-check" id="m2" onchange="saveCheck('m2',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="m2-label">Quantify customer discovery for pitch</div>
+            <div class="task-badges"><span class="badge badge-quick">Quick</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">3</span>
+          <input type="checkbox" class="task-check" id="m3" onchange="saveCheck('m3',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="m3-label">Rebuild pitch: story → pain spine → mic-drop</div>
+            <div class="task-note">KT's exact prescription. Data/ops depth → Q&A.</div>
+            <div class="task-badges"><span class="badge badge-day">Day</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">4</span>
+          <input type="checkbox" class="task-check" id="m4" onchange="saveCheck('m4',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="m4-label">Define MVP scope for PoC delivery</div>
+            <div class="task-badges"><span class="badge badge-tracked">Tracked</span></div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">5</span>
+          <input type="checkbox" class="task-check" id="m5" onchange="saveCheck('m5',this.checked)">
+          <div class="task-body">
+            <div class="task-name" id="m5-label">Identify beachhead specialty</div>
+            <div class="task-note">Concierge medicine is leading candidate.</div>
+            <div class="task-badges"><span class="badge badge-tracked">Tracked</span></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div><!-- /grid-3 -->
+
+  <!-- Tracked -->
+  <div class="section-label">Tracked — Multi-Day / Multi-Week</div>
+  <div class="grid-full">
+    <div class="card">
+      <ul class="task-list">
+        <li class="task-item">
+          <span class="task-num">1</span>
+          <div class="task-body">
+            <div class="task-name"><span class="status-dot sd-inprog"></span>Paid PoC conversion</div>
+            <div class="task-note">No LOI yet. Target this week. Dollar commitment required.</div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">2</span>
+          <div class="task-body">
+            <div class="task-name"><span class="status-dot sd-open"></span>Distribution channel validation</div>
+            <div class="task-note">Pick one path (medical schools, physician associations, health system carve-outs) and validate it before scaling.</div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">3</span>
+          <div class="task-body">
+            <div class="task-name"><span class="status-dot sd-open"></span>PhysicianLabs MVP scope</div>
+            <div class="task-note">Unblock after PoC is signed. Don't define scope before you have a paying customer.</div>
+          </div>
+        </li>
+        <li class="task-item">
+          <span class="task-num">4</span>
+          <div class="task-body">
+            <div class="task-name"><span class="status-dot sd-open"></span>Beachhead specialty identification</div>
+            <div class="task-note">Concierge medicine is leading candidate from Sameer Gafoor interview.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Done -->
+  <details>
+    <summary>Done ✓ (6 items)</summary>
+    <div style="margin-top:0.75rem;">
+      <div class="card">
+        <ul class="done-list">
+          <li>5 interested customers identified</li>
+          <li>1 design partner committed</li>
+          <li>Mentor panel pitch (Marc Krejci + Carmela Fortin) — 2026-05-20</li>
+          <li>KT McBratney pitch session — 2026-05-11</li>
+          <li>Sameer Gafoor interview (concierge medicine beachhead) — 2026-05-28</li>
+          <li>Saf Malleck interview (staffing pain cluster) — 2026-05-28</li>
+        </ul>
+      </div>
+    </div>
+  </details>
+
+  <!-- Footer -->
+  <div class="footer">
+    Last generated: 2026-05-28 &nbsp;·&nbsp;
+    Edit <a href="TASKS.md">TASKS.md</a> to update tasks &nbsp;·&nbsp;
+    Run <code>/checkin</code> in Claude Code to regenerate
+  </div>
+
+</div><!-- /container -->
+
+<script>
+  const PREFIX = 'checkin_';
+
+  function saveCheck(id, checked) {
+    localStorage.setItem(PREFIX + id, checked ? '1' : '0');
+    const label = document.getElementById(id + '-label');
+    if (label) label.classList.toggle('done', checked);
+  }
+
+  function restoreChecks() {
+    document.querySelectorAll('input.task-check').forEach(function(el) {
+      const stored = localStorage.getItem(PREFIX + el.id);
+      if (stored === '1') {
+        el.checked = true;
+        const label = document.getElementById(el.id + '-label');
+        if (label) label.classList.add('done');
+      }
+    });
+  }
+
+  restoreChecks();
+</script>
+</body>
+</html>
