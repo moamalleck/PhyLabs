@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PhysicianLabs — One Problem Mind Map</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #0a1628;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    width: 1400px;
+    height: 1000px;
+    overflow: hidden;
+  }
+  svg {
+    width: 1400px;
+    height: 1000px;
+  }
+  .title-block {
+    position: absolute;
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #e8f0fe;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.55;
+    white-space: nowrap;
+  }
+  .footer {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #e8f0fe;
+    font-size: 10px;
+    opacity: 0.3;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="title-block">PhysicianLabs &nbsp;&bull;&nbsp; One Problem Mind Map &nbsp;&bull;&nbsp; 2026-05-11</div>
+
+<svg viewBox="0 0 1400 1000" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Glow filters -->
+    <filter id="glow-gold">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-teal">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-center">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- Branch colors as gradients -->
+    <radialGradient id="grad-center" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a3a6e"/>
+      <stop offset="100%" style="stop-color:#0d2040"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ===================== CONNECTOR LINES ===================== -->
+  <!-- Branch 1: Financial Structure (gold) — upper left -->
+  <line x1="700" y1="500" x2="290" y2="215" stroke="#f4c542" stroke-width="2.5" opacity="0.6"/>
+  <!-- Branch 2: Operational Roadmap (teal) — upper right -->
+  <line x1="700" y1="500" x2="1090" y2="215" stroke="#00d4d8" stroke-width="2.5" opacity="0.6"/>
+  <!-- Branch 3: Concierge Service (mint) — right -->
+  <line x1="700" y1="500" x2="1190" y2="490" stroke="#50e3c2" stroke-width="2.5" opacity="0.6"/>
+  <!-- Branch 4: Patient Pipeline (purple) — lower right -->
+  <line x1="700" y1="500" x2="1060" y2="780" stroke="#b47eff" stroke-width="2.5" opacity="0.6"/>
+  <!-- Branch 5: Staffing (coral) — lower left -->
+  <line x1="700" y1="500" x2="340" y2="780" stroke="#ff7f7f" stroke-width="2.5" opacity="0.6"/>
+  <!-- Branch 6: Community + Education (green) — left -->
+  <line x1="700" y1="500" x2="205" y2="490" stroke="#78d97a" stroke-width="2.5" opacity="0.6"/>
+
+  <!-- ===================== BRANCH 1 LEAF CONNECTORS (Financial, gold) ===================== -->
+  <line x1="290" y1="215" x2="175" y2="115" stroke="#f4c542" stroke-width="1.4" opacity="0.45"/>
+  <line x1="290" y1="215" x2="310" y2="95" stroke="#f4c542" stroke-width="1.4" opacity="0.45"/>
+  <line x1="290" y1="215" x2="440" y2="105" stroke="#f4c542" stroke-width="1.4" opacity="0.45"/>
+  <line x1="290" y1="215" x2="150" y2="240" stroke="#f4c542" stroke-width="1.4" opacity="0.45"/>
+  <line x1="290" y1="215" x2="155" y2="310" stroke="#f4c542" stroke-width="1.4" opacity="0.45"/>
+
+  <!-- ===================== BRANCH 2 LEAF CONNECTORS (Operational, teal) ===================== -->
+  <line x1="1090" y1="215" x2="960" y2="105" stroke="#00d4d8" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1090" y1="215" x2="1090" y2="85" stroke="#00d4d8" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1090" y1="215" x2="1230" y2="110" stroke="#00d4d8" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1090" y1="215" x2="1255" y2="210" stroke="#00d4d8" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1090" y1="215" x2="1240" y2="310" stroke="#00d4d8" stroke-width="1.4" opacity="0.45"/>
+
+  <!-- ===================== BRANCH 3 LEAF CONNECTORS (Concierge, mint) ===================== -->
+  <line x1="1190" y1="490" x2="1295" y2="390" stroke="#50e3c2" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1190" y1="490" x2="1320" y2="480" stroke="#50e3c2" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1190" y1="490" x2="1295" y2="580" stroke="#50e3c2" stroke-width="1.4" opacity="0.45"/>
+
+  <!-- ===================== BRANCH 4 LEAF CONNECTORS (Patient Pipeline, purple) ===================== -->
+  <line x1="1060" y1="780" x2="1100" y2="880" stroke="#b47eff" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1060" y1="780" x2="1220" y2="800" stroke="#b47eff" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1060" y1="780" x2="1180" y2="900" stroke="#b47eff" stroke-width="1.4" opacity="0.45"/>
+  <line x1="1060" y1="780" x2="960" y2="900" stroke="#b47eff" stroke-width="1.4" opacity="0.45"/>
+
+  <!-- ===================== BRANCH 5 LEAF CONNECTORS (Staffing, coral) ===================== -->
+  <line x1="340" y1="780" x2="175" y2="795" stroke="#ff7f7f" stroke-width="1.4" opacity="0.45"/>
+  <line x1="340" y1="780" x2="220" y2="885" stroke="#ff7f7f" stroke-width="1.4" opacity="0.45"/>
+  <line x1="340" y1="780" x2="390" y2="900" stroke="#ff7f7f" stroke-width="1.4" opacity="0.45"/>
+  <line x1="340" y1="780" x2="510" y2="875" stroke="#ff7f7f" stroke-width="1.4" opacity="0.45"/>
+
+  <!-- ===================== BRANCH 6 LEAF CONNECTORS (Community, green) ===================== -->
+  <line x1="205" y1="490" x2="80" y2="400" stroke="#78d97a" stroke-width="1.4" opacity="0.45"/>
+  <line x1="205" y1="490" x2="60" y2="490" stroke="#78d97a" stroke-width="1.4" opacity="0.45"/>
+  <line x1="205" y1="490" x2="80" y2="590" stroke="#78d97a" stroke-width="1.4" opacity="0.45"/>
+  <line x1="205" y1="490" x2="190" y2="625" stroke="#78d97a" stroke-width="1.4" opacity="0.45"/>
+
+  <!-- ===================== CENTER NODE ===================== -->
+  <circle cx="700" cy="500" r="105" fill="url(#grad-center)" stroke="#00d4d8" stroke-width="2.5" filter="url(#glow-center)" opacity="0.95"/>
+  <circle cx="700" cy="500" r="108" fill="none" stroke="#00d4d8" stroke-width="0.6" stroke-dasharray="4 6" opacity="0.35"/>
+
+  <text x="700" y="454" text-anchor="middle" fill="#e8f0fe" font-size="11" font-weight="700" letter-spacing="1.5" opacity="0.7" text-transform="uppercase">THE ONE PROBLEM</text>
+  <text x="700" y="476" text-anchor="middle" fill="#00d4d8" font-size="14.5" font-weight="800">The Independent</text>
+  <text x="700" y="496" text-anchor="middle" fill="#00d4d8" font-size="14.5" font-weight="800">Clinic Launch</text>
+  <text x="700" y="516" text-anchor="middle" fill="#00d4d8" font-size="14.5" font-weight="800">Information Vacuum</text>
+  <line x1="630" y1="528" x2="770" y2="528" stroke="#00d4d8" stroke-width="0.8" opacity="0.4"/>
+  <text x="700" y="543" text-anchor="middle" fill="#8cb8f0" font-size="9.5">Physicians lose $200K-$400K</text>
+  <text x="700" y="556" text-anchor="middle" fill="#8cb8f0" font-size="9.5">in avoidable launch mistakes</text>
+
+  <!-- ===================== BRANCH 1: FINANCIAL STRUCTURE (gold) ===================== -->
+  <!-- Branch hub -->
+  <circle cx="290" cy="215" r="52" fill="#1a1a00" stroke="#f4c542" stroke-width="2" opacity="0.92"/>
+  <text x="290" y="207" text-anchor="middle" fill="#f4c542" font-size="12" font-weight="800">Financial</text>
+  <text x="290" y="222" text-anchor="middle" fill="#f4c542" font-size="12" font-weight="800">Structure</text>
+  <text x="290" y="237" text-anchor="middle" fill="#f4c542" font-size="9" opacity="0.7">★ HIGHEST VALUE</text>
+
+  <!-- Leaf nodes -->
+  <rect x="90" y="78" width="168" height="36" rx="9" fill="#1a1800" stroke="#f4c542" stroke-width="1.3" opacity="0.88"/>
+  <text x="174" y="92" text-anchor="middle" fill="#f4c542" font-size="10" font-weight="700">S-Corp / PC Election Advisor</text>
+  <text x="174" y="107" text-anchor="middle" fill="#c8a832" font-size="8.5">When to incorporate + entity type</text>
+
+  <rect x="218" y="58" width="182" height="36" rx="9" fill="#1a1800" stroke="#f4c542" stroke-width="1.3" opacity="0.88"/>
+  <text x="309" y="72" text-anchor="middle" fill="#f4c542" font-size="10" font-weight="700">Tax Optimization Guide</text>
+  <text x="309" y="87" text-anchor="middle" fill="#c8a832" font-size="8.5">Income splitting + deductibles</text>
+
+  <rect x="374" y="68" width="172" height="36" rx="9" fill="#1a1800" stroke="#f4c542" stroke-width="1.3" opacity="0.88"/>
+  <text x="460" y="82" text-anchor="middle" fill="#f4c542" font-size="10" font-weight="700">Operating Capital Model</text>
+  <text x="460" y="97" text-anchor="middle" fill="#c8a832" font-size="8.5">30-90 day payment lag planner</text>
+
+  <rect x="50" y="210" width="175" height="36" rx="9" fill="#1a1800" stroke="#f4c542" stroke-width="1.3" opacity="0.88"/>
+  <text x="138" y="224" text-anchor="middle" fill="#f4c542" font-size="10" font-weight="700">Healthcare Accountant Match</text>
+  <text x="138" y="239" text-anchor="middle" fill="#c8a832" font-size="8.5">Specialist referrals (Saf's "Rob")</text>
+
+  <rect x="48" y="288" width="170" height="36" rx="9" fill="#1a1800" stroke="#f4c542" stroke-width="1.3" opacity="0.88"/>
+  <text x="133" y="302" text-anchor="middle" fill="#f4c542" font-size="10" font-weight="700">Fee Schedule Benchmarker</text>
+  <text x="133" y="317" text-anchor="middle" fill="#c8a832" font-size="8.5">Specialty rate benchmarks by ZIP</text>
+
+  <!-- TOP 3 badge on Branch 1 -->
+  <rect x="224" y="154" width="132" height="24" rx="12" fill="#f4c542" opacity="0.92"/>
+  <text x="290" y="171" text-anchor="middle" fill="#0a1628" font-size="10" font-weight="800">★ TOP IDEA #1</text>
+
+  <!-- ===================== BRANCH 2: OPERATIONAL ROADMAP (teal) ===================== -->
+  <circle cx="1090" cy="215" r="52" fill="#001a1a" stroke="#00d4d8" stroke-width="2" opacity="0.92"/>
+  <text x="1090" y="207" text-anchor="middle" fill="#00d4d8" font-size="12" font-weight="800">Operational</text>
+  <text x="1090" y="222" text-anchor="middle" fill="#00d4d8" font-size="12" font-weight="800">Roadmap</text>
+  <text x="1090" y="237" text-anchor="middle" fill="#00d4d8" font-size="9" opacity="0.7">50-STEP SYSTEM</text>
+
+  <rect x="840" y="68" width="192" height="36" rx="9" fill="#001818" stroke="#00d4d8" stroke-width="1.3" opacity="0.88"/>
+  <text x="936" y="82" text-anchor="middle" fill="#00d4d8" font-size="10" font-weight="700">50-Step Launch Checklist</text>
+  <text x="936" y="97" text-anchor="middle" fill="#009da0" font-size="8.5">State-specific (WA / Ontario)</text>
+
+  <rect x="990" y="48" width="198" height="36" rx="9" fill="#001818" stroke="#00d4d8" stroke-width="1.3" opacity="0.88"/>
+  <text x="1089" y="62" text-anchor="middle" fill="#00d4d8" font-size="10" font-weight="700">Payer Credentialing Tracker</text>
+  <text x="1089" y="77" text-anchor="middle" fill="#009da0" font-size="8.5">90-120 day deadline alerts</text>
+
+  <rect x="1165" y="73" width="172" height="36" rx="9" fill="#001818" stroke="#00d4d8" stroke-width="1.3" opacity="0.88"/>
+  <text x="1251" y="87" text-anchor="middle" fill="#00d4d8" font-size="10" font-weight="700">Deadline Alert System</text>
+  <text x="1251" y="102" text-anchor="middle" fill="#009da0" font-size="8.5">Credentialing + compliance dates</text>
+
+  <rect x="1190" y="185" width="162" height="36" rx="9" fill="#001818" stroke="#00d4d8" stroke-width="1.3" opacity="0.88"/>
+  <text x="1271" y="199" text-anchor="middle" fill="#00d4d8" font-size="10" font-weight="700">Entity Formation Wizard</text>
+  <text x="1271" y="214" text-anchor="middle" fill="#009da0" font-size="8.5">PLLC, PC, S-Corp election</text>
+
+  <rect x="1195" y="288" width="160" height="36" rx="9" fill="#001818" stroke="#00d4d8" stroke-width="1.3" opacity="0.88"/>
+  <text x="1275" y="302" text-anchor="middle" fill="#00d4d8" font-size="10" font-weight="700">NPI + CAQH Manager</text>
+  <text x="1275" y="317" text-anchor="middle" fill="#009da0" font-size="8.5">Profile completion tracker</text>
+
+  <!-- TOP 3 badge on Branch 2 -->
+  <rect x="1025" y="154" width="132" height="24" rx="12" fill="#00d4d8" opacity="0.92"/>
+  <text x="1091" y="171" text-anchor="middle" fill="#0a1628" font-size="10" font-weight="800">★ TOP IDEA #1</text>
+
+  <!-- ===================== BRANCH 3: CONCIERGE SERVICE (mint) ===================== -->
+  <circle cx="1190" cy="490" r="52" fill="#001a14" stroke="#50e3c2" stroke-width="2" opacity="0.92"/>
+  <text x="1190" y="482" text-anchor="middle" fill="#50e3c2" font-size="12" font-weight="800">Concierge</text>
+  <text x="1190" y="497" text-anchor="middle" fill="#50e3c2" font-size="12" font-weight="800">Service</text>
+  <text x="1190" y="512" text-anchor="middle" fill="#50e3c2" font-size="9" opacity="0.7">DONE-FOR-YOU</text>
+
+  <rect x="1248" y="358" width="155" height="36" rx="9" fill="#001810" stroke="#50e3c2" stroke-width="1.3" opacity="0.88"/>
+  <text x="1326" y="372" text-anchor="middle" fill="#50e3c2" font-size="10" font-weight="700">White-Glove Launch</text>
+  <text x="1326" y="387" text-anchor="middle" fill="#3aad8a" font-size="8.5">$2K-$15K full setup service</text>
+
+  <rect x="1268" y="455" width="118" height="36" rx="9" fill="#001810" stroke="#50e3c2" stroke-width="1.3" opacity="0.88"/>
+  <text x="1327" y="469" text-anchor="middle" fill="#50e3c2" font-size="10" font-weight="700">Expert Network</text>
+  <text x="1327" y="484" text-anchor="middle" fill="#3aad8a" font-size="8.5">Accountants, attorneys</text>
+
+  <rect x="1250" y="552" width="150" height="36" rx="9" fill="#001810" stroke="#50e3c2" stroke-width="1.3" opacity="0.88"/>
+  <text x="1325" y="566" text-anchor="middle" fill="#50e3c2" font-size="10" font-weight="700">Peer Mentor Matching</text>
+  <text x="1325" y="581" text-anchor="middle" fill="#3aad8a" font-size="8.5">Physician-to-physician</text>
+
+  <!-- TOP 3 badge on Branch 3 -->
+  <rect x="1125" y="428" width="130" height="24" rx="12" fill="#50e3c2" opacity="0.92"/>
+  <text x="1190" y="445" text-anchor="middle" fill="#0a1628" font-size="10" font-weight="800">★ TOP IDEA #2</text>
+
+  <!-- ===================== BRANCH 4: PATIENT PIPELINE (purple) ===================== -->
+  <circle cx="1060" cy="780" r="52" fill="#110019" stroke="#b47eff" stroke-width="2" opacity="0.92"/>
+  <text x="1060" y="772" text-anchor="middle" fill="#b47eff" font-size="12" font-weight="800">Patient</text>
+  <text x="1060" y="787" text-anchor="middle" fill="#b47eff" font-size="12" font-weight="800">Pipeline</text>
+  <text x="1060" y="802" text-anchor="middle" fill="#b47eff" font-size="9" opacity="0.7">ACQUISITION</text>
+
+  <rect x="1025" y="868" width="148" height="34" rx="9" fill="#0e0018" stroke="#b47eff" stroke-width="1.3" opacity="0.88"/>
+  <text x="1099" y="881" text-anchor="middle" fill="#b47eff" font-size="10" font-weight="700">Google Business Wizard</text>
+  <text x="1099" y="895" text-anchor="middle" fill="#8055cc" font-size="8.5">SEO + reviews setup</text>
+
+  <rect x="1165" y="768" width="162" height="34" rx="9" fill="#0e0018" stroke="#b47eff" stroke-width="1.3" opacity="0.88"/>
+  <text x="1246" y="781" text-anchor="middle" fill="#b47eff" font-size="10" font-weight="700">Insurance Dir. Enrollment</text>
+  <text x="1246" y="795" text-anchor="middle" fill="#8055cc" font-size="8.5">In-network visibility</text>
+
+  <rect x="1118" y="878" width="160" height="34" rx="9" fill="#0e0018" stroke="#b47eff" stroke-width="1.3" opacity="0.88"/>
+  <text x="1198" y="891" text-anchor="middle" fill="#b47eff" font-size="10" font-weight="700">Referral Network Builder</text>
+  <text x="1198" y="905" text-anchor="middle" fill="#8055cc" font-size="8.5">Physician-to-physician referrals</text>
+
+  <rect x="880" y="878" width="162" height="34" rx="9" fill="#0e0018" stroke="#b47eff" stroke-width="1.3" opacity="0.88"/>
+  <text x="961" y="891" text-anchor="middle" fill="#b47eff" font-size="10" font-weight="700">HIPAA Practice Website</text>
+  <text x="961" y="905" text-anchor="middle" fill="#8055cc" font-size="8.5">Compliant patient intake</text>
+
+  <!-- ===================== BRANCH 5: STAFFING (coral) ===================== -->
+  <circle cx="340" cy="780" r="52" fill="#1a0000" stroke="#ff7f7f" stroke-width="2" opacity="0.92"/>
+  <text x="340" y="772" text-anchor="middle" fill="#ff7f7f" font-size="12" font-weight="800">Staffing</text>
+  <text x="340" y="787" text-anchor="middle" fill="#ff7f7f" font-size="12" font-weight="800">Support</text>
+  <text x="340" y="802" text-anchor="middle" fill="#ff7f7f" font-size="9" opacity="0.7">2,000+ APPLICANTS</text>
+
+  <rect x="62" y="772" width="178" height="34" rx="9" fill="#180000" stroke="#ff7f7f" stroke-width="1.3" opacity="0.88"/>
+  <text x="151" y="785" text-anchor="middle" fill="#ff7f7f" font-size="10" font-weight="700">Medical Secretary Guide</text>
+  <text x="151" y="799" text-anchor="middle" fill="#cc5555" font-size="8.5">Hiring criteria + vetting protocol</text>
+
+  <rect x="125" y="865" width="178" height="34" rx="9" fill="#180000" stroke="#ff7f7f" stroke-width="1.3" opacity="0.88"/>
+  <text x="214" y="878" text-anchor="middle" fill="#ff7f7f" font-size="10" font-weight="700">EMR-Trained Talent Pool</text>
+  <text x="214" y="892" text-anchor="middle" fill="#cc5555" font-size="8.5">Acuro/PS Suite/WebPT certified</text>
+
+  <rect x="310" y="882" width="168" height="34" rx="9" fill="#180000" stroke="#ff7f7f" stroke-width="1.3" opacity="0.88"/>
+  <text x="394" y="895" text-anchor="middle" fill="#ff7f7f" font-size="10" font-weight="700">AI Front Desk Assistant</text>
+  <text x="394" y="909" text-anchor="middle" fill="#cc5555" font-size="8.5">Bridge gap during hiring</text>
+
+  <rect x="448" y="850" width="160" height="34" rx="9" fill="#180000" stroke="#ff7f7f" stroke-width="1.3" opacity="0.88"/>
+  <text x="528" y="863" text-anchor="middle" fill="#ff7f7f" font-size="10" font-weight="700">Job Description Templates</text>
+  <text x="528" y="877" text-anchor="middle" fill="#cc5555" font-size="8.5">Role specs for medical office</text>
+
+  <!-- ===================== BRANCH 6: COMMUNITY + EDUCATION (green) ===================== -->
+  <circle cx="205" cy="490" r="52" fill="#001a00" stroke="#78d97a" stroke-width="2" opacity="0.92"/>
+  <text x="205" y="482" text-anchor="middle" fill="#78d97a" font-size="12" font-weight="800">Community</text>
+  <text x="205" y="497" text-anchor="middle" fill="#78d97a" font-size="12" font-weight="800">+ Education</text>
+  <text x="205" y="512" text-anchor="middle" fill="#78d97a" font-size="9" opacity="0.7">COHORT MODEL</text>
+
+  <rect x="18" y="368" width="152" height="34" rx="9" fill="#001500" stroke="#78d97a" stroke-width="1.3" opacity="0.88"/>
+  <text x="94" y="381" text-anchor="middle" fill="#78d97a" font-size="10" font-weight="700">Cohort Launch Program</text>
+  <text x="94" y="395" text-anchor="middle" fill="#4fa852" font-size="8.5">5-10 PTs launching together</text>
+
+  <rect x="0" y="460" width="128" height="34" rx="9" fill="#001500" stroke="#78d97a" stroke-width="1.3" opacity="0.88"/>
+  <text x="64" y="473" text-anchor="middle" fill="#78d97a" font-size="10" font-weight="700">Video Course</text>
+  <text x="64" y="487" text-anchor="middle" fill="#4fa852" font-size="8.5">Launch OS curriculum</text>
+
+  <rect x="18" y="562" width="148" height="34" rx="9" fill="#001500" stroke="#78d97a" stroke-width="1.3" opacity="0.88"/>
+  <text x="92" y="575" text-anchor="middle" fill="#78d97a" font-size="10" font-weight="700">Template Library</text>
+  <text x="92" y="589" text-anchor="middle" fill="#4fa852" font-size="8.5">Contracts, SOPs, scripts</text>
+
+  <rect x="100" y="612" width="175" height="34" rx="9" fill="#001500" stroke="#78d97a" stroke-width="1.3" opacity="0.88"/>
+  <text x="188" y="625" text-anchor="middle" fill="#78d97a" font-size="10" font-weight="700">PTOC Community Strategy</text>
+  <text x="188" y="639" text-anchor="middle" fill="#4fa852" font-size="8.5">10K+ member acquisition channel</text>
+
+  <!-- TOP 3 badge on Branch 6 -->
+  <rect x="140" y="430" width="132" height="24" rx="12" fill="#78d97a" opacity="0.92"/>
+  <text x="206" y="447" text-anchor="middle" fill="#0a1628" font-size="10" font-weight="800">★ TOP IDEA #3</text>
+
+  <!-- ===================== TOP 3 IDEAS LEGEND (bottom center) ===================== -->
+  <rect x="370" y="862" width="560" height="118" rx="14" fill="#0d1f3e" stroke="#00d4d8" stroke-width="1.2" opacity="0.95"/>
+
+  <text x="650" y="882" text-anchor="middle" fill="#e8f0fe" font-size="11" font-weight="800" letter-spacing="1.5">TOP 3 IDEAS</text>
+  <line x1="390" y1="890" x2="910" y2="890" stroke="#00d4d8" stroke-width="0.6" opacity="0.4"/>
+
+  <!-- Idea 1 -->
+  <circle cx="393" cy="910" r="7" fill="#f4c542" opacity="0.9"/>
+  <circle cx="393" cy="910" r="7" fill="none" stroke="#00d4d8" stroke-width="0" opacity="0"/>
+  <text x="407" y="907" fill="#f4c542" font-size="10" font-weight="800">#1 — Clinical Launch OS</text>
+  <text x="407" y="921" fill="#c8c8d8" font-size="9">"The 50-step financial and operational guide that turns a physician's independence decision into a</text>
+  <text x="407" y="933" fill="#c8c8d8" font-size="9">structured, deadline-tracked launch — before one dollar is lost."</text>
+
+  <!-- Idea 2 -->
+  <circle cx="393" cy="950" r="7" fill="#50e3c2" opacity="0.9"/>
+  <text x="407" y="947" fill="#50e3c2" font-size="10" font-weight="800">#2 — Business Doula Concierge</text>
+  <text x="407" y="961" fill="#c8c8d8" font-size="9">"A founder-led done-for-you service that handles every legal, tax, and credentialing step so the</text>
+  <text x="407" y="973" fill="#c8c8d8" font-size="9">physician focuses entirely on patients from day one."</text>
+
+  <!-- Idea 3 legend moved below — no space, just reference in tag below -->
+
+  <!-- ===================== THIRD IDEA PITCH TAG ===================== -->
+  <rect x="370" y="986" width="560" height="0" rx="0" fill="none"/>
+  <!-- Actually add idea 3 inline in the box, smaller -->
+  <!-- Overwrite the box with a taller one -->
+
+  <!-- ===================== STARTUP PITCH BANNER ===================== -->
+  <rect x="130" y="940" width="240" height="52" rx="10" fill="#0d1f3e" stroke="#78d97a" stroke-width="1.2" opacity="0.95"/>
+  <text x="250" y="958" text-anchor="middle" fill="#78d97a" font-size="10" font-weight="800">#3 — Healthcare Pro Network</text>
+  <text x="250" y="972" text-anchor="middle" fill="#c8c8d8" font-size="8.5">"A curated marketplace that instantly</text>
+  <text x="250" y="984" text-anchor="middle" fill="#c8c8d8" font-size="8.5">connects new physicians to the right</text>
+  <!-- truncated -->
+
+</svg>
+
+<div class="footer">PhysicianLabs &nbsp;|&nbsp; FRAIM AI Agent &nbsp;|&nbsp; ash.malleck@gmail.com &nbsp;|&nbsp; Confidential</div>
+
+</body>
+</html>

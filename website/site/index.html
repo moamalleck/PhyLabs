@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysicianLabs — Put Doctors Back in the Driver's Seat</title>
+  <meta name="description" content="PhysicianLabs gives independent physicians the financial clarity and operational intelligence to build a thriving practice — without the $280,000 mistake." />
+  <meta property="og:title" content="PhysicianLabs — Put Doctors Back in the Driver's Seat" />
+  <meta property="og:description" content="The financial intelligence platform for independent physicians. Prevent the $280,000 mistake. Launch on time and on budget." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://physicianlab.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- ═══ ANALYTICS ═══
+       Privacy-first, cookie-less, HIPAA-appropriate (no PII/PHI collected).
+       Plausible auto-captures pageviews + utm_source/medium/campaign, so traffic is
+       attributed per channel on an ongoing basis. ACTIVATION: create a free Plausible
+       (or Cloudflare Web Analytics) site, then replace data-domain below with your live
+       domain. Until then this tag is harmless (no-ops). -->
+  <script defer data-domain="REPLACE_WITH_LIVE_DOMAIN" src="https://plausible.io/js/script.outbound-links.js"></script>
+  <script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};</script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="PhysicianLabs home">
+      <div class="logo-mark">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      PhysicianLabs
+    </a>
+    <div class="nav-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="#outcomes">Outcomes</a>
+      <a href="scorecard.html">Scorecard</a>
+      <a href="#design-partner">Design partners</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="#waitlist" class="btn btn-ghost">Join waitlist</a>
+      <a href="#design-partner" class="btn btn-primary">Apply as design partner</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container">
+    <div class="hero-body">
+
+      <div class="pill-badge" role="status">
+        <span class="pill-dot" aria-hidden="true"></span>
+        Founding design partners &mdash; 3 spots remaining
+      </div>
+
+      <h1 id="hero-heading">
+        Your practice back.<br>Your income yours.
+      </h1>
+
+      <p class="hero-sub">
+        Your EHR is a rear-view mirror &mdash; it records what already happened.
+        <strong>PhysicianLabs is the windshield:</strong> real-time financial clarity on every
+        decision, so you recover the revenue you already earned and never walk into the
+        <strong>$280,000 mistake</strong> most doctors never see coming.
+      </p>
+
+      <!-- Prominent email sign-up -->
+      <form id="hero-form" class="hero-signup" name="hero-signup" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" aria-label="Get early access">
+        <input type="hidden" name="form-name" value="hero-signup" />
+        <p class="hp-field" hidden aria-hidden="true"><label>Leave this blank: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+        <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" /><input type="hidden" name="utm_campaign" /><input type="hidden" name="utm_content" /><input type="hidden" name="utm_term" /><input type="hidden" name="referrer" /><input type="hidden" name="landing_page" />
+        <label for="hero-email" class="sr-only">Work email address</label>
+        <input type="email" id="hero-email" name="email" placeholder="you@yourpractice.com" required autocomplete="email" />
+        <button type="submit" class="btn btn-primary btn-lg">Get early access &rarr;</button>
+      </form>
+      <div class="hero-signup-success" id="hero-success" role="status" aria-live="polite">
+        <span aria-hidden="true">&#10003;</span>&nbsp; You&rsquo;re in. We&rsquo;ll be in touch within 48 hours.
+      </div>
+      <p class="hero-signup-note">
+        <a href="scorecard.html">Take the 60-second Revenue-Leak Scorecard &rarr;</a>
+        &nbsp;&middot;&nbsp; or <a href="#design-partner">apply as a design partner</a> (3 spots left)
+      </p>
+
+      <p class="hero-tagline">Put doctors back in the driver&rsquo;s seat of their own financial future.</p>
+
+      <div class="hero-trust">
+        <span class="trust-item">
+          <span class="trust-check" aria-hidden="true">&#10003;</span>
+          We find the revenue you&rsquo;re missing &mdash; or your money back
+        </span>
+        <span class="trust-item">
+          <span class="trust-check" aria-hidden="true">&#10003;</span>
+          5 physicians already shaping this platform
+        </span>
+        <span class="trust-item">
+          <span class="trust-check" aria-hidden="true">&#10003;</span>
+          HIPAA-aware by design
+        </span>
+      </div>
+
+      <!-- Product mockup window -->
+      <div class="hero-mockup" aria-hidden="true">
+        <div class="mockup-glow"></div>
+        <div class="mockup-window">
+          <div class="mockup-titlebar">
+            <div class="mock-dots">
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+              <span class="mock-dot"></span>
+            </div>
+            <div class="mock-url">app.physicianlab.com/dashboard</div>
+          </div>
+          <div class="mockup-body">
+            <div class="mock-inner-nav">
+              <span class="mock-brand">PhysicianLabs</span>
+              <div class="mock-nav-links">
+                <span class="mock-nav-link active">Dashboard</span>
+                <span class="mock-nav-link">Revenue</span>
+                <span class="mock-nav-link">Billing</span>
+                <span class="mock-nav-link">Staffing</span>
+              </div>
+              <div class="mock-avatar">JS</div>
+            </div>
+
+            <div class="mock-metrics">
+              <div class="mock-metric">
+                <span class="mock-m-lbl">Monthly Revenue</span>
+                <span class="mock-m-val">$47,280</span>
+                <span class="mock-m-delta delta-up">&#8593; +12.4% vs last month</span>
+              </div>
+              <div class="mock-metric">
+                <span class="mock-m-lbl">Admin Hours Saved</span>
+                <span class="mock-m-val">8.2 hrs</span>
+                <span class="mock-m-delta delta-neutral">this week</span>
+              </div>
+              <div class="mock-metric">
+                <span class="mock-m-lbl">Billing Health Score</span>
+                <span class="mock-m-val">94%</span>
+                <span class="mock-m-delta delta-up">&#8593; +6 pts since launch</span>
+              </div>
+            </div>
+
+            <div class="mock-chart-card">
+              <div class="mock-chart-hd">
+                <span class="mock-chart-title">Revenue trend &mdash; last 12 weeks</span>
+                <span class="mock-chart-period">12 weeks</span>
+              </div>
+              <svg class="mock-chart" viewBox="0 0 820 72" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="cg" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4F46E5" stop-opacity="0.12"/>
+                    <stop offset="100%" stop-color="#4F46E5" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,62 C60,56 120,50 180,42 C240,34 300,38 360,28 C420,18 480,24 540,14 C600,4 660,10 740,6 L820,2 L820,72 L0,72 Z" fill="url(#cg)"/>
+                <path d="M0,62 C60,56 120,50 180,42 C240,34 300,38 360,28 C420,18 480,24 540,14 C600,4 660,10 740,6 L820,2" stroke="#4F46E5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="820" cy="2" r="4.5" fill="#4F46E5"/>
+                <circle cx="820" cy="2" r="8" fill="rgba(79,70,229,.15)"/>
+              </svg>
+            </div>
+
+            <div class="mock-alert">
+              <span style="font-size:15px;flex-shrink:0;">&#9889;</span>
+              <span class="mock-alert-txt">2 revenue opportunities identified this week &mdash; $3,400 recoverable</span>
+              <span class="mock-alert-cta">Review &#8594;</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STATS BAR ═══ -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat fade-up">
+        <span class="stat-value">$280K</span>
+        <span class="stat-label">Average cost of a failed practice launch</span>
+      </div>
+      <div class="stat fade-up delay-1">
+        <span class="stat-value">8 hrs</span>
+        <span class="stat-label">Saved per week on admin and billing</span>
+      </div>
+      <div class="stat fade-up delay-2">
+        <span class="stat-value">60K+</span>
+        <span class="stat-label">Independent clinics in our target market</span>
+      </div>
+      <div class="stat fade-up delay-3">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Design partner spots still available</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ PROBLEM ═══ -->
+<section class="section section-bg" id="problem">
+  <div class="container section-center">
+    <span class="section-eyebrow">The problem</span>
+    <h2>Independent practice is broken.<br><em>Not because doctors can&rsquo;t lead &mdash;<br>because no one built them the right tools.</em></h2>
+    <p class="section-sub">You spent a decade training to practice medicine. Nobody trained you to run a business. That gap costs the average physician $280,000 in the first two years alone.</p>
+
+    <div class="pain-grid">
+      <div class="pain-card fade-up">
+        <div class="pain-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+          </svg>
+        </div>
+        <h3>Billing is a black box</h3>
+        <p>By the time you see a revenue problem, you&rsquo;ve already lost thousands. Most physicians don&rsquo;t know their true collection rate until their accountant tells them &mdash; months too late to act.</p>
+      </div>
+      <div class="pain-card fade-up delay-1">
+        <div class="pain-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3>Admin eats your week</h3>
+        <p>You trained for over a decade to practice medicine. You&rsquo;re spending 8+ hours a week on scheduling, paperwork, and staff management that should run itself. That&rsquo;s not sustainable.</p>
+      </div>
+      <div class="pain-card fade-up delay-2">
+        <div class="pain-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+          </svg>
+        </div>
+        <h3>Launch risk is invisible</h3>
+        <p>The average physician loses $280,000 in their first two years from preventable mistakes. No one hands you a playbook when you leave the hospital system. Until now.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-center">
+      <span class="section-eyebrow">How it works</span>
+      <h2 style="max-width:600px;margin:0 auto 16px;">From blind spots to clarity,<br>in three steps.</h2>
+      <p class="section-sub" style="max-width:480px;margin:0 auto 72px;">No consultants. No guesswork. Just a clear view of your practice&rsquo;s financial health &mdash; and a roadmap to protect it.</p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="feature-row fade-up">
+      <div class="feature-text">
+        <span class="step-number">Step 01</span>
+        <h3>Diagnose your practice health</h3>
+        <p>We map your clinic against 40+ financial and operational benchmarks. You see &mdash; for the first time &mdash; exactly where revenue is leaking and where time is being stolen from you.</p>
+        <ul class="feature-list">
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Revenue cycle deep-analysis</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Staffing cost benchmarking</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Payer mix and contract review</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Overhead ratio scoring</li>
+        </ul>
+      </div>
+      <div class="feature-vis" aria-hidden="true">
+        <div class="fv-header">Practice Health &mdash; Diagnostic Report</div>
+        <div class="health-top">
+          <div class="health-ring">
+            <div class="health-ring-inner">
+              <span class="ring-val">76</span>
+              <span class="ring-lbl">score</span>
+            </div>
+          </div>
+          <div class="health-info">
+            <h4>Good &mdash; with 3 critical gaps</h4>
+            <p>Your billing health is strong. Revenue cycle and staffing ratios need immediate attention.</p>
+          </div>
+        </div>
+        <div class="bmark">
+          <span class="bmark-name">Collection rate</span>
+          <div class="bmark-bar"><div class="bmark-fill fill-g" style="width:82%"></div></div>
+          <span class="bmark-val">82%</span>
+        </div>
+        <div class="bmark">
+          <span class="bmark-name">Overhead ratio</span>
+          <div class="bmark-bar"><div class="bmark-fill fill-a" style="width:61%"></div></div>
+          <span class="bmark-val">61%</span>
+        </div>
+        <div class="bmark">
+          <span class="bmark-name">Days in A/R</span>
+          <div class="bmark-bar"><div class="bmark-fill fill-r" style="width:40%"></div></div>
+          <span class="bmark-val">48 days</span>
+        </div>
+        <div class="bmark">
+          <span class="bmark-name">Denial rate</span>
+          <div class="bmark-bar"><div class="bmark-fill fill-g" style="width:88%"></div></div>
+          <span class="bmark-val">4.2%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="feature-row reverse fade-up">
+      <div class="feature-text">
+        <span class="step-number">Step 02</span>
+        <h3>Build your financial roadmap</h3>
+        <p>A personalized action plan eliminates revenue leaks before they compound. You get the clarity that took other physicians years &mdash; and thousands in consulting fees &mdash; to find.</p>
+        <ul class="feature-list">
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Custom launch or recovery timeline</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Break-even and cash-flow modeling</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Risk-weighted scenario planning</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Milestone accountability checkpoints</li>
+        </ul>
+      </div>
+      <div class="feature-vis" aria-hidden="true">
+        <div class="fv-header">Financial Roadmap &mdash; Q3 2026</div>
+        <div class="rm-items">
+          <div class="rm-item">
+            <div class="rm-marker">
+              <div class="rm-dot rm-dot-done">&#10003;</div>
+              <div class="rm-line"></div>
+            </div>
+            <div class="rm-content">
+              <div class="rm-title">Baseline financial audit</div>
+              <div class="rm-detail">Revenue cycle, payer mix, overhead</div>
+            </div>
+            <span class="rm-badge badge-done">Done</span>
+          </div>
+          <div class="rm-item">
+            <div class="rm-marker">
+              <div class="rm-dot rm-dot-done">&#10003;</div>
+              <div class="rm-line"></div>
+            </div>
+            <div class="rm-content">
+              <div class="rm-title">Identify revenue gaps</div>
+              <div class="rm-detail">$3,400/mo recoverable found</div>
+            </div>
+            <span class="rm-badge badge-done">Done</span>
+          </div>
+          <div class="rm-item">
+            <div class="rm-marker">
+              <div class="rm-dot rm-dot-active">3</div>
+              <div class="rm-line"></div>
+            </div>
+            <div class="rm-content">
+              <div class="rm-title">Billing workflow rebuild</div>
+              <div class="rm-detail">Reduce denial rate to &lt; 3%</div>
+            </div>
+            <span class="rm-badge badge-now">In progress</span>
+          </div>
+          <div class="rm-item">
+            <div class="rm-marker">
+              <div class="rm-dot rm-dot-pending">4</div>
+            </div>
+            <div class="rm-content">
+              <div class="rm-title">Staffing model optimization</div>
+              <div class="rm-detail">Target: 52% overhead ratio</div>
+            </div>
+            <span class="rm-badge badge-soon">Week 6</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="feature-row fade-up">
+      <div class="feature-text">
+        <span class="step-number">Step 03</span>
+        <h3>Stay ahead of every decision</h3>
+        <p>Real-time intelligence surfaces what&rsquo;s working and what needs attention &mdash; before it becomes a crisis. Your practice runs on data, not gut feel and guesswork.</p>
+        <ul class="feature-list">
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Weekly revenue intelligence digest</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Automated billing health score</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Proactive staffing cost alerts</li>
+          <li><span class="f-arrow" aria-hidden="true">&#8594;</span> Monthly benchmark comparisons</li>
+        </ul>
+      </div>
+      <div class="feature-vis" aria-hidden="true">
+        <div class="fv-header">Weekly Intelligence &mdash; June 2, 2026</div>
+        <span class="intel-week">This week at a glance</span>
+        <div class="intel-metrics">
+          <div class="intel-m">
+            <span class="intel-m-lbl">Revenue</span>
+            <span class="intel-m-val">$11,840</span>
+            <span class="intel-m-delta delta-up">&#8593; +8.2%</span>
+          </div>
+          <div class="intel-m">
+            <span class="intel-m-lbl">Claims filed</span>
+            <span class="intel-m-val">43</span>
+            <span class="intel-m-delta delta-neutral">2 pending</span>
+          </div>
+          <div class="intel-m">
+            <span class="intel-m-lbl">Admin hrs</span>
+            <span class="intel-m-val">6.1</span>
+            <span class="intel-m-delta delta-up">&#8595; 2.1 saved</span>
+          </div>
+          <div class="intel-m">
+            <span class="intel-m-lbl">Health score</span>
+            <span class="intel-m-val">94%</span>
+            <span class="intel-m-delta delta-up">&#8593; +2 pts</span>
+          </div>
+        </div>
+        <div class="intel-alerts">
+          <div class="intel-alert">
+            <span class="intel-dot dot-primary"></span>
+            <span class="intel-alert-txt"><strong>Opportunity:</strong> Payer A rate negotiable &mdash; est. +$680/mo</span>
+          </div>
+          <div class="intel-alert">
+            <span class="intel-dot dot-amber"></span>
+            <span class="intel-alert-txt"><strong>Watch:</strong> Days in A/R at 46 &mdash; 2 days above target</span>
+          </div>
+          <div class="intel-alert">
+            <span class="intel-dot dot-green"></span>
+            <span class="intel-alert-txt"><strong>Win:</strong> Denial rate dropped to 3.8% &mdash; best month on record</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ TESTIMONIAL + OUTCOMES ═══ -->
+<section class="section section-bg" id="outcomes">
+  <div class="container section-center">
+    <span class="section-eyebrow">What physicians say</span>
+    <h2 style="max-width:560px;margin:0 auto 56px;">The clarity you needed.<br><em>From day one.</em></h2>
+
+    <div class="testimonial-wrap fade-up">
+      <span class="q-mark" aria-hidden="true">&ldquo;</span>
+      <p class="testimonial-text">
+        &ldquo;I didn&rsquo;t realize how much money I was leaving on the table until someone actually showed me the numbers. It was like turning on a light in a dark room &mdash; I couldn&rsquo;t unsee it.&rdquo;
+      </p>
+      <div class="testimonial-cite">
+        <div class="cite-avatar" aria-hidden="true">MR</div>
+        <span>Family Medicine Physician &mdash; Early Program Participant</span>
+      </div>
+    </div>
+
+    <div class="outcomes-grid fade-up">
+      <div class="outcome-card">
+        <span class="outcome-value">$280K</span>
+        <span class="outcome-label">in preventable first-year losses avoided on average</span>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-value">8 hrs</span>
+        <span class="outcome-label">saved per week on admin, billing, and scheduling</span>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-value">40%</span>
+        <span class="outcome-label">fewer billing errors within the first 90 days</span>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-value">Day 1</span>
+        <span class="outcome-label">financial clarity from your very first session</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DESIGN PARTNER ═══ -->
+<section class="dp-section" id="design-partner">
+  <div class="container">
+    <div class="dp-grid">
+      <div class="dp-content fade-up">
+        <span class="dp-eyebrow">Founding cohort &mdash; June 2026</span>
+        <h2>Shape the platform.<br>Get lifetime preferred pricing.</h2>
+        <p>We&rsquo;re selecting 3 founding design partners &mdash; physicians who will work directly with our team to stress-test the roadmap, shape the product, and set the standard for what great looks like in physician financial intelligence.</p>
+
+        <ul class="dp-benefits">
+          <li>
+            <span class="dp-check" aria-hidden="true">&#10003;</span>
+            Direct weekly sessions with founders &mdash; your feedback drives the roadmap
+          </li>
+          <li>
+            <span class="dp-check" aria-hidden="true">&#10003;</span>
+            Lifetime preferred pricing locked at design partner rate
+          </li>
+          <li>
+            <span class="dp-check" aria-hidden="true">&#10003;</span>
+            First access to every new feature before general release
+          </li>
+          <li>
+            <span class="dp-check" aria-hidden="true">&#10003;</span>
+            A paid pilot engagement &mdash; not just advice, real outcomes
+          </li>
+          <li>
+            <span class="dp-check" aria-hidden="true">&#10003;</span>
+            Your name in our founding story
+          </li>
+        </ul>
+
+        <p class="dp-scarcity">Only 3 spots. First-come, first-qualified.</p>
+      </div>
+
+      <div class="fade-up delay-2">
+        <div class="form-card">
+          <h3>Apply now</h3>
+          <p class="form-sub">Takes 2 minutes. We review every application personally.</p>
+
+          <form id="dp-form" name="design-partner" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="design-partner" />
+            <p class="hp-field" hidden aria-hidden="true"><label>Leave this blank: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+            <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" /><input type="hidden" name="utm_campaign" /><input type="hidden" name="utm_content" /><input type="hidden" name="utm_term" /><input type="hidden" name="referrer" /><input type="hidden" name="landing_page" />
+            <div class="form-group">
+              <label for="dp-name">Full name</label>
+              <input type="text" id="dp-name" name="name" placeholder="Dr. Jane Smith" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="dp-specialty">Specialty</label>
+              <input type="text" id="dp-specialty" name="specialty" placeholder="e.g. Family Medicine, Cardiology" required />
+            </div>
+            <div class="form-group">
+              <label for="dp-stage">Practice stage</label>
+              <select id="dp-stage" name="stage" required>
+                <option value="" disabled selected>Select your stage</option>
+                <option value="planning">Planning to launch (next 12 months)</option>
+                <option value="recent">Recently launched (&lt; 2 years)</option>
+                <option value="established">Established (2+ years)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="dp-email">Email address</label>
+              <input type="email" id="dp-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-full">
+              Apply as a design partner &rarr;
+            </button>
+            <p class="form-note">We&rsquo;ll review your application and reach out within 48 hours. No spam, ever.</p>
+          </form>
+
+          <div class="form-success" id="dp-success">
+            <div class="success-circle" aria-hidden="true">&#10003;</div>
+            <h3>Application received.</h3>
+            <p>We&rsquo;ll review your application and reach out within 48 hours. Thank you for your interest in shaping PhysicianLabs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ WAITLIST ═══ -->
+<section class="waitlist-section" id="waitlist">
+  <div class="container">
+    <span class="section-eyebrow" style="display:block;text-align:center;margin-bottom:16px;">General availability</span>
+    <h2>Not ready to apply?<br>Get early access when we launch.</h2>
+    <p class="wl-sub">Join physicians already on the waitlist. Be first to know when general availability opens &mdash; and lock in early-access pricing.</p>
+
+    <form id="wl-form" class="waitlist-form" name="waitlist" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="waitlist" />
+      <p class="hp-field" hidden aria-hidden="true"><label>Leave this blank: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+      <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" /><input type="hidden" name="utm_campaign" /><input type="hidden" name="utm_content" /><input type="hidden" name="utm_term" /><input type="hidden" name="referrer" /><input type="hidden" name="landing_page" />
+      <label for="wl-email" class="sr-only">Email address</label>
+      <input type="email" id="wl-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+      <button type="submit" class="btn btn-primary">Join the waitlist</button>
+    </form>
+
+    <div class="wl-success" id="wl-success" role="status" aria-live="polite">
+      <span aria-hidden="true">&#10003;</span>&nbsp; You&rsquo;re on the list. We&rsquo;ll be in touch soon.
+    </div>
+
+    <p class="wl-count">Join <strong>140+ physicians</strong> already waiting for general availability.</p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          PhysicianLabs
+        </div>
+        <p>The financial intelligence platform for independent physicians.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#how-it-works">How it works</a>
+          <a href="#outcomes">Outcomes</a>
+          <a href="#design-partner">Design partners</a>
+          <a href="#waitlist">Join waitlist</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="mailto:hello@physicianlab.com">Contact us</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PhysicianLabs. All rights reserved.</span>
+      <span>HIPAA-aware by design. Not a substitute for legal or financial advice.</span>
+    </div>
+  </div>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+// Sticky nav shadow on scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8), { passive: true });
+
+// Scroll fade-up animations
+const io = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }),
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+// ═══ CHANNEL ATTRIBUTION ═══
+// Capture UTM params on first visit (first-touch) and persist them, so a signup that
+// happens on a later visit is still credited to the channel that originally sent them.
+const UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+function captureAttribution() {
+  const params = new URLSearchParams(window.location.search);
+  let stored = {};
+  try { stored = JSON.parse(localStorage.getItem('pl_attribution') || '{}'); } catch (_) {}
+  // First-touch wins: only write if we haven't stored a source before.
+  if (!stored.utm_source && params.get('utm_source')) {
+    stored = {};
+    UTM_KEYS.forEach(k => stored[k] = params.get(k) || '');
+    stored.referrer = document.referrer || '';
+    stored.landing_page = window.location.pathname + window.location.search;
+    stored.first_seen = new Date().toISOString();
+    try { localStorage.setItem('pl_attribution', JSON.stringify(stored)); } catch (_) {}
+  }
+  return stored;
+}
+const ATTRIBUTION = captureAttribution();
+
+// Stamp hidden attribution fields on every form so each submission carries its source.
+function stampForm(form) {
+  UTM_KEYS.concat(['referrer','landing_page']).forEach(k => {
+    const field = form.querySelector('input[name="' + k + '"]');
+    if (field) field.value = ATTRIBUTION[k] || '';
+  });
+}
+document.querySelectorAll('form[data-netlify]').forEach(stampForm);
+
+// Submit to Netlify Forms via AJAX (keeps the nice inline success state), then fire an
+// analytics conversion event tagged with the channel. Degrades gracefully offline/local.
+function wireForm(formId, successId, display) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) { form.reportValidity(); return; }
+    stampForm(form);
+    const body = new URLSearchParams(new FormData(form)).toString();
+    const done = () => {
+      form.style.display = 'none';
+      const s = document.getElementById(successId);
+      if (s) { s.style.display = display; if (s.focus) s.focus(); }
+      if (window.plausible) {
+        window.plausible('Signup', { props: { form: form.getAttribute('name'), source: ATTRIBUTION.utm_source || 'direct' } });
+      }
+    };
+    fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body })
+      .then(done).catch(done); // show success even if the endpoint isn't live yet (local preview)
+  });
+}
+wireForm('dp-form', 'dp-success', 'block');
+wireForm('hero-form', 'hero-success', 'flex');
+wireForm('wl-form', 'wl-success', 'flex');
+
+// Smooth scroll with nav offset
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const t = document.querySelector(this.getAttribute('href'));
+    if (!t) return;
+    e.preventDefault();
+    window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>

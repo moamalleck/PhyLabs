@@ -1,0 +1,16 @@
+# Netlify deploy config for the PhysicianLabs landing page.
+# The site is the static website/site/ folder — no build step.
+# Netlify auto-detects the forms (data-netlify="true") from the deployed HTML and
+# captures every submission in Forms → dashboard, with optional email notifications.
+
+[build]
+  publish = "website/site"
+  command = ""
+
+# Security + caching headers (no PHI/PII is collected; forms only take email/name/specialty).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

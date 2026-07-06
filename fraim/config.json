@@ -1,5 +1,4 @@
 {
-  "version": "2.0.124",
   "mode": "integrated",
   "project": {
     "name": "PhysicianLabs",
@@ -17,7 +16,7 @@
     "name": "PhyLabs"
   },
   "customizations": {
-    "architectureDoc": "docs/architecture/architecture.md",
+    "architectureDoc": "product/architecture/architecture.md",
     "validation": {
       "buildCommand": "npm run build",
       "testSuiteCommand": "npm test",

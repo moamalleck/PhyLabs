@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practice Revenue-Leak Scorecard — PhysicianLabs</title>
+  <meta name="description" content="Answer 7 questions and get an instant estimate of the revenue your independent practice may be leaving on the table each year — denied claims, under-collection, patient drop-off, and under-coding." />
+  <meta property="og:title" content="Practice Revenue-Leak Scorecard — PhysicianLabs" />
+  <meta property="og:description" content="60-second self-check: how much revenue is your practice leaking each year? Get your estimate and Practice Health Score." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Analytics — see index.html. Replace data-domain with the live domain to activate. -->
+  <script defer data-domain="REPLACE_WITH_LIVE_DOMAIN" src="https://plausible.io/js/script.outbound-links.js"></script>
+  <script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};</script>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="PhysicianLabs home">
+      <div class="logo-mark">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      PhysicianLabs
+    </a>
+    <div class="nav-links">
+      <a href="index.html#how-it-works">How it works</a>
+      <a href="index.html#outcomes">Outcomes</a>
+      <a href="index.html#design-partner">Design partners</a>
+    </div>
+    <div class="nav-ctas">
+      <a href="index.html#design-partner" class="btn btn-primary">Apply as design partner</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ SCORECARD ═══ -->
+<section class="sc-section">
+  <div class="container sc-wrap">
+
+    <div class="sc-intro section-center">
+      <span class="pill-badge" role="status"><span class="pill-dot" aria-hidden="true"></span> Free &mdash; takes 60 seconds</span>
+      <h1 class="sc-h1">How much revenue is your<br>practice leaking each year?</h1>
+      <p class="sc-lead">
+        Denied claims, under-collection, patients dropping their plan of care, under-coding &mdash;
+        it adds up quietly. Answer 7 questions and see your estimate + a Practice Health Score.
+        <strong>No patient data. No account.</strong>
+      </p>
+    </div>
+
+    <!-- STEP 1 — QUIZ -->
+    <div class="form-card sc-card" id="quiz-card">
+      <form id="sc-form" novalidate>
+        <div class="form-group">
+          <label for="sc-specialty">1. Your specialty</label>
+          <select id="sc-specialty" name="specialty" required>
+            <option value="" disabled selected>Select your specialty</option>
+            <option value="Physical Therapy">Physical Therapy</option>
+            <option value="Chiropractic">Chiropractic</option>
+            <option value="Primary Care">Primary Care</option>
+            <option value="Dermatology">Dermatology</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="sc-visits">2. Roughly how many patient visits per month?</label>
+          <input type="number" id="sc-visits" name="visits" min="1" step="1" inputmode="numeric" placeholder="e.g. 400" required />
+        </div>
+
+        <div class="form-group">
+          <label for="sc-rev">3. Average revenue per visit ($)</label>
+          <input type="number" id="sc-rev" name="revPerVisit" min="1" step="1" inputmode="numeric" placeholder="e.g. 110" required />
+        </div>
+
+        <div class="form-group">
+          <label for="sc-denial">4. Claim denial rate (%) <span class="sc-hint">&mdash; not sure? leave blank</span></label>
+          <input type="number" id="sc-denial" name="denialRate" min="0" max="100" step="0.1" inputmode="decimal" placeholder="e.g. 12" />
+        </div>
+
+        <div class="form-group">
+          <label for="sc-collect">5. Net collection rate (%) <span class="sc-hint">&mdash; not sure? leave blank</span></label>
+          <input type="number" id="sc-collect" name="collectionRate" min="0" max="100" step="0.1" inputmode="decimal" placeholder="e.g. 91" />
+        </div>
+
+        <div class="form-group">
+          <label for="sc-complete">6. Of patients on a multi-visit plan, ~what % complete it? <span class="sc-hint">&mdash; not sure? leave blank</span></label>
+          <input type="number" id="sc-complete" name="completionRate" min="0" max="100" step="1" inputmode="numeric" placeholder="e.g. 45" />
+        </div>
+
+        <div class="form-group">
+          <label for="sc-coding">7. How confident are you in your coding accuracy?</label>
+          <select id="sc-coding" name="coding" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Very">Very confident</option>
+            <option value="Somewhat">Somewhat confident</option>
+            <option value="Not confident">Not confident</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg btn-full">See my results &rarr;</button>
+        <p class="form-note">Estimates use the figures you provide and industry benchmarks. No patient-identifiable data is collected.</p>
+      </form>
+    </div>
+
+    <!-- STEP 2 — RESULTS -->
+    <div class="sc-card sc-results" id="sc-results" role="region" aria-live="polite" aria-label="Your results" hidden>
+      <div class="sc-result-head">
+        <div class="health-ring" id="sc-ring" aria-hidden="true">
+          <div class="health-ring-inner">
+            <span class="ring-val" id="sc-score">0</span>
+            <span class="ring-lbl">score</span>
+          </div>
+        </div>
+        <div class="sc-result-headline">
+          <span class="section-eyebrow">Estimated annual revenue leak</span>
+          <div class="sc-range" id="sc-range">$0 &ndash; $0</div>
+          <p class="sc-toppain" id="sc-toppain">&nbsp;</p>
+        </div>
+      </div>
+
+      <!-- Free headline; detailed breakdown gated behind email -->
+      <div class="sc-gate" id="sc-gate">
+        <h3>Get the full breakdown + a recovery plan</h3>
+        <p class="form-sub">See exactly where the leak is coming from and the specific steps to recover it &mdash; sent to your inbox.</p>
+        <form id="sc-lead" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" name="scorecard">
+          <input type="hidden" name="form-name" value="scorecard" />
+          <p class="hp-field" hidden aria-hidden="true"><label>Leave this blank: <input name="bot-field" tabindex="-1" autocomplete="off" /></label></p>
+          <input type="hidden" name="specialty" id="h-specialty" />
+          <input type="hidden" name="est_leak_low" id="h-low" />
+          <input type="hidden" name="est_leak_high" id="h-high" />
+          <input type="hidden" name="health_score" id="h-score" />
+          <input type="hidden" name="top_leak_source" id="h-top" />
+          <input type="hidden" name="utm_source" /><input type="hidden" name="utm_medium" /><input type="hidden" name="utm_campaign" /><input type="hidden" name="utm_content" /><input type="hidden" name="utm_term" /><input type="hidden" name="referrer" /><input type="hidden" name="landing_page" />
+          <div class="sc-gate-row">
+            <label for="sc-email" class="sr-only">Work email address</label>
+            <input type="email" id="sc-email" name="email" placeholder="you@yourpractice.com" required autocomplete="email" />
+            <button type="submit" class="btn btn-primary btn-lg">Unlock breakdown &rarr;</button>
+          </div>
+          <p class="form-note">We review every result personally. No spam, ever.</p>
+        </form>
+      </div>
+
+      <!-- Revealed after email -->
+      <div class="sc-breakdown" id="sc-breakdown" hidden>
+        <h3 class="sc-bd-title">Where your revenue is leaking</h3>
+        <div id="sc-bars"></div>
+        <div class="sc-cta">
+          <h3>Turn the estimate into recovered dollars.</h3>
+          <p>Our <strong>$1,000 Proof-of-Concept</strong> verifies this on your real data &mdash; and if we don&rsquo;t find the revenue, <strong>it&rsquo;s free.</strong></p>
+          <a href="index.html#design-partner" class="btn btn-primary btn-lg">Start my Proof-of-Concept &rarr;</a>
+        </div>
+      </div>
+
+      <p class="sc-disclaimer">
+        This is a directional estimate based on the figures you provided and industry benchmarks &mdash;
+        not a guarantee, audit, or financial advice. Actual results are verified in a paid Proof-of-Concept.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="logo-mark" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M8 2v4M8 10v4M2 8h4M10 8h4" stroke="#fff" stroke-width="2.2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          PhysicianLabs
+        </div>
+        <p>The financial intelligence platform for independent physicians.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="index.html#how-it-works">How it works</a>
+          <a href="index.html#outcomes">Outcomes</a>
+          <a href="scorecard.html">Revenue-Leak Scorecard</a>
+          <a href="index.html#waitlist">Join waitlist</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="mailto:hello@physicianlab.com">Contact us</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms of service</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 PhysicianLabs. All rights reserved.</span>
+      <span>HIPAA-aware by design. Not a substitute for legal or financial advice.</span>
+    </div>
+  </div>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
+
+<script>
+// Sticky nav shadow
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8), { passive: true });
+
+// ── Attribution (first-touch UTM), mirrors index.html ──
+const UTM_KEYS = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+function captureAttribution() {
+  const params = new URLSearchParams(window.location.search);
+  let stored = {};
+  try { stored = JSON.parse(localStorage.getItem('pl_attribution') || '{}'); } catch (_) {}
+  if (!stored.utm_source && params.get('utm_source')) {
+    stored = {};
+    UTM_KEYS.forEach(k => stored[k] = params.get(k) || '');
+    stored.referrer = document.referrer || '';
+    stored.landing_page = window.location.pathname + window.location.search;
+    try { localStorage.setItem('pl_attribution', JSON.stringify(stored)); } catch (_) {}
+  }
+  return stored;
+}
+const ATTRIBUTION = captureAttribution();
+function stampForm(form) {
+  UTM_KEYS.concat(['referrer','landing_page']).forEach(k => {
+    const f = form.querySelector('input[name="' + k + '"]');
+    if (f) f.value = ATTRIBUTION[k] || '';
+  });
+}
+
+// ── Calculation model (see revenue-leak-scorecard-spec) ──
+const B = {
+  targetDenial: 0.05, fallbackDenial: 0.12,
+  targetCollection: 0.96, fallbackCollection: 0.91,
+  targetCompletion: 0.70, fallbackCompletion: 0.40,
+  denialRecoverable: 0.60, dropoffCapture: 0.50, undercode: 0.02,
+  cap: 0.15
+};
+const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
+const numOr = (v, fallback) => { const n = parseFloat(v); return isFinite(n) ? n : fallback; };
+const money = n => '$' + (Math.round(n / 100) * 100).toLocaleString('en-US');
+
+function compute(vals) {
+  const annualGross = vals.visits * vals.revPerVisit * 12;
+  const denialRate     = numOr(vals.denialRate, B.fallbackDenial * 100) / 100;
+  const collectionRate = numOr(vals.collectionRate, B.fallbackCollection * 100) / 100;
+  const completionRate = numOr(vals.completionRate, B.fallbackCompletion * 100) / 100;
+
+  const denialLeak     = Math.max(0, denialRate - B.targetDenial) * annualGross * B.denialRecoverable;
+  const collectionLeak = Math.max(0, B.targetCollection - collectionRate) * annualGross;
+  const dropoffLeak    = Math.max(0, B.targetCompletion - completionRate) * annualGross * B.dropoffCapture;
+  const undercodeLeak  = vals.coding === 'Not confident' ? annualGross * B.undercode : 0;
+
+  const rawTotal = denialLeak + collectionLeak + dropoffLeak + undercodeLeak;
+  const total = Math.min(rawTotal, annualGross * B.cap);
+  // If capped, scale components proportionally so the breakdown reconciles to the headline.
+  const scale = rawTotal > 0 ? total / rawTotal : 0;
+
+  // sub-scores (0–100)
+  const denialScore     = clamp(Math.round(100 * B.targetDenial / Math.max(denialRate, B.targetDenial)), 0, 100);
+  const collectionScore = clamp(Math.round(100 * collectionRate / B.targetCollection), 0, 100);
+  const completionScore = clamp(Math.round(100 * completionRate / B.targetCompletion), 0, 100);
+  const codingScore     = vals.coding === 'Very' ? 100 : vals.coding === 'Somewhat' ? 75 : 45;
+  const score = Math.round(0.35 * denialScore + 0.30 * collectionScore + 0.25 * completionScore + 0.10 * codingScore);
+
+  const components = [
+    { key: 'Denied & rejected claims', val: denialLeak * scale, line: 'Claims are being denied above the clean-claim benchmark — much of it is recoverable with better first-pass and appeals.' },
+    { key: 'Under-collection', val: collectionLeak * scale, line: 'You’re keeping less than benchmark of what you bill — the gap between charged and collected is real money.' },
+    { key: 'Patients dropping their plan of care', val: dropoffLeak * scale, line: 'Patients are leaving treatment plans early — each unfinished episode is lost revenue and a worse outcome.' },
+    { key: 'Under-coding', val: undercodeLeak * scale, line: 'Low coding confidence usually means services delivered but not fully captured — money left in the chart.' },
+  ].sort((a, b) => b.val - a.val);
+
+  return { total, low: total * 0.8, high: total * 1.2, score, components };
+}
+
+// ── Wire quiz ──
+const quizCard = document.getElementById('quiz-card');
+const results = document.getElementById('sc-results');
+document.getElementById('sc-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+  const vals = {
+    specialty: document.getElementById('sc-specialty').value,
+    visits: parseFloat(document.getElementById('sc-visits').value),
+    revPerVisit: parseFloat(document.getElementById('sc-rev').value),
+    denialRate: document.getElementById('sc-denial').value,
+    collectionRate: document.getElementById('sc-collect').value,
+    completionRate: document.getElementById('sc-complete').value,
+    coding: document.getElementById('sc-coding').value,
+  };
+  const r = compute(vals);
+
+  // headline (free)
+  document.getElementById('sc-score').textContent = r.score;
+  const color = r.score >= 75 ? 'var(--green)' : r.score >= 50 ? 'var(--amber)' : 'var(--red)';
+  document.getElementById('sc-ring').style.background = 'conic-gradient(' + color + ' 0% ' + r.score + '%, var(--border) ' + r.score + '% 100%)';
+  document.getElementById('sc-range').textContent = money(r.low) + ' – ' + money(r.high) + ' / year';
+  const top = r.components[0];
+  document.getElementById('sc-toppain').innerHTML = r.total > 0
+    ? 'Biggest leak: <strong>' + top.key + '</strong>. ' + top.line
+    : 'Your inputs look strong against benchmark — a Proof-of-Concept can confirm there’s nothing hiding in the claim detail.';
+
+  // stash for lead form
+  document.getElementById('h-specialty').value = vals.specialty;
+  document.getElementById('h-low').value = Math.round(r.low);
+  document.getElementById('h-high').value = Math.round(r.high);
+  document.getElementById('h-score').value = r.score;
+  document.getElementById('h-top').value = top.key;
+
+  // build (hidden) breakdown bars
+  const bars = document.getElementById('sc-bars');
+  const max = Math.max(...r.components.map(c => c.val), 1);
+  bars.innerHTML = r.components.map(c => {
+    const pct = Math.round((c.val / max) * 100);
+    const fill = c.val === max && c.val > 0 ? 'fill-r' : c.val > 0 ? 'fill-a' : 'fill-g';
+    return '<div class="bmark"><span class="bmark-name">' + c.key + '</span>' +
+      '<div class="bmark-bar"><div class="bmark-fill ' + fill + '" style="width:' + pct + '%"></div></div>' +
+      '<span class="bmark-val">' + money(c.val) + '</span></div>';
+  }).join('');
+
+  quizCard.hidden = true;
+  results.hidden = false;
+  stampForm(document.getElementById('sc-lead'));
+  if (window.plausible) window.plausible('Scorecard Completed', { props: { specialty: vals.specialty } });
+  results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+
+// ── Wire lead capture (Netlify Forms) ──
+document.getElementById('sc-lead').addEventListener('submit', function (e) {
+  e.preventDefault();
+  if (!this.checkValidity()) { this.reportValidity(); return; }
+  stampForm(this);
+  const form = this;
+  const body = new URLSearchParams(new FormData(form)).toString();
+  const reveal = () => {
+    document.getElementById('sc-gate').hidden = true;
+    document.getElementById('sc-breakdown').hidden = false;
+    if (window.plausible) window.plausible('Signup', { props: { form: 'scorecard', source: ATTRIBUTION.utm_source || 'direct' } });
+    document.getElementById('sc-breakdown').scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+  fetch('/', { method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body }).then(reveal).catch(reveal);
+});
+</script>
+
+</body>
+</html>

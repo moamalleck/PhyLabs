@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PhysicianLabs — Growth Strategy (3-Slide, 1-Minute)</title>
+  <!--
+    ═══ 60-SECOND PRESENTER SCRIPT (≈150 words) ═══
+    [S1 · 12s] "PhysicianLabs gives independent physicians real-time ROI visibility on every
+    growth decision — so they recover the revenue they're leaking and thrive faster, without
+    living in spreadsheets."
+    [S2 · 26s] "Today we're pre-revenue but the engine is built: five design-partner physicians,
+    a 140-plus waitlist, and a live three-channel acquisition test plus a free Revenue-Leak
+    Scorecard. Our ambitious six-month goal: six paying practices, a twenty-one-thousand-a-month
+    run-rate, and cash-flow positive by month four — the repeatable wedge that unlocks the seed.
+    The path: launch the engine now, first paying practice in September, break even in October,
+    double to six by December."
+    [S3 · 22s] "We're acquiring through LinkedIn, physician communities, and cold email. Three
+    tactics we're layering on: the free Scorecard as a value-first magnet, a physician referral
+    loop that compounds, and association and content partnerships for durable inbound. Because
+    every channel decays — so we build a portfolio."
+  -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy:#0a1628; --slate:#112240; --teal:#00c7b1; --teal2:#00a896;
+      --white:#f0f6fc; --muted:#8899aa; --accent:#ff6b6b; --gold:#ffd166;
+    }
+    html, body { width:100%; height:100%; overflow:hidden; background:var(--navy); }
+    .deck { width:100%; height:100vh; position:relative; }
+    .slide {
+      position:absolute; inset:0; display:flex; flex-direction:column;
+      justify-content:center; align-items:center; padding:48px 64px;
+      opacity:0; pointer-events:none; transition:opacity .45s ease;
+    }
+    .slide.active { opacity:1; pointer-events:all; }
+
+    .slide-label {
+      font-family:'Courier New',monospace; font-size:11px; letter-spacing:3px;
+      text-transform:uppercase; color:var(--teal); border:1px solid var(--teal);
+      padding:4px 14px; border-radius:20px;
+    }
+    .logo-line {
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      font-size:13px; font-weight:700; letter-spacing:2px; color:var(--teal);
+      text-transform:uppercase; opacity:.7;
+    }
+    .slide-header { width:100%; display:flex; align-items:center; gap:16px; margin-bottom:4px; }
+    .slide-header h2 {
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      font-size:13px; font-weight:600; letter-spacing:3px; text-transform:uppercase;
+      color:var(--teal); white-space:nowrap;
+    }
+    .divider { flex:1; height:1px; background:rgba(0,199,177,.25); }
+    .eyebrow {
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase;
+      color:var(--muted);
+    }
+
+    /* ── SLIDE 1 — Pitch ── */
+    #s1 { background:radial-gradient(ellipse at 60% 40%, #0d2b50 0%, var(--navy) 70%); text-align:center; gap:28px; }
+    .pitch-headline {
+      font-family:Georgia,'Times New Roman',serif; font-size:clamp(24px,3.2vw,40px);
+      color:var(--white); line-height:1.45; max-width:900px;
+    }
+    .pitch-headline em { font-style:normal; color:var(--teal); }
+    .pitch-tagline {
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      font-size:15px; color:var(--muted); max-width:600px; line-height:1.7; font-style:italic;
+    }
+
+    /* ── SLIDE 2 — Growth Goals ── */
+    #s2 { background:var(--slate); flex-direction:column; gap:14px; max-width:1160px; margin:auto; width:100%; padding:26px 56px 96px; align-items:stretch; }
+    .traction-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+    .chip {
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:12px;
+      color:var(--white); background:rgba(255,255,255,.05); border:1px solid rgba(0,199,177,.22);
+      border-radius:20px; padding:6px 14px;
+    }
+    .chip.dim { color:var(--muted); border-color:rgba(255,255,255,.1); }
+    .goal-banner {
+      background:rgba(0,199,177,.07); border:1px solid rgba(0,199,177,.3);
+      border-radius:16px; padding:16px 24px; display:flex; align-items:center; gap:24px;
+    }
+    .goal-big {
+      font-family:Georgia,serif; font-size:clamp(17px,1.9vw,23px); color:var(--white); line-height:1.3; flex:1;
+    }
+    .goal-big em { font-style:normal; color:var(--teal); font-weight:700; }
+    .goal-north {
+      font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif; font-size:11px;
+      color:var(--gold); background:rgba(255,209,102,.08); border:1px solid rgba(255,209,102,.28);
+      border-radius:10px; padding:10px 14px; max-width:230px; line-height:1.5;
+    }
+    .goal-north b { display:block; font-size:9px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold); margin-bottom:3px; }
+
+    .ramp { display:grid; grid-template-columns:repeat(6,1fr); gap:12px; align-items:end; height:150px; }
+    .ramp-col { display:flex; flex-direction:column; align-items:center; gap:6px; height:100%; justify-content:flex-end; }
+    .ramp-metric { font-family:'Courier New',monospace; font-size:14px; color:var(--white); font-weight:700; }
+    .ramp-bar {
+      width:100%; max-width:70px; border-radius:8px 8px 0 0;
+      background:linear-gradient(180deg, var(--teal) 0%, var(--teal2) 100%); transition:height .3s;
+    }
+    .ramp-bar.stub { background:rgba(255,255,255,.08); border:1px dashed rgba(255,255,255,.18); }
+    .ramp-foot { display:flex; flex-direction:column; align-items:center; gap:3px; padding-top:2px; }
+    .ramp-month { font-family:'Courier New',monospace; font-size:12px; color:var(--white); font-weight:700; }
+    .ramp-prac { font-family:-apple-system,sans-serif; font-size:10.5px; color:var(--teal); font-weight:700; }
+    .ramp-note  { font-family:-apple-system,sans-serif; font-size:9.5px; color:var(--muted); text-align:center; line-height:1.3; max-width:96px; }
+    .ramp-note.win { color:var(--gold); }
+
+    /* ── SLIDE 3 — Alternative Tactics ── */
+    #s3 { background:radial-gradient(ellipse at 30% 60%, #0d2b50 0%, var(--navy) 70%); flex-direction:column; gap:18px; max-width:1120px; margin:auto; width:100%; padding:32px 56px 96px; align-items:stretch; }
+    .main-row { display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+    .main-chip {
+      font-family:-apple-system,sans-serif; font-size:13px; font-weight:600; color:var(--white);
+      background:rgba(0,199,177,.1); border:1px solid rgba(0,199,177,.3); border-radius:10px; padding:9px 16px;
+      display:flex; align-items:center; gap:8px;
+    }
+    .main-chip span { font-size:15px; }
+    .alt-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .alt-card {
+      background:rgba(255,255,255,.04); border:1px solid rgba(0,199,177,.18); border-radius:14px;
+      padding:22px 22px; display:flex; flex-direction:column; gap:10px; position:relative; overflow:hidden;
+    }
+    .alt-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(90deg,var(--teal),var(--teal2)); }
+    .alt-num { font-family:'Courier New',monospace; font-size:34px; color:rgba(0,199,177,.15); font-weight:900; line-height:1; position:absolute; top:14px; right:18px; }
+    .alt-icon { font-size:24px; line-height:1; }
+    .alt-title { font-family:-apple-system,sans-serif; font-size:15px; font-weight:700; color:var(--white); line-height:1.25; }
+    .alt-why { font-family:-apple-system,sans-serif; font-size:12.5px; color:rgba(240,246,252,.68); line-height:1.6; }
+    .alt-why b { color:var(--teal); font-weight:600; }
+    .s3-foot { font-family:-apple-system,sans-serif; font-size:12px; color:var(--muted); text-align:center; font-style:italic; }
+    .s3-foot b { color:var(--teal); font-style:normal; }
+
+    /* ── Nav ── */
+    .nav { position:fixed; bottom:28px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:18px; z-index:100; }
+    .nav-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,.2); cursor:pointer; transition:background .2s, transform .2s; }
+    .nav-dot.active { background:var(--teal); transform:scale(1.4); }
+    .nav-btn { background:rgba(0,199,177,.1); border:1px solid rgba(0,199,177,.3); color:var(--teal); font-size:18px; width:36px; height:36px; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s; user-select:none; }
+    .nav-btn:hover { background:rgba(0,199,177,.2); }
+    .slide-counter { position:fixed; top:24px; right:32px; font-family:'Courier New',monospace; font-size:12px; color:var(--muted); letter-spacing:1px; }
+    .hint { position:fixed; bottom:70px; left:50%; transform:translateX(-50%); font-family:'Courier New',monospace; font-size:10px; color:rgba(136,153,170,.5); letter-spacing:1.5px; }
+  </style>
+</head>
+<body>
+
+<div class="deck" id="deck">
+
+  <!-- ═══ SLIDE 1 · ONE-SENTENCE PITCH ═══ -->
+  <section class="slide active" id="s1">
+    <span class="logo-line">PhysicianLabs</span>
+    <span class="slide-label">Slide 1 · One-Sentence Pitch</span>
+    <p class="pitch-headline">
+      PhysicianLabs gives <em>independent physicians</em> real-time
+      <em>ROI visibility on every growth decision</em> &mdash; so they
+      <em>recover the revenue they&rsquo;re leaking</em> and thrive faster,
+      without living in <em>disconnected spreadsheets</em>.
+    </p>
+    <p class="pitch-tagline">
+      &ldquo;Put doctors back in the driver&rsquo;s seat of their own financial future.&rdquo;
+    </p>
+  </section>
+
+  <!-- ═══ SLIDE 2 · GROWTH GOALS ═══ -->
+  <section class="slide" id="s2">
+    <div class="slide-header">
+      <h2>Slide 2 · Growth Goals</h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- (1) Growth to date -->
+    <div>
+      <div class="eyebrow" style="margin-bottom:8px;">Traction to date</div>
+      <div class="traction-row">
+        <span class="chip">5 design-partner physicians co-building</span>
+        <span class="chip">140+ physician waitlist</span>
+        <span class="chip">Acquisition engine live &mdash; 3-channel test + free Revenue-Leak Scorecard</span>
+        <span class="chip dim">Pre-revenue &mdash; this is Month 1</span>
+      </div>
+    </div>
+
+    <!-- (2) Ambitious 6-month goal -->
+    <div>
+      <div class="eyebrow" style="margin-bottom:8px;">The ambitious 6-month goal &mdash; by Dec 2026</div>
+      <div class="goal-banner">
+        <div class="goal-big">
+          <em>6 paying practices</em> &middot; <em>$21K/mo</em> run-rate &middot;
+          <em>cash-flow positive</em> from Month 4 &mdash; the repeatable concierge wedge that unlocks the seed.
+          <span style="display:block;margin-top:6px;font-size:.62em;color:var(--muted);">On track to $1.13M revenue / 46 customers by Month 18.</span>
+        </div>
+        <div class="goal-north">
+          <b>North Star</b>
+          Active practices receiving a verified revenue-recovery finding
+        </div>
+      </div>
+    </div>
+
+    <!-- (3) Monthly metrics to reach the goal -->
+    <div>
+      <div class="eyebrow" style="margin-bottom:14px;">The monthly path &mdash; cumulative paying practices &amp; monthly revenue</div>
+      <div class="ramp">
+        <div class="ramp-col">
+          <div class="ramp-metric">$0</div>
+          <div class="ramp-bar stub" style="height:4%;"></div>
+          <div class="ramp-foot"><span class="ramp-month">Jul</span><span class="ramp-prac">0 practices</span><span class="ramp-note">Engine live</span></div>
+        </div>
+        <div class="ramp-col">
+          <div class="ramp-metric">$0</div>
+          <div class="ramp-bar stub" style="height:4%;"></div>
+          <div class="ramp-foot"><span class="ramp-month">Aug</span><span class="ramp-prac">0 practices</span><span class="ramp-note">Pipeline building</span></div>
+        </div>
+        <div class="ramp-col">
+          <div class="ramp-metric">$9.8K</div>
+          <div class="ramp-bar" style="height:46%;"></div>
+          <div class="ramp-foot"><span class="ramp-month">Sep</span><span class="ramp-prac">1 practice</span><span class="ramp-note">1st paying &middot; 2 PoCs</span></div>
+        </div>
+        <div class="ramp-col">
+          <div class="ramp-metric">$10.4K</div>
+          <div class="ramp-bar" style="height:49%;"></div>
+          <div class="ramp-foot"><span class="ramp-month">Oct</span><span class="ramp-prac">2 practices</span><span class="ramp-note win">Cash-flow positive</span></div>
+        </div>
+        <div class="ramp-col">
+          <div class="ramp-metric">$19.9K</div>
+          <div class="ramp-bar" style="height:94%;"></div>
+          <div class="ramp-foot"><span class="ramp-month">Nov</span><span class="ramp-prac">4 practices</span><span class="ramp-note">Ramp</span></div>
+        </div>
+        <div class="ramp-col">
+          <div class="ramp-metric">$21.1K</div>
+          <div class="ramp-bar" style="height:100%;"></div>
+          <div class="ramp-foot"><span class="ramp-month">Dec</span><span class="ramp-prac">6 practices</span><span class="ramp-note win">Goal &middot; $2.4K MRR</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SLIDE 3 · ALTERNATIVE TACTICS ═══ -->
+  <section class="slide" id="s3">
+    <div class="slide-header">
+      <h2>Slide 3 · Alternative Tactics</h2>
+      <div class="divider"></div>
+    </div>
+
+    <!-- Main channels in play -->
+    <div>
+      <div class="eyebrow" style="margin-bottom:10px;">Main channels we&rsquo;re using now (live 3-channel test)</div>
+      <div class="main-row">
+        <span class="main-chip"><span>&#128188;</span> LinkedIn &mdash; organic posts + targeted DMs</span>
+        <span class="main-chip"><span>&#128172;</span> Physician communities &mdash; Reddit + PT Owners Club</span>
+        <span class="main-chip"><span>&#9993;</span> Cold email &mdash; scored prospect list</span>
+      </div>
+    </div>
+
+    <!-- 3 alternative tactics under evaluation -->
+    <div>
+      <div class="eyebrow" style="margin-bottom:12px;">Three tactics we&rsquo;re considering &mdash; and why they help hit the goal</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-num">01</div>
+          <div class="alt-icon">&#129517;</div>
+          <div class="alt-title">Free Revenue-Leak Scorecard</div>
+          <div class="alt-why">A 60-second self-check that shows a practice <b>its own dollar leak</b> before we ask for anything. Delivers value first, produces higher-intent signups, and makes &ldquo;find $20K or it&rsquo;s free&rdquo; personal. <b>Already built.</b></div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-num">02</div>
+          <div class="alt-icon">&#128101;</div>
+          <div class="alt-title">Physician referral loop</div>
+          <div class="alt-why">One happy PoC refers peers. Warm referrals convert at <b>20&ndash;40%</b> and compound inside tight professional networks &mdash; our <b>cheapest, highest-trust</b> path to the next paying practice.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-num">03</div>
+          <div class="alt-icon">&#129309;</div>
+          <div class="alt-title">Association &amp; content partnerships</div>
+          <div class="alt-why">APTA Private Practice Section + guest posts on KevinMD / Medical Economics. One partner or article reaches <b>thousands of exactly-right owners</b> &mdash; compounding inbound that hedges channel decay.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="s3-foot">Every channel decays over time &mdash; so we test a <b>portfolio</b>, then pour budget into the winner.</div>
+  </section>
+
+</div><!-- /deck -->
+
+<div class="slide-counter" id="counter">01 / 03</div>
+<div class="hint">&larr; &rarr; ARROW KEYS  ·  CLICK TO ADVANCE  ·  ~60s TOTAL</div>
+
+<div class="nav">
+  <button class="nav-btn" id="prevBtn" onclick="navigate(-1)">&lsaquo;</button>
+  <div class="nav-dot active" onclick="goTo(0)"></div>
+  <div class="nav-dot" onclick="goTo(1)"></div>
+  <div class="nav-dot" onclick="goTo(2)"></div>
+  <button class="nav-btn" id="nextBtn" onclick="navigate(1)">&rsaquo;</button>
+</div>
+
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const dots   = document.querySelectorAll('.nav-dot');
+  const counter = document.getElementById('counter');
+  let cur = 0;
+  function goTo(n) {
+    slides[cur].classList.remove('active');
+    dots[cur].classList.remove('active');
+    cur = Math.max(0, Math.min(n, slides.length - 1));
+    slides[cur].classList.add('active');
+    dots[cur].classList.add('active');
+    counter.textContent = String(cur + 1).padStart(2,'0') + ' / 0' + slides.length;
+  }
+  function navigate(dir) { goTo(cur + dir); }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') navigate(1);
+    if (e.key === 'ArrowLeft'  || e.key === 'ArrowUp')                     navigate(-1);
+  });
+  document.getElementById('deck').addEventListener('click', e => {
+    if (!e.target.closest('.nav') && !e.target.closest('.nav-btn')) navigate(1);
+  });
+</script>
+</body>
+</html>

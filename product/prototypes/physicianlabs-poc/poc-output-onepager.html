@@ -1,0 +1,146 @@
+<!doctype html>
+<!--
+  PhysicianLabs — Revenue-Leak Audit · Output One-Pager (branded, print-to-PDF)
+  Section 5 leave-behind for the $1,000 money-back PoC. Extends the marketing brand
+  (Plus Jakarta Sans, indigo #4F46E5). Open in a browser → "Save as PDF" → one page.
+  Sample data = Dr. Marcus Chen (matches the demo persona). Element ids (found-total,
+  cat-*, score-*) are wired so the future live calculator can auto-fill this template.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PhysicianLabs — Revenue-Leak Audit</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --primary:#4F46E5; --primary-soft:#EEF2FF; --ink:#0F172A; --muted:#64748B;
+    --line:#E2E8F0; --green:#10B981; --amber:#F59E0B; --red:#EF4444; --bg:#F8FAFC;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Plus Jakarta Sans",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;}
+  .toolbar{position:sticky;top:0;display:flex;gap:12px;align-items:center;justify-content:center;
+    padding:12px;background:#fff;border-bottom:1px solid var(--line);}
+  .toolbar button{font:inherit;font-weight:700;color:#fff;background:var(--primary);border:0;
+    border-radius:10px;padding:10px 18px;cursor:pointer;}
+  .toolbar span{color:var(--muted);font-size:13px;}
+  .page{width:8.5in;min-height:11in;margin:18px auto;background:#fff;
+    border:1px solid var(--line);border-radius:14px;padding:0.55in 0.6in;}
+  header{display:flex;justify-content:space-between;align-items:flex-start;
+    border-bottom:2px solid var(--ink);padding-bottom:14px;}
+  .brand{font-weight:800;font-size:22px;letter-spacing:-.02em}
+  .brand span{color:var(--primary)}
+  .brand small{display:block;font-weight:500;font-size:12px;color:var(--muted);letter-spacing:0}
+  .doctype{text-align:right;font-size:12px;color:var(--muted)}
+  .doctype b{display:block;color:var(--ink);font-size:14px}
+  .practicebar{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;
+    margin:16px 0 6px;font-size:13px;color:var(--muted)}
+  .practicebar b{color:var(--ink)}
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 9px;border-radius:999px}
+  .badge.mode{background:var(--primary-soft);color:var(--primary)}
+  .badge.ok{background:#ECFDF5;color:#047857}
+  .hero{display:flex;gap:22px;align-items:center;margin:18px 0 6px;
+    background:linear-gradient(180deg,#fff, var(--primary-soft));
+    border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .ring{width:104px;height:104px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+    background:conic-gradient(var(--primary) calc(var(--score,76)*1%), #E2E8F0 0);}
+  .ring i{width:80px;height:80px;border-radius:50%;background:#fff;display:grid;place-items:center;
+    font-style:normal;text-align:center;line-height:1.05}
+  .ring i b{font-size:26px;font-weight:800}
+  .ring i small{display:block;font-size:10px;color:var(--muted);font-weight:600}
+  .heroright h1{margin:0;font-size:15px;font-weight:600;color:var(--muted)}
+  .heroright .big{font-size:40px;font-weight:800;letter-spacing:-.02em;color:var(--ink);margin:2px 0}
+  .heroright .big span{color:var(--primary)}
+  .heroright p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+  h2{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
+    margin:22px 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+  .src{display:grid;grid-template-columns:180px 1fr 92px;align-items:center;gap:12px;margin:9px 0}
+  .src .lbl{font-size:13px;font-weight:600}
+  .src .track{height:14px;background:#EEF2F7;border-radius:999px;overflow:hidden}
+  .src .fill{height:100%;background:var(--primary);border-radius:999px}
+  .src .amt{text-align:right;font-weight:800;font-size:14px}
+  .roadmap{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .step{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+  .step .n{font-size:11px;font-weight:800;color:var(--primary)}
+  .step b{display:block;font-size:13px;margin:4px 0 3px}
+  .step p{margin:0;font-size:12px;color:var(--muted)}
+  .offer{display:flex;gap:10px;align-items:stretch;margin-top:8px}
+  .offer .o{flex:1;border:1px solid var(--line);border-radius:12px;padding:12px;text-align:center}
+  .offer .o.lead{border-color:var(--primary);background:var(--primary-soft)}
+  .offer .o small{display:block;color:var(--muted);font-size:11px}
+  .offer .o b{font-size:16px}
+  .offer .arrow{align-self:center;color:var(--muted);font-weight:800}
+  footer{margin-top:18px;border-top:1px solid var(--line);padding-top:10px;
+    font-size:10.5px;color:var(--muted);line-height:1.5}
+  @page{size:Letter;margin:0.4in}
+  @media print{
+    body{background:#fff}
+    .toolbar{display:none}
+    .page{margin:0;border:0;border-radius:0;width:auto;min-height:auto;padding:0}
+    .hero,.step,.src .track{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  }
+</style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">Save as PDF</button>
+    <span>Browser → Save as PDF · fits one Letter page · sample data shown</span>
+  </div>
+
+  <div class="page">
+    <header>
+      <div class="brand">Physician<span>Labs</span>
+        <small>Put doctors back in the driver's seat of their own financial future</small>
+      </div>
+      <div class="doctype"><b>Revenue-Leak Audit</b>Prepared <span id="report-date">June 20, 2026</span></div>
+    </header>
+
+    <div class="practicebar">
+      <span><b id="practice-name">Meridian Family Medicine</b></span>
+      <span>Dr. <b id="physician-name">Marcus Chen, MD</b></span>
+      <span>Family Medicine · <b id="months-indep">~7 months</b> independent</span>
+      <span class="badge mode" id="mode-badge">ACTUALS MODE</span>
+      <span class="badge ok" id="guarantee-badge">$20K MONEY-BACK GUARANTEE</span>
+    </div>
+
+    <div class="hero">
+      <div class="ring" style="--score:76"><i><b id="score-val">76</b><small>HEALTH SCORE</small></i></div>
+      <div class="heroright">
+        <h1>Here's what your practice earned this year — and didn't collect</h1>
+        <div class="big">$<span id="found-total">67,900</span></div>
+        <p>Not a forecast. This is revenue already sitting in your billing system — and every dollar below traces to a specific, fixable gap.</p>
+      </div>
+    </div>
+
+    <h2>Where it's hiding — every dollar traced</h2>
+    <div class="src"><div class="lbl">Unrecovered denials</div><div class="track"><div class="fill" style="width:100%"></div></div><div class="amt" id="cat-denials">$24,800</div></div>
+    <div class="src"><div class="lbl">E/M under-coding</div><div class="track"><div class="fill" style="width:87%"></div></div><div class="amt" id="cat-coding">$21,600</div></div>
+    <div class="src"><div class="lbl">Payer underpayment</div><div class="track"><div class="fill" style="width:59%"></div></div><div class="amt" id="cat-underpay">$14,700</div></div>
+    <div class="src"><div class="lbl">Unbilled visits</div><div class="track"><div class="fill" style="width:27%"></div></div><div class="amt" id="cat-unbilled">$6,800</div></div>
+
+    <h2>The 90-day recovery plan</h2>
+    <div class="roadmap">
+      <div class="step"><div class="n">DAYS 0–30</div><b>Fast money first</b><p>We rework your top denials and resubmit before deadlines close — cash back in weeks, not quarters.</p></div>
+      <div class="step"><div class="n">DAYS 30–60</div><b>Stop the leak</b><p>Fix the under-coding and capture the visits you aren't billing, so it stops repeating.</p></div>
+      <div class="step"><div class="n">DAYS 60–90</div><b>Lock in the run-rate</b><p>Recover payer underpayments against your contracts and hold every dollar, month after month.</p></div>
+    </div>
+
+    <h2>Start here</h2>
+    <div class="offer">
+      <div class="o lead"><small>PROVE IT</small><b>$1,000</b><small>Money-back — we find $20K+ or you pay nothing</small></div>
+      <div class="arrow">→</div>
+      <div class="o"><small>FIX IT · founding</small><b>$8,000</b><small>Done-for-you setup — first 10 clinics only</small></div>
+      <div class="arrow">→</div>
+      <div class="o"><small>RUN IT · locked for life</small><b>$599<small>/mo</small></b><small>Your founding rate, locked for good</small></div>
+    </div>
+
+    <footer>
+      <span id="mode-note">Figures are computed from your own billing data (A/R aging, denials, procedure frequency, remittance).</span>
+      They're deliberately conservative — we under-promise, then the full diagnostic confirms each number against your system. No patient health information is stored in this document. Prepared by PhysicianLabs · physicianlab.com
+    </footer>
+  </div>
+</body>
+</html>

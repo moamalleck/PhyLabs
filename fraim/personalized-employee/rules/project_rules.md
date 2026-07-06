@@ -4,6 +4,22 @@ These rules apply to every AI agent working in this repository. Read and follow 
 
 ---
 
+## Workspace Rule — No Worktrees
+
+**ABSOLUTE RULE: Never create git worktrees or new git branches for FRAIM jobs.**
+
+All FRAIM work — every job, every phase, every file output — must happen directly inside the main project directory: `C:\Users\Admin\Documents\MyNewStartup`.
+
+- Do NOT call `EnterWorktree` or any equivalent worktree-creation tool.
+- Do NOT run `prep-issue.sh` or any script that creates a branch or worktree.
+- Do NOT use the `isolation: "worktree"` option in any agent invocation.
+- Work in place in the current workspace at all times.
+- The only exception is if the user explicitly says "create a worktree" or "create a branch" in their message.
+
+This overrides the FRAIM `local-development` rule's isolated-issue-worktree option. Worktrees are disabled for this project (`fraim/config.json` → `customizations.worktrees: false`).
+
+---
+
 ## Non-Negotiables
 
 ### 1. HIPAA-Awareness by Default
@@ -58,6 +74,13 @@ Register all new AI-callable tools in `src/mcp-server.ts` under `tools/call`. Do
 - **API changes**: Confirm auth middleware is applied and RBAC roles are enforced.
 - **Database changes**: Confirm branch-scoped DB isolation is preserved via `determineDatabaseName()`.
 - **MCP changes**: Run `npm run e2e` to validate the MCP sidecar health and tool registration.
+
+---
+
+## Experiment Hygiene
+
+### Close Every Experiment on Its Review Date
+Every experiment or test document (e.g., `marketing/strategy/business-development/experiment-design-*.md`) must be closed with a recorded **PASS / FAIL verdict and supporting evidence on its stated review/decision date**. Do not leave an experiment's evidence log frozen or its verdict unrecorded past the decision date. If the review date arrives and the outcome is genuinely ambiguous, record an explicit **INCONCLUSIVE** verdict with the reason rather than leaving it open. (Origin: the first MVT lapsed 11 days un-closed before its June 4 verdict was reconstructed on June 15.)
 
 ---
 

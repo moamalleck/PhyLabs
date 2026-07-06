@@ -4,20 +4,26 @@
     {
       "name": "strategy-presentation",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3741", "docs/strategy-presentation"],
+      "runtimeArgs": ["serve", "-l", "3741", "marketing/strategy/strategy-presentation"],
       "port": 3741
     },
     {
       "name": "physicianlab-website",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3742", "PhysicianLabs"],
+      "runtimeArgs": ["serve", "-l", "3742", "website/site"],
       "port": 3742
     },
     {
       "name": "physicianlabs-poc",
       "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", "-l", "3743", "docs/prototypes/physicianlabs-poc"],
+      "runtimeArgs": ["serve", "-l", "3743", "product/prototypes/physicianlabs-poc"],
       "port": 3743
+    },
+    {
+      "name": "sales-sheets",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3744", "marketing/customer-discussion-materials/sales"],
+      "port": 3744
     }
   ]
 }

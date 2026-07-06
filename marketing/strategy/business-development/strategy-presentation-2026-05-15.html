@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PhysicianLabs — Strategy Presentation</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #0a1628;
+    color: #e8edf5;
+  }
+
+  /* Each slide is exactly 1280x720 — 16:9 */
+  .slide {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #0a1628;
+  }
+
+  /* ── decorative accent bar ── */
+  .slide::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, #00d4d8 0%, #0077ff 60%, #7b2fff 100%);
+  }
+
+  /* ── slide label (top-left) ── */
+  .slide-label {
+    position: absolute;
+    top: 28px; left: 56px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #00d4d8;
+  }
+
+  /* ── logo / product name (top-right) ── */
+  .slide-logo {
+    position: absolute;
+    top: 22px; right: 56px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: 0.04em;
+  }
+  .slide-logo span {
+    color: #00d4d8;
+  }
+
+  /* ── slide number (bottom-right) ── */
+  .slide-num {
+    position: absolute;
+    bottom: 26px; right: 56px;
+    font-size: 11px;
+    color: #4a5a7a;
+    letter-spacing: 0.1em;
+  }
+
+  /* ══════════════════════════════════
+     SLIDE 1
+  ══════════════════════════════════ */
+  .slide-1 .content {
+    padding: 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  .slide-1 .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #00d4d8;
+  }
+
+  .slide-1 .headline {
+    font-size: 19px;
+    font-weight: 300;
+    line-height: 1.75;
+    color: #dce6f5;
+    max-width: 1000px;
+  }
+
+  .slide-1 .headline strong {
+    font-weight: 700;
+    color: #ffffff;
+  }
+
+  .slide-1 .headline em {
+    font-style: normal;
+    color: #00d4d8;
+  }
+
+  .slide-1 .rule {
+    width: 64px;
+    height: 3px;
+    background: linear-gradient(90deg, #00d4d8, #0077ff);
+    border-radius: 2px;
+  }
+
+  /* ══════════════════════════════════
+     SLIDE 2
+  ══════════════════════════════════ */
+  .slide-2 .content {
+    padding: 60px 72px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .slide-2 .slide-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #00d4d8;
+    margin-bottom: 28px;
+  }
+
+  .elephant-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 40px;
+  }
+
+  .elephant {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border-left: 3px solid #1a3060;
+    padding-left: 16px;
+  }
+
+  .elephant-q {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #f0b429;
+    line-height: 1.4;
+  }
+
+  .elephant-a {
+    font-size: 12px;
+    font-weight: 400;
+    color: #a8bed8;
+    line-height: 1.55;
+  }
+
+  /* last elephant spans full width at bottom */
+  .elephant.span-2 {
+    grid-column: 1 / -1;
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════
+     SLIDE 1 — ONE-SENTENCE PITCH
+══════════════════════════════════════════════════════ -->
+<div class="slide slide-1">
+  <div class="slide-label">Strategy Presentation — May 2026</div>
+  <div class="slide-logo">Physician<span>Labs</span></div>
+
+  <div class="content">
+    <div class="rule"></div>
+    <div class="eyebrow">The One-Sentence Pitch</div>
+    <div class="headline">
+      <strong>PhysicianLabs</strong> is a <strong>pre-launch advisory program</strong> for physicians going independent:
+      a <strong>founder-guided walkthrough</strong> of the financial, legal, and operational decisions
+      that determine whether a new clinic survives its first year,
+      starting with the <em>incorporation timing mistake</em> that silently costs most independent physicians
+      <em>$200,000 to $400,000</em> before a good accountant finds it.
+    </div>
+    <div class="rule"></div>
+  </div>
+
+  <div class="slide-num">1 / 2</div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════
+     SLIDE 2 — ELEPHANTS IN THE ROOM
+══════════════════════════════════════════════════════ -->
+<div class="slide slide-2">
+  <div class="slide-label">Strategy Presentation — May 2026</div>
+  <div class="slide-logo">Physician<span>Labs</span></div>
+
+  <div class="content">
+    <div class="slide-title">Elephants in the Room</div>
+
+    <div class="elephant-grid">
+
+      <div class="elephant">
+        <div class="elephant-q">No paying customers yet.</div>
+        <div class="elephant-a">The 30-day milestone is one paid engagement closing this month. Three warm physician referrals from my personal network are already in motion.</div>
+      </div>
+
+      <div class="elephant">
+        <div class="elephant-q">You are not a doctor. Why would a physician trust you?</div>
+        <div class="elephant-a">McKinsey advisory plus Amazon PM is exactly the background this product requires. The physician needs a business framework and a specialist referral network, not a medical degree. Licensed accountants and attorneys deliver the advice. I sequence and introduce.</div>
+      </div>
+
+      <div class="elephant">
+        <div class="elephant-q">This sounds like consulting, not a scalable startup.</div>
+        <div class="elephant-a">Three-stage roadmap: concierge to validate, SaaS to scale, marketplace for network effects. The concierge is the product specification phase, not the ceiling.</div>
+      </div>
+
+      <div class="elephant">
+        <div class="elephant-q">Doctors are notoriously hard to sell to.</div>
+        <div class="elephant-a">The pre-launch moment is the one exception. No administrator, no procurement committee, no institutional budget approval. The physician is the sole buyer and the most motivated buyer of their career.</div>
+      </div>
+
+      <div class="elephant span-2">
+        <div class="elephant-q">What stops a large incumbent from copying this?</div>
+        <div class="elephant-a">The moat is not the checklist. It is the vetted specialist network and the community trust inside PTOC. Both take 18 to 24 months to build. A competitor can copy a feature list. They cannot copy 50 physician relationships built engagement by engagement.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="slide-num">2 / 2</div>
+</div>
+
+</body>
+</html>

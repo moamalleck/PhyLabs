@@ -16,7 +16,7 @@ Read this file fully before taking any action.
 | **Repo** | `github.com/moamalleck/PhyLabs` |
 | **Issue tracker** | GitHub Issues — `moamalleck/PhyLabs` |
 | **FRAIM mode** | `integrated` |
-| **Architecture doc** | `docs/architecture/architecture.md` |
+| **Architecture doc** | `product/architecture/architecture.md` |
 
 ---
 
@@ -106,7 +106,12 @@ fraim/
   personalized-employee/
     rules/project_rules.md    # Agent operating rules (source of truth for this file)
 
-docs/
+# Three-domain split (see STRUCTURE.md for the full guide)
+marketing/                    # Internal GTM brain — strategy, research, competitor analysis,
+                              #   customer research, discussion prep, emails, FRAIM job outputs
+website/                      # Everything publicly accessible — landing, signup, demo,
+                              #   testimonials, shareable credibility/partnership materials
+product/                      # Engineering — APIs, architecture, EMR integrations, tests, infra
   architecture/
     architecture.md           # Full system architecture document (read before designing)
 ```
@@ -155,5 +160,5 @@ This repository uses FRAIM.
 - When users ask for next step recommendations, use recommend-next-job skill under `fraim/ai-employee/skills/` to gather context before suggesting jobs.
 
 > [!IMPORTANT]
-> **Job stubs are for discovery only.** When a user @mentions or references any file under `fraim/ai-employee/jobs/` or `fraim/ai-manager/jobs/`, do NOT attempt to execute the job from the stub content. The stub only shows intent and phase names. Always call `get_fraim_job({ job: "<job-name>" })` first to get the full phased instructions before doing any work.
+> **Job stubs are for discovery only.** When a user mentions or references any file under `fraim/ai-employee/jobs/` or `fraim/ai-manager/jobs/`, do NOT attempt to execute the job from the stub content. The stub only shows intent and phase names. Always call `get_fraim_job({ job: "<job-name>" })` first to get the full phased instructions before doing any work.
 <!-- FRAIM_AGENT_ADAPTER_END -->
