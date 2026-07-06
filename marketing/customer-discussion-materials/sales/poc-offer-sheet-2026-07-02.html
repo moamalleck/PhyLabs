@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>PhysicianLabs — Revenue-Leak PoC</title>
+<style>
+  :root{
+    --navy:#0F172A; --teal:#2DD4BF; --tealdk:#0F6E56; --tealbg:#E1F5EE;
+    --ink:#0F172A; --muted:#475569; --border:#E2E8F0; --card:#F8FAFC; --gold:#B45309;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:Letter;margin:0.45in}
+  html,body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);font-size:9.7pt;line-height:1.34}
+  .wrap{max-width:7.6in;margin:0 auto}
+  .hdr{background:var(--navy);color:#fff;border-radius:6px;padding:12px 16px;display:flex;justify-content:space-between;align-items:flex-end}
+  .wordmark{font-size:20pt;font-weight:800;letter-spacing:1px;line-height:1}
+  .wordmark span{color:var(--teal)}
+  .tag{color:#5EEAD4;font-style:italic;font-size:9.5pt;margin-top:5px}
+  .meta{text-align:right;font-size:8pt;color:#9FB3C8;letter-spacing:1px;text-transform:uppercase}
+  .hero{background:var(--tealbg);border-left:4px solid var(--teal);padding:11px 14px;margin:11px 0;font-size:13.5pt;line-height:1.28;font-weight:800;color:var(--navy)}
+  .hero span{color:var(--tealdk)}
+  .hero .sub{display:block;font-size:9.6pt;font-weight:400;color:var(--muted);margin-top:5px;line-height:1.35}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 16px;margin-bottom:10px}
+  h2{font-size:8pt;letter-spacing:1.3px;text-transform:uppercase;color:var(--teal);font-weight:800;margin-bottom:3px;border-bottom:1px solid var(--border);padding-bottom:2px}
+  p{margin-bottom:3px}
+  .muted{color:var(--muted)}
+  .steps{display:flex;gap:8px;margin:2px 0 10px}
+  .step{flex:1;background:var(--card);border:1px solid var(--border);border-top:3px solid var(--teal);border-radius:5px;padding:8px 10px}
+  .step .n{font-size:8pt;font-weight:800;color:var(--tealdk);letter-spacing:1px}
+  .step b{display:block;font-size:9.5pt;margin:2px 0}
+  .step p{font-size:8.6pt;color:var(--muted);margin:0}
+  .guar{background:var(--navy);color:#e2e8f0;border-radius:6px;padding:11px 15px;margin-bottom:10px}
+  .guar h3{color:var(--teal);font-size:9pt;letter-spacing:1.3px;text-transform:uppercase;margin-bottom:5px}
+  .guar b{color:#fff}
+  .guar .terms{font-size:8.4pt;color:#9FB3C8;margin-top:6px;line-height:1.4}
+  .partner{background:var(--card);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:5px;padding:9px 13px;margin-bottom:10px}
+  .partner b{color:var(--gold)}
+  .foot{background:var(--navy);color:#cbd5e1;border-radius:6px;padding:9px 14px;font-size:8.6pt;display:flex;justify-content:space-between;align-items:center;margin-top:2px}
+  .foot b{color:#fff}
+  .cta{background:var(--teal);color:var(--navy);font-weight:800;padding:3px 10px;border-radius:4px;font-size:9pt}
+  b{font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hdr">
+    <div>
+      <div class="wordmark">PHYSICIAN<span>LABS</span></div>
+      <div class="tag">Put doctors back in the driver's seat of their own financial future.</div>
+    </div>
+    <div class="meta">Revenue-Leak PoC<br>For independent physicians<br>2026</div>
+  </div>
+
+  <div class="hero">
+    We&rsquo;ll find <span>$20,000</span> your practice is losing &mdash; or you don&rsquo;t pay.
+    <span class="sub">A 90-minute Revenue-Leak audit and a written Recovery Report within a week &mdash; exactly where your money is leaking and how to get it back. Find less than $20K, and the review is free.</span>
+  </div>
+
+  <div class="grid">
+    <div>
+      <h2>Why this money is hiding</h2>
+      <p class="muted">You trained 10+ years to practise medicine and zero hours to run a business. In your first years independent, the money leaks quietly &mdash; and independent physicians lose <b>$200,000+</b> before they see it:</p>
+      <p>&bull; <b>Tax &amp; entity structure</b> &mdash; wrong incorporation timing and a poor salary/dividend mix routinely cost tens of thousands a year.</p>
+      <p>&bull; <b>Revenue you never collected</b> &mdash; the average practice has <b>1 in 9 claims denied</b> on first submission: 5&ndash;11% of everything you&rsquo;re owed, written off quietly.</p>
+      <p>&bull; <b>Overhead you never priced</b> &mdash; franchise cuts, duplicated tools, staffing you over-pay for.</p>
+      <p class="muted" style="font-style:italic;margin-top:4px">&ldquo;The amount of tax I&rsquo;m paying is nauseating &mdash; the house I&rsquo;d be living in would be double the size.&rdquo; &mdash; independent surgeon, Ontario</p>
+    </div>
+    <div>
+      <h2>What you get</h2>
+      <p>&bull; A <b>90-minute Revenue-Leak audit</b> of your practice &mdash; structure, tax, collections, and overhead.</p>
+      <p>&bull; A <b>1-page Recovery Report within a week</b>: every dollar we identify, where it&rsquo;s leaking, and how to capture it.</p>
+      <p>&bull; A <b>prioritized action list</b> you can execute immediately &mdash; with your accountant or biller &mdash; whether or not you continue with us.</p>
+      <p class="muted" style="margin-top:4px">Worst case, you get a free expert audit of your finances. Best case, we&rsquo;ve already paid for ourselves 20&times; over.</p>
+    </div>
+  </div>
+
+  <h2 style="margin-bottom:5px">How it works</h2>
+  <div class="steps">
+    <div class="step"><div class="n">STEP 1</div><b>Qualify</b><p>A quick fit check. 10 minutes.</p></div>
+    <div class="step"><div class="n">STEP 2</div><b>The Audit</b><p>$1,000 PoC. 90-min review + report in a week. Money-back.</p></div>
+    <div class="step"><div class="n">STEP 3</div><b>Capture</b><p>We close the leaks with you. $8,000 founding program.</p></div>
+    <div class="step"><div class="n">STEP 4</div><b>Stay ahead</b><p>$599/mo &mdash; ongoing clarity so it never leaks again.</p></div>
+  </div>
+
+  <div class="guar">
+    <h3>The Guarantee</h3>
+    <p><b>We find at least $20,000 you&rsquo;re losing, documented with a capture plan &mdash; or the $1,000 PoC is fully refunded.</b> No fine print, no findings fees, no obligation to continue. The only thing you risk is 90 minutes.</p>
+    <p class="terms"><b>What &ldquo;find&rdquo; means:</b> money we <b>identify and document, with a clear step-by-step plan to capture it</b> (tax you&rsquo;re overpaying, revenue you&rsquo;re not collecting, overhead you&rsquo;re over-spending) &mdash; measured over a 12-month forward period. It does not require you to have recovered the dollars yet; it requires us to prove they&rsquo;re there and show you how to get them.</p>
+  </div>
+
+  <div class="partner">
+    <p><b>Design partner? 2 seats open.</b> Same $1,000 money-back PoC &mdash; real money, because skin in the game keeps us both honest &mdash; plus the founding <b>$8,000 Transition Program</b> (standard $22,000), in exchange for weekly feedback and a testimonial once you see the recovery.</p>
+  </div>
+
+  <div class="foot">
+    <span><b>Ash Malleck</b> · Founder &amp; CEO · PhysicianLabs &nbsp;·&nbsp; <b>ash@malleckclinics.com</b></span>
+    <span class="cta">Book your audit &rarr;</span>
+  </div>
+
+</div>
+</body>
+</html>
