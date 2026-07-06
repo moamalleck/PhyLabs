@@ -28,3 +28,11 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# Claude Code — local/personal & transient artifacts (do not track)
+# machine-local permissions/config
+.claude/settings.local.json
+# transient worktree copies (worktrees are banned in this repo)
+.claude/worktrees/
+# browser-automation debug logs
+.playwright-mcp/
