@@ -2,7 +2,7 @@
 
 Patterns in how this operator delegates, reviews, and directs — useful context for working together effectively.
 
-Last synthesized: 2026-05-11
+Last synthesized: 2026-06-22
 
 ---
 
@@ -91,3 +91,58 @@ Patient acquisition was omitted from the initial problem statement draft because
 **First synthesized**: 2026-05-11
 
 When delegating a revision job ("revise the existing marketing brief"), specifying what changed vs. what should be preserved prevents the agent from defaulting to a shallow find-and-replace. In the May 6 design-partner revision, minimal input was sufficient for a confident session, but a one-line scope note — "change the offer, commitment, and qualification gate; preserve the ICP and channels" — would reduce the risk of cosmetic revision in lower-confidence contexts. For significant strategic reframes, include a "what changed" note in the job brief.
+
+---
+
+#### [P-HIGH] Ask "describe your customer" before presenting ICP options
+
+**Score**: 8.0
+**Last seen**: 2026-05-31
+**Recurrences**: 1
+**First synthesized**: 2026-05-31
+
+In the 2026-05-31 ICP decision session, structured options (A, B, C) were presented for the ICP fork. Ash chose Option C but then added four specific customer criteria — disposable income, risk awareness, high WTP, reclaim agency — that were not in any of the options. These criteria were the most valuable ICP output of the session. The structured options prompted the decision; the founder's own articulation produced the insight. Before presenting ICP or segment options in any future strategy or validation session, ask: "Describe the customer you picture when you imagine the ideal sale — their situation, what they're feeling, what they want." Use the answer to sharpen or rewrite the options. Ash consistently produces the most precise framing when articulating from his own mental model rather than selecting from pre-built alternatives.
+
+---
+
+#### [P-MED] Outreach inertia is specific to the "hardest ask" — prompt explicitly at session end
+
+**Score**: 5.0
+**Last seen**: 2026-05-31
+**Recurrences**: 1
+**First synthesized**: 2026-05-31
+
+In today's session, every documentation task (ICP decision doc, business plan, SWOT, pitch package, quality review) was completed immediately and without hesitation. The paid experiment — designed 3 days prior with a June 4 pass/fail deadline — had zero outreach sent despite active discussion about it. The inertia pattern is specific: sending a paid offer to a warm contact is a qualitatively different risk from writing a document, and it does not progress without explicit prompting. Documentation work does not substitute for outreach. At the end of any session where the outreach tracker or experiment has open rows, close with: "What is the first outreach message you will send in the next 24 hours, and to whom?" — name a specific contact, not a category.
+
+---
+
+#### [P-MED] When commissioning a discovery run, include expected prospect count and platform access requirements in the brief
+
+**Score**: 5.0
+**Last seen**: 2026-06-01
+**Recurrences**: 1
+**First synthesized**: 2026-06-04
+
+When briefing a discovery run, specify the prospect count target and list which platforms require active login — so the agent can flag inaccessible platforms before starting rather than after. The June 1 discovery run was commissioned with a 50–200 target but no explicit note about which platforms required active login. When LinkedIn login was unverified, the agent proceeded without flagging the gap — leaving the prospect count at 10 and two platforms unsearched. Future discovery briefs should include: (1) target prospect count range, (2) required platforms with a note on which require active login, and (3) a checkpoint instruction — "if any platform is inaccessible, flag expected count impact before proceeding."
+
+---
+
+#### [P-HIGH] Verify acquisition channel community names before they appear in any strategy document
+
+**Score**: 8.0
+**Last seen**: 2026-05-17
+**Recurrences**: 1
+**First synthesized**: 2026-05-18
+
+"PTOC" was named as the primary acquisition channel across the PhysicianLabs pitch, UVP, business model, and startup critique documents — described as a 10,000-member physician Facebook group. It was never verified. Research confirmed it is a regulatory designation, not a community. A single web search at the point of first mention would have caught this before it propagated. When commissioning GTM or pitch work that names a specific community as an acquisition channel, include a verification requirement in the brief: "Confirm this community exists, what it actually is, and what its commercial tolerance is before building strategy around it."
+
+---
+
+#### [P-MED] Experiments need a forcing function to record the verdict on the decision date
+
+**Score**: 5.0
+**Last seen**: 2026-06-15
+**Recurrences**: 1
+**First synthesized**: 2026-06-22
+
+Give every experiment a forcing function to record its pass/fail verdict on its stated review date. The first MVT had a June 4 decision date, but the verdict was never recorded and the doc sat open for 11 days until the June 15 session reconstructed it from the outreach tracker. This is now enforced by a project rule (see `project_rules.md` → "Experiment Hygiene"): every experiment doc must be closed with a recorded PASS/FAIL verdict and evidence on its stated review date. At an experiment's review date, proactively prompt to record the verdict.

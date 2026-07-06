@@ -2,15 +2,15 @@
 
 Recurring agent mistakes and environmental pitfalls to avoid on this project.
 
-Last synthesized: 2026-05-11
+Last synthesized: 2026-06-22
 
 ---
 
 #### [P-HIGH] gh CLI not available in this shell environment
 
-**Score**: 12.1
-**Last seen**: 2026-04-30
-**Recurrences**: 2
+**Score**: 16.0
+**Last seen**: 2026-06-18
+**Recurrences**: 3
 **First synthesized**: 2026-05-06
 
 `gh` is not on the PATH in the bash/PowerShell environment on this machine. Discovering this at the PR submission step (the last step of any job) interrupts the automated flow and forces a manual URL handoff to the operator. The fix is to check for `gh` during the first phase of any job that has a submission step, surface the fallback plan early, and prepare the PR body text before reaching submission.
@@ -162,9 +162,99 @@ In repositories with Claude worktrees (`.claude/worktrees/<branch-name>/`), conf
 
 #### [P-LOW] Segment or specialty targeting left vague when founder has a clear hierarchy
 
+
+
 **Score**: 3.0
 **Last seen**: 2026-05-01
 **Recurrences**: 1
 **First synthesized**: 2026-05-06
 
 In the problem statement crystallization session, the specialty note defaulted to "no gut sense, wait for interviews" when the founder in fact had a clear segment hierarchy (derm+PT primary, chiro+mental health secondary). This required an extra feedback round to resolve. In Socratic refinement phases, ask directly: "Do you have a priority order across these segments?" before documenting the target market.
+
+---
+
+#### [P-HIGH] Community identity assumed without verification — propagates into strategy documents unchecked
+
+**Score**: 8.0
+**Last seen**: 2026-05-17
+**Recurrences**: 1
+**First synthesized**: 2026-05-18
+
+In the 2026-05-17 investor-pitch-preparation session, prior work had embedded "PTOC" as the primary acquisition channel across multiple strategy documents, described as a "10,000-member physician Facebook group." Research confirmed that PTOC means "Physicians Trained Outside of Canada" — a regulatory designation for international medical graduates, not a commercial community. The claim had been carried through the pitch, UVP, and business model documents without a single verification step. Before any community is named as an acquisition channel in a strategy document, verify its existence, nature, and commercial tolerance with a direct web search.
+
+---
+
+#### [P-MED] Unicode symbol characters in markdown tables break Edit tool string matching
+
+**Score**: 5.0
+**Last seen**: 2026-05-31
+**Recurrences**: 1
+**First synthesized**: 2026-05-31
+
+Two Edit attempts failed on `business-strategy-quality-review.md` because the file contained Unicode arrow symbols (▲ ▼) inside markdown table cells. The Edit tool could not match the old_string despite visual equivalence — the mismatch is at the byte level. Both attempts required fallback to a Node.js file splice (read file, split by lines, splice replacement block, write) to complete the update. On any markdown file containing non-ASCII Unicode symbols — especially ▲ ▼ ✅ ❌ 🔴 🟠 🟡 in table cells or headers — prefer Node.js file manipulation over the Edit tool for table row replacements. The Edit tool remains reliable for prose sections with standard ASCII text.
+
+---
+
+#### [P-HIGH] "Zero direct competitors" claimed before competitive research is complete
+
+**Score**: 8.0
+**Last seen**: 2026-05-17
+**Recurrences**: 1
+**First synthesized**: 2026-05-18
+
+Prior work on PhysicianLabs claimed "no direct competitors in the pre-launch physician space." Research in the 2026-05-17 session found five established consulting firms serving this exact market (Physicians Thrive, Independent Practice Partners, TruMediq, Cornerstone Healthcare Consulting, Physician Practice Specialists). The correct claim — "no productized competitor" — is accurate and defensible; the zero-competitor claim is not. Competitive research must include the unproductized consulting market, not just SaaS platforms, before any competitive differentiation statement is finalized.
+
+---
+
+#### [P-HIGH] Platform authentication not verified before starting discovery — platforms missed entirely
+
+**Score**: 8.0
+**Last seen**: 2026-06-01
+**Recurrences**: 1
+**First synthesized**: 2026-06-04
+
+On any browser-based discovery run, the first browser action should be opening and verifying login status for every required platform — before any search begins. In the June 1 prospect discovery session, Phase 3 began with Reddit searches without first verifying LinkedIn login. LinkedIn was never searched as a result, and DPC Frontier was also skipped — leaving 2 of 4 planned platforms incomplete and the prospect count at 10 instead of the 50–200 target. The phase instruction explicitly requires "Open all platform tabs and verify authentication before starting navigation," but this was treated as optional. On any future discovery or research run, the first browser action is navigating to each auth-required platform (LinkedIn, DPC Frontier, etc.) and taking a login-state snapshot. If not logged in, the user is told before any searches proceed.
+
+---
+
+#### [P-HIGH] Partial run scope not flagged to user before execution — surfaced as a finding at the end instead
+
+**Score**: 8.0
+**Last seen**: 2026-06-01
+**Recurrences**: 1
+**First synthesized**: 2026-06-04
+
+When a planned platform is inaccessible or login status is unknown at the start of a run, the user should be told upfront — including the expected impact on prospect count — before proceeding, not after. The June 1 discovery session concluded with a postmortem finding that 2 of 4 planned platforms were unsearched and the prospect count was 10 instead of 50–200. This should have been a pre-execution flag: "I cannot verify LinkedIn login — expect well below 50 prospects if I proceed. Shall I continue or pause?" Before any discovery execution phase begins, if any required platform is inaccessible, the expected prospect count impact will be stated to the user immediately and confirmation to proceed will be requested.
+
+---
+
+#### [P-MED] Subreddit freshness not checked before deep-diving a thread sweep
+
+**Score**: 5.0
+**Last seen**: 2026-06-01
+**Recurrences**: 1
+**First synthesized**: 2026-06-04
+
+Before running a full subreddit thread sweep, check the /new/ feed for the date of the most recent post. If it is more than 6 months old, note it in the dossier and deprioritize. In the June 1 session, r/DirectPrimaryCare was swept in full despite the last post being May 2023 — over a year before the session. A 30-second check of the newest post would have revealed this and redirected effort toward active channels. Prospects from stale subreddits may have lower DM response rates since their posts are old and they may no longer be active on the platform.
+
+---
+
+#### [P-HIGH] Inherited claims carried into a new document without re-checking them against newly validated facts
+
+**Score**: 8.0
+**Last seen**: 2026-06-15
+**Recurrences**: 1
+**First synthesized**: 2026-06-22
+
+When a validated fact changes (the ideal customer, a competitive claim, a channel), re-audit every section of any document that inherits older framing before shipping it. In the 2026-06-15 SoftBank/NEC-X deck, the competition slide argued a "we own the pre-launch window" moat inherited from the May 17 pitch even though the customer had been re-validated as the just-launched physician that same day — Slide 6 said "buyers launched in the last 6–12 months" while Slide 9 claimed a pre-launch moat, and the operator had to surface the contradiction. This is the same failure mode as the earlier "PTOC" and "zero direct competitors" slips: an old claim propagated into a new artifact unchecked. Whenever a core fact is revalidated, re-reconcile every inherited claim in dependent docs (deck, UVP, business plan, SWOT) against the new fact before treating the work as done.
+
+---
+
+#### [P-MED] preview_click can report success but silently not fire on fixed-position or zoomed elements
+
+**Score**: 5.0
+**Last seen**: 2026-06-18
+**Recurrences**: 1
+**First synthesized**: 2026-06-22
+
+When a `preview_click` returns success but the page state does not change, verify with a programmatic `preview_eval` `.click()` before assuming the code is broken. In the 2026-06-18 PoC prototype build, clicks on the fixed bottom demo-bar buttons (`#run-diagnostic`, `#db-next`) reported success but did not fire because the click coordinate translation missed the target at a zoomed viewport — it looked like a broken handler, but the buttons work for real users. Treat a successful-but-inert `preview_click` as a tooling artifact first, and confirm via programmatic click before touching the code.

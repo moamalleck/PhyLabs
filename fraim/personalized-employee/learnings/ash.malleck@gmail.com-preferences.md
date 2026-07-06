@@ -2,15 +2,15 @@
 
 Stable style, tone, and output preferences observed across sessions.
 
-Last synthesized: 2026-05-11
+Last synthesized: 2026-06-22
 
 ---
 
 #### [P-HIGH] Document the rationale for key decisions, not just the decision itself
 
-**Score**: 15.7
-**Last seen**: 2026-05-06
-**Recurrences**: 3
+**Score**: 18.6
+**Last seen**: 2026-06-15
+**Recurrences**: 4
 **First synthesized**: 2026-05-06
 
 When selecting a hero benefit, choosing a channel strategy, making a revision decision, or making any recommendation that required judgment among alternatives, documenting the explicit rationale (why this option over the others, what evidence supports it) correlates strongly with first-pass operator approval. The website-creation, marketing-strategy-definition, and marketing-strategy-revision sessions all achieved zero revision rounds; in all three, key decisions included documented rationale inline. Surface the "why" alongside the "what" — so the operator can confirm or redirect before acting on it.
@@ -19,9 +19,9 @@ When selecting a hero benefit, choosing a channel strategy, making a revision de
 
 #### [P-HIGH] Physician-specific copy: clinical credibility over generic SaaS language
 
-**Score**: 7.8
-**Last seen**: 2026-04-23
-**Recurrences**: 1
+**Score**: 12.7
+**Last seen**: 2026-06-18
+**Recurrences**: 2
 **First synthesized**: 2026-05-06
 
 In the PhysicianLabs website session, copy that used clinical-domain specifics ("11.8% initial denial rate", "90–120 day credentialing lag", "payer enrollment") was approved without revision, while generic SaaS phrasing ("streamline your workflow", "boost efficiency") was absent from the final approved output. The user's product targets physicians who distrust generic HealthTech marketing. Always use real clinical metrics, domain-specific terminology, and outcome-anchored language in any PhysicianLabs-facing content. Avoid generic B2B SaaS copy patterns.
