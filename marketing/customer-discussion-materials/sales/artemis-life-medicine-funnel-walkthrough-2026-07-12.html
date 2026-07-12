@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Artemis Life Medicine — New-Patient Funnel Walkthrough</title>
+<style>
+  :root{
+    /* Artemis house green (from their booking accent #165A51) + neutral ink */
+    --green:#165A51; --greendk:#0E3E38; --greenbg:#E6F2EF;
+    --ink:#12211E; --muted:#4B5A56; --ink3:#6B7B77; --border:#DCE7E4; --card:#F6FAF9;
+    --amber:#B45309; --navy:#0F172A;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  @page{size:Letter;margin:0.5in}
+  html,body{font-family:"Helvetica Neue",Arial,sans-serif;color:var(--ink);font-size:10pt;line-height:1.4;background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .wrap{max-width:7.5in;margin:0 auto}
+  b{font-weight:700}
+  .muted{color:var(--muted)}
+
+  /* header — Artemis-first, prepared-by mark small */
+  .top{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:2px solid var(--green);padding-bottom:10px;margin-bottom:14px}
+  .kicker{font-size:7.6pt;letter-spacing:1.6px;text-transform:uppercase;color:var(--green);font-weight:800;margin-bottom:5px}
+  .title{font-size:20pt;font-weight:800;letter-spacing:-.3px;line-height:1.05;color:var(--ink)}
+  .subtitle{font-size:10.5pt;color:var(--muted);margin-top:4px}
+  .by{text-align:right;font-size:7.8pt;color:var(--ink3);letter-spacing:.4px;line-height:1.6;text-transform:uppercase;white-space:nowrap}
+  .by b{color:var(--green);font-size:8.4pt}
+
+  .intro{background:var(--greenbg);border-left:3px solid var(--green);padding:13px 16px;border-radius:5px;margin-bottom:24px;font-size:10pt;color:var(--greendk);line-height:1.5}
+
+  h2{font-size:8pt;letter-spacing:1.4px;text-transform:uppercase;color:var(--green);font-weight:800;margin:0 0 12px;border-bottom:1px solid var(--border);padding-bottom:4px}
+
+  /* what's working */
+  .works{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px 22px;margin-bottom:30px}
+  .works div{font-size:10pt;color:var(--ink);padding-left:18px;position:relative;line-height:1.3}
+  .works div::before{content:"\2713";position:absolute;left:0;top:0;color:var(--green);font-weight:800}
+
+  /* wins */
+  .win{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--border)}
+  .win:last-child{border-bottom:none}
+  .num{width:28px;height:28px;border-radius:50%;background:var(--green);color:#fff;font-weight:800;font-size:11.5pt;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .win .body{flex:1}
+  .win .name{font-weight:800;font-size:11.5pt;color:var(--ink);margin-bottom:5px}
+  .win .desc{font-size:10pt;color:var(--muted);line-height:1.5}
+  .win .desc b{color:var(--ink)}
+  .win .fix{font-size:9pt;color:var(--greendk);margin-top:7px}
+  .win .fix span{font-weight:800;text-transform:uppercase;letter-spacing:.6px;font-size:7.6pt;color:var(--green)}
+
+  .close{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--green);border-radius:6px;padding:12px 15px;margin-top:16px;font-size:9.8pt;line-height:1.5}
+  .close b{color:var(--ink)}
+
+  .foot{display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding-top:9px;border-top:1px solid var(--border);font-size:8.4pt;color:var(--ink3)}
+  .foot b{color:var(--green)}
+  .disc{font-size:7.2pt;color:var(--ink3);line-height:1.4;margin-top:9px;font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <div>
+      <div class="kicker">New-Patient Funnel Walkthrough</div>
+      <div class="title">Artemis Life Medicine</div>
+      <div class="subtitle">A few quick wins to get more of the right patients in the door</div>
+    </div>
+    <div class="by">
+      Prepared for<br><b>Dr. Neha Didwaniya</b><br>
+      <span style="color:var(--ink3)">by Ash Malleck · PhysicianLabs</span><br>
+      July 2026
+    </div>
+  </div>
+
+  <div class="intro">
+    Neha — congratulations again on the launch. I went through your site the way a prospective patient
+    would, and honestly it's one of the clearer direct-primary-care sites I've seen. A few small,
+    high-leverage things stood out that could turn more visitors into booked Meet &amp; Greets.
+  </div>
+
+  <h2>What's already working</h2>
+  <div class="works">
+    <div><b>Sharp positioning</b></div>
+    <div><b>Transparent pricing</b></div>
+    <div><b>Free Meet &amp; Greet front door</b></div>
+    <div><b>Strong menopause niche</b></div>
+    <div><b>Thorough, clear FAQ</b></div>
+    <div><b>Clean on mobile</b></div>
+  </div>
+
+  <h2>Three quick wins</h2>
+
+  <div class="win">
+    <div class="num">1</div>
+    <div class="body">
+      <div class="name">Turn your analytics on — you can't see your own traffic</div>
+      <div class="desc">Google Analytics is installed but was never switched on. Right now, every marketing
+        decision is a guess.</div>
+      <div class="fix"><span>The fix</span> &nbsp;~20 minutes to activate it and log each booking — so you see which
+        channels actually bring patients.</div>
+    </div>
+  </div>
+
+  <div class="win">
+    <div class="num">2</div>
+    <div class="body">
+      <div class="name">Give researchers a way to stay in touch</div>
+      <div class="desc">Menopause patients often research for <b>weeks</b>. Anyone not ready to book today leaves
+        with no way to reconnect.</div>
+      <div class="fix"><span>The fix</span> &nbsp;A simple email capture recovers the slow deciders instead of losing
+        them.</div>
+    </div>
+  </div>
+
+  <div class="win">
+    <div class="num">3</div>
+    <div class="body">
+      <div class="name">Put a price on the homepage</div>
+      <div class="desc">Your pricing is transparent — but it's one click in. A "<b>from $200/mo</b>" line lets
+        visitors self-qualify before booking.</div>
+      <div class="fix"><span>The fix</span> &nbsp;Fewer, better-fit Meet &amp; Greets — protecting your scarcest
+        resource: time.</div>
+    </div>
+  </div>
+
+  <div class="close">
+    Happy to walk through any of these in our <b>August chat</b> — or just take them and run. Either way,
+    rooting hard for Artemis. — Ash
+  </div>
+
+  <div class="foot">
+    <span><b>Ash Malleck</b> · Founder, PhysicianLabs · helping doctors build thriving independent practices</span>
+    <span><b>ash@malleckclinics.com</b> · malleckclinics.com</span>
+  </div>
+
+  <div class="disc">
+    Observations from a public walkthrough of artemislifemedicine.com on July 12, 2026. Shared as a courtesy,
+    not a formal audit. No patient data was accessed.
+  </div>
+
+</div>
+</body>
+</html>
