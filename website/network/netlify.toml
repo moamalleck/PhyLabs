@@ -1,0 +1,18 @@
+# Netlify deploy config for The Physicians' Circle (ashmalleck.com).
+# This is a SEPARATE Netlify site from the PhysicianLabs marketing site (which is published by the
+# root-level netlify.toml → website/site). Point a second Netlify site's base directory at
+# website/network and it will use this file.
+#
+# Netlify auto-detects the application form (data-netlify="true") from the deployed HTML and
+# captures every submission in Forms → dashboard. No PHI/PII beyond name/email/specialty is collected.
+
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

@@ -24,6 +24,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-l", "3744", "marketing/customer-discussion-materials/sales"],
       "port": 3744
+    },
+    {
+      "name": "physicians-circle",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3745", "website/network"],
+      "port": 3745
     }
   ]
 }
