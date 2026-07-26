@@ -1,7 +1,7 @@
-# UnuMedic — `ashmalleck.com`
+# UnuMedic — `malleckclinics.org`
 
 **UnuMedic — The Physician Circle of Ambitious Practitioners.**
-A **separate, self-contained static site** for Ash Malleck's personal domain (`ashmalleck.com`).
+A **separate, self-contained static site** for Ash Malleck's personal domain (`malleckclinics.org`).
 It is deliberately **not** part of `website/site/` (the PhysicianLabs marketing site on
 `physicianlab.com`) because it is a different brand on a different domain — but it is a **funnel**
 into both the Circle *and* PhysicianLabs OS as a design partner.
@@ -34,11 +34,11 @@ The application form captures which track the applicant selects, so leads are se
 - [ ] **Replace testimonials**: the `#voices` section uses **illustrative archetype composites**,
       clearly labeled as such. Swap in real, permissioned, named member quotes as the cohort forms,
       then remove the `.tst-note` line and the HTML comment above the section.
-- [x] **Analytics**: `data-domain` is set to `ashmalleck.com`. Create the matching free Plausible
+- [x] **Analytics**: `data-domain` is set to `malleckclinics.org`. Create the matching free Plausible
       (or Cloudflare Web Analytics) site so the tag has somewhere to report; until then it no-ops.
 - [ ] **Forms**: Netlify auto-detects `data-netlify="true"` on deploy and collects submissions in
       Forms → dashboard. Turn on an email notification so applications reach Ash. No PHI is collected.
-- [ ] **Contact email**: `hello@ashmalleck.com` is used in the footer/FAQ — set up the mailbox or
+- [ ] **Contact email**: `hello@malleckclinics.org` is used in the footer/FAQ — set up the mailbox or
       change it.
 - [ ] **Legal**: the investor track carries a plain-English "not a securities offering / not advice"
       disclaimer. Have counsel review before promoting Track 3 to investors.
@@ -46,7 +46,7 @@ The application form captures which track the applicant selects, so leads are se
 ## Deploy
 Because the repo root `netlify.toml` already publishes `website/site`, this site is a **second
 Netlify site** pointed at `publish = "website/network"` (config in `website/network/netlify.toml`),
-mapped to the `ashmalleck.com` domain. When migrating to AWS, this folder maps cleanly to its own
+mapped to the `malleckclinics.org` domain. When migrating to AWS, this folder maps cleanly to its own
 S3 bucket behind CloudFront — keep it a single static folder so the deploy stays a plain sync.
 
 ## Local preview
